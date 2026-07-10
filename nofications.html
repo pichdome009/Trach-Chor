@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>មជ្ឈមណ្ឌលជូនដំណឹង (Notification Center) - ត្រាច់ចរ (Trach Chor)</title>
+    <link rel="stylesheet" href="assets/css/nofication.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+    <div class="container wrapper">
+
+        <div class="row g-3">
+
+            <!-- LEFT SIDEBAR -->
+            <div class="col-lg-4">
+
+                <div class="sidebar">
+
+                    <div class="title mb-4">
+                        ជូនដំណឹង<br>
+                        (Notification)
+                    </div>
+
+                    <a href="#all" class="notification-category active">
+                        <i class="bi bi-envelope me-2"></i>
+                        ទាំងអស់ (All)
+                    </a>
+
+                    <a href="#booking" class="notification-category">
+                        <i class="bi bi-calendar3 me-2"></i>
+                        ការកក់ (Bookings)
+                    </a>
+
+                    <a href="#reminder" class="notification-category">
+                        <i class="bi bi-bell me-2"></i>
+                        ការរំលឹក (Reminders)
+                    </a>
+
+                    <a href="#payment" class="notification-category">
+                        <i class="bi bi-qr-code-scan me-2"></i>
+                        ការទូទាត់ប្រាក់ (Payments)
+                    </a>
+
+                    <a href="#promotion" class="notification-category">
+                        <i class="bi bi-tags me-2"></i>
+                        ប្រូម៉ូសិន (Promotions)
+                    </a>
+
+                    <div class="sidebar-divider"></div>
+
+                    <div class="title mb-4">
+                        ការកំណត់សំឡេង<br>
+                        (Alert Settings)
+                    </div>
+
+                    <div class="setting-row d-flex justify-content-between align-items-center mb-3">
+                        <span>សារ SMS</span>
+
+                        <div class="form-check form-switch m-0">
+                            <input class="form-check-input" type="checkbox" checked>
+                        </div>
+                    </div>
+
+                    <div class="setting-row d-flex justify-content-between align-items-center mb-3">
+                        <span>អ៊ីមែល</span>
+
+                        <div class="form-check form-switch m-0">
+                            <input class="form-check-input" type="checkbox" checked>
+                        </div>
+                    </div>
+
+                    <div class="setting-row d-flex justify-content-between align-items-center">
+                        <span>ប្រូម៉ូសិន</span>
+
+                        <div class="form-check form-switch m-0">
+                            <input class="form-check-input" type="checkbox" checked>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="col-lg-8" id="notification-top">
+                <div class="d-inline-block px-3 py-2 rounded-4 border text-light" style="background-color: #2D6A4F; border-color: white;">
+                    <h2 id="all" class="mb-0"><i class="bi bi-envelope me-2"></i>ទាំងអស់ (All)</h2>
+                </div>
+                <section id="booking" class="mt-4">
+                    <h3 class="mb-4">
+                        <i class="bi bi-calendar3 me-2 me-2"></i>
+                        ការកក់
+                    </h3>
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-calendar3 me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #dc3545; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">2 នាទីមុន</small>
+                            </div>
+                            <h5 class="mt-3">បានបញ្ជាក់ការកក់</h5>
+                            <p class="text-muted mb-0">
+                                ការកក់របស់អ្នកសម្រាប់ដំណើរកម្សាន្តមើលថ្ងៃរះនៅអង្គរវត្តត្រូវបានបញ្ជាក់ហើយ។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">ចំណាំថាអានរួច</button>
+                                <button class="btn btn-details btn-sm">ព័ត៌មានលម្អិត</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-calendar3 me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #dc3545; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">3 ម៉ោងមុន</small>
+                            </div>
+                            <h5 class="mt-3">បានបញ្ជាក់ការកក់</h5>
+                            <p class="text-muted mb-0">
+                                ការកក់របស់អ្នកសម្រាប់ដំណើរកម្សាន្តតាមទូកទៅកាន់កោះរុងត្រូវបានបញ្ជាក់ហើយ។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">ចំណាំថាអានរួច</button>
+                                <button class="btn btn-details btn-sm">ព័ត៌មានលម្អិត</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-calendar3 me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #dc3545; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">ម្សិលមិញ</small>
+                            </div>
+                            <h5 class="mt-3">ការកក់កំពុងរង់ចាំ</h5>
+                            <p class="text-muted mb-0">
+                                ការកក់របស់អ្នកសម្រាប់ដំណើរកម្សាន្តជិះរថភ្លើងឫស្សីនៅបាត់ដំបង កំពុងរង់ចាំការបញ្ជាក់។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">ចំណាំថាអានរួច</button>
+                                <button class="btn btn-details btn-sm">ព័ត៌មានលម្អិត</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-calendar3 me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #dc3545; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">2 ថ្ងៃមុន</small>
+                            </div>
+                            <h5 class="mt-3">បានបញ្ជាក់ការកក់</h5>
+                            <p class="text-muted mb-0">
+                                ការកក់របស់អ្នកសម្រាប់ដំណើរកម្សាន្តទៅកាន់ភូមិបណ្តែតទឹកនៅសៀមរាបត្រូវបានបញ្ជាក់ហើយ។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">ចំណាំថាអានរួច</button>
+                                <button class="btn btn-details btn-sm">ព័ត៌មានលម្អិត</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="reminder" class="mt-5">
+                    <h3 class="mb-4">
+                        <i class="bi bi-bell me-2"></i>
+                        ការរំលឹក
+                    </h3>
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-bell me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #ffc107; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">1 ម៉ោងមុន</small>
+                            </div>
+                            <h5 class="mt-3">ការរំលឹកអំពីដំណើរកម្សាន្ត</h5>
+                            <p class="text-muted mb-0">
+                                ដំណើរកម្សាន្តរបស់អ្នកនឹងចាប់ផ្តើមនៅថ្ងៃស្អែក វេលាម៉ោង 7:00 ព្រឹក។ សូមមកដល់មុន 30 នាទី។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">ចំណាំថាអានរួច</button>
+                                <button class="btn btn-details btn-sm">ព័ត៌មានលម្អិត</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-bell me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #ffc107; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">5 ម៉ោងមុន</small>
+                            </div>
+                            <h5 class="mt-3">ជិតដល់ពេលទូទាត់ប្រាក់</h5>
+                            <p class="text-muted mb-0">
+                                ទឹកប្រាក់ដែលនៅសល់សម្រាប់ដំណើរកម្សាន្តទៅកោះរុង ត្រូវតែទូទាត់ក្នុងរយៈពេល 24 ម៉ោងទៀត។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">ចំណាំថាអានរួច</button>
+                                <button class="btn btn-details btn-sm">ព័ត៌មានលម្អិត</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-bell me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #ffc107; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">ម្សិលមិញ</small>
+                            </div>
+                            <h5 class="mt-3">ការរំលឹកអំពីលិខិតឆ្លងដែន</h5>
+                            <p class="text-muted mb-0">
+                                កុំភ្លេចយកលិខិតឆ្លងដែន ឬអត្តសញ្ញាណប័ណ្ណដែលមានសុពលភាពមកជាមួយ
+                                សម្រាប់ការឆែកអ៊ិនចូលរួមដំណើរកម្សាន្ត។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">ចំណាំថាអានរួច</button>
+                                <button class="btn btn-details btn-sm">ព័ត៌មានលម្អិត</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-bell me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #ffc107; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">2 ថ្ងៃមុន</small>
+                            </div>
+                            <h5 class="mt-3">ការព្រមានអំពីអាកាសធាតុ</h5>
+                            <p class="text-muted mb-0">
+                                មានការរំពឹងទុកថានឹងមានភ្លៀងធ្លាក់តិចតួច អំឡុងពេលដំណើរកម្សាន្តទៅកាន់ភូមិបណ្តែតទឹក។
+                                សូមយកអាវភ្លៀងមកជាមួយ។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">ចំណាំថាអានរួច</button>
+                                <button class="btn btn-details btn-sm">ព័ត៌មានលម្អិត</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="payment" class="mt-5">
+                    <h3 class="mb-4">
+                        <i class="bi bi-qr-code-scan me-2"></i>
+                        ការទូទាត់ប្រាក់
+                    </h3>
+
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-qr-code-scan me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #0d6efd; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">ថ្ងៃនេះ</small>
+                            </div>
+                            <h5 class="mt-3">ទទួលបានការទូទាត់ប្រាក់</h5>
+                            <p class="text-muted mb-0">
+                                ការទូទាត់ប្រាក់ចំនួន <strong>$45</strong> របស់អ្នកត្រូវបានទទួលដោយជោគជ័យ។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">ចំណាំថាអានរួច</button>
+                                <button class="btn btn-details btn-sm">វិក្កយបត្រ</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-qr-code-scan me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #0d6efd; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">ម្សិលមិញ</small>
+                            </div>
+                            <h5 class="mt-3">ទទួលបានប្រាក់កក់</h5>
+                            <p class="text-muted mb-0">
+                                ប្រាក់កក់ចំនួន <strong>$20</strong>
+                                របស់អ្នកសម្រាប់ដំណើរកម្សាន្តជិះរថភ្លើងឫស្សីត្រូវបានទទួលហើយ។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">ចំណាំថាអានរួច</button>
+                                <button class="btn btn-details btn-sm">វិក្កយបត្រ</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-qr-code-scan me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #0d6efd; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">2 ថ្ងៃមុន</small>
+                            </div>
+                            <h5 class="mt-3">ការទាត់ប្រាក់មិនបានសម្រេច</h5>
+                            <p class="text-muted mb-0">
+                                ការព្យាយាមទូទាត់ប្រាក់ចំនួន <strong>$60</strong> ចុងក្រោយរបស់អ្នក មិនអាចដំណើរការបានទេ។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">ចំណាំថាអានរួច</button>
+                                <button class="btn btn-details btn-sm">ព្យាយាមម្តងទៀត</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-qr-code-scan me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #0d6efd; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">3 ថ្ងៃមុន</small>
+                            </div>
+                            <h5 class="mt-3">បានដំណើរការប្រគល់ប្រាក់វិញ</h5>
+                            <p class="text-muted mb-0">
+                                ការប្រគល់ប្រាក់ចំនួន <strong>$15</strong> វិញសម្រាប់ការកក់ដែលបានលុបចោល
+                                ត្រូវបានដំណើរការរួចរាល់ហើយ។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">ចំណាំថាអានរួច</button>
+                                <button class="btn btn-details btn-sm">វិក្កយបត្រ</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="promotion" class="mt-5">
+                    <h3 class="mb-4">
+                        <i class="bi bi-tags me-2"></i>
+                        ប្រូម៉ូសិន
+                    </h3>
+
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-tags me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #7c3aed; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">ថ្ងៃនេះ</small>
+                            </div>
+                            <h5 class="mt-3">ប្រូម៉ូសិនខែកក្កដា</h5>
+                            <p class="text-muted mb-0">
+                                រីករាយជាមួយការបញ្ចុះតម្លៃ 20%
+                                លើដំណើរកម្សាន្តផ្សងព្រេងដែលបានជ្រើសរើសក្នុងប្រទេសកម្ពុជានៅខែនេះ។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">មើល</button>
+                                <button class="btn btn-details btn-sm">ស្វែងយល់បន្ថែម</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-tags me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #7c3aed; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">2 ថ្ងៃមុន</small>
+                            </div>
+                            <h5 class="mt-3">ការបញ្ចុះតម្លៃសម្រាប់ការកក់ទុកមុន</h5>
+                            <p class="text-muted mb-0">
+                                កក់ដំណើរកម្សាន្តទៅកាន់អង្គរវត្តរបស់អ្នក 7 ថ្ងៃមុន ដើម្បីទទួលបានការសន្សំសំចៃ 15%។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">មើល</button>
+                                <button class="btn btn-details btn-sm">ស្វែងយល់បន្ថែម</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-tags me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #7c3aed; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">3 ថ្ងៃមុន</small>
+                            </div>
+                            <h5 class="mt-3">កម្មវិធីពិសេសសម្រាប់ដំណើរកម្សាន្តជាក្រុម</h5>
+                            <p class="text-muted mb-0">
+                                នាំមិត្តភក្តិ 4 នាក់មកជាមួយ និងទទួលបានសំបុត្រឥតគិតថ្លៃ 1 សន្លឹក
+                                សម្រាប់ការជិះទូកទៅកោះរុង។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">មើល</button>
+                                <button class="btn btn-details btn-sm">ស្វែងយល់បន្ថែម</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-tags me-2" style="font-size: 1.2rem;"></i>
+                                    <span class="badge rounded-pill" style="background-color: #7c3aed; width: 24px; height: 24px; padding: 0; display: inline-block;"></span>
+                                </div>
+                                <small class="text-muted">1 សប្តាហ៍មុន</small>
+                            </div>
+                            <h5 class="mt-3">ការលក់បញ្ចុះតម្លៃពិសេសចុងសប្តាហ៍</h5>
+                            <p class="text-muted mb-0">
+                                ទទួលបានការបញ្ចុះតម្លៃ 10% រាល់ការកក់ទាំងអស់ដែលបានធ្វើឡើងក្នុងចុងសប្តាហ៍នេះតែប៉ុណ្ណោះ។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-read btn-sm">មើល</button>
+                                <button class="btn btn-details btn-sm">ស្វែងយល់បន្ថែម</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Handle filter active status
+        document.querySelectorAll('.notification-category').forEach(link => {
+            link.addEventListener('click', function() {
+                // Remove active class from all filters
+                document.querySelectorAll('.notification-category').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Add active class to clicked filter
+                this.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
