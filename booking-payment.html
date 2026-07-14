@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/booking-payment.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <section class=" py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <div id="panelBooking" class="kh-form-card p-4">
+                        <h4 class="mb-4"><i class="fa-solid fa-calendar-check me-2 text-success btn bg-success-subtle"></i>ព័ត៌មានការកក់
+                        </h4>
+                        <form onsubmit="goToPayment(event)">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label>នាមត្រកូល</label>
+                                    <input type="text" class="form-control" placeholder="" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>នាមខ្លួន</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-12">
+                                    <label>បញ្ចូលលេខទូរស័ព្ទ</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>កាលបរិច្ឆេទចេញដំណើរ</label>
+                                    <input type="date" class="form-control" required value="2026-08-14">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>ចំនួនអ្នកដំណើរ</label>
+                                    <input type="number" class="form-control" min="1" value="2" required>
+                                </div>
+                                <div class="col-12">
+                                    <label>ទីតាំងជួបជុំ</label>
+                                    <select class="form-select">
+                                        <option>ខាងមុខសណ្ឋាគារ Angkor Palace</option>
+                                        <option>ព្រលានយន្តហោះសៀមរាប</option>
+                                        <option>ស្ថានីយឡានក្រុងសៀមរាប</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label>កំណត់ចំណាំបន្ថែម (ស្រេចចិត្ត)</label>
+                                    <textarea class="form-control" rows="2"
+                                        placeholder="ឧ. ត្រូវការគ្រែបន្ថែម, អាហារបួស..."></textarea>
+                                </div>
+                            </div>
+                            <button class="btn btn-gold w-100 mt-4 btn-outline-success">បន្តទៅការបង់ប្រាក់ <i
+                                    class="fa-solid fa-arrow-right ms-1"></i></button>
+                        </form>
+
+                    </div>
+                    <section>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class=" d-flex ">
+                                        <i class="bi bi-shield-check text-success fs-4 fw-bold"></i>
+                                        <p>ការពារសុវត្តិភាព</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div id="panelPayment" class="kh-form-card d-none p-4">
+                        <h4 class="mb-4"><i class="fa-solid text-success btn bg-success-subtle fa-credit-card me-2"></i>ជ្រើសរើសវិធីបង់ប្រាក់</h4>
+                        <div class="d-flex flex-column gap-2 mb-4">
+                            <label class="pay-method selected d-flex px-3 py-3 rounded border-success border justify-content-between align-items-center">
+                                <span><input type="radio" name="pay" checked class="me-2">ABA PAY</span>
+                                <i class="fa-solid fa-mobile-screen-button text-success"></i>
+                            </label>
+                            <label class="pay-method d-flex border px-3 py-3 rounded border-success justify-content-between align-items-center">
+                                <span><input type="radio" name="pay" class="me-2">Wing Money</span>
+                                <i class="fa-solid fa-wallet text-success"></i>
+                            </label>
+                            <label class="pay-method d-flex border px-3 py-3 rounded border-success justify-content-between align-items-center">
+                                <span><input type="radio" name="pay" class="me-2">កាតឥណទាន/ឥណពន្ធ</span>
+                                <i class="fa-solid fa-credit-card text-success"></i>
+                            </label>
+                            <label class="pay-method d-flex border px-3 py-3 rounded border-success justify-content-between align-items-center">
+                                <span><input type="radio" name="pay" class="me-2">បង់ជាសាច់ប្រាក់ផ្ទាល់</span>
+                                <i class="fa-solid fa-money-bill-wave text-success"></i>
+                            </label>
+                        </div>
+                        <div class="d-flex justify-content-between fw-bold mb-3"><span>ចំនួនត្រូវបង់សរុប</span><span
+                                style="color:var(--clay)" id="payAmount">$0.00</span></div>
+                        <button class="btn btn-gold w-100 btn-outline-success" onclick="confirmPayment()">បញ្ជាក់ការបង់ប្រាក់</button>
+                    </div>
+
+                    <div id="panelReceipt" class="kh-form-card p-4 d-none text-center">
+                        <i class="fa-solid fa-circle-check text-success fa-3x mb-3"></i>
+                        <h4>ការកក់ជោគជ័យ!</h4>
+                        <p class="text-muted small">ការជូនដំណឹង៖ អ៊ីមែលបញ្ជាក់ការកក់ត្រូវបានផ្ញើទៅអ្នកហើយ។
+                            យើងខ្ញុំនឹងរំលឹកអ្នកម្តងទៀត ១ថ្ងៃ មុនកាលបរិច្ឆេទចេញដំណើរ។</p>
+                        <div class="border rounded p-3 text-start small mt-3 border-success bg-warning-subtle">
+                            <div class="d-flex justify-content-between mb-1"><span>លេខកក់</span><strong>BK-<span
+                                        id="rcptId"></span></strong></div>
+                            <div class="d-flex justify-content-between mb-1"><span>ស្ថានភាព</span><span
+                                    class="status-pill status-confirmed text-success rounded-pill border px-3 py-1 bg-success-subtle">Confirmed</span></div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>កាលបរិច្ឆេទ</span><span>2026-08-14</span>
+                            </div>
+                            <div class="d-flex justify-content-between"><span>ចំនួនទឹកប្រាក់</span><strong
+                                    id="rcptAmount"></strong>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 mt-4">
+                            <a href="profile.html" class="btn btn-jungle text-success w-100">មើលប្រវត្តិកក់</a>
+                            <a href="index.html" class="btn btn-outline-secondary btn-outline-success w-100">ត្រឡប់ទំព័រដើម</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll(".pay-method").forEach(el => {
+            el.addEventListener("click", () => {
+                document.querySelectorAll(".pay-method").forEach(x => x.classList.remove("selected"));
+                el.classList.add("selected");
+                el.querySelector("input").checked = true;
+            });
+        });
+
+        const total = window.APP_STATE.cart.reduce((s, i) => s + i.price * i.qty, 0) * 1.05;
+
+        function goToPayment(e) {
+            e.preventDefault();
+            document.getElementById("panelBooking").classList.add("d-none");
+            document.getElementById("panelPayment").classList.remove("d-none");
+            document.getElementById("payAmount").textContent = formatUSD(total);
+            document.getElementById("stepD2").classList.replace("active", "done");
+            document.getElementById("stepD2").querySelector(".dot").innerHTML = '<i class="fa-solid fa-check"></i>';
+            document.getElementById("stepD3").classList.add("active");
+        }
+        function confirmPayment() {
+            document.getElementById("panelPayment").classList.add("d-none");
+            document.getElementById("panelReceipt").classList.remove("d-none");
+            document.getElementById("stepD3").classList.replace("active", "done");
+            document.getElementById("stepD3").querySelector(".dot").innerHTML = '<i class="fa-solid fa-check"></i>';
+            document.getElementById("stepD4").classList.add("active");
+            document.getElementById("rcptId").textContent = Math.floor(1000 + Math.random() * 9000);
+            document.getElementById("rcptAmount").textContent = formatUSD(total);
+            window.APP_STATE.cart = [];
+            syncNavBadges();
+        }
+    </script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
