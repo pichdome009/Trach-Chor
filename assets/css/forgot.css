@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Kantumruy Pro", sans-serif;
+  background-image: url(../images/SEAVTHEAN/golden-beach-resort-koh-rong-main.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.glass-bac {
+  background-color: rgba(255, 255, 255, 0.148);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.line-input:focus {
+  transform: scale(1.01);
+  background: none;
+  /* border-color: green; */
+  /* outline-style: none !important; */
+  box-shadow: 0 0 2px 4px #00ff9133;
+}

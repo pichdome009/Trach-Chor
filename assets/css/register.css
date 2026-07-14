@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Battambang:wght@100;300;400;700;900&family=Bayon&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Khmer&family=Noto+Sans+Khmer:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Kantumruy Pro", sans-serif;
+  background-image: url(../images/SEAVTHEAN/golden-beach-resort-koh-rong-main.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* .form-control {
+  outline: none !important;
+} */
+.line-input {
+  background: none;
+  transition: 0.3s;
+}
+.line-input:focus {
+  transform: scale(1.01);
+  background: none;
+  box-shadow: 0 0 2px 4px #00ff9133;
+}
+.line {
+  height: 1px;
+  width: 100px;
+  background-color: black;
+}
+.google-icon {
+  width: 20px;
+  /* margin-right: px; */
+}
+.social-link .btn:hover {
+  transform: scale(1.02);
+  transition: 0.5s;
+  background-color: #f5f5f5ed !important;
+  color: black !important;
+  /* border: 1px solid green !important; */
+  box-shadow: 0 0 0 4px #00ff9133;
+}
+form {
+  background-color: rgba(255, 255, 255, 0.148);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+}
+/* .btn-color {
+  background-color: #0f8954;
+  border: none;
+}
+.btn-color:hover {
+  background-color: #0f89548a;
+} */
+.blur {
+  background-color: #3b3a3a30;
+}
