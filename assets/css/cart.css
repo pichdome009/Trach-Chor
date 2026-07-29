@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+html { scroll-behavior: smooth; font-size: 16px; }
 
 :root {
     --primary: #0F172A;
@@ -32,32 +34,36 @@ body {
     color: var(--text-main);
     background-color: var(--body-bg);
     line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
 .kh-card {
-  background: #fff;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-  border: 1px solid rgba(156, 107, 62, .14);
-  transition: .25s;
-  height: 100%;
+    background: #fff;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(156, 107, 62, .14);
+    transition: .25s;
+    height: 100%;
 }
 
 .kh-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(22, 48, 31, .2);
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(22, 48, 31, .2);
 }
 
 .my-card {
     background-color: white;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
     box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    height: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: var(--transition);
 }
 
 .img {
@@ -73,20 +79,253 @@ body {
     object-position: center;
     width: 35%;
     height: 125px;
-    /* background-size: cover; */
 }
 
-.my-card:hover{
+.my-card:hover {
     box-shadow: var(--card-shadow-hover);
     transform: scale(1.02);
     transition: 0.5s;
 }
 
 .product-img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: var(--transition);
 }
 
 .img-bade {
-    background-color: var(--accent) !important;
+    background-color: var(--light) !important;
+}
+
+.btn-booking {
+    box-shadow: var(--success);
+    transition: var(--transition);
+}
+
+.btn-booking:hover {
+    box-shadow: var(--success);
+    transform: scale(1.03);
+    transition: 0.5s;
+}
+
+.bag {
+    border-radius: 50%;
+}
+
+.cart-item-card {
+    display: flex;
+    gap: 24px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 24px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+    transition: .35s;
+}
+
+.cart-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .12);
+}
+
+.cart-item-img {
+    width: 220px;
+    min-width: 220px;
+    position: relative;
+}
+
+.cart-item-img img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.cart-item-type-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    border-radius: 30px;
+    padding: 7px 14px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.hover-primary:hover {
+    color: #0B8457 !important;
+}
+
+
+.btn-remove-item {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.btn-remove-item:hover {
+    transform: rotate(90deg) scale(1.1);
+}
+
+.cart-qty-controls {
+    display: flex;
+    align-items: center;
+    border: 1px solid #dee2e6;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.qty-btn {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: #f8f9fa;
+    color: #0B8457;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.qty-btn:hover {
+    background: #0B8457;
+    color: #fff;
+}
+
+.qty-input {
+    width: 60px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-weight: 700;
+    background: #fff;
+}
+
+
+.coupon-box-luxury {
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+}
+
+.form-control-luxury {
+    height: 55px;
+    border-radius: 50px 0 0 50px;
+    border: 2px solid #dee2e6;
+}
+
+.form-control-luxury:focus {
+    border-color: #0B8457;
+    box-shadow: 0 0 0 .25rem rgba(11, 132, 87, .15);
+}
+
+
+.cart-summary-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 30px;
+    position: sticky;
+    top: 100px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+}
+
+.price-breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px dashed #dee2e6;
+    font-size: 15px;
+}
+
+.price-breakdown-total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.price-breakdown-total span:first-child {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+#cartTotalUsd {
+    color: #0B8457 !important;
+    font-weight: 700;
+}
+
+#cartTotalKhr {
+    color: #6c757d;
+}
+
+#emptyCartMessage {
+    background: #fff;
+    border-radius: 24px;
+    padding: 80px 30px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .06);
+}
+
+.cart-item-card,
+.cart-summary-card,
+.coupon-box-luxury {
+    transition: all .35s ease;
+}
+
+@media(max-width:991px) {
+
+    .cart-item-card {
+        flex-direction: column;
+    }
+
+    .cart-item-img {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .cart-item-img img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .cart-summary-card {
+        margin-top: 30px;
+        position: relative;
+        top: 0;
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .cart-item-card {
+        padding: 15px;
+    }
+
+    .cart-qty-controls {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .qty-input {
+        width: 50px;
+    }
+
+    .price-breakdown-row,
+    .price-breakdown-total {
+        font-size: 14px;
+    }
+
 }
