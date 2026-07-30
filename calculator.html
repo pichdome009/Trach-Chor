@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>គណនាចំណាយកម្សាន្ត (Trip Budget Calculator) - ត្រាច់ចរ (Trach Chor)</title>
+    <meta name="description"
+        content="គណនាថវិកា និងផែនការចំណាយសម្រាប់ការធ្វើដំណើរកម្សាន្តនៅកម្ពុជា ជាមួយប្រព័ន្ធគណនា VIP របស់ Trach Chor។">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧮</text></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/calculator.css">
+
+</head>
+
+<body>
+
+    <header class="calc-layout">>
+        <div class="container animate__animated animate__fadeInDown">
+            <div class=" bg-img">
+                <div class="calc-header-card">
+                    <i class="fas fa-calculator calc-header-bg-icon"></i>
+                    <div class="position-relative z-2 col-7">
+                        <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold"><i
+                                class="fas fa-magic me-1"></i>
+                            AI SMART BUDGET PLANNER</span>
+                        <h1 class="display-5 fw-bold text-white mb-3">ប្រព័ន្ធគណនាចំណាយកម្សាន្ត
+                        </h1>
+                        <p class="text-light fs-5 opacity-90">
+                            ជ្រើសរើសខេត្តគោលដៅ ចំនួនថ្ងៃ ភ្ញៀវទេសចរ យានជំនិះ កន្លែងស្នាក់នៅ និងអាហារ
+                            ដើម្បីទទួលបានផែនការថវិកាសរុប
+                            និងតារាងបែងចែកចំណាយច្បាស់លាស់ ១០០%!
+                        </p>
+                        <div class=" d-flex gap-5">
+                            <div class=" text-center">
+                                <div class="icon-circle text-success bg-body">
+                                    <i class="fa-solid fa-face-smile"></i>
+                                </div>
+                                <p class=" pt-1">ងាយស្រួលប្រើ</p>
+                            </div>
+                            <div class=" text-center">
+                                <div class="icon-circle text-primary bg-body">
+                                    <i class="fa-solid fa-bullseye"></i>
+                                </div>
+                                <p class=" pt-1">ការប៉ាន់ស្មានត្រឹមត្រូវ</p>
+                            </div>
+                            <div class=" text-center">
+                                <div class="icon-circle text-warning bg-body">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                </div>
+                                <p class=" pt-1">រក្សាទុក និងចែករំលែក</p>
+                            </div>
+                            <div class=" text-center">
+                                <div class="icon-circle text-danger bg-body">
+                                    <i class="fa-solid fa-tag"></i>
+                                </div>
+                                <p class=" pt-1">ឥតគិតថ្លៃ ១០០%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+
+                <!-- LEFT -->
+
+                <div class="col-lg-8">
+                    <div class="card shadow border-0 rounded-4 p-4">
+                        <h3 class="mb-4"><i class="fa-solid fa-suitcase text-primary"></i> ព័ត៌មានលម្អិតអំពីការធ្វើដំណើរ
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label>គោលដៅ</label>
+                                <select id="destination" class="form-select">
+                                    <option>Siem Reap</option>
+                                    <option>Phnom Penh</option>
+                                    <option>Kampot</option>
+                                    <option>Kep</option>
+                                    <option>Koh Rong</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>
+                                    អ្នកធ្វើដំណើរ
+                                </label>
+                                <input type="number" id="people" value="2" min="1" class="form-control">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>
+                                    រយៈពេល
+                                </label>
+                                <input type="number" id="days" value="5" min="1" class="form-control">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>
+                                    របៀបនៃការធ្វើដំណើរ
+                                </label>
+                                <select id="style" class="form-select">
+                                    <option value="20">
+                                        Budget
+                                    </option>
+                                    <option value="40" selected>
+                                        Mid-range
+                                    </option>
+                                    <option value="80">
+                                        Luxury
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Budget -->
+
+                    <div class="card mt-4 shadow border-0 rounded-4 p-4">
+                        <h3>ប្រភេទថវិកា</h3>
+                        <table class="table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>ប្រភេទ</th>
+                                    <th>តម្លៃ/ថ្ងៃ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Accommodation</td>
+                                    <td>
+                                        <input type="number" id="hotel" class="form-control" value="30">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Food</td>
+                                    <td>
+                                        <input type="number" id="food" class="form-control" value="20">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Transportation</td>
+                                    <td>
+                                        <input type="number" id="transport" class="form-control" value="15">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Activities</td>
+                                    <td>
+                                        <input type="number" id="activity" class="form-control" value="25">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Shopping</td>
+                                    <td>
+                                        <input type="number" id="shopping" class="form-control" value="10">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- <button class="btn btn-success w-100" onclick="calculateBudget()">
+                            Calculate Budget
+                        </button> -->
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="col-lg-4">
+                    <div class="card shadow border-0 rounded-4 p-4 sticky-top">
+                        <h3>
+                            ប៉ាន់ស្មានសរុប
+                        </h3>
+                        <div class="text-center">
+                            <h1 class="display-3 text-success fw-bold" id="total">
+                                $0
+                            </h1>
+                        </div>
+                        <hr>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between">
+                                Accommodation
+                                <span id="hotelTotal">
+                                    0
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                Food
+                                <span id="foodTotal">
+                                    0
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                Transport
+                                <span id="transportTotal">
+                                    0
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                Activities
+                                <span id="activityTotal">
+                                    0
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                Shopping
+                                <span id="shoppingTotal">
+                                    0
+                                </span>
+                            </li>
+                        </ul>
+                        <button class="btn btn-success mt-4" onclick="calculateBudget()">Save Plan</button>
+                        <button class="btn btn-outline-primary mt-2">Share</button>
+                        <button class="btn btn-outline-danger mt-2">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const people = document.getElementById("people");
+        const days = document.getElementById("days");
+        const hotel = document.getElementById("hotel");
+        const food = document.getElementById("food");
+        const transport = document.getElementById("transport");
+        const activity = document.getElementById("activity");
+        const shopping = document.getElementById("shopping");
+        const total = document.getElementById("total");
+        const hotelTotal = document.getElementById("hotelTotal");
+        const foodTotal = document.getElementById("foodTotal");
+        const transportTotal = document.getElementById("transportTotal");
+        const activityTotal = document.getElementById("activityTotal");
+        const shoppingTotal = document.getElementById("shoppingTotal");
+
+        function calculateBudget() {
+
+            const traveler = Number(people.value);
+            const tripDays = Number(days.value);
+
+            const hotelCost = Number(hotel.value) * tripDays;
+            const foodCost = Number(food.value) * tripDays;
+            const transportCost = Number(transport.value) * tripDays;
+            const activityCost = Number(activity.value) * tripDays;
+            const shoppingCost = Number(shopping.value);
+
+            const grandTotal =
+                (hotelCost +
+                    foodCost +
+                    transportCost +
+                    activityCost +
+                    shoppingCost) * traveler;
+
+            hotelTotal.innerHTML = "$" + hotelCost * traveler;
+
+            foodTotal.innerHTML = "$" + foodCost * traveler;
+
+            transportTotal.innerHTML =
+                "$" + transportCost * traveler;
+
+            activityTotal.innerHTML =
+                "$" + activityCost * traveler;
+
+            shoppingTotal.innerHTML =
+                "$" + shoppingCost * traveler;
+
+            total.innerHTML =
+                "$" + grandTotal.toLocaleString();
+        }
+        const inputs = document.querySelectorAll("input,select");
+        inputs.forEach(function (item) {
+            item.addEventListener("input", calculateBudget);
+
+        });
+        const saveBtn =
+            document.querySelector(".btn-success");
+
+        saveBtn.addEventListener("click", function () {
+
+            const plan = {
+
+                destination:
+                    document.getElementById("destination").value,
+                travelers:
+                    people.value,
+                days:
+                    days.value,
+                hotel:
+                    hotel.value,
+                food:
+                    food.value,
+                transport:
+                    transport.value,
+
+                activity:
+                    activity.value,
+
+                shopping:
+                    shopping.value,
+
+                total:
+                    total.innerHTML
+
+            };
+
+            localStorage.setItem(
+                "travelPlan",
+                JSON.stringify(plan)
+            );
+
+            alert("Plan Saved Successfully!");
+
+        });
+        window.onload = function () {
+
+            const saved =
+                localStorage.getItem("travelPlan");
+
+            if (saved) {
+
+                const data = JSON.parse(saved);
+
+                document.getElementById("destination").value =
+                    data.destination;
+
+                people.value = data.travelers;
+
+                days.value = data.days;
+
+                hotel.value = data.hotel;
+
+                food.value = data.food;
+
+                transport.value = data.transport;
+
+                activity.value = data.activity;
+
+                shopping.value = data.shopping;
+
+            }
+
+            calculateBudget();
+
+        };
+        const resetBtn =
+            document.querySelector(".btn-outline-danger");
+
+        resetBtn.addEventListener("click", function () {
+
+            people.value = 2;
+
+            days.value = 5;
+
+            hotel.value = 30;
+
+            food.value = 20;
+
+            transport.value = 15;
+
+            activity.value = 25;
+
+            shopping.value = 10;
+
+            document.getElementById("destination").selectedIndex = 0;
+
+            localStorage.removeItem("travelPlan");
+
+            calculateBudget();
+
+        });
+        const shareBtn =
+            document.querySelector(".btn-outline-primary");
+
+        shareBtn.addEventListener("click", function () {
+
+            const text = `
+                Travel Cost Calculator
+
+                Destination : ${document.getElementById("destination").value}
+
+                Travelers : ${people.value}
+
+                Days : ${days.value}
+
+                Estimated Total : ${total.innerHTML}
+                `;
+
+            if (navigator.share) {
+
+                navigator.share({
+
+                    title: "Travel Budget",
+
+                    text: text
+
+                });
+
+            } else {
+
+                navigator.clipboard.writeText(text);
+
+                alert("Plan copied to clipboard.");
+
+            }
+
+        });
+
+        calculateBudget();
+    </script>
+
+</body>
+
+</html>

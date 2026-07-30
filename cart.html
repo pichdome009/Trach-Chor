@@ -4,49 +4,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>រទេះទិញទំនិញ (Shopping Cart) - ត្រាច់ចរ (Trach Chor)</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/cart.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-
     <section class=" py-5">
         <div class="container border-bottom border-2 pb-5">
-            <h3 class=" mb-4">ទំនិញរបស់អ្នក</h3>
-            <div class="row">
-                <div class="col-lg-8 ">
+            <div class=" row d-flex justify-content-between align-items-center pb-2">
+                <div class=" col-lg-8 col-12">
+                    <div class=" text-center text-lg-start pb-3 pb-lg-0">
+                        <h1 class=" text-dark fw-bold"><i
+                                class="bi bi-cart3 bag bg-success-subtle text-success p-3 fs-4"></i>
+                            រទេះទិញទំនិញរបស់អ្នក
+                        </h1>
+                        <p class=" pt-4 px-3 fs-5">ពិនិត្យមើលកញ្ចប់ទេសចរណ៍ សណ្ឋាគារ
+                            និងផលិតផលអនុស្សាវរីយ៍មុនពេលទូទាត់ប្រាក់។
+                        </p>
+                    </div>
+                </div>
+                <div class=" col-lg-4 col-12 pb-3 pb-lg-0">
+                    <div class=" text-lg-end">
+                        <a class=" btn btn-outline-success fs-5 fw-medium" href="#">បន្តការជ្រើសរើសគោលដៅ <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 align-items-start">
+                <div class="col-lg-8" data-aos="fade-right">
                     <div class="kh-card rounded-4 p-3" id="cartBox">
-                        <div class=" d-flex align-items-center gap-2">
-                            <i class="bi bi-cart-check-fill text-primary btn bg-primary-subtle fw-bold fs-4"></i>
-                            <h4 class=" fw-bold">សេវាកម្មកំពុងកក់ (...)</h4>
+                        <div class=" d-flex align-items-center gap-2 pb-4">
+                            <i class="bi bi-cart-check-fill text-success btn bg-success-subtle fw-bold fs-4"></i>
+                            <h4 class="fw-bold text-dark">សេវាកម្មកំពុងកក់(<span id="cartCount">3</span>)</h4>
+                        </div>
+                        <div class="text-center py-5 d-none" id="emptyCartMessage">
+                            <div class="mb-4"><i class="fas fa-shopping-basket fs-1 text-muted opacity-50"></i></div>
+                            <h4 class="fw-bold text-dark mb-2">រទេះទិញទំនិញរបស់អ្នកនៅទទេ!</h4>
+                            <p class="text-muted small mb-4">សូមស្វែងរកគោលដៅទេសចរណ៍ ឬផលិតផលអនុស្សាវរីយ៍
+                                ដើម្បីបន្ថែមចូលរទេះ VIP របស់អ្នក។
+                            </p>
+                            <a href="destinations.html"
+                                class="btn btn-primary-luxury px-4 py-2">ស្វែងរកគោលដៅទេសចរណ៍ឥឡូវនេះ</a>
+                        </div>
+                        <div class="cart-item-card" data-price="100" data-aos="fade-up">
+                            <div class="cart-item-img">
+                                <span class="badge bg-success text-white cart-item-type-badge">សណ្ឋាគារ</span>
+                                <img src="assets/images/naret/unnamed.jpg" alt="Angkor VIP Heritage">
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-1">
+                                    <a href="destination-detail.html" class="text-decoration-none">
+                                        <h5 class="fw-bold text-dark hover-primary mb-0">សណ្ឋាគារ ម៉េម័រ​ សៀមរាប</h5>
+                                    </a>
+                                    <button type="button"
+                                        class="btn btn-sm btn-outline-danger border-0 rounded-circle btn-remove-item"
+                                        title="លុបចេញពីបញ្ជី"><i class="fas fa-trash-alt"></i></button>
+                                </div>
+                                <div class="small text-muted mb-2">
+                                    <i class="fas fa-calendar-check text-primary me-1"></i> ថ្ងៃចូល៖ <b>១៥ មិថុនា
+                                        ២០២៦</b> (៣ ថ្ងៃ ២ យប់ - ២ នាក់)
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                                    <!-- Quantity Selector -->
+                                    <div class="cart-qty-controls">
+                                        <button type="button" class="qty-btn qty-minus"><i
+                                                class="fas fa-minus"></i></button>
+                                        <input type="text" class="qty-input" value="2" readonly>
+                                        <button type="button" class="qty-btn qty-plus"><i
+                                                class="fas fa-plus"></i></button>
+                                    </div>
+                                    <!-- Price Display -->
+                                    <div class="text-end">
+                                        <span class="small text-muted d-block">$100 / យប់</span>
+                                        <span class="fs-5 fw-bold text-primary item-total-price">$200.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item-card" data-price="10" data-aos="fade-up">
+                            <div class="cart-item-img">
+                                <span class="badge bg-success text-white cart-item-type-badge">ភោជនីយដ្ឋាន</span>
+                                <img src="assets/images/naret/images (4).jpeg" alt="Angkor VIP Heritage">
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-1">
+                                    <a href="destination-detail.html" class="text-decoration-none">
+                                        <h5 class="fw-bold text-dark hover-primary mb-0">ជួលម៉ូតូ</h5>
+                                    </a>
+                                    <button type="button"
+                                        class="btn btn-sm btn-outline-danger border-0 rounded-circle btn-remove-item"
+                                        title="លុបចេញពីបញ្ជី"><i class="fas fa-trash-alt"></i></button>
+                                </div>
+                                <div class="small text-muted mb-2">
+                                    <i class="fas fa-calendar-check text-primary me-1"></i> ថ្ងៃចូល៖ <b>១៥ មិថុនា
+                                        ២០២៦</b> (៣ ថ្ងៃ ២ យប់ - ២
+                                    នាក់)
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                                    <!-- Quantity Selector -->
+                                    <div class="cart-qty-controls">
+                                        <button type="button" class="qty-btn qty-minus"><i
+                                                class="fas fa-minus"></i></button>
+                                        <input type="text" class="qty-input" value="2" readonly>
+                                        <button type="button" class="qty-btn qty-plus"><i
+                                                class="fas fa-plus"></i></button>
+                                    </div>
+                                    <!-- Price Display -->
+                                    <div class="text-end">
+                                        <span class="small text-muted d-block">$10 / ថ្ងៃ</span>
+                                        <span class="fs-5 fw-bold text-primary item-total-price">$20.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item-card" data-price="220" data-aos="fade-up">
+                            <div class="cart-item-img">
+                                <span class="badge bg-success text-white cart-item-type-badge">កញ្ចប់ទេសចរណ៍</span>
+                                <img src="assets/images/naret/Angkorareab.jpg" alt="Angkor VIP Heritage">
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-1">
+                                    <a href="destination-detail.html" class="text-decoration-none">
+                                        <h5 class="fw-bold text-dark hover-primary mb-0">ប្រាសាទអង្គរវត្ត</h5>
+                                    </a>
+                                    <button type="button"
+                                        class="btn btn-sm btn-outline-danger border-0 rounded-circle btn-remove-item"
+                                        title="លុបចេញពីបញ្ជី"><i class="fas fa-trash-alt"></i></button>
+                                </div>
+                                <div class="small text-muted mb-2">
+                                    <i class="fas fa-calendar-check text-primary me-1"></i> ថ្ងៃចូល៖ <b>១៥ មិថុនា
+                                        ២០២៦</b> (៣ ថ្ងៃ ២ យប់ - ២
+                                    នាក់)
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                                    <!-- Quantity Selector -->
+                                    <div class="cart-qty-controls">
+                                        <button type="button" class="qty-btn qty-minus"><i
+                                                class="fas fa-minus"></i></button>
+                                        <input type="text" class="qty-input" value="1" readonly>
+                                        <button type="button" class="qty-btn qty-plus"><i
+                                                class="fas fa-plus"></i></button>
+                                    </div>
+                                    <!-- Price Display -->
+                                    <div class="text-end">
+                                        <span class="small text-muted d-block">$220 / កញ្ចប់</span>
+                                        <span class="fs-5 fw-bold text-primary item-total-price">$220.00</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+
+                <div class="col-lg-4  position-sticky" style="top: 20px;" data-aos="fade-left">
                     <div class="kh-card rounded-4">
                         <div class=" d-flex justify-content-between align-items-center bg-warning-subtle p-3 rounded-4">
                             <h4 class="mb-3">សង្ខេបការបញ្ជាទិញ</h4>
                             <img class=" img-bag" src="assets/images/naret/store .webp" alt="">
                         </div>
                         <div class=" px-3">
-                            <div class="d-flex justify-content-between fw-medium mb-2 mt-4"><span>សរុបរង</span><span 
+                            <div class="d-flex justify-content-between fw-medium mb-2 mt-4"><span>សរុបរង</span><span
                                     id="subtotal">$0.00</span>
                             </div>
-                            <div class="d-flex justify-content-between fw-medium mb-2"><span>បញ្ចុះតម្លៃ</span><span class=" text-warning"
-                                    id="subtotal">$0.00</span>
+                            <div class="d-flex justify-content-between fw-medium mb-2"><span>បញ្ចុះតម្លៃ</span><span
+                                    class=" text-warning" id="subtotal">$0.00</span>
                             </div>
-                            <div class="d-flex justify-content-between fw-medium mb-2"><span>ពន្ធសេវាកម្ម (5%)</span><span
-                                    id="tax">$0.00</span></div>
+                            <div class="d-flex justify-content-between fw-medium mb-2"><span>ពន្ធសេវាកម្ម
+                                    (5%)</span><span id="tax">$0.00</span></div>
                         </div>
                         <hr>
-                        <div class="d-flex justify-content-between fw-bold mb-3 px-3"><span>សរុប</span><span class=" text-primary"
-                                id="grandtotal">$0.00</span></div>
+                        <div class="d-flex justify-content-between fw-bold mb-3 px-3"><span>សរុប</span><span
+                                class=" text-primary" id="grandtotal">$0.00</span></div>
                         <div class=" m-3">
-                            <a href="booking-payment.html" class="btn btn-warning fw-medium w-100 ">បន្តទៅការកក់ <i
-                                class="fa-solid fa-arrow-right ms-1"></i></a>
+                            <a href="booking-payment.html"
+                                class="btn btn-booking btn-success fw-medium w-100 rounded-pill py-2">បន្តទៅការកក់ <i
+                                    class="fa-solid fa-arrow-right ms-1"></i></a>
                         </div>
                         <div class=" d-flex px-3 align-items-center gap-3">
                             <div class=" text-primary fs-4 btn fw-bold rounded-3 bg-primary-subtle">
@@ -74,7 +214,7 @@
                             </div>
                         </div>
 
-                        
+
                     </div>
                 </div>
             </div>
@@ -83,363 +223,436 @@
 
     <section class="pb-5">
         <div class="container">
-            <h3 class=" mb-4">ផលិតផល និងសេវាកម្មណែនាំបន្ថែម</h3>
-            <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
-                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
-                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
-                    <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled"
-                        type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">Disabled</button>
-                </div>
-            </nav>
-            <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active mt-4" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+            <h1 class=" fw-bold mb-5 text-dark text-md-start text-center" data-aos="fade-up" data-aos-duration="1000"><i
+                    class="bi bi-bag-dash-fill text-success bag bg-success-subtle p-3 fs-4"></i> ផលិតផល
+                និងសេវាកម្មណែនាំបន្ថែម</h1>
+
+            <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist" data-aos="fade-up" data-aos-duration="1000">
+                <li class="nav-item" role="presentation">
+                    <button class=" btn btn-outline-success border-success rounded-5 btn-fav active" id="pills-home-tab"
+                        data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab"
+                        aria-controls="pills-home" aria-selected="true"><i class="bi bi-gift"></i> ផលិតផល</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="btn btn-outline-success border-success rounded-5 mx-3 btn-fav" id="pills-profile-tab"
+                        data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab"
+                        aria-controls="pills-profile" aria-selected="false"><i class="bi bi-bell-fill"></i>
+                        សេវាកម្ម</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
                     tabindex="0">
-                    <div class="row">
-                        <div class="col-4">
+                    <div class="row g-4">
+                        <div class=" col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
                             <div class="my-card">
                                 <div class="img position-relative">
                                     <span
-                                        class=" small fw-medium img-bade text-light py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
+                                        class=" mt-2 mx-2 position-absolute img-bade btn rounded-pill">លក់ដាច់បំផុត</span>
+                                    <i
+                                        class="fa-regular fa-heart heart fs-5 position-absolute end-0 fs-3 text-light m-2"></i>
                                     <img src="assets/images/naret/images.jpeg" class="card-img-top product-img"
                                         alt="...">
                                 </div>
-                                <div class="card-body p-3">
-                                    <span class="category">ក្រម៉ា</span>
-                                    <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
+                                <div class="px-3 pt-3 pb-3">
+                                    <p class=" text-dark fs-5 fw-bold">ក្រម៉ាខ្មែរ</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> ភ្នំពេញ</span>
                                 </div>
-                                <div class="rating px-3 pb-3 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span class=" text-dark">(4.9)</span>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.9 (120)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$8.00</h5>
                                 </div>
-                                <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                                    <h5 class=" fw-bolder">$18.50</h5>
-                                    <a href="#"
-                                        class="card-link text-decoration-none border rounded px-2 align-content-center fw-medium"><i
-                                            class="bi bi-eye"></i> មើលលម្អិត</a>
-                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="ក្រម៉ាខ្មែរ" data-price="8"
+                                    data-image="assets/images/naret/images.jpeg">🛒 បន្ថែមទៅកន្ត្រក
+                                </a>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class=" col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
                             <div class="my-card">
                                 <div class="img position-relative">
-                                    <span
-                                        class=" small fw-medium img-bade text-light py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
-                                    <img src="assets/images/naret/Angkorareab.jpg" class="card-img-top product-img"
+                                    <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill">ថ្មីៗ​នេះ
+                                    </span>
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/images (2).jpeg" class="card-img-top product-img"
                                         alt="...">
                                 </div>
-                                <div class="card-body p-3">
-                                    <span class="category">ក្រម៉ា</span>
-                                    <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">ម្រេចកំពត</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> កំពត</span>
                                 </div>
-                                <div class="rating px-3 pb-3 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span class=" text-dark">(4.9)</span>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.8(98)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$12.00</h5>
                                 </div>
-                                <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                                    <h5 class=" fw-bolder">$18.50</h5>
-                                    <a href="#"
-                                        class="card-link text-decoration-none border rounded px-2 align-content-center fw-medium"><i
-                                            class="bi bi-eye"></i> មើលលម្អិត</a>
-                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="ម្រេចកំពត" data-price="12"
+                                    data-image="assets/images/naret/images (2).jpeg">🛒 បន្ថែមទៅកន្ត្រក
+                                </a>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
                             <div class="my-card">
                                 <div class="img position-relative">
-                                    <span
-                                        class=" small fw-medium img-bade text-light py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
-                                    <img src="assets/images/naret/images (1).jpeg" class="card-img-top product-img"
+                                    <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill">ពេញនិយម</span>
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/1_498eba896b5010f742dadc40053a780d.jpg"
+                                        class="card-img-top product-img" alt="...">
+                                </div>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">ចម្លាក់អង្គរវត្ត</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
+                                </div>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.8(98)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$60.00</h5>
+                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="បចម្លាក់អង្គរវត្ត" data-price="60"
+                                    data-image="assets/images/naret/1_498eba896b5010f742dadc40053a780d.jpg">🛒
+                                    បន្ថែមទៅកន្ត្រក
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="my-card">
+                                <div class="img position-relative">
+                                    <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill">ថ្មីៗ​នេះ
+                                    </span>
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/images (3).jpeg" class="card-img-top product-img"
                                         alt="...">
                                 </div>
-                                <div class="card-body p-3">
-                                    <span class="category">ក្រម៉ា</span>
-                                    <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">សូត្រខ្មែរ</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> តាកែវ</span>
                                 </div>
-                                <div class="rating px-3 pb-3 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span class=" text-dark">(4.9)</span>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.7(76)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$30.00</h5>
                                 </div>
-                                <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                                    <h5 class=" fw-bolder">$18.50</h5>
-                                    <a href="#"
-                                        class="card-link text-decoration-none border rounded px-2 align-content-center fw-medium"><i
-                                            class="bi bi-eye"></i> មើលលម្អិត</a>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="សូត្រខ្មែរ" data-price="30"
+                                    data-image="assets/images/naret/images (3).jpeg">🛒 បន្ថែមទៅកន្ត្រក
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="my-card">
+                                <div class="img position-relative">
+                                    <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill">ធម្មជាតិ</span>
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/2023-10-10-13.31.34.webp"
+                                        class="card-img-top product-img" alt="...">
                                 </div>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">ស្ករត្នោត</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> កំពង់ស្ពឺ</span>
+                                </div>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.8(88)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$6.00</h5>
+                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="ស្ករត្នោត" data-price="6"
+                                    data-image="assets/images/naret/2023-10-10-13.31.34.webp">🛒 បន្ថែមទៅកន្ត្រក
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="my-card">
+                                <div class="img position-relative">
+                                    <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill">សិប្បកម្ម
+                                    </span>
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/20230908_184920-e1697228699720.jpg"
+                                        class="card-img-top product-img" alt="...">
+                                </div>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">កន្ត្រកសិប្បកម្ម</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> បាតដំបង</span>
+                                </div>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.9(64)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$10.00</h5>
+                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="កន្ត្រកសិប្បកម្ម" data-price="10"
+                                    data-image="assets/images/naret/20230908_184920-e1697228699720.jpg">🛒
+                                    បន្ថែមទៅកន្ត្រក
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="my-card">
+                                <div class="img position-relative">
+                                    <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill">អាវយឺតថ្មី
+                                    </span>
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/t-shrit.jpeg" class="card-img-top product-img"
+                                        alt="...">
+                                </div>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">អាវយឺត</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
+                                </div>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.4(72)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$5.50</h5>
+                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="កន្ត្រកសិប្បកម្ម" data-price="5.5"
+                                    data-image="assets/images/naret/t-shrit.jpeg">🛒 បន្ថែមទៅកន្ត្រក
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="my-card">
+                                <div class="img position-relative">
+                                    <span
+                                        class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill text-success">គំនូរ
+                                    </span>
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/images (6).jpeg" class="card-img-top product-img"
+                                        alt="...">
+                                </div>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">គំនូរខ្មែរ​អង្គរវត្ត</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
+                                </div>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.1(89)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$50.00</h5>
+                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="កន្ត្រកសិប្បកម្ម" data-price="50"
+                                    data-image="assets/images/naret/images (6).jpeg">🛒 បន្ថែមទៅកន្ត្រក
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade mt-4" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
+
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
                     tabindex="0">
-                    <div class="row">
-                        <div class="col-4">
+                    <div class="row g-4">
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
                             <div class="my-card">
                                 <div class="img position-relative">
-                                    <span
-                                        class=" small fw-medium img-bade text-light py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
-                                    <img src="assets/images/images.jpeg" class="card-img-top product-img" alt="...">
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/unnamed.jpg" class="card-img-top product-img"
+                                        alt="...">
                                 </div>
-                                <div class="card-body p-3">
-                                    <span class="category">ក្រម៉ា</span>
-                                    <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">សណ្ឋាគារ ម៉េម័រ​ សៀមរាប</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
                                 </div>
-                                <div class="rating px-3 pb-3 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span class=" text-dark">(4.9)</span>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.7(250)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$100.00/យប់</h5>
                                 </div>
-                                <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                                    <h5 class=" fw-bolder">$18.50</h5>
-                                    <a href="#"
-                                        class="card-link text-decoration-none border rounded px-2 align-content-center fw-medium"><i
-                                            class="bi bi-eye"></i> មើលលម្អិត</a>
-                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="សណ្ឋាគារ ម៉េម័រ​ សៀមរាប" data-price="100"
+                                    data-image="assets/images/naret/unnamed.jpg">🛒 បន្ថែមទៅកន្ត្រក
+                                </a>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
                             <div class="my-card">
                                 <div class="img position-relative">
-                                    <span
-                                        class=" small fw-medium img-bade text-light py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
-                                    <img src="assets/images/images.jpeg" class="card-img-top product-img" alt="...">
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/koh-rong-sanloem-cambodia.jpg"
+                                        class="card-img-top product-img" alt="...">
                                 </div>
-                                <div class="card-body p-3">
-                                    <span class="category">ក្រម៉ា</span>
-                                    <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">ការជួលទូក</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> កោះរ៉ុង</span>
                                 </div>
-                                <div class="rating px-3 pb-3 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span class=" text-dark">(4.9)</span>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.2(520)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$50.00/ថ្ងៃ</h5>
                                 </div>
-                                <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                                    <h5 class=" fw-bolder">$18.50</h5>
-                                    <a href="#"
-                                        class="card-link text-decoration-none border rounded px-2 align-content-center fw-medium"><i
-                                            class="bi bi-eye"></i> មើលលម្អិត</a>
-                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="ការជួលទូក" data-price="50"
+                                    data-image="assets/images/naret/koh-rong-sanloem-cambodia.jpg">🛒 បន្ថែមទៅកន្ត្រក
+                                </a>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
                             <div class="my-card">
                                 <div class="img position-relative">
-                                    <span
-                                        class=" small fw-medium img-bade text-light py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
-                                    <img src="assets/images/images.jpeg" class="card-img-top product-img" alt="...">
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/toyota-alphard-z-gasoline-4wd-465761.png"
+                                        class="card-img-top product-img" alt="...">
                                 </div>
-                                <div class="card-body p-3">
-                                    <span class="category">ក្រម៉ា</span>
-                                    <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">ការជួលរថយន្ត</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
                                 </div>
-                                <div class="rating px-3 pb-3 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span class=" text-dark">(4.9)</span>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.8(320)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$45.00/ថ្ងៃ</h5>
                                 </div>
-                                <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                                    <h5 class=" fw-bolder">$18.50</h5>
-                                    <a href="#"
-                                        class="card-link text-decoration-none border rounded px-2 align-content-center fw-medium"><i
-                                            class="bi bi-eye"></i> មើលលម្អិត</a>
-                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="ការជួលរថយន្ត" data-price="45"
+                                    data-image="assets/images/naret/toyota-alphard-z-gasoline-4wd-465761.png">🛒
+                                    បន្ថែមទៅកន្ត្រក
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade mt-4" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
-                    tabindex="0">
-                    <div class="row">
-                        <div class="col-4">
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
                             <div class="my-card">
                                 <div class="img position-relative">
-                                    <span
-                                        class=" small fw-medium img-bade text-light py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
-                                    <img src="assets/images/images.jpeg" class="card-img-top product-img" alt="...">
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/images (4).jpeg" class="card-img-top product-img"
+                                        alt="...">
                                 </div>
-                                <div class="card-body p-3">
-                                    <span class="category">ក្រម៉ា</span>
-                                    <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">ការជួលម៉ូតូ</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
                                 </div>
-                                <div class="rating px-3 pb-3 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span class=" text-dark">(4.9)</span>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.3(70)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$10.00/ថ្ងៃ</h5>
                                 </div>
-                                <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                                    <h5 class=" fw-bolder">$18.50</h5>
-                                    <a href="#"
-                                        class="card-link text-decoration-none border rounded px-2 align-content-center fw-medium"><i
-                                            class="bi bi-eye"></i> មើលលម្អិត</a>
-                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="ការជួលម៉ូតូ" data-price="10"
+                                    data-image="assets/images/naret/images (4).jpeg">🛒 បន្ថែមទៅកន្ត្រក
+                                </a>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
                             <div class="my-card">
                                 <div class="img position-relative">
-                                    <span
-                                        class=" small fw-medium img-bade text-light py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
-                                    <img src="assets/images/images.jpeg" class="card-img-top product-img" alt="...">
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/Tour Guide khmer.jpg"
+                                        class="card-img-top product-img" alt="...">
                                 </div>
-                                <div class="card-body p-3">
-                                    <span class="category">ក្រម៉ា</span>
-                                    <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">ជួល​ TourGuide</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
                                 </div>
-                                <div class="rating px-3 pb-3 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span class=" text-dark">(4.9)</span>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.5(420)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$40.00/ម្នាក់</h5>
                                 </div>
-                                <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                                    <h5 class=" fw-bolder">$18.50</h5>
-                                    <a href="#"
-                                        class="card-link text-decoration-none border rounded px-2 align-content-center fw-medium"><i
-                                            class="bi bi-eye"></i> មើលលម្អិត</a>
-                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="ជួល​ TourGuide" data-price="40"
+                                    data-image="assets/images/naret/Tour Guide khmer.jpg">🛒
+                                    បន្ថែមទៅកន្ត្រក
+                                </a>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
                             <div class="my-card">
                                 <div class="img position-relative">
-                                    <span
-                                        class=" small fw-medium img-bade text-light py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
-                                    <img src="assets/images/images.jpeg" class="card-img-top product-img" alt="...">
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/1.jpg" class="card-img-top product-img" alt="...">
                                 </div>
-                                <div class="card-body p-3">
-                                    <span class="category">ក្រម៉ា</span>
-                                    <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">ភោជនីយដ្ឋាន ច័ន្ទរស្មី</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
                                 </div>
-                                <div class="rating px-3 pb-3 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span class=" text-dark">(4.9)</span>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.3(392)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$20.00/យប់</h5>
                                 </div>
-                                <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                                    <h5 class=" fw-bolder">$18.50</h5>
-                                    <a href="#"
-                                        class="card-link text-decoration-none border rounded px-2 align-content-center fw-medium"><i
-                                            class="bi bi-eye"></i> មើលលម្អិត</a>
-                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="ភោជនីយដ្ឋាន ច័ន្ទរស្មី" data-price="20"
+                                    data-image="assets/images/naret/1.jpg">🛒 បន្ថែមទៅកន្ត្រក
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade mt-4" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab"
-                    tabindex="0">
-                    <div class="row">
-                        <div class="col-4">
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
                             <div class="my-card">
                                 <div class="img position-relative">
-                                    <span
-                                        class=" small fw-medium img-bade text-light py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
-                                    <img src="assets/images/images.jpeg" class="card-img-top product-img" alt="...">
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/images (7).jpeg" class="card-img-top product-img"
+                                        alt="...">
                                 </div>
-                                <div class="card-body p-3">
-                                    <span class="category">ក្រម៉ា</span>
-                                    <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">បោះតង់</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> គិរីរម្យ</span>
                                 </div>
-                                <div class="rating px-3 pb-3 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span class=" text-dark">(4.9)</span>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">3.9(120)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$20.00/យប់</h5>
                                 </div>
-                                <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                                    <h5 class=" fw-bolder">$18.50</h5>
-                                    <a href="#"
-                                        class="card-link text-decoration-none border rounded px-2 align-content-center fw-medium"><i
-                                            class="bi bi-eye"></i> មើលលម្អិត</a>
-                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="បោះតង់" data-price="20"
+                                    data-image="assets/images/naret/images (7).jpeg">🛒 បន្ថែមទៅកន្ត្រក
+                                </a>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12" data-aos="fade-up" data-aos-duration="1000">
                             <div class="my-card">
                                 <div class="img position-relative">
-                                    <span
-                                        class=" small fw-medium img-bade text-light py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
-                                    <img src="assets/images/images.jpeg" class="card-img-top product-img" alt="...">
+                                    <i class="fa-regular fa-heart text-light fs-3 position-absolute end-0 m-2"></i>
+                                    <img src="assets/images/naret/resort.jpg" class="card-img-top product-img"
+                                        alt="...">
                                 </div>
-                                <div class="card-body p-3">
-                                    <span class="category">ក្រម៉ា</span>
-                                    <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
+                                <div class=" px-3 py-3">
+                                    <p class="category text-dark fs-5 fw-bold">រ៉ាម៉ូ Resort</p>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> កំពត</span>
                                 </div>
-                                <div class="rating px-3 pb-3 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span class=" text-dark">(4.9)</span>
+                                <div class=" d-flex justify-content-between px-3 pb-3">
+                                    <div class=" text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class=" text-dark">4.8(209)</span>
+                                    </div>
+                                    <h5 class=" fw-bolder text-success">$150.00/យប់</h5>
                                 </div>
-                                <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                                    <h5 class=" fw-bolder">$18.50</h5>
-                                    <a href="#"
-                                        class="card-link text-decoration-none border rounded px-2 align-content-center fw-medium"><i
-                                            class="bi bi-eye"></i> មើលលម្អិត</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="my-card">
-                                <div class="img position-relative">
-                                    <span
-                                        class=" small fw-medium img-bade text-light py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
-                                    <img src="assets/images/images.jpeg" class="card-img-top product-img" alt="...">
-                                </div>
-                                <div class="card-body p-3">
-                                    <span class="category">ក្រម៉ា</span>
-                                    <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
-                                </div>
-                                <div class="rating px-3 pb-3 text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                    <span class=" text-dark">(4.9)</span>
-                                </div>
-                                <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                                    <h5 class=" fw-bolder">$18.50</h5>
-                                    <a href="#"
-                                        class="card-link text-decoration-none border rounded px-2 align-content-center fw-medium"><i
-                                            class="bi bi-eye"></i> មើលលម្អិត</a>
-                                </div>
+                                <a class="btn btn-success mx-3 mb-3 fw-medium add-to-cart" data-id="1"
+                                    data-name="រ៉ាម៉ូ Resort" data-price="150"
+                                    data-image="assets/images/naret/resort.jpg">🛒 បន្ថែមទៅកន្ត្រក
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -448,7 +661,181 @@
         </div>
     </section>
 
+
+
+
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 50
+            });
+        }
+
+
+        document.querySelectorAll(".cart-item-card").forEach(card => {
+            const minus = card.querySelector(".qty-minus");
+            const plus = card.querySelector(".qty-plus");
+            const qtyInput = card.querySelector(".qty-input");
+            const price = Number(card.dataset.price);
+            plus.onclick = () => {
+                qtyInput.value++;
+                updateItem(card, price);
+            }
+            minus.onclick = () => {
+                if (qtyInput.value > 1) {
+                    qtyInput.value--;
+                    updateItem(card, price);
+                }
+            }
+        });
+
+
+        function updateItem(card, price) {
+            let qty = Number(card.querySelector(".qty-input").value);
+            card.querySelector(".item-total-price").innerHTML =
+                "$" + (qty * price).toFixed(2);
+            calculateSummary();
+        }
+
+
+        function calculateSummary() {
+            let subtotal = 0;
+            document.querySelectorAll(".cart-item-card").forEach(card => {
+                let qty = Number(card.querySelector(".qty-input").value);
+                let price = Number(card.dataset.price);
+                subtotal += qty * price;
+            });
+            let tax = subtotal * 0.05;
+            let grand = subtotal + tax;
+            document.getElementById("subtotal").innerHTML =
+                "$" + subtotal.toFixed(2);
+            document.getElementById("tax").innerHTML =
+                "$" + tax.toFixed(2);
+            document.getElementById("grandtotal").innerHTML =
+                "$" + grand.toFixed(2);
+            localStorage.setItem("grandTotal", grand.toFixed(2));
+        }
+
+        calculateSummary();
+
+
+        document.addEventListener("click", function (e) {
+            if (e.target.closest(".btn-remove-item")) {
+                e.target.closest(".cart-item-card").remove();
+                updateCartCount();
+                calculateSummary();
+                checkEmptyCart();
+            }
+        });
+
+
+
+        function checkEmptyCart() {
+            const total = document.querySelectorAll(".cart-item-card").length;
+            if (total == 0) {
+                document.getElementById("emptyCartMessage")
+                    .classList.remove("d-none");
+            }
+        }
+
+        function updateCartCount() {
+            document.getElementById("cartCount").innerHTML =
+                document.querySelectorAll(".cart-item-card").length;
+        }
+        updateCartCount();
+
+
+        document.querySelectorAll(".add-to-cart").forEach(btn => {
+            btn.onclick = function (e) {
+                e.preventDefault();
+                const name = this.dataset.name;
+                const price = this.dataset.price;
+                const image = this.dataset.image;
+                const html = `
+            <div class="cart-item-card" data-price="${price}">
+                <div class="cart-item-img">
+                    <span class="badge bg-success text-white cart-item-type-badge">
+                        ផលិតផល
+                    </span>
+                    <img src="${image}" alt="${name}">
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h5 class="fw-bold text-dark">${name}</h5>
+                        <button
+                            class="btn btn-sm btn-outline-danger border-0 rounded-circle btn-remove-item">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                    <div class="small text-muted mb-3">
+                        <i class="fas fa-shopping-bag text-success me-2"></i>
+                        ផលិតផលថ្មីបន្ថែមចូលកន្ត្រក
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <div class="cart-qty-controls">
+                            <button class="qty-btn qty-minus">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input
+                                class="qty-input"
+                                value="1"
+                                readonly>
+                            <button class="qty-btn qty-plus">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="text-end">
+                            <span class="small text-muted d-block">
+                                $${price} / Item
+                            </span>
+                            <span class="fs-5 fw-bold text-primary item-total-price">
+                                $${Number(price).toFixed(2)}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+
+                document.getElementById("cartBox")
+                    .insertAdjacentHTML("beforeend", html);
+                bindQuantity();
+                updateCartCount();
+                calculateSummary();
+                alert("Added to Cart");
+            }
+        });
+
+
+        function bindQuantity() {
+            document.querySelectorAll(".cart-item-card").forEach(card => {
+                if (card.dataset.bind) return;
+                card.dataset.bind = true;
+                const plus = card.querySelector(".qty-plus");
+                const minus = card.querySelector(".qty-minus");
+                const qty = card.querySelector(".qty-input");
+                const price = Number(card.dataset.price);
+                plus.onclick = () => {
+                    qty.value++;
+                    updateItem(card, price);
+                }
+                minus.onclick = () => {
+                    if (qty.value > 1) {
+                        qty.value--;
+                        updateItem(card, price);
+                    }
+                }
+            });
+        }
+    </script>
+
 </body>
 
 </html>

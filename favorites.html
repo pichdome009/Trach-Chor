@@ -4,203 +4,522 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>បញ្ជីចំណង់ចំណូលចិត្ត (My Wishlist) - ត្រាច់ចរ (Trach Chor)</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/favorites.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
 </head>
 
 <body>
 
-    <section class="py-5">
+    <section class="pt-5 pb-3">
         <div class="container">
             <div class="row flex-wrap g-4">
                 <div class="col-12">
-                    <div class=" border-success card border">
-                        <div class=" d-flex justify-content-between border-bottom border-success-subtle border-2 p-4">
-                            <div>
-                                <h4><i class="fa-regular fa-heart text-danger"></i> បញ្ជីចំណង់ចំណូលចិត្តរបស់អ្នក</h4>
+                    <div class=" border-success card border bg-light">
+                        <div class=" row g-4 d-flex justify-content-between p-4 align-items-center">
+                            <div class="col-lg-8 col-12">
+                                <h1 class=" fw-bold text-dark"><i
+                                        class="fa-regular fa-heart text-success p-3 bg-success-subtle fs-3 heart text-center text-xl-start"></i>
+                                    បញ្ជីចំណង់ចំណូលចិត្តរបស់អ្នក</h1>
+                                <p class=" text-center text-md-start pe-md-5 me-md-5">គ្រប់គ្រងគោលដៅទេសចរណ៍
+                                    កញ្ចប់កម្សាន្ត
+                                    និងសណ្ឋាគារដែលអ្នកបានរក្សាទុកសម្រាប់វិស្សមកាលបន្ទាប់របស់អ្នក។ អ្នកអាចកក់រហ័ស
+                                    ឬបន្ថែមចូលរទេះទិញទំនិញបានភ្លាមៗ!</p>
                             </div>
-                            <div>
-                                <div class="box bg-dark-subtle rounded">
-                                    <p class=" px-3 pt-3 text-center fw-bold">ទីតាំងរក្សាទុកសរុប (Total Saved)</p>
-                                    <h4 class=" text-center pb-3 fw-bold text-danger">6 ទីតាំង</h4>
+                            <div
+                                class="box rounded px-4 pb-4 col-lg-4 col-12 border-top border-success-subtle border-3">
+                                <div class=" d-flex align-items-center">
+                                    <div class=" fs-3 text-light bg-success save">
+                                        <i class="fa-solid fa-bookmark save p-3"></i>
+                                    </div>
+                                    <div class=" px-3 pt-4 pb-2">
+                                        <p class=" fw-bold text-muted">ទីតាំងរក្សាទុកសរុប (Total Saved)</p>
+                                        <h3 class="fs-3 fw-bold text-success"><span id="totalSaved">6</span> ទីតាំង
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div class=" mt-3">
-                                    <button class="btn btn-outline-danger fw-medium w-100 rounded-5"><i class="bi bi-trash3"></i> សម្អាតបញ្ជីទាំងអស់ (Clear All)</button>
+                                <div>
+                                    <button id="clearAllBtn" class="btn btn-outline-success fw-medium w-100 rounded-5">
+                                        <i class="bi bi-trash3"></i>
+                                        សម្អាតបញ្ជីទាំងអស់ (Clear All)
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <div class=" p-4">
-                            <button class="btn text-success">តាមប្រភេទ:</button>
-                            <button class="btn border btn-outline-success border-success rounded-5 mx-3 btn-fav">ទាំងអស់ (All)</button>
-                            <button class="btn border btn-outline-success border-success rounded-5 btn-fav">គោលដៅទេសចរណ៍</button>
-                            <button class="btn border btn-outline-success border-success rounded-5 mx-3 btn-fav">កញ្ចប់កម្សាន្ត</button>
-                            <button class="btn border btn-outline-success border-success rounded-5 btn-fav">សណ្ឋាគារ & ភោជនីយដ្ឋាន</button> 
+                        <div class=" nav nav-pills p-4 d-flex align-items-center border-top border-success-subtle border-2"
+                            id="pills-tab" role="tablist">
+                            <h5 class=" text-success text-sm-center">ចម្រេាះតាមប្រភេទ៖</h5>
+                            <li class="nav-item list-unstyled pb-3 pb-md-0" role="presentation">
+                                <button class="btn btn-outline-success border-success rounded-5 mx-3 btn-fav active"
+                                    id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
+                                    role="tab" aria-controls="pills-home" aria-selected="true"><i
+                                        class="fa-solid fa-table-cells-large"></i> ទាំងអស់ (All)
+                                </button>
+                            </li>
+                            <li class="nav-item list-unstyled pb-3 pb-md-0" role="presentation">
+                                <button class="btn  btn-outline-success border-success rounded-5 btn-fav"
+                                    id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i
+                                        class="bi bi-clock"></i> គោលដៅទេសចរណ៍
+                                </button>
+                            </li>
+                            <li class="nav-item list-unstyled pb-3 pb-md-0" role="presentation">
+                                <button class="btn btn-outline-success border-success rounded-5 mx-3 btn-fav"
+                                    id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                                    type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><i
+                                        class="fa-solid fa-umbrella-beach"></i> កញ្ចប់កម្សាន្ត
+                                </button>
+                            </li>
+                            <li class="nav-item list-unstyled pt-md-3 pt-lg-0" role="presentation">
+                                <button class="btn border btn-outline-success border-success rounded-5 btn-fav"
+                                    id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled"
+                                    type="button" role="tab" aria-controls="pills-disabled" aria-selected="false"><i
+                                        class="bi bi-buildings"></i> សណ្ឋាគារ & ភោជនីយដ្ឋាន
+                                </button>
+                            </li>
                         </div>
-                        
+
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="my-card">
-                        <div class="img position-relative">
-                            <span
-                                class=" small img-bade py-1 px-2 mt-3 mx-3 position-absolute end-0 rounded-5 text-danger"><i class="bi bi-heart-fill"></i></span>
-                            <img src="assets/images/naret/9194734.jpg" class="card-img-top product-img" alt="...">
-                        </div>
-                        <div class="card-body p-3">
-                            <span class="category">កោះរ៉ុងសន្លឹម</span>
-                            <h6 class=" fw-bolder pt-2">កោះទេសចរណ៍ល្បីនៅកំពង់សោម</h6>
-                        </div>
-                        <div class="rating px-3 pb-3 text-warning">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <span class=" text-dark">(4.9)</span>
-                        </div>
-                        <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                            <h5 class=" fw-bolder">$18.50 <span class=" small text-muted fw-normal">/ម្នាក់</span></h5>
-                            <a href="#"
-                                class="card-link text-decoration-none text-success border-success rounded border px-2 align-content-center fw-medium"><i
-                                    class="bi bi-eye"></i> មើលលម្អិត</a>
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="row g-4">
+                            <div class=" col-xl-3 col-lg-4 col-md-6 col-12 favorite-item" data-aos="fade-up"
+                                data-aos-duration="1000">
+                                <div class="card border-0 rounded-4">
+                                    <div class="img position-relative">
+                                        <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill"><i
+                                                class="fa-solid fa-umbrella-beach text-success"></i> កោះ</span>
+                                        <i
+                                            class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3"></i>
+                                        <img src="assets/images/naret/9194734.jpg" class="card-img-top product-img"
+                                            alt="...">
+                                    </div>
+                                    <div class="card-body px-3 pt-3">
+                                        <span class="category fs-5 fw-medium text-dark">កោះរ៉ុងសន្លឹម</span>
+                                        <p class=" category pt-2">រីករាយនឹងសម្រស់ធម្មជាតិដ៏ស្រស់ស្អាត
+                                            និងទេសភាពសមុទ្រដែលគួរឱ្យទាក់ទាញ</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-between px-4 pb-3">
+                                        <div class=" text-warning">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                            <span class=" text-dark">(4.9)</span>
+                                        </div>
+                                        <div>
+                                            <span><i class="fa-solid fa-location-dot text-success"></i> កំពង់សោម</span>
+                                        </div>
+                                    </div>
+                                    <a href="#"
+                                        class="card-link text-decoration-none btn-success btn mx-2 mb-2 fw-medium"
+                                        data-bs-toggle="modal" data-bs-target="#KohRongModal"><i class="bi bi-eye"></i>
+                                        មើលលម្អិត</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-12 favorite-item" data-aos="fade-up"
+                                data-aos-duration="1000">
+                                <div class="card border-0 rounded-4">
+                                    <div class="img position-relative">
+                                        <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill"><i
+                                                class="fa-solid fa-landmark text-success"></i> វប្បធម៏</span>
+                                        <i
+                                            class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3"></i>
+                                        <img src="assets/images/naret/Angkorareab.jpg" class="card-img-top product-img"
+                                            alt="...">
+                                    </div>
+                                    <div class="card-body px-3 pt-3">
+                                        <span class="category fw-medium fs-5">ប្រាសាទអង្ករវត្ត</span>
+                                        <p class="category pt-2">រីករាយនឹងការទស្សនាបេតិកភណ្ឌពិភពលោក
+                                            និងស្វែងយល់ពីអរិយធម៌ខ្មែរ</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-between px-4 pb-3">
+                                        <div class=" text-warning">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                            <span class=" text-dark">(4.9)</span>
+                                        </div>
+                                        <div>
+                                            <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
+                                        </div>
+                                    </div>
+                                    <a href="#"
+                                        class="card-link text-decoration-none btn-success btn mx-2 mb-2 fw-medium"
+                                        data-bs-toggle="modal" data-bs-target="#AngkorwatModal"><i
+                                            class="bi bi-eye"></i> មើលលម្អិត</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-12 favorite-item" data-aos="fade-up"
+                                data-aos-duration="1000">
+                                <div class="card border-0 rounded-4">
+                                    <div class="img position-relative">
+                                        <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill"><i
+                                                class="fa-solid fa-umbrella-beach text-success"></i> ធម្មជាតិ</span>
+                                        <i
+                                            class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3"></i>
+                                        <img src="assets/images/naret/image_1762823797.png"
+                                            class="card-img-top product-img" alt="...">
+                                    </div>
+                                    <div class="card-body px-3 pt-3">
+                                        <span class="category fs-5 fw-medium">បឹងយក្សឡោម</span>
+                                        <p class=" category pt-2">ស្វែងរកភាពស្រស់ស្អាតនៃបឹងភ្នំភ្លើង
+                                            និងព្រៃឈើធម្មជាតិដ៏សម្បូរបែប</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-between px-4 pb-3">
+                                        <div class=" text-warning">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                            <span class=" text-dark">(4.9)</span>
+                                        </div>
+                                        <div>
+                                            <span><i class="fa-solid fa-location-dot text-success"></i> រតនគីរី</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-link btn-success btn mx-2 mb-2 fw-medium"
+                                        data-bs-toggle="modal" data-bs-target="#YeakLaomModal"><i class="bi bi-eye"></i>
+                                        មើលលម្អិត</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-12 favorite-item" data-aos="fade-up"
+                                data-aos-duration="1000">
+                                <div class="card border-0 rounded-4">
+                                    <div class="img position-relative">
+                                        <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill"><i
+                                                class="fa-solid fa-landmark text-success"></i> វប្បធម៏</span>
+                                        <i
+                                            class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3"></i>
+                                        <img src="assets/images/naret/fn-2017-07-09-19-44-15-0.jpg"
+                                            class="card-img-top product-img" alt="...">
+                                    </div>
+                                    <div class="card-body px-3 pt-3">
+                                        <span class="category fs-5 fw-medium text-dark">ប្រាសាទសំបូរព្រៃគុក</span>
+                                        <p class=" category pt-2">ស្វែងរកភាពអស្ចារ្យនៃប្រាសាទបុរាណ
+                                            ដែលជាស្នាដៃស្ថាបត្យកម្មដ៏លេចធ្លោរបស់ខ្មែរ</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-between px-4 pb-3">
+                                        <div class=" text-warning">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                            <span class=" text-dark">(4.9)</span>
+                                        </div>
+                                        <div>
+                                            <span><i class="fa-solid fa-location-dot text-success"></i> កំពង់ធំ</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-link btn-success btn mx-2 mb-2 fw-medium"
+                                        data-bs-toggle="modal" data-bs-target="#SamborPreiKukModal"><i
+                                            class="bi bi-eye"></i> មើលលម្អិត</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-12 favorite-item" data-aos="fade-up"
+                                data-aos-duration="1000">
+                                <div class="card border-0 rounded-4">
+                                    <div class="img position-relative">
+                                        <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill"><i
+                                                class="bi bi-buildings text-success"></i> ភោជនីយដ្ឋាន</span>
+                                        <i
+                                            class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3"></i>
+                                        <img src="assets/images/naret/1.jpg" class="card-img-top product-img" alt="...">
+                                    </div>
+                                    <div class="card-body px-3 pt-3">
+                                        <span class="category fw-medium fs-5 text-dark">ភោជនីយដ្ឋាន ច័ន្ទរស្មី</span>
+                                        <p class="category pt-2">
+                                            ទទួលទានអាហារប្រពៃណីខ្មែររសជាតិដើមក្នុងបរិយាកាសសួនច្បារបុរាណ។
+                                        </p>
+                                    </div>
+                                    <div class=" d-flex justify-content-between px-4 pb-3">
+                                        <div class=" text-warning">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                            <span class=" text-dark">(4.9)</span>
+                                        </div>
+                                        <div>
+                                            <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-link btn-success btn mx-2 mb-2 fw-medium"
+                                        data-bs-toggle="modal" data-bs-target="#ChanrasmeyModal"><i
+                                            class="bi bi-eye"></i> មើលលម្អិត</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-12 favorite-item" data-aos="fade-up"
+                                data-aos-duration="1000">
+                                <div class="card border-0 rounded-4">
+                                    <div class="img position-relative">
+                                        <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill"><i
+                                                class="bi bi-buildings text-success"></i> សណ្ឋាគារ</span>
+                                        <i
+                                            class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3"></i>
+                                        <img src="assets/images/naret/unnamed.jpg" class="card-img-top product-img"
+                                            alt="...">
+                                    </div>
+                                    <div class="card-body px-3 pt-3">
+                                        <span class="category text-dark fw-medium fs-5">សណ្ឋាគារ ម៉េម័រ​ សៀមរាប</span>
+                                        <p class="category pt-2">សណ្ឋាគារប្រណីត បន្ទប់ទំនើប អាហារពេលព្រឹកឥតគិតថ្លៃ
+                                            អាងហែលទឹក និងស្ប៉ា។</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-between px-4 pb-3">
+                                        <div class=" text-warning">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                            <span class=" text-dark">(4.9)</span>
+                                        </div>
+                                        <div>
+                                            <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-link btn-success btn mx-2 mb-2 fw-medium"
+                                        data-bs-toggle="modal" data-bs-target="#MemoireHotelModal"><i
+                                            class="bi bi-eye"></i> មើលលម្អិត</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <div class="my-card">
-                        <div class="img position-relative">
-                            <span
-                                class=" small img-bade py-1 px-2 mt-3 mx-3 position-absolute end-0 rounded-5 text-danger"><i class="bi bi-heart-fill"></i></span>
-                            <img src="assets/images/naret/Angkorareab.jpg" class="card-img-top product-img" alt="...">
-                        </div>
-                        <div class="card-body p-3">
-                            <span class="category">ក្រម៉ា</span>
-                            <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
-                        </div>
-                        <div class="rating px-3 pb-3 text-warning">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <span class=" text-dark">(4.9)</span>
-                        </div>
-                        <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                            <h5 class=" fw-bolder">$18.50</h5>
-                            <a href="#"
-                                class="card-link text-decoration-none text-success border-success border rounded px-2 align-content-center fw-medium"><i
-                                    class="bi bi-eye"></i> មើលលម្អិត</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="my-card">
-                        <div class="img position-relative"> 
-                            <span
-                                class=" small img-bade py-1 px-2 mt-3 mx-3 position-absolute end-0 rounded-5 text-danger"><i class="bi bi-heart-fill"></i></span>
-                            <img src="assets/images/naret/DJI_0020-1024x683.jpg" class="card-img-top product-img" alt="...">
-                        </div>
-                        <div class="card-body p-3">
-                            <span class="category">ក្រម៉ា</span>
-                            <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
-                        </div>
-                        <div class="rating px-3 pb-3 text-warning">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <span class=" text-dark">(4.9)</span>
-                        </div>
-                        <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                            <h5 class=" fw-bolder">$18.50</h5>
-                            <a href="#"
-                                class="card-link text-decoration-none text-success border-success border rounded px-2 align-content-center fw-medium"><i
-                                    class="bi bi-eye"></i> មើលលម្អិត</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="my-card">
-                        <div class="img position-relative">
-                            <span
-                                class=" small img-bade py-1 px-2 mt-3 mx-3 position-absolute end-0 text-danger rounded-5"><i class="bi bi-heart-fill"></i></span>
-                            <img src="assets/images/naret/fn-2017-07-09-19-44-15-0.jpg" class="card-img-top product-img" alt="...">
-                        </div>
-                        <div class="card-body p-3">
-                            <span class="category">ក្រម៉ា</span>
-                            <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
-                        </div>
-                        <div class="rating px-3 pb-3 text-warning">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <span class=" text-dark">(4.9)</span>
-                        </div>
-                        <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                            <h5 class=" fw-bolder">$18.50</h5>
-                            <a href="#"
-                                class="card-link text-decoration-none text-success border-success border rounded px-2 align-content-center fw-medium"><i
-                                    class="bi bi-eye"></i> មើលលម្អិត</a>
+
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                        tabindex="0">
+                        <div class="row g-3">
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-12 favorite-item" data-aos="fade-up"
+                                data-aos-duration="1000">
+                                <div class="card border-0 rounded-4">
+                                    <div class="img position-relative">
+                                        <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill"><i
+                                                class="fa-solid fa-umbrella-beach text-success"></i> កោះ</span>
+                                        <i
+                                            class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3"></i>
+                                        <img src="assets/images/naret/9194734.jpg" class="card-img-top product-img"
+                                            alt="...">
+                                    </div>
+                                    <div class="card-body px-3 pt-3">
+                                        <span class="category text-dark fs-5 fw-medium">កោះរ៉ុងសន្លឹម</span>
+                                        <p class=" pt-2">រីករាយនឹងសម្រស់ធម្មជាតិដ៏ស្រស់ស្អាត
+                                            និងទេសភាពសមុទ្រដែលគួរឱ្យទាក់ទាញ</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-between px-4 pb-3">
+                                        <div class=" text-warning">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                            <span class=" text-dark">(4.9)</span>
+                                        </div>
+                                        <div>
+                                            <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-link  btn-success btn mx-2 mb-2 fw-medium"
+                                        data-bs-toggle="modal" data-bs-target="#KohRongModal"><i class="bi bi-eye"></i>
+                                        មើលលម្អិត</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-12 favorite-item" data-aos="fade-up"
+                                data-aos-duration="1000">
+                                <div class="card border-0 rounded-4">
+                                    <div class="img position-relative">
+                                        <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill"><i
+                                                class="fa-solid fa-umbrella-beach text-success"></i> ធម្មជាតិ</span>
+                                        <i
+                                            class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3"></i>
+                                        <img src="assets/images/naret/image_1762823797.png"
+                                            class="card-img-top product-img" alt="...">
+                                    </div>
+                                    <div class="card-body px-3 pt-3">
+                                        <span class="category fs-5 fw-medium">បឹងយក្សឡោម</span>
+                                        <p class=" category pt-2">ស្វែងរកភាពស្រស់ស្អាតនៃបឹងភ្នំភ្លើង
+                                            និងព្រៃឈើធម្មជាតិដ៏សម្បូរបែប</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-between px-4 pb-3">
+                                        <div class=" text-warning">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                            <span class=" text-dark">(4.9)</span>
+                                        </div>
+                                        <div>
+                                            <span><i class="fa-solid fa-location-dot text-success"></i> រតនគីរី</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-link btn-success btn mx-2 mb-2 fw-medium"
+                                        data-bs-toggle="modal" data-bs-target="#YeakLaomModal"><i class="bi bi-eye"></i>
+                                        មើលលម្អិត</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <div class="my-card">
-                        <div class="img position-relative">
-                            <span
-                                class=" small img-bade py-1 px-2 mt-3 mx-3 position-absolute end-0 text-danger rounded-5"><i class="bi bi-heart-fill"></i></span>
-                            <img src="assets/images/naret/image_2023-09-04_15-29-48.jpg" class="card-img-top product-img" alt="...">
-                        </div>
-                        <div class="card-body p-3">
-                            <span class="category">ក្រម៉ា</span>
-                            <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
-                        </div>
-                        <div class="rating px-3 pb-3 text-warning">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <span class=" text-dark">(4.9)</span>
-                        </div>
-                        <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                            <h5 class=" fw-bolder">$18.50</h5>
-                            <a href="#"
-                                class="card-link text-decoration-none text-success border-success border rounded px-2 align-content-center fw-medium"><i
-                                    class="bi bi-eye"></i> មើលលម្អិត</a>
+
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                        tabindex="0">
+                        <div class="row g-3">
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-12 favorite-item">
+                                <div class="card border-0 rounded-4">
+                                    <div class="img position-relative">
+                                        <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill"><i
+                                                class="fa-solid fa-landmark text-success"></i> វប្បធម៏</span>
+                                        <i
+                                            class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3"></i>
+                                        <img src="assets/images/naret/Angkorareab.jpg" class="card-img-top product-img"
+                                            alt="...">
+                                    </div>
+                                    <div class="card-body px-3 pt-3">
+                                        <span class="category fw-medium fs-5">ប្រាសាទអង្ករវត្ត</span>
+                                        <p class="category pt-2">រីករាយនឹងការទស្សនាបេតិកភណ្ឌពិភពលោក
+                                            និងស្វែងយល់ពីអរិយធម៌ខ្មែរ</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-between px-4 pb-3">
+                                        <div class=" text-warning">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                            <span class=" text-dark">(4.9)</span>
+                                        </div>
+                                        <div>
+                                            <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-link btn-success btn mx-2 mb-2 fw-medium"
+                                        data-bs-toggle="modal" data-bs-target="#AngkorwatModal"><i
+                                            class="bi bi-eye"></i> មើលលម្អិត</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-12 favorite-item" data-aos="fade-up"
+                                data-aos-duration="1000">
+                                <div class="card border-0 rounded-4">
+                                    <div class="img position-relative">
+                                        <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill"><i
+                                                class="fa-solid fa-landmark text-success"></i> វប្បធម៏</span>
+                                        <i
+                                            class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3"></i>
+                                        <img src="assets/images/naret/fn-2017-07-09-19-44-15-0.jpg"
+                                            class="card-img-top product-img" alt="...">
+                                    </div>
+                                    <div class="card-body px-3 pt-3">
+                                        <span class="category fs-5 fw-medium text-dark">ប្រាសាទសំបូរព្រៃគុក</span>
+                                        <p class=" category pt-2">ស្វែងរកភាពអស្ចារ្យនៃប្រាសាទបុរាណ
+                                            ដែលជាស្នាដៃស្ថាបត្យកម្មដ៏លេចធ្លោរបស់ខ្មែរ</p>
+                                    </div>
+                                    <div class=" d-flex justify-content-between px-4 pb-3">
+                                        <div class=" text-warning">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                            <span class=" text-dark">(4.9)</span>
+                                        </div>
+                                        <div>
+                                            <span><i class="fa-solid fa-location-dot text-success"></i> កំពង់ធំ</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-link mx-2 mb-2 btn-success btn fw-medium"
+                                        data-bs-toggle="modal" data-bs-target="#SamborPreiKukModal"><i
+                                            class="bi bi-eye"></i>
+                                        មើលលម្អិត</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <div class="my-card">
-                        <div class="img position-relative">
-                            <span
-                                class=" small img-bade py-1 px-2 mt-3 mx-3 position-absolute end-0 text-danger rounded-5"><i class="bi bi-heart-fill"></i></span>
-                            <img src="assets/images/naret/image_1762823797.png" class="card-img-top product-img" alt="...">
-                        </div>
-                        <div class="card-body p-3">
-                            <span class="category">ក្រម៉ា</span>
-                            <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
-                        </div>
-                        <div class="rating px-3 pb-3 text-warning">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <span class=" text-dark">(4.9)</span>
-                        </div>
-                        <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                            <h5 class=" fw-bolder">$18.50</h5>
-                            <a href="#"
-                                class="card-link text-decoration-none text-success border-success border rounded px-2 align-content-center fw-medium"><i
-                                    class="bi bi-eye"></i> មើលលម្អិត</a>
+
+                    <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+                        tabindex="0">
+                        <div class="row g-3">
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-12 favorite-item">
+                                <div class="card border-0 rounded-4">
+                                    <div class="img position-relative">
+                                        <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill"><i
+                                                class="bi bi-buildings text-success"></i> ភោជនីយដ្ឋាន</span>
+                                        <i
+                                            class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3"></i>
+                                        <img src="assets/images/naret/1.jpg" class="card-img-top product-img" alt="...">
+                                    </div>
+                                    <div class="card-body px-3 pt-3">
+                                        <span class="category text-dark fs-5 fw-medium">ភោជនីយដ្ឋាន ច័ន្ទរស្មី</span>
+                                        <p class=" pt-2">
+                                            ទទួលទានអាហារប្រពៃណីខ្មែររសជាតិដើមក្នុងបរិយាកាសសួនច្បារបុរាណ។</p>
+                                        <div class=" d-flex justify-content-between">
+                                            <div class=" text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                                <span class=" text-dark">(4.9)</span>
+                                            </div>
+                                            <div>
+                                                <span><i class="fa-solid fa-location-dot text-success"></i>
+                                                    សៀមរាប</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class=" btn btn-success fw-medium mx-2 mb-2" data-bs-toggle="modal"
+                                        data-bs-target="#ChanrasmeyModal"><i class="bi bi-eye"></i>
+                                        មើលលម្អិត</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-12 favorite-item">
+                                <div class="card border-0 rounded-4">
+                                    <div class="img position-relative">
+                                        <span class=" mt-3 mx-3 position-absolute img-bade btn rounded-pill"><i
+                                                class="bi bi-buildings text-success"></i> ភោជនីយដ្ឋាន</span>
+                                        <i
+                                            class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3"></i>
+                                        <img src="assets/images/naret/unnamed.jpg" class="card-img-top product-img"
+                                            alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <span class="category fw-medium fs-5">សណ្ឋាគារ ម៉េម័រ​ សៀមរាប</span>
+                                        <p class="category pt-2">សណ្ឋាគារប្រណីត បន្ទប់ទំនើប អាហារពេលព្រឹកឥតគិតថ្លៃ
+                                            អាងហែលទឹក និងស្ប៉ា។</p>
+                                        <div class=" d-flex justify-content-between">
+                                            <div class=" text-warning">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                                <span class=" text-dark">(4.9)</span>
+                                            </div>
+                                            <div>
+                                                <span><i class="fa-solid fa-location-dot text-success"></i>
+                                                    សៀមរាប</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class=" btn btn-success fw-medium mx-2 mb-2" data-bs-toggle="modal"
+                                        data-bs-target="#MemoireHotelModal"><i class="bi bi-eye"></i>
+                                        មើលលម្អិត</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -209,208 +528,1983 @@
     </section>
 
 
-    <section class="pb-5">
+    <section class=" pb-5">
         <div class="container">
-            <h3 class=" pb-4"><i class="bi bi-fire text-danger"></i> គោលដៅពេញនិយមដែលអ្នកប្រហែលជាចូលចិត្ត (Recommended For You)</h3>
-            <div>
-
+            <hr class=" border-2 border-success pb-3">
+            <div class=" text-center">
+                <h1 class=" text-center fw-bold text-dark-emphasis">
+                    គោលដៅពេញនិយមដែលអ្នកប្រហែលជាចូលចិត្ត</h1>
+                <div class=" d-flex justify-content-center align-items-center ">
+                    <div class=" border-icon"></div>
+                    <i class="fa-solid fa-clover text-success fs-3 px-2"></i>
+                    <div class=" border-icon"></div>
+                </div>
+                <p class=" fs-5 text-muted pb-4 pt-2">ស្វែងយល់ពីកន្លែងពេញនិយម​ សម្រាប់ការធ្វើដំណើរដែលល្អបំផុត</p>
             </div>
             <div class="row g-4">
-
-                <div class="col-4">
-                    <div class="my-card">
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="card border-0 rounded-4">
                         <div class="img position-relative">
-                            <span
-                                class=" small fw-medium img-bade py-1 px-2 mt-3 mx-3 position-absolute rounded-5">សៀមរាប</span>
+                            <span class=" small fw-medium img-bade py-1 px-2 mt-3 mx-3 position-absolute rounded-5"><i
+                                    class="fa-solid fa-landmark text-success fs-5"></i></span>
+                            <span class=" mt-3 mx-3 position-absolute text-light fs-4 end-0"><i
+                                    class="fa-regular fa-heart"></i></span>
                             <img src="assets/images/naret/Angkorareab.jpg" class="card-img-top product-img" alt="...">
                         </div>
-                        <div class="card-body p-3">
-                            <span class="category">ប្រាសាទអង្ករវត្ត</span>
-                            <h6 class=" fw-bolder pt-2"></h6>
+                        <div class="card-body">
+                            <span class=" card-title fw-medium fs-5">ប្រាសាទអង្ករវត្ត</span>
+                            <p class=" card-text pt-2">រីករាយនឹងការទស្សនាបេតិកភណ្ឌពិភពលោក និងស្វែងយល់ពីអរិយធម៌ខ្មែរ</p>
+                            <div class=" d-flex justify-content-between">
+                                <div class=" text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <span class=" text-dark">(4.9)</span>
+                                </div>
+                                <div>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="rating px-3 pb-3 text-warning">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <span class=" text-dark">(4.9)</span>
-                        </div>
-                        <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                            <h5 class=" fw-bolder">$18.50</h5>
-                            <a href="#"
-                                class="card-link text-decoration-none text-success border-success border rounded px-2 align-content-center fw-medium"><i
-                                    class="bi bi-eye"></i> មើលលម្អិត</a>
-                        </div>
+                        <a href="#" class="card-link btn btn-success mx-2 mb-2 fw-medium" data-bs-toggle="modal"
+                            data-bs-target="#AngkorwatModal"><i class="bi bi-eye"></i>
+                            មើលលម្អិត</a>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="my-card">
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="card border-0 rounded-4">
                         <div class="img position-relative">
-                            <span
-                                class=" small fw-medium img-bade py-1 px-2 mt-3 mx-3 position-absolute rounded-5"><i class="fa-solid fa-water"></i></span>
-                            <img src="assets/images/naret/9194734.jpg" class="card-img-top product-img" alt="...">
+                            <span class=" small fw-medium img-bade py-1 px-2 mt-3 mx-3 position-absolute rounded-5"><i
+                                    class="bi bi-buildings text-success fs-5"></i></span>
+                            <span class=" mt-3 mx-3 position-absolute text-light fs-4 end-0"><i
+                                    class="fa-regular fa-heart"></i></span>
+                            <img src="assets/images/naret/unnamed.jpg" class="card-img-top product-img" alt="...">
                         </div>
-                        <div class="card-body p-3">
-                            <span class="category">កោះរ៉ុងសន្លឹម</span>
-                            <h6 class=" fw-bolder pt-2">កោះទេសចរណ៍ល្បីនៅកំពង់សោម</h6>
+                        <div class="card-body">
+                            <span class=" card-title fw-medium fs-5">សណ្ឋាគារ ម៉េម័រ​ សៀមរាប</span>
+                            <p class=" card-text pt-2">សណ្ឋាគារប្រណីត បន្ទប់ទំនើប អាហារពេលព្រឹកឥតគិតថ្លៃ អាងហែលទឹក
+                                និងស្ប៉ា។</p>
+                            <div class=" d-flex justify-content-between">
+                                <div class=" text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <span class=" text-dark">(4.9)</span>
+                                </div>
+                                <div>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="rating px-3 pb-3 text-warning">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <span class=" text-dark">(4.9)</span>
-                        </div>
-                        <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                            <h5 class=" fw-bolder">$18.50</h5>
-                            <a href="#"
-                                class="card-link text-decoration-none text-success border-success border rounded px-2 align-content-center fw-medium"><i
-                                    class="bi bi-eye"></i> មើលលម្អិត</a>
-                        </div>
+                        <a href="#" class=" btn btn-success fw-medium mx-2 mb-2" data-bs-toggle="modal"
+                            data-bs-target="#MemoireHotelModal"><i class="bi bi-eye"></i> មើលលម្អិត</a>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="my-card">
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="card border-0 rounded-4">
                         <div class="img position-relative">
-                            <span
-                                class=" small fw-medium img-bade py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
-                            <img src="assets/images/naret/images (1).jpeg" class="card-img-top product-img" alt="...">
+                            <span class=" small fw-medium img-bade py-1 px-2 mt-3 mx-3 position-absolute rounded-5"><i
+                                    class="fa-solid fa-mountain text-success fs-5"></i></span>
+                            <span class=" mt-3 mx-3 position-absolute text-light fs-4 end-0"><i
+                                    class="fa-regular fa-heart"></i></span>
+                            <img src="assets/images/naret/Tour Guide khmer.jpg" class="card-img-top product-img"
+                                alt="...">
                         </div>
-                        <div class="card-body p-3">
-                            <span class="category">ភ្នំខ្នងផ្សារ</span>
-                            <h6 class=" fw-bolder pt-2">តំបន់ Trekking ភ្នំដ៏ល្បីល្បាញ</h6>
+                        <div class="card-body">
+                            <span class="fw-medium fs-5 card-title">ជួល​ TourGuide</span>
+                            <p class="card-text pt-2">ស្វែងយល់ពីប្រវត្តិសាស្ត្រ វប្បធម៌ និងតំបន់ទេសចរណ៍ជាមួយអ្នកជំនាញ
+                            </p>
+                            <div class=" d-flex justify-content-between">
+                                <div class=" text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <span class=" text-dark">(4.9)</span>
+                                </div>
+                                <div>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="rating px-3 pb-3 text-warning">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <span class=" text-dark">(4.9)</span>
-                        </div>
-                        <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                            <h5 class=" fw-bolder">$18.50</h5>
-                            <a href="#"
-                                class="card-link text-decoration-none text-success border-success border rounded px-2 align-content-center fw-medium"><i
-                                    class="bi bi-eye"></i> មើលលម្អិត</a>
-                        </div>
+                        <a href="#" class=" btn btn-success fw-medium mx-2 mb-2" data-bs-toggle="modal"
+                            data-bs-target="#TourGuideModal"><i class="bi bi-eye"></i>
+                            មើលលម្អិត</a>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="my-card">
-                        <div class="img position-relative">
-                            <span
-                                class=" small fw-medium img-bade py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
-                            <img src="assets/images/naret/fn-2017-07-09-19-44-15-0.jpg" class="card-img-top product-img" alt="...">
-                        </div>
-                        <div class="card-body p-3">
-                            <span class="category">ប្រាសាទសំបូរព្រៃគុក</span>
-                            <h6 class=" fw-bolder pt-2">បេតិកភណ្ឌពិភពលោកនៅកំពង់ធំ</h6>
-                        </div>
-                        <div class="rating px-3 pb-3 text-warning">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i> 
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <span class=" text-dark">(4.9)</span>
-                        </div>
-                        <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                            <h5 class=" fw-bolder">$18.50</h5>
-                            <a href="#"
-                                class="card-link text-decoration-none text-success border-success border rounded px-2 align-content-center fw-medium"><i
-                                    class="bi bi-eye"></i> មើលលម្អិត</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="my-card">
-                        <div class="img position-relative">
-                            <span
-                                class=" small fw-medium img-bade py-1 px-2 mt-3 mx-3 position-absolute rounded-5">កោះកុង</span>
-                            <img src="assets/images/naret/image_2023-09-04_15-29-48.jpg" class="card-img-top product-img" alt="...">
-                        </div>
-                        <div class="card-body p-3">
-                            <span class="category">ទឹកធ្លាក់តាតៃ</span>
-                            <h6 class=" fw-bolder pt-2">តំបន់រីសតធម្មជាតិខេត្តកោះកុង</h6>
-                        </div>
-                        <div class="rating px-3 pb-3 text-warning">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <span class=" text-dark">(4.9)</span>
-                        </div>
-                        <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                            <h5 class=" fw-bolder">$18.50</h5>
-                            <a href="#"
-                                class="card-link text-decoration-none text-success border-success border rounded px-2 align-content-center fw-medium"><i
-                                    class="bi bi-eye"></i> មើលលម្អិត</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="my-card">
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="card border-0 rounded-4">
                         <div class="img position-relative">
                             <span
                                 class=" small fw-medium img-bade py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ថ្មី</span>
-                            <img src="assets/images/naret/image_1762823797.png" class="card-img-top product-img" alt="...">
+                            <span class=" mt-3 mx-3 position-absolute text-light fs-4 end-0"><i
+                                    class="fa-regular fa-heart"></i></span>
+                            <img src="assets/images/naret/toyota-alphard-z-gasoline-4wd-465761.png"
+                                class="card-img-top product-img" alt="...">
                         </div>
-                        <div class="card-body p-3">
-                            <span class="category">បឹងយក្សឡោម</span>
-                            <h6 class=" fw-bolder pt-2">បឹងភ្នំភ្លើងខេត្តរតនគីរី</h6>
+                        <div class="card-body">
+                            <span class="card-title fw-medium fs-5">ការជួលរថយន្ត</span>
+                            <p class=" card-text pt-2">រីករាយនឹងការធ្វើដំណើរជាមួយរថយន្តទំនើប និងអ្នកបើកបរជំនាញ</p>
+                            <div class=" d-flex justify-content-between">
+                                <div class=" text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <span class=" text-dark">(4.9)</span>
+                                </div>
+                                <div>
+                                    <span><i class="fa-solid fa-location-dot text-success"></i> សៀមរាប</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="rating px-3 pb-3 text-warning">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <span class=" text-dark">(4.9)</span>
-                        </div>
-                        <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                            <h5 class=" fw-bolder">$18.50</h5>
-                            <a href="#"
-                                class="card-link text-decoration-none text-success border-success border rounded px-2 align-content-center fw-medium"><i
-                                    class="bi bi-eye"></i> មើលលម្អិត</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="my-card">
-                        <div class="img position-relative"> 
-                            <span
-                                class=" small fw-medium img-bade py-1 px-2 mt-3 mx-3 position-absolute rounded-5">ក្រចេះ</span>
-                            <img src="assets/images/naret/DJI_0020-1024x683.jpg" class="card-img-top product-img" alt="...">
-                        </div>
-                        <div class="card-body p-3">
-                            <span class="category">សហគមន៍មើលផ្សោតកាំពី</span>
-                            <h6 class=" fw-bolder pt-2">អាវសឺមីដៃវែងបុរស ក្រណាត់លីនិន</h6>
-                        </div>
-                        <div class="rating px-3 pb-3 text-warning">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                            <span class=" text-dark">(4.9)</span>
-                        </div>
-                        <div class="card-body px-3 pb-4 d-flex justify-content-between">
-                            <h5 class=" fw-bolder">$18.50</h5>
-                            <a href="#"
-                                class="card-link text-decoration-none text-success border-success border rounded px-2 align-content-center fw-medium"><i
-                                    class="bi bi-eye"></i> មើលលម្អិត</a>
-                        </div>
+                        <a href="#" class=" btn btn-success fw-medium mx-2 mb-2" data-bs-toggle="modal"
+                            data-bs-target="#RentCarModal"><i class="bi bi-eye"></i>
+                            មើលលម្អិត</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
+    <!-- ======================================================================================= -->
+
+
+    <div class="modal fade" id="KohRongModal" tabindex="-1" aria-labelledby="KohRongModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content angkor-modal">
+                <div class="modal-header custom-modal-header">
+                    <h1 class="modal-title fw-bold" id="KohRongModalLabel"><i
+                            class="fa-solid fa-umbrella-beach text-success"></i> កោះរ៉ុងសន្លឹម
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+
+                <div class=" modal-body">
+                    <div class="koh-rong-grid-container">
+                        <div>
+                            <div class="koh-rong-main-img-container">
+                                <img id="koh-rong-display-image" class="koh-rong-main-img"
+                                    src="assets/images/naret/Beach.jpeg" alt="Koh Rong Samloem">
+                                <div class="koh-rong-img-badge" id="koh-rong-image-counter">
+                                    1 / 4
+                                </div>
+                            </div>
+                            <div class=" fs-4 fw-bold text-muted py-3">
+                                <i class="fa-solid fa-umbrella-beach text-success"></i> រូបភាពកោះរ៉ុងសន្លឹម
+                            </div>
+                            <div class="koh-rong-options">
+                                <div class="koh-rong-card active"
+                                    onclick="selectKohRongImage( this, 1, 'assets/images/naret/Beach.jpeg' )">
+                                    <div class="koh-rong-check-icon">✓</div>
+                                    <img src="assets/images/naret/Beach.jpeg" alt="Koh Rong Samloem Beach">
+                                    <div class="koh-rong-name">ឆ្នេរខ្សាច់</div>
+                                </div>
+                                <div class="koh-rong-card"
+                                    onclick="selectKohRongImage( this, 2, 'assets/images/naret/9194734.jpg' )">
+                                    <div class="koh-rong-check-icon">✓</div>
+                                    <img src="assets/images/naret/9194734.jpg" alt="Koh Rong Samloem Island">
+                                    <div class="koh-rong-name">កោះ</div>
+                                </div>
+                                <div class="koh-rong-card"
+                                    onclick="selectKohRongImage( this, 3, 'assets/images/naret/Sunset.jpeg' )">
+                                    <div class="koh-rong-check-icon">✓</div>
+                                    <img src="assets/images/naret/Sunset.jpeg" alt="Koh Rong Samloem Sunset">
+                                    <div class="koh-rong-name">ថ្ងៃលិច</div>
+                                </div>
+                                <div class="koh-rong-card"
+                                    onclick="selectKohRongImage( this, 4, 'assets/images/naret/Resortkohrong.jpeg' )">
+                                    <div class="koh-rong-check-icon">✓</div>
+                                    <img src="assets/images/naret/Resortkohrong.jpeg" alt="Koh Rong Samloem Resort">
+                                    <div class="koh-rong-name">
+                                        Resort
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class=" fw-bold text-warning-emphasis"><i
+                                    class="fa-solid fa-umbrella-beach text-success"></i> កោះរ៉ុងសន្លឹម
+                            </h1>
+                            <div class="koh-rong-rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                <span>4.7 / 5</span>
+                            </div>
+                            <p>
+                                កោះរ៉ុងសន្លឹម គឺជាគោលដៅទេសចរណ៍ដ៏ស្រស់ស្អាត
+                                ដែលមានឆ្នេរខ្សាច់សស្អាត ទឹកសមុទ្រថ្លា
+                                និងបរិយាកាសស្ងប់ស្ងាត់ សាកសមសម្រាប់ការសម្រាកលំហែ
+                                និងរីករាយជាមួយធម្មជាតិ។
+                            </p>
+                            <div class=" fs-4 fw-bold text-muted">
+                                <i class="bi bi-stars text-warning"></i> អ្វីដែលអ្នកអាចរីករាយ
+                            </div>
+                            <ul class="koh-rong-details-list">
+                                <li><i class="bi bi-tsunami text-warning"></i> ឆ្នេរខ្សាច់សស្អាត និងទឹកសមុទ្រថ្លា</li>
+                                <li><i class="bi bi-binoculars text-danger"></i> ការមុជទឹក និងសកម្មភាពកម្សាន្តក្នុងទឹក
+                                </li>
+                                <li><i class="bi bi-cloud-sun-fill text-warning"></i> មើលថ្ងៃលិចដ៏ស្រស់ស្អាត</li>
+                                <li><i class="fa-solid fa-umbrella-beach text-success"></i> សម្រាកលំហែជាមួយធម្មជាតិ</li>
+                            </ul>
+
+                            <div class="koh-rong-info-pills">
+                                <div>
+                                    <i class="bi bi-geo text-danger"></i> ទីតាំង:
+                                    <strong>ខេត្តព្រះសីហនុ</strong>
+                                </div>
+
+                                <div>
+                                    <i class="fa-solid fa-sailboat text-success"></i> ការធ្វើដំណើរ:
+                                    <strong>ទូកល្បឿនលឿន</strong>
+                                </div>
+                                <div>
+                                    <i class="bi bi-umbrella-fill text-info"></i> ប្រភេទ:
+                                    <strong>កោះ</strong>
+                                </div>
+
+                                <div>
+                                    <i class="fa-solid fa-umbrella-beach text-success"></i> បរិយាកាស:
+                                    <strong>ស្ងប់ស្ងាត់</strong>
+                                </div>
+                            </div>
+                            <div class="koh-rong-price-box">
+                                <span>
+                                    <i class="bi bi-currency-dollar text-warning"></i> តម្លៃដំណើរកម្សាន្ត
+                                </span>
+                                <strong>
+                                    $100
+                                    <small>/ ថ្ងៃ</small>
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" d-flex justify-content-around pb-3">
+                    <button class="koh-rong-btn koh-rong-favorite-btn" id="koh-rong-favorite-btn"
+                        onclick="toggleKohRongFavorite()">
+                        <i class="bi bi-heart"></i> Add to Favorite
+                    </button>
+                    <button class="koh-rong-btn koh-rong-map-btn" onclick="viewKohRongMap()">
+                        <i class="bi bi-geo text-danger"></i> View on Map
+                    </button>
+                    <button class="koh-rong-btn koh-rong-action-contact" onclick="ContactKohRong()">
+                        <i class="bi bi-telephone"></i>
+                        Contact
+                    </button>
+                    <a href="#" class="koh-rong-btn koh-rong-action-book" onclick="bookkohrongtrip()">
+                        <i class="bi bi-cash-stack"></i>
+                        កក់ដំណើរកម្សាន្តឥឡូវនេះ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================================================================== -->
+
+
+    <div class="modal fade" id="AngkorwatModal" tabindex="-1" aria-labelledby="AngkorwatModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content angkor-modal">
+                <div class="modal-header custom-modal-header">
+                    <h1 class="modal-title fw-bold" id="AngkorwatModalLabel">
+                        <i class="fa-solid fa-landmark text-success"></i> ប្រាសាទអង្ករវត្ត
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="hotel-gallery">
+                                <div class="main-gallery-image">
+                                    <img id="mainGalleryImage" src="assets/images/naret/Angkorareab.jpg"
+                                        alt="Angkor Wat">
+                                    <button type="button" class="view-gallery-btn" onclick="openGallery()">
+                                        <i class="bi bi-camera-fill"></i>
+                                        View Gallery
+                                    </button>
+                                    <span class="image-counter" id="imageCounter">
+                                        1 / 4
+                                    </span>
+                                </div>
+                                <div class="gallery-thumbnails">
+                                    <div class="thumbnail active" onclick="changeGalleryImage(this)">
+                                        <img src="assets/images/naret/Angkorareab.jpg" alt="Angkor Wat">
+                                    </div>
+                                    <div class="thumbnail" onclick="changeGalleryImage(this)">
+                                        <img src="assets/images/naret/Screen-Shot-2019-03-18-at-3.06.49-PM.webp"
+                                            alt="Angkor Wat">
+                                    </div>
+                                    <div class="thumbnail" onclick="changeGalleryImage(this)">
+                                        <img src="assets/images/naret/image-23.png" alt="Angkor Wat">
+                                    </div>
+                                    <div class="thumbnail" onclick="changeGalleryImage(this)">
+                                        <img src="assets/images/naret/9-25.jpg" alt="Angkor Wat">
+                                    </div>
+                                    <button class="gallery-next-btn" type="button" onclick="nextThumbnailImage()">
+                                        <i class="bi bi-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="tour-info">
+                                <h2 class="tour-title">
+                                    <i class="fa-solid fa-landmark text-success"></i>
+                                    ស្វែងយល់ពីប្រាសាទអង្គរវត្ត
+                                </h2>
+                                <p class="tour-subtitle">
+                                    បេតិកភណ្ឌពិភពលោក និងនិមិត្តរូបនៃប្រទេសកម្ពុជា
+                                </p>
+                                <p class="tour-description">
+                                    ប្រាសាទអង្គរវត្ត គឺជាស្នាដៃស្ថាបត្យកម្មខ្មែរដ៏អស្ចារ្យ
+                                    ដែលបានកសាងឡើងនៅសតវត្សទី១២។
+                                    ដំណើរកម្សាន្តនេះនឹងនាំអ្នកទៅស្គាល់ប្រវត្តិសាស្ត្រដ៏សម្បូរបែប
+                                    សិល្បៈចម្លាក់ដ៏វិចិត្រ
+                                    និងទេសភាពថ្ងៃរះដ៏ស្រស់ស្អាត
+                                    ដែលធ្វើឱ្យអង្គរវត្តក្លាយជាគោលដៅទេសចរណ៍ដ៏ល្បីល្បាញលើពិភពលោក។
+                                </p>
+                                <h3 class="section-title">
+                                    <i class="bi bi-stars text-warning"></i>
+                                    អ្វីដែលអ្នកនឹងទទួលបាន
+                                </h3>
+                                <div class="benefit-list">
+                                    <p>
+                                        <i class="fa-solid fa-landmark text-success"></i>
+                                        ទស្សនាប្រាសាទអង្គរវត្ត និងតំបន់ជុំវិញ
+                                    </p>
+                                    <p>
+                                        <i class="bi bi-book-fill text-info"></i>
+                                        ស្វែងយល់ពីប្រវត្តិសាស្ត្រខ្មែរ
+                                    </p>
+                                    <p>
+                                        <i class="bi bi-camera-fill text-success"></i>
+                                        កន្លែងថតរូបដ៏ស្រស់ស្អាត
+                                    </p>
+                                    <p>
+                                        <i class="bi bi-cloud-sun-fill text-warning"></i>
+                                        ទស្សនាទិដ្ឋភាពថ្ងៃរះ
+                                    </p>
+                                    <p>
+                                        <i class="fa-solid fa-user-tie text-primary"></i>
+                                        មគ្គុទ្ទេសក៍ជំនាញពន្យល់ពេញដំណើរ
+                                    </p>
+                                </div>
+                                <h3 class="section-title">
+                                    <i class="bi bi-geo-fill text-danger"></i>
+                                    ព័ត៌មានដំណើរកម្សាន្ត
+                                </h3>
+                                <div class="tour-details">
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-location-dot text-primary"></i>
+                                        <span>
+                                            ទីតាំង៖ ក្រុងសៀមរាប
+                                        </span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="bi bi-clock-fill text-success"></i>
+                                        <span>
+                                            រយៈពេល៖ ១ ថ្ងៃ
+                                        </span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-gopuram text-primary"></i>
+                                        <span>
+                                            ប្រភេទ៖ វប្បធម៌ និងប្រវត្តិសាស្ត្រ
+                                        </span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-earth-asia text-success"></i>
+                                        <span>
+                                            ភាសា៖ ខ្មែរ / English
+                                        </span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-users text-primary"></i>
+                                        <span>
+                                            ចំនួនអ្នកចូលរួម៖ ១–១៥ នាក់
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="price-box">
+                                    <div class="price-label">
+                                        <i class="bi bi-cash-coin"></i>
+                                        តម្លៃចាប់ពី
+                                    </div>
+                                    <div class="price-value">
+                                        <strong>
+                                            $220.00
+                                        </strong>
+                                        <span>
+                                            / កញ្ចប់
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" d-flex justify-content-around">
+                        <button class="angkor-btn action-favorite">
+                            <i class="bi bi-heart"></i>
+                            Favorite
+                        </button>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Angkor+Wat,+Siem+Reap,+Cambodia"
+                            target="_blank" class="angkor-btn action-map">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            View on Maps
+                        </a>
+
+                        <button class="angkor-btn action-contact">
+                            <i class="bi bi-telephone"></i>
+                            Contact
+                        </button>
+
+                        <a href="#" class="angkor-btn action-book">
+                            <i class="bi bi-cash-stack"></i>
+                            កក់ដំណើរកម្សាន្តឥឡូវនេះ
+                        </a>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================================================================== -->
+
+    <div class="gallery-lightbox" id="galleryLightbox">
+        <button class="gallery-close" onclick="closeGallery()">
+            &times;
+        </button>
+        <button class="gallery-prev" onclick="previousImage()">
+            ❮
+        </button>
+        <img id="lightboxImage" src="" alt="Gallery Image">
+        <button class="gallery-next" onclick="nextImage()">
+            ❯
+        </button>
+        <div class="lightbox-counter" id="lightboxCounter">
+            1 / 4
+        </div>
+    </div>
+
+
+
+    <!-- =========================================================================== -->
+
+
+
+
+    <div class="modal fade" id="YeakLaomModal" tabindex="-1" aria-labelledby="YeakLaomModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content yeaklaom-modal">
+                <div class="modal-header custom-modal-header">
+                    <h1 class="modal-title fw-bold" id="YeakLaomModalLabel"><i
+                            class="fa-solid fa-mountain text-success"></i> បឹងយក្សឡោម
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class=" yeak-laom-grid-container">
+                        <div>
+                            <div class="yeak-laom-main-img-container">
+                                <img id="yeak-laom-display-image" class="yeak-laom-main-img"
+                                    src="assets/images/naret/image_1762823797.png" alt="Yeak Laom Lake">
+                                <div class="yeak-laom-img-badge" id="yeak-laom-image-counter">
+                                    1 / 4
+                                </div>
+                            </div>
+                            <div class=" fs-4 fw-bold text-muted py-3">
+                                <i class="fa-solid fa-leaf text-success"></i> រូបភាពបឹងយក្សឡោម
+                            </div>
+
+                            <div class="yeak-laom-options">
+                                <div class="yeak-laom-card active"
+                                    onclick="selectYeakLaomImage( this, 1, 'assets/images/naret/image_1762823797.png' )">
+                                    <div class="yeak-laom-check-icon">✓</div>
+                                    <img src="assets/images/naret/image_1762823797.png" alt="Yeak Laom Lake">
+                                    <div class="yeak-laom-name">
+                                        បឹង
+                                    </div>
+                                </div>
+                                <div class="yeak-laom-card"
+                                    onclick="selectYeakLaomImage( this, 2, 'assets/images/naret/Nature.jpeg' )">
+                                    <div class="yeak-laom-check-icon">✓</div>
+                                    <img src="assets/images/naret/Nature.jpeg" alt="Yeak Laom Nature">
+                                    <div class="yeak-laom-name">
+                                        Nature
+                                    </div>
+                                </div>
+                                <div class="yeak-laom-card"
+                                    onclick="selectYeakLaomImage( this, 3, 'assets/images/naret/Forest).jpeg' )">
+                                    <div class="yeak-laom-check-icon">✓</div>
+                                    <img src="assets/images/naret/Forest).jpeg" alt="Yeak Laom Forest">
+                                    <div class="yeak-laom-name">
+                                        Forest
+                                    </div>
+                                </div>
+                                <div class="yeak-laom-card"
+                                    onclick="selectYeakLaomImage( this, 4, 'assets/images/naret/View.jpeg' )">
+                                    <div class="yeak-laom-check-icon">✓</div>
+                                    <img src="assets/images/naret/View.jpeg" alt="Yeak Laom View">
+                                    <div class="yeak-laom-name">
+                                        View
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class=" fw-bold  text-success-emphasis"><i
+                                    class="fa-solid fa-mountain text-success"></i> បឹងយក្សឡោម
+                            </h1>
+                            <div class="yeak-laom-rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                <span>4.8 / 5</span>
+                            </div>
+
+                            <p>
+                                បឹងយក្សឡោម គឺជាបឹងភ្នំភ្លើងធម្មជាតិដ៏ស្រស់ស្អាត
+                                ដែលមានទីតាំងនៅខេត្តរតនគិរី។ ទីនេះមានទឹកថ្លា
+                                ព្រៃឈើបៃតង និងបរិយាកាសស្ងប់ស្ងាត់ សាកសមសម្រាប់
+                                ការសម្រាកលំហែ និងរីករាយជាមួយធម្មជាតិ។
+                            </p>
+
+                            <div class=" fs-4 fw-bold text-muted">
+                                <i class="bi bi-stars text-warning"></i> អ្វីដែលអ្នកអាចរីករាយ
+                            </div>
+
+                            <ul class="yeak-laom-details-list">
+                                <li><i class="fa-solid fa-water text-info-emphasis"></i> ទស្សនាបឹងភ្នំភ្លើងធម្មជាតិ</li>
+                                <li><i class="fa-solid fa-leaf text-success"></i> ដើរកម្សាន្តជុំវិញបឹង</li>
+                                <li><i class="bi bi-camera2 text-success-emphasis"></i> ថតរូបជាមួយទេសភាពធម្មជាតិ</li>
+                                <li><i class="fa-solid fa-mountain text-success"></i> សម្រាកលំហែក្នុងបរិយាកាសស្ងប់ស្ងាត់
+                                </li>
+                            </ul>
+
+                            <div class="yeak-laom-info-pills">
+                                <div>
+                                    <i class="bi bi-geo text-danger"></i> ទីតាំង:
+                                    <strong>រតនគិរី</strong>
+                                </div>
+                                <div>
+                                    <i class="bi bi-x-diamond-fill text-success"></i> ប្រភេទ:
+                                    <strong>Volcanic Lake</strong>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-leaf text-success"></i> បរិយាកាស:
+                                    <strong>ធម្មជាតិ</strong>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-mountain text-success"></i> សកម្មភាព:
+                                    <strong>ដើរកម្សាន្ត</strong>
+                                </div>
+                            </div>
+                            <div class="yeak-laom-price-box">
+                                <span>
+                                    <i class="bi bi-currency-dollar text-warning"></i> តម្លៃដំណើរកម្សាន្ត
+                                </span>
+                                <strong>
+                                    $50
+                                    <small>/ ថ្ងៃ</small>
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" d-flex justify-content-around">
+                        <button class="yeak-laom-btn yeak-laom-favorite-btn" id="yeak-laom-favorite-btn"
+                            onclick="toggleYeakLaomFavorite()">
+                            <i class="bi bi-heart"></i> Add to Favorite
+                        </button>
+                        <button class="yeak-laom-btn yeak-laom-map-btn" onclick="viewYeakLaomMap()">
+                            <i class="bi bi-geo text-danger"></i> View on Map
+                        </button>
+                        <button class="yeak-laom-btn yeak-laom-contact-btn" onclick="contactYeakLaom()">
+                            <i class="bi bi-telephone text-danger"></i> Contact
+                        </button>
+                        <button class="yeak-laom-btn yeak-laom-book-btn" onclick="bookYeakLaomTrip()">
+                            <i class="fa-solid fa-mountain text-success"></i> កក់ដំណើរកម្សាន្តឥឡូវនេះ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===================================================================================== -->
+
+
+
+    <div class="modal fade" id="SamborPreiKukModal" tabindex="-1" aria-labelledby="SamborPreiKukModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content samborpreikuk-modal">
+                <div class="modal-header custom-modal-header">
+                    <h1 class="modal-title fw-bold" id="SamborPreiKukModalLabel"><i
+                            class="bi bi-bank2 text-success"></i> ប្រាសាទសំបូរព្រៃគុក
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="sambor-prei-kuk-modal-card">
+                        <div class="sambor-prei-kuk-grid-container">
+                            <div>
+                                <div class="sambor-prei-kuk-main-img-container">
+                                    <img id="sambor-prei-kuk-display-image" class="sambor-prei-kuk-main-img"
+                                        src="assets/images/naret/fn-2017-07-09-19-44-15-0.jpg" alt="Sambor Prei Kuk">
+
+                                    <div class="sambor-prei-kuk-img-badge" id="sambor-prei-kuk-image-counter">
+                                        1 / 4
+                                    </div>
+                                </div>
+                                <div class=" fs-4 fw-bold text-warning-emphasis py-3">
+                                    <i class="bi bi-bank2 text-success"></i> រូបភាពប្រាសាទសំបូរព្រៃគុក
+                                </div>
+                                <div class="sambor-prei-kuk-options">
+                                    <div class="sambor-prei-kuk-card active"
+                                        onclick="selectSamborPreiKukImage( this, 1, 'assets/images/naret/fn-2017-07-09-19-44-15-0.jpg' )">
+                                        <div class="sambor-prei-kuk-check-icon">
+                                            ✓
+                                        </div>
+                                        <img src="assets/images/naret/fn-2017-07-09-19-44-15-0.jpg"
+                                            alt="Sambor Prei Kuk Temple">
+                                        <div class="sambor-prei-kuk-name">
+                                            ប្រាសាទ
+                                        </div>
+                                    </div>
+
+                                    <div class="sambor-prei-kuk-card"
+                                        onclick="selectSamborPreiKukImage( this, 2, 'assets/images/naret/ប្រាសាទសំបូរព្រៃគុកព្រៃឈើ.png' )">
+                                        <div class="sambor-prei-kuk-check-icon">
+                                            ✓
+                                        </div>
+                                        <img src="assets/images/naret/ប្រាសាទសំបូរព្រៃគុកព្រៃឈើ.png"
+                                            alt="Sambor Prei Kuk Forest">
+                                        <div class="sambor-prei-kuk-name">
+                                            ព្រៃឈើ
+                                        </div>
+                                    </div>
+
+                                    <div class="sambor-prei-kuk-card"
+                                        onclick="selectSamborPreiKukImage( this, 3, 'assets/images/naret/បុរាណ.jpg' )">
+                                        <div class="sambor-prei-kuk-check-icon">
+                                            ✓
+                                        </div>
+                                        <img src="assets/images/naret/បុរាណ.jpg" alt="Sambor Prei Kuk Ancient Temple">
+                                        <div class="sambor-prei-kuk-name">
+                                            បុរាណ
+                                        </div>
+                                    </div>
+
+                                    <div class="sambor-prei-kuk-card"
+                                        onclick="selectSamborPreiKukImage( this, 4, 'assets/images/naret/ទេសភាព.jpg' )">
+                                        <div class="sambor-prei-kuk-check-icon">
+                                            ✓
+                                        </div>
+                                        <img src="assets/images/naret/ទេសភាព.jpg" alt="Sambor Prei Kuk View">
+
+                                        <div class="sambor-prei-kuk-name">
+                                            ទេសភាព
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h1 class="fw-bold text-warning-emphasis">
+                                    ប្រាសាទសំបូរព្រៃគុក
+                                </h1>
+                                <div class="sambor-prei-kuk-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <span>4.8 / 5</span>
+                                </div>
+                                <p class=" fs-6 text-muted">
+                                    ប្រាសាទសំបូរព្រៃគុក គឺជាតំបន់ប្រាសាទបុរាណដ៏សំខាន់
+                                    ដែលមានស្ថាបត្យកម្មខ្មែរដ៏អស្ចារ្យ និងមានទីតាំង
+                                    ស្ថិតនៅក្នុងតំបន់ព្រៃធម្មជាតិដ៏ស្រស់ស្អាត។
+                                    វាជាគោលដៅដ៏ល្អសម្រាប់អ្នកដែលចូលចិត្តប្រវត្តិសាស្ត្រ
+                                    វប្បធម៌ និងការស្វែងយល់ពីអរិយធម៌ខ្មែរ។
+                                </p>
+                                <div class=" fw-bold fs-4 text-muted pb-2">
+                                    <i class="bi bi-stars text-warning"></i> អ្វីដែលអ្នកអាចរីករាយ
+                                </div>
+                                <ul class="sambor-prei-kuk-details-list">
+                                    <li>
+                                        <i class="bi bi-bank2 text-success"></i> ទស្សនាប្រាសាទបុរាណខ្មែរ
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-tree text-success"></i> ដើរកម្សាន្តក្នុងព្រៃធម្មជាតិ
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-camera text-warning"></i> ថតរូបជាមួយស្ថាបត្យកម្មបុរាណ
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-book text-danger"></i> ស្វែងយល់ពីប្រវត្តិសាស្ត្រខ្មែរ
+                                    </li>
+                                </ul>
+
+                                <div class="sambor-prei-kuk-info-pills">
+                                    <div>
+                                        <i class="bi bi-geo text-danger"></i> ទីតាំង:
+                                        <strong>កំពង់ធំ</strong>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-bank2 text-success"></i> ប្រភេទ:
+                                        <strong>ប្រាសាទបុរាណ</strong>
+                                    </div>
+
+                                    <div>
+                                        <i class="bi bi-tree text-success"></i> បរិយាកាស:
+                                        <strong>ធម្មជាតិ</strong>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-stopwatch"></i> រយៈពេល:
+                                        <strong>១ ថ្ងៃ</strong>
+                                    </div>
+                                </div>
+                                <div class="sambor-prei-kuk-price-box">
+                                    <span>
+                                        <i class="bi bi-currency-dollar text-warning"></i> តម្លៃដំណើរកម្សាន្ត
+                                    </span>
+                                    <strong>
+                                        $25
+                                        <small>/ ថ្ងៃ</small>
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" d-flex justify-content-around">
+                            <button class="sambor-prei-kuk-btn sambor-prei-kuk-favorite-btn"
+                                id="sambor-prei-kuk-favorite-btn" onclick="toggleSamborPreiKukFavorite()">
+                                <i class="bi bi-heart"></i> Add to Favorite
+                            </button>
+                            <button class="sambor-prei-kuk-btn sambor-prei-kuk-map-btn"
+                                onclick="viewSamborPreiKukMap()">
+                                <i class="bi bi-geo text-danger"></i> View on Map
+                            </button>
+                            <button class="sambor-prei-kuk-btn sambor-prei-kuk-contact-btn"
+                                onclick="contactSamborPreiKuk()">
+                                <i class="bi bi-telephone"></i> Contact
+                            </button>
+                            <button class="sambor-prei-kuk-btn sambor-prei-kuk-book-btn"
+                                onclick="bookSamborPreiKukTrip()">
+                                <i class="bi bi-bank2"></i> កក់ដំណើរកម្សាន្តឥឡូវនេះ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- ========================================================================= -->
+
+
+    <div class="modal fade" id="ChanrasmeyModal" tabindex="-1" aria-labelledby="chanrasmeyModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content chanrasmey-modal">
+                <div class="modal-header custom-modal-header">
+                    <h1 class="modal-title fw-bold" id="chanrasmeyModalLabel"> <i
+                            class="fa-solid fa-plate-wheat text-success"></i> ភោជនីយដ្ឋាន ច័ន្ទរស្មី
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="chanrasmey-grid-container">
+                            <div>
+                                <div class="chanrasmey-main-img-container">
+                                    <img id="chanrasmey-display-image" class="chanrasmey-main-img"
+                                        src="assets/images/naret/1.jpg" alt="Chan Rasmey Restaurant">
+                                    <div class="chanrasmey-img-badge" id="chanrasmey-image-counter">
+                                        1 / 4
+                                    </div>
+                                </div>
+                                <div class=" fs-4 fw-bold text-muted py-3">
+                                    <i class="fa-solid fa-plate-wheat text-danger-emphasis"></i> ជ្រើសរើសបរិយាកាស /
+                                    តំបន់
+                                </div>
+                                <div class="chanrasmey-options">
+                                    <div class="chanrasmey-card active"
+                                        onclick="selectChanRasmeyImage( this, 'ភោជនីយដ្ឋាន ច័ន្ទរស្មី', 1, 'assets/images/naret/1.jpg' )">
+                                        <div class="chanrasmey-check-icon">✓</div>
+                                        <img src="assets/images/naret/1.jpg" alt="Chan Rasmey Restaurant">
+                                        <div class="chanrasmey-name">
+                                            Restaurant
+                                        </div>
+                                    </div>
+                                    <div class="chanrasmey-card"
+                                        onclick="selectChanRasmeyImage( this, 'Outdoor Dining', 2, 'assets/images/naret/outdoor.jpg' )">
+
+                                        <div class="chanrasmey-check-icon">✓</div>
+                                        <img src="assets/images/naret/outdoor.jpg" alt="Outdoor Dining">
+                                        <div class="chanrasmey-name">
+                                            Outdoor
+                                        </div>
+                                    </div>
+                                    <div class="chanrasmey-card"
+                                        onclick="selectChanRasmeyImage( this, 'Restaurant Interior', 3, 'assets/images/naret/4.jpg' )">
+                                        <div class="chanrasmey-check-icon">✓</div>
+                                        <img src="assets/images/naret/4.jpg" alt="Restaurant Interior">
+                                        <div class="chanrasmey-name">
+                                            Interior
+                                        </div>
+                                    </div>
+                                    <div class="chanrasmey-card"
+                                        onclick="selectChanRasmeyImage( this, 'Special Dining Area', 4, 'assets/images/naret/foodkhmer.webp' )">
+                                        <div class="chanrasmey-check-icon">✓</div>
+                                        <img src="assets/images/naret/foodkhmer.webp" alt="Special Dining Area">
+                                        <div class="chanrasmey-name">
+                                            Special Area
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h1 class=" fw-bold text-info-emphasis">
+                                    ភោជនីយដ្ឋាន ច័ន្ទរស្មី
+                                </h1>
+                                <div class="chanrasmey-rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <span>4.1 / 5</span>
+                                </div>
+
+                                <p class="chanrasmey-description">
+                                    ភោជនីយដ្ឋាន ច័ន្ទរស្មី ផ្តល់ជូនម្ហូបអាហារខ្មែរបែបប្រពៃណី
+                                    និងម្ហូបអន្តរជាតិ ជាមួយបរិយាកាសស្រស់ស្អាត សេវាកម្មល្អ
+                                    និងរសជាតិឆ្ងាញ់សម្រាប់គ្រួសារ និងភ្ញៀវទេសចរ។
+                                </p>
+                                <div class=" fs-4 fw-bold text-muted">
+                                    <i class="bi bi-stars text-warning"></i> សេវាកម្មដែលមាន
+                                </div>
+
+                                <ul class="chanrasmey-details-list">
+                                    <li><i class="fa-solid fa-bowl-rice text-warning-emphasis"></i> ម្ហូបខ្មែរបែបប្រពៃណី
+                                    </li>
+                                    <li><i class="fa-solid fa-plate-wheat text-success"></i> ម្ហូបអន្តរជាតិ</li>
+                                    <li><i class="fa-solid fa-champagne-glasses text-danger"></i> ភេសជ្ជៈ និងកាហ្វេ</li>
+                                    <li><i class="bi bi-leaf text-success"></i> បរិយាកាសស្អាត និងមានផាសុកភាព</li>
+                                </ul>
+
+                                <div class="chanrasmey-info-pills">
+                                    <div>
+                                        <i class="bi bi-geo text-danger"></i> ទីតាំង:
+                                        <strong>សៀមរាប</strong>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-stopwatch text-primary"></i> ម៉ោងបើក:
+                                        <strong>7:00 AM - 10:00 PM</strong>
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-plate-wheat text-success"></i> ប្រភេទ:
+                                        <strong>Khmer & International</strong>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-currency-dollar text-warning"></i> តម្លៃ:
+                                        <strong>$10 - $100+</strong>
+                                    </div>
+                                </div>
+                                <div class="chanrasmey-price-box">
+                                    <span class=" fs-5 fw-medium text-primary-emphasis">
+                                        <i class="bi bi-currency-dollar text-warning"></i>តម្លៃកក់ភោជនីយដ្ឋាន
+                                    </span>
+                                    <strong class=" fs-4 fw-bold text-primary">
+                                        $20
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-flex justify-content-around mt-2 chanrasmey-action">
+                            <button class="chanrasmey-btn chanrasmey-favorite-btn" id="chanrasmey-favorite-btn"
+                                onclick="toggleChanRasmeyFavorite()">
+                                <i class="bi bi-heart"></i> Add to Favorite
+                            </button>
+                            <button class="chanrasmey-btn chanrasmey-map-btn" onclick="viewChanRasmeyMap()">
+                                <i class="bi bi-geo"></i> View on Map
+                            </button>
+
+                            <button class="chanrasmey-btn chanrasmey-action-contact" onclick="contactChanrasmey()">
+                                <i class="bi bi-telephone"></i>
+                                Contact
+                            </button>
+                            <button class="chanrasmey-btn chanrasmey-action-book text-center"
+                                onclick="bookChanrasmey()">
+                                <i class="bi bi-cash-stack"></i>
+                                កក់ភោជនីយដ្ឋាន ឥឡូវនេះ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- ======================================================================== -->
+
+    <div class="modal fade" id="MemoireHotelModal" tabindex="-1" aria-labelledby="MemoireHotelModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class=" modal-content memoire-hotel-modal">
+                <div class="modal-header custom-modal-header">
+                    <h1 class="modal-title fw-bold" id="AngkorwatModalLabel">
+                        <i class="fa-solid fa-landmark text-success"></i> សណ្ឋាគារ ម៉េម័រ សៀមរាប
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class=" modal-body">
+                    <div class="memoire-grid-container p-4">
+                        <div>
+                            <div class="memoire-main-img-container">
+                                <img id="memoire-display-image" class="memoire-main-img"
+                                    src="assets/images/naret/room1.jpg" alt="Memoire Hotel Siem Reap">
+                                <div class="memoire-img-badge" id="memoire-image-counter">
+                                    1 / 4
+                                </div>
+                            </div>
+                            <div class=" fs-4 fw-bold text-muted py-3">
+                                🏨 ជ្រើសរើសប្រភេទបន្ទប់
+                            </div>
+                            <div class="memoire-room-options">
+
+                                <div class="memoire-room-card active"
+                                    onclick="selectMemoireRoom( this, 'Deluxe Room', 45, 'assets/images/naret/room1.jpg', 1 )">
+                                    <div class="memoire-check-icon">✓</div>
+                                    <img src="assets/images/naret/room1.jpg" alt="Memoire Deluxe Room">
+                                    <div class="memoire-room-name">
+                                        Deluxe Room
+                                    </div>
+                                    <div class="memoire-room-price">
+                                        $45 / យប់
+                                    </div>
+                                </div>
+                                <div class="memoire-room-card"
+                                    onclick="selectMemoireRoom( this, 'Superior Room', 60, 'assets/images/naret/roomhotel.jpg', 2 )">
+
+                                    <div class="memoire-check-icon">✓</div>
+                                    <img src="assets/images/naret/roomhotel.jpg" alt="Memoire Superior Room">
+                                    <div class="memoire-room-name">
+                                        Superior Room
+                                    </div>
+                                    <div class="memoire-room-price">
+                                        $60 / យប់
+                                    </div>
+                                </div>
+                                <div class="memoire-room-card"
+                                    onclick="selectMemoireRoom( this, 'Family Room', 85, 'assets/images/naret/room2.jpg', 3 )">
+                                    <div class="memoire-check-icon">✓</div>
+                                    <img src="assets/images/naret/room2.jpg" alt="Memoire Family Room">
+                                    <div class="memoire-room-name">
+                                        Family Room
+                                    </div>
+                                    <div class="memoire-room-price">
+                                        $85 / យប់
+                                    </div>
+                                </div>
+                                <div class="memoire-room-card"
+                                    onclick="selectMemoireRoom( this, 'Suite Room', 120, 'assets/images/naret/room3.jpg', 4 )">
+
+                                    <div class="memoire-check-icon">✓</div>
+                                    <img src="assets/images/naret/room3.jpg" alt="Memoire Suite Room">
+                                    <div class="memoire-room-name">
+                                        Suite Room
+                                    </div>
+                                    <div class="memoire-room-price">
+                                        $120 / យប់
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class=" fw-bold text-info-emphasis">
+                                សណ្ឋាគារ ម៉េម័រ សៀមរាប
+                            </h1>
+                            <p>
+                                សណ្ឋាគារម៉េម័រ សៀមរាប ផ្តល់ជូននូវបន្ទប់ស្នាក់នៅមានផាសុកភាព
+                                សេវាកម្មល្អ និងទីតាំងងាយស្រួលសម្រាប់ការធ្វើដំណើរទៅកាន់
+                                តំបន់ទេសចរណ៍សំខាន់ៗក្នុងក្រុងសៀមរាប។
+                            </p>
+                            <div class=" fs-4 fw-bold text-muted">
+                                ✨ អ្វីដែលអ្នកនឹងទទួលបាន
+                            </div>
+
+                            <ul class="memoire-details-list">
+                                <li>🏊 អាងហែលទឹក</li>
+                                <li>🍽️ ភោជនីយដ្ឋាន</li>
+                                <li>📶 Free Wi-Fi</li>
+                                <li>🛏️ បន្ទប់មានផាសុកភាព</li>
+                            </ul>
+                            <div class="memoire-info-pills">
+                                <div>
+                                    📍 ទីតាំង:
+                                    <strong>សៀមរាប</strong>
+                                </div>
+                                <div>
+                                    ⭐ កម្រិត:
+                                    <strong>4 Star Hotel</strong>
+                                </div>
+
+                                <div>
+                                    🕒 Check-in:
+                                    <strong>2:00 PM</strong>
+                                </div>
+
+                                <div>
+                                    🏨 បន្ទប់:
+                                    <strong id="memoire-selected-room">
+                                        Deluxe Room
+                                    </strong>
+                                </div>
+                            </div>
+                            <div class="memoire-price-box">
+                                <span>តម្លៃសរុប</span>
+                                <span class="memoire-total-price" id="memoire-total-price">
+                                    $45.00
+                                    <small>/ យប់</small>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around">
+                        <button class="memoire-btn memoire-favorite-btn" id="memoire-favorite-btn"
+                            onclick="toggleMemoireFavorite()">
+                            <i class="bi bi-heart"></i> បន្ថែមទៅក្នុងបញ្ជីប្រាថ្នា
+                        </button>
+                        <button class="memoire-btn memoire-map-btn" onclick="viewMemoireMap()">
+                            <i class="bi bi-geo text-danger"></i> មើលនៅលើផែនទី
+                        </button>
+                        <button class="memoire-btn memoire-contact-btn" onclick="contactMemoire()">
+                            <i class="bi bi-telephone text-danger"></i> ទំនាក់ទំនង
+                        </button>
+                        <button class="memoire-btn memoire-book-btn" onclick="bookMemoireRoom()">
+                            <i class="fa-solid fa-hotel text-success"></i> កក់បន្ទប់ឥឡូវនេះ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- ======================================================================= -->
+
+    <div class="modal fade" id="RentCarModal" tabindex="-1" aria-labelledby="RentCarModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content rent-car-modal">
+                <div class=" modal-header custom-modal-header">
+                    <h1 class=" modal-title fw-bold" id="RentCarModalLabel"><i
+                            class="fa-solid fa-car-side text-danger"></i> សេវាកម្មជួលរថយន្តទាន់សម័យ</h1>
+                    <button type="button" class=" btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class=" modal-body">
+                    <div class="grid-container">
+                        <div>
+                            <div class="main-img-container">
+                                <img id="car-display-image" class="main-img" src="assets/images/naret/toyota-prius.webp"
+                                    alt="Car">
+                                <div class="img-badge" id="car-image-counter">1 / 4</div>
+                            </div>
+
+                            <div class="section-title"><i class="fa-solid fa-map-pin text-danger"></i>
+                                ជ្រើសរើសប្រភេទរថយន្ត
+                            </div>
+                            <div class="car-options">
+                                <!-- Car 1 -->
+                                <div class="car-card active"
+                                    onclick="selectCar(this, 'Toyota Prius', 35, 'assets/images/naret/toyota-prius.webp', 1)">
+                                    <div class="check-icon">✓</div>
+                                    <img src="assets/images/naret/toyota-prius.webp" alt="Prius">
+                                    <div class="car-name">Prius</div>
+                                    <div class="car-price">$35/ថ្ងៃ</div>
+                                </div>
+                                <!-- Car 2 -->
+                                <div class="car-card"
+                                    onclick="selectCar(this, 'Lexus RX330', 55, 'assets/images/naret/Lexus RX330.jpg', 2)">
+                                    <div class="check-icon">✓</div>
+                                    <img src="assets/images/naret/Lexus RX330.jpg" alt="Lexus">
+                                    <div class="car-name">Lexus RX</div>
+                                    <div class="car-price">$55/ថ្ងៃ</div>
+                                </div>
+                                <!-- Car 3 -->
+                                <div class="car-card"
+                                    onclick="selectCar(this, 'Ford Ranger Pickup', 70, 'assets/images/naret/Ford Ranger Pickup.webp', 3)">
+                                    <div class="check-icon">✓</div>
+                                    <img src="assets/images/naret/Ford Ranger Pickup.webp" alt="Ford Ranger">
+                                    <div class="car-name">Ford Pickup</div>
+                                    <div class="car-price">$70/ថ្ងៃ</div>
+                                </div>
+                                <!-- Car 4 -->
+                                <div class="car-card"
+                                    onclick="selectCar(this, 'Alphard VIP (7កៅអី)', 120, 'assets/images/naret/Alphard VIP.jpg', 4)">
+                                    <div class="check-icon">✓</div>
+                                    <img src="assets/images/naret/Alphard VIP.jpg" alt="Alphard VIP">
+                                    <div class="car-name">Alphard VIP</div>
+                                    <div class="car-price">$120/ថ្ងៃ</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class=" fw-bold text-muted"><i class="fa-solid fa-car-rear text-danger"></i>
+                                សេវាកម្មជួលរថយន្ត</h1>
+                            <p>
+                                ជួលរថយន្តដែលមានគុណភាពខ្ពស់ សុវត្ថិភាព និងផាសុកភាព សម្រាប់ការធ្វើដំណើរគ្រប់ប្រភេទ
+                                ក្នុងតម្លៃសមរម្យ និងសេវាកម្មប្រកបដោយទំនុកចិត្ត។
+                            </p>
+                            <div class="section-title"><i class="bi bi-stars text-warning"></i> អ្វីដែលអ្នកនឹងទទួលបាន
+                            </div>
+                            <ul class="details-list">
+                                <li><i class="bi bi-shield-fill-check text-info"></i> ប្រព័ន្ធធានារ៉ាប់រងរថយន្ត
+                                    (Insurance)
+                                </li>
+                                <li><i class="fa-solid fa-user-tie text-warning"></i> ជម្រើសជួលជាមួយអ្នកបើកបរ
+                                    ឬបើកបរដោយខ្លួនឯង</li>
+                                <li><i class="fa-solid fa-gas-pump"></i> ប្រេងសាំងពេញធុង ឬត្រួតពិនិត្យរួចរាល់</li>
+                                <li><i class="fa-solid fa-earth-asia text-success"></i> ប្រព័ន្ធ GPS មើលផ្លូវក្នុងរថយន្ត
+                                </li>
+                            </ul>
+
+                            <div class="info-pills">
+                                <div><i class="fa-solid fa-map-pin text-danger"></i> ទីតាំង: ភ្នំពេញ / សៀមរាប /
+                                    ព្រះសីហនុ
+                                </div>
+                                <div><i class="bi bi-stopwatch text-success"></i> រយៈពេល: ចាប់ពី ១ ថ្ងៃឡើង</div>
+                                <div><i class="fa-regular fa-file"></i> ឯកសារ: អត្តសញ្ញាណប័ណ្ណ / ប័ណ្ណបើកបរ</div>
+                                <div><i class="fa-solid fa-car-side text-danger"></i> រថយន្តជ្រើសរើស: <span
+                                        id="selected-car-text" style="font-weight:bold; color:#1565c0;">Toyota
+                                        Prius</span>
+                                </div>
+                            </div>
+
+                            <div class="price-box">
+                                <span class=" text-dark"><i class="bi bi-cash-coin text-success"></i> តម្លៃសរុប</span>
+                                <span class=" fw-bold fs-3 text-primary" id="total-price-display">$35.00 <span
+                                        class=" small fs-5 text-muted">/
+                                        ថ្ងៃ</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" d-flex justify-content-around">
+                        <button class="car-btn car-favorite-btn" id="Car-favorite-btn" onclick="toggleCarFavorite()">
+                            <i class="bi bi-heart"></i> Add to Favorite</button>
+                        <button class="car-btn car-map-btn" onclick="viewCarMap()">
+                            <i class="bi bi-geo"></i> View on Map</button>
+                        <button class="car-btn car-contact-btn"><i class="bi bi-telephone"></i> ទាក់ទង</button>
+                        <button class="car-btn car-book-btn" id="book-btn" onclick="confirmBooking()">កក់រថយន្ត
+                            Toyota Prius
+                            ឥឡូវនេះ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================================ -->
+
+
+    <div class="modal fade" id="TourGuideModal" tabindex="-1" aria-labelledby="TourGuideModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content tour-guide-modal">
+                <div class=" modal-header custom-modal-header">
+                    <h1 class=" modal-title fw-bold" id="TourGuideModalLabel"><i class="bi bi-flag text-danger"></i>
+                        សេវាកម្មជួលមគ្គុទ្ទេសក៍ទេសចរណ៍ (Tour Guide)</h1>
+                    <button type="button" class=" btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+
+                <div class=" modal-body">
+                    <div class="grid-container">
+                        <div>
+                            <div class="main-img-container">
+                                <img id="guide-display-image" class="main-img"
+                                    src="assets/images/naret/Tour Guide khmer.jpg" alt="Tour Guide Khmer">
+                                <div class="img-badge" id="guide-image-counter">1 / 4</div>
+                            </div>
+
+                            <div class="section-title"><i class="bi bi-geo text-danger"></i> ជ្រើសរើសប្រភេទមគ្គុទ្ទេសក៍
+                                (តាមភាសា)</div>
+                            <div class="guide-options">
+                                <div class="guide-card active"
+                                    onclick="selectGuide(this, 'ភាសាខ្មែរ (Khmer)', 30, 'assets/images/naret/Tour Guide khmer.jpg', 1)">
+                                    <div class="check-icon">✓</div>
+                                    <img src="assets/images/naret/Tour Guide khmer.jpg" alt="Khmer Guide">
+                                    <div class="guide-name">ភាសាខ្មែរ</div>
+                                    <div class="guide-price">$30/ថ្ងៃ</div>
+                                </div>
+                                <div class="guide-card"
+                                    onclick="selectGuide(this, 'ភាសាអង់គ្លេស (English)', 45, 'assets/images/naret/Tour Guide.jpg', 2)">
+                                    <div class="check-icon">✓</div>
+                                    <img src="assets/images/naret/Tour Guide.jpg" alt="English Guide">
+                                    <div class="guide-name">អង់គ្លេស</div>
+                                    <div class="guide-price">$45/ថ្ងៃ</div>
+                                </div>
+                                <div class="guide-card"
+                                    onclick="selectGuide(this, 'ភាសាចិន (Chinese)', 50, 'assets/images/naret/Tour Guide chaina.jpg', 3)">
+                                    <div class="check-icon">✓</div>
+                                    <img src="assets/images/naret/Tour Guide chaina.jpg" alt="Chinese Guide">
+                                    <div class="guide-name">ភាសាចិន</div>
+                                    <div class="guide-price">$50/ថ្ងៃ</div>
+                                </div>
+                                <div class="guide-card"
+                                    onclick="selectGuide(this, 'ភាសាកូរ៉េ/ជប៉ុន (VIP)', 65, 'assets/images/naret/Tour Guide1.jpg', 4)">
+                                    <div class="check-icon">✓</div>
+                                    <img src="assets/images/naret/Tour Guide1.jpg" alt="VIP Guide">
+                                    <div class="guide-name">កូរ៉េ/ជប៉ុន</div>
+                                    <div class="guide-price">$65/ថ្ងៃ</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class=" text-success fw-bold text-muted">សេវាកម្មមគ្គុទ្ទេសក៍ទេសចរណ៍អាជីព</h3>
+                            <p>
+                                សេវាកម្មមគ្គុទ្ទេសក៍ទេសចរណ៍ដែលមានអាជ្ញាប័ណ្ណត្រឹមត្រូវ ស្ទាត់ជំនាញ
+                                រាយរ៉ាប់ប្រវត្តិសាស្ត្រ
+                                និងដឹកនាំកម្សាន្តប្រកបដោយជំនាញ និងសុវត្ថិភាព។
+                            </p>
+
+                            <div class="section-title fs-3 text-muted"><i class="bi bi-stars text-warning"></i>
+                                អ្វីដែលអ្នកនឹងទទួលបាន</div>
+                            <ul class="details-list fs-5">
+                                <li>📜 មគ្គុទ្ទេសក៍មានអាជ្ញាប័ណ្ណផ្លូវការ (Licensed Guide)</li>
+                                <li>🏛️ ណែនាំ និងពន្យល់ប្រវត្តិសាស្ត្រតំបន់រមណីយដ្ឋានយ៉ាងលម្អិត</li>
+                                <li>📸 ជួយថតរូបស្អាតៗ និងរៀបចំកាលវិភាគដើរកម្សាន្ត</li>
+                                <li>💬 ជំនាញសម្របសម្រួល និងបកប្រែតាមតម្រូវការ</li>
+                            </ul>
+
+                            <div class="info-pills">
+                                <div><i class="bi bi-geo text-danger"></i> តំបន់: សៀមរាប / ភ្នំពេញ / កំពត</div>
+                                <div><i class="bi bi-stopwatch-fill text-success"></i> រយៈពេល: ៨ ម៉ោង / ថ្ងៃ</div>
+                                <div>🗣️ ភាសាជ្រើសរើស: <span id="selected-guide-text" class=" text-primary">ភាសាខ្មែរ
+                                        (Khmer)</span></div>
+                                <div><i class="bi bi-star-fill text-warning"></i> បទពិសោធន៍: ចាប់ពី ៣ ឆ្នាំឡើង</div>
+                            </div>
+
+                            <div class="price-box">
+                                <span class=" text-success"><i class="bi bi-cash-coin"></i> តម្លៃសរុប</span>
+                                <span class="total-price" id="guide-total-price-display">$30.00 <span class=" fs-6">/
+                                        ថ្ងៃ</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" d-flex justify-content-around">
+                        <button class="guide-btn guide-favorite-btn" id="Guide-favorite-btn"
+                            onclick="toggleGuideFavorite()">
+                            <i class="bi bi-heart"></i> Add to Favorite</button>
+                        <button class="guide-btn guide-map-btn" onclick="viewGuideMap()">
+                            <i class="bi bi-geo"></i> View on Map</button>
+                        <button class="guide-btn guide-contact-btn"><i class="bi bi-telephone"></i> ទាក់ទង</button>
+                        <button class="guide-btn guide-book-btn" id="guide-book-btn" onclick="confirmGuideBooking()">កក់
+                            ភាសាខ្មែរ (Khmer) ឥឡូវនេះ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        function updateTotalSaved() {
+            const total = document.querySelectorAll(".favorite-item").length;
+            document.getElementById("totalSaved").textContent = total;
+        }
+        updateTotalSaved();
+        document.getElementById("clearAllBtn").addEventListener("click", function () {
+            if (confirm("តើអ្នកចង់លុបទាំងអស់មែនទេ?")) {
+                document.querySelectorAll(".favorite-item").forEach(item => {
+                    item.remove();
+                });
+                updateTotalSaved();
+            }
+        });
+
+
+
+        // =======================================
+        // =======================================
+
+        function selectKohRongImage(
+            element,
+            imageNumber,
+            imageUrl
+        ) {
+            document
+                .querySelectorAll('.koh-rong-card')
+                .forEach(function (card) {
+                    card.classList.remove('active');
+                });
+            element.classList.add('active');
+            document.getElementById(
+                'koh-rong-display-image'
+            ).src = imageUrl;
+            document.getElementById(
+                'koh-rong-image-counter'
+            ).innerText =
+                imageNumber + ' / 4';
+        }
+        function toggleKohRongFavorite() {
+            const button =
+                document.getElementById(
+                    'koh-rong-favorite-btn'
+                );
+            if (
+                button.classList.contains('is-favorite')
+            ) {
+                button.classList.remove('is-favorite');
+                button.innerHTML =
+                    '<i class="bi bi-heart-fill"></i> Add to Favorite';
+            } else {
+                button.classList.add('is-favorite');
+                button.innerHTML =
+                    '<i class="bi bi-heart-fill"></i> Added to Favorite';
+            }
+        }
+        function viewKohRongMap() {
+            window.open(
+                'https://www.google.com/maps/search/?api=1&query=Koh+Rong+Samloem',
+                '_blank'
+            );
+        }
+
+
+
+
+        <!-- ==================================================== -->
+        function changeGalleryImage(thumbnail) {
+            const thumbnails =
+                document.querySelectorAll(".thumbnail");
+
+            const selectedIndex =
+                Array.from(thumbnails).indexOf(thumbnail);
+            currentGalleryIndex =
+                selectedIndex;
+            updateGallery();
+        }
+        function nextThumbnailImage() {
+            const angkorModal = document.getElementById("AngkorwatModal");
+            const thumbnails = angkorModal.querySelectorAll(".thumbnail");
+
+            currentGalleryIndex++;
+
+            if (currentGalleryIndex >= thumbnails.length) {
+                currentGalleryIndex = 0;
+            }
+            updateGallery();
+        }
+        function updateGallery() {
+            const angkorModal = document.getElementById("AngkorwatModal");
+            const thumbnails = angkorModal.querySelectorAll(".thumbnail");
+            const selectedThumbnail =
+                thumbnails[currentGalleryIndex];
+            const selectedImage =
+                selectedThumbnail
+                    .querySelector("img")
+                    .src;
+            angkorModal.querySelector("#mainGalleryImage")
+                .src = selectedImage;
+            thumbnails.forEach(thumbnail => {
+                thumbnail.classList.remove("active");
+            });
+            selectedThumbnail
+                .classList
+                .add("active");
+            angkorModal.querySelector("#imageCounter")
+                .innerText =
+                `${currentGalleryIndex + 1} / ${thumbnails.length}`;
+        }
+        let currentGalleryIndex = 0;
+
+        const galleryImages = [
+            "assets/images/naret/Angkorareab.jpg",
+            "assets/images/naret/Screen-Shot-2019-03-18-at-3.06.49-PM.webp",
+            "assets/images/naret/image-23.png",
+            "assets/images/naret/9-25.jpg"
+        ];
+        let currentImageIndex = 0;
+        function openGallery() {
+            const lightbox =
+                document.getElementById("galleryLightbox");
+            const image =
+                document.getElementById("lightboxImage");
+            lightbox.classList.add("active");
+            image.src =
+                galleryImages[currentImageIndex];
+            updateGalleryCounter();
+            document.body.style.overflow = "hidden";
+        }
+        function closeGallery() {
+            const lightbox =
+                document.getElementById("galleryLightbox");
+            lightbox.classList.remove("active");
+            document.body.style.overflow = "auto";
+        }
+        function nextImage() {
+            currentImageIndex++;
+            if (
+                currentImageIndex >= galleryImages.length
+            ) {
+                currentImageIndex = 0;
+            }
+            updateGalleryImage();
+        }
+        function previousImage() {
+            currentImageIndex--;
+            if (currentImageIndex < 0) {
+                currentImageIndex =
+                    galleryImages.length - 1;
+            }
+            updateGalleryImage();
+        }
+        function updateGalleryImage() {
+            document
+                .getElementById("lightboxImage")
+                .src =
+                galleryImages[currentImageIndex];
+            updateGalleryCounter();
+        }
+        function updateGalleryCounter() {
+            document
+                .getElementById("lightboxCounter")
+                .innerText =
+                `${currentImageIndex + 1} / ${galleryImages.length}`;
+        }
+        document.addEventListener(
+            "keydown",
+            function (event) {
+                if (event.key === "Escape") {
+                    closeGallery();
+                }
+                if (event.key === "ArrowRight") {
+                    nextImage();
+                }
+                if (event.key === "ArrowLeft") {
+                    previousImage();
+                }
+            }
+        );
+
+        const favoriteButton =
+            document.querySelector(".action-favorite");
+        if (favoriteButton) {
+            favoriteButton.addEventListener("click", function () {
+                const icon =
+                    this.querySelector("i");
+                if (icon.classList.contains("bi-heart")) {
+                    icon.classList.remove("bi-heart");
+                    icon.classList.add("bi-heart-fill");
+                    this.classList.add("active");
+                    this.innerHTML =
+                        '<i class="bi bi-heart-fill"></i> Favorited';
+                } else {
+                    icon.classList.remove("bi-heart-fill");
+                    icon.classList.add("bi-heart");
+                    this.classList.remove("active");
+                    this.innerHTML =
+                        '<i class="bi bi-heart"></i> Favorite';
+                }
+            });
+        }
+
+        const contactButton =
+            document.querySelector(".action-contact");
+        if (contactButton) {
+            contactButton.addEventListener("click", function () {
+                window.location.href = "tel:+85512345678";
+            });
+        }
+
+        const bookingButton =
+            document.querySelector(".action-book");
+        if (bookingButton) {
+            bookingButton.addEventListener("click", function (e) {
+                e.preventDefault();
+                const hotel = {
+                    id: this.dataset.id,
+                    name: this.dataset.name,
+                    price: parseFloat(this.dataset.price),
+                    qty: 1,
+                    image: this.dataset.image
+                };
+                let hotelCart = JSON.parse(
+                    localStorage.getItem("hotelCart")
+                ) || [];
+                const existing =
+                    hotelCart.find(item => item.id === hotel.id);
+                if (existing) {
+                    existing.qty++;
+                } else {
+                    hotelCart.push(hotel);
+                }
+                localStorage.setItem(
+                    "hotelCart",
+                    JSON.stringify(hotelCart)
+                );
+                this.innerHTML =
+                    '<i class="bi bi-check-circle-fill"></i> Added';
+                this.classList.remove("btn-primary");
+                this.classList.add("btn-success");
+                setTimeout(() => {
+                    this.innerHTML =
+                        '<i class="bi bi-calendar-check-fill"></i> កក់ដំណើរកម្សាន្តឥឡូវនេះ';
+                    this.classList.remove("btn-success");
+                    this.classList.add("btn-primary");
+                }, 1800);
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            updateHotelGallery();
+        });
+
+
+
+
+        // =======================================
+        // =======================================
+
+
+
+
+        function selectYeakLaomImage(
+            element,
+            imageNumber,
+            imageUrl
+        ) {
+            document
+                .querySelectorAll('.yeak-laom-card')
+                .forEach(function (card) {
+                    card.classList.remove('active');
+                });
+            element.classList.add('active');
+            document.getElementById(
+                'yeak-laom-display-image'
+            ).src = imageUrl;
+            document.getElementById(
+                'yeak-laom-image-counter'
+            ).innerText =
+                imageNumber + ' / 4';
+
+        }
+        function toggleYeakLaomFavorite() {
+            const button =
+                document.getElementById(
+                    'yeak-laom-favorite-btn'
+                );
+            if (
+                button.classList.contains('is-favorite')
+            ) {
+                button.classList.remove('is-favorite');
+                button.innerHTML =
+                    '<i class="bi bi-heart-fill"></i> Add to Favorite';
+
+            } else {
+                button.classList.add('is-favorite');
+                button.innerHTML =
+                    '<i class="bi bi-heart-fill"></i> Added to Favorite';
+
+            }
+
+        }
+        function viewYeakLaomMap() {
+            window.open(
+                'https://www.google.com/maps/search/?api=1&query=Yeak+Laom+Lake+Ratanakiri',
+                '_blank'
+            );
+        }
+        function contactYeakLaom() {
+            alert(
+                'សូមទាក់ទងក្រុមការងាររបស់យើង ដើម្បីទទួលបានព័ត៌មានបន្ថែម។'
+            );
+        }
+        function bookYeakLaomTrip() {
+            alert(
+                'ការកក់ដំណើរកម្សាន្តទៅបឹងយក្សឡោមបានចាប់ផ្តើម!'
+            );
+        }
+
+
+        // =======================================
+        // =======================================
+
+
+        function selectSamborPreiKukImage(
+            element,
+            imageNumber,
+            imageUrl
+        ) {
+            document
+                .querySelectorAll(
+                    '.sambor-prei-kuk-card'
+                )
+                .forEach(function (card) {
+                    card.classList.remove('active');
+                });
+            element.classList.add('active');
+            document.getElementById(
+                'sambor-prei-kuk-display-image'
+            ).src = imageUrl;
+            document.getElementById(
+                'sambor-prei-kuk-image-counter'
+            ).innerText =
+                imageNumber + ' / 4';
+
+        }
+
+        function toggleSamborPreiKukFavorite() {
+            const button =
+                document.getElementById(
+                    'sambor-prei-kuk-favorite-btn'
+                );
+            if (
+                button.classList.contains(
+                    'is-favorite'
+                )
+            ) {
+                button.classList.remove(
+                    'is-favorite'
+                );
+                button.innerHTML =
+                    '<i class="bi bi-heart-fill"></i> Add to Favorite';
+            } else {
+                button.classList.add(
+                    'is-favorite'
+                );
+                button.innerHTML =
+                    '<i class="bi bi-heart-fill"></i> Added to Favorite';
+            }
+        }
+        function viewSamborPreiKukMap() {
+            window.open(
+                'https://www.google.com/maps/search/?api=1&query=Sambor+Prei+Kuk+Temple',
+                '_blank'
+            );
+        }
+        function contactSamborPreiKuk() {
+            alert(
+                'សូមទាក់ទងក្រុមការងាររបស់យើង ដើម្បីទទួលបានព័ត៌មានបន្ថែម។'
+            );
+        }
+        function bookSamborPreiKukTrip() {
+            alert(
+                'ការកក់ដំណើរកម្សាន្តទៅប្រាសាទសំបូរព្រៃគុកបានចាប់ផ្តើម!'
+            );
+        }
+
+
+        // =======================================
+        // =======================================
+
+        function selectChanRasmeyImage(
+            element,
+            imageName,
+            imageNumber,
+            imageUrl
+        ) {
+
+            document
+                .querySelectorAll('.chanrasmey-card')
+                .forEach(function (card) {
+                    card.classList.remove('active');
+                });
+            element.classList.add('active');
+            document.getElementById(
+                'chanrasmey-display-image'
+            ).src = imageUrl;
+            document.getElementById(
+                'chanrasmey-image-counter'
+            ).innerText =
+                imageNumber + ' / 4';
+        }
+
+        function toggleChanRasmeyFavorite() {
+            const favoriteButton =
+                document.getElementById(
+                    'chanrasmey-favorite-btn'
+                );
+            if (
+                favoriteButton.classList.contains(
+                    'is-favorite'
+                )
+            ) {
+                favoriteButton.classList.remove(
+                    'is-favorite'
+                );
+                favoriteButton.innerHTML =
+                    '<i class="bi bi-heart-fill"></i> Add to Favorite';
+            } else {
+                favoriteButton.classList.add(
+                    'is-favorite'
+                );
+                favoriteButton.innerHTML =
+                    '<i class="bi bi-heart-fill"></i> Added to Favorite';
+            }
+        }
+
+        function viewChanRasmeyMap() {
+            window.open(
+                'https://www.google.com/maps/search/?api=1&query=Chan+Rasmey+Restaurant+Siem+Reap',
+                '_blank'
+            );
+        }
+
+        function contactChanrasmey() {
+            alert(
+                'សូមទាក់ទងក្រុមការងាររបស់យើង ដើម្បីទទួលបានព័ត៌មានបន្ថែម។'
+            );
+        }
+        function bookChanrasmey() {
+            alert(
+                'ការកក់ភោជនីយដ្ឋាន ច័ន្ទរស្មី បានចាប់ផ្តើម!'
+            );
+        }
+
+        // =======================================
+        // =======================================
+
+
+        function selectMemoireRoom(element, roomName, roomPrice, roomImage, roomNumber) {
+            document
+                .querySelectorAll('.memoire-room-card')
+                .forEach(function (roomCard) {
+                    roomCard.classList.remove('active');
+                });
+
+            element.classList.add('active');
+
+            document.getElementById(
+                'memoire-display-image'
+            ).src = roomImage;
+
+            document.getElementById(
+                'memoire-image-counter'
+            ).innerText = roomNumber + ' / 4';
+
+            document.getElementById(
+                'memoire-selected-room'
+            ).innerText = roomName;
+
+            document.getElementById(
+                'memoire-total-price'
+            ).innerHTML =
+                `$${roomPrice}.00  <small>/ យប់</small>`;
+        }
+
+
+        function toggleMemoireFavorite() {
+            const favoriteButton =
+                document.getElementById(
+                    'memoire-favorite-btn'
+                );
+            if (
+                favoriteButton.classList.contains(
+                    'is-favorite'
+                )
+            ) {
+
+                favoriteButton.classList.remove(
+                    'is-favorite'
+                );
+                favoriteButton.innerHTML =
+                    '<i class="bi bi-heart-fill"></i> Add to Favorite';
+            } else {
+                favoriteButton.classList.add(
+                    'is-favorite'
+                );
+                favoriteButton.innerHTML =
+                    '<i class="bi bi-heart-fill"></i> Added to Favorite';
+            }
+        }
+
+        function viewMemoireMap() {
+            const mapUrl = "https://maps.google.com/?q=Memoire+D'Angkor+Culinary+Boutique+Hotel+Siem+Reap";
+            window.open(mapUrl, '_blank');
+        }
+
+        function contactMemoire() {
+            alert(
+                'សូមទាក់ទងក្រុមការងាររបស់យើង ដើម្បីទទួលបានព័ត៌មានបន្ថែម។'
+            );
+        }
+        function bookMemoireRoom() {
+            alert(
+                'ការកក់ដំណើរកម្សាន្តទៅប្រាសាទសំបូរព្រៃគុកបានចាប់ផ្តើម!'
+            );
+        }
+
+
+
+        // =======================================
+        // =======================================
+
+        function selectCar(element, name, price, imageUrl, imageNumber) {
+            let cards = document.querySelectorAll('.car-card');
+
+            cards.forEach(card => {
+                card.classList.remove('active');
+            });
+
+            element.classList.add('active');
+            document.getElementById('car-display-image').src = imageUrl;
+            document.getElementById('car-image-counter').innerText =
+                `${imageNumber} / 4`;
+
+            document.getElementById('selected-car-text').innerText = name;
+            document.getElementById('total-price-display').innerHTML =
+                `$${price}.00  <span class=" small fs-5 text-muted">/ ថ្ងៃ</span>`;
+
+            document.getElementById('book-btn').innerText =
+                `កក់រថយន្ត ${name} ឥឡូវនេះ`;
+        }
+
+        function confirmBooking() {
+            let selectedCar = document.getElementById('selected-car-text').innerText;
+            alert(`អ្នកបានជ្រើសរើសកក់រថយន្ត: ${selectedCar} ដោយជោគជ័យ!`);
+        }
+
+        function toggleCarFavorite() {
+            const favoriteButton =
+                document.getElementById(
+                    'Car-favorite-btn'
+                );
+            if (
+                favoriteButton.classList.contains(
+                    'is-favorite'
+                )
+            ) {
+                favoriteButton.classList.remove(
+                    'is-favorite'
+                );
+                favoriteButton.innerHTML =
+                    '<i class="bi bi-heart-fill"></i> Add to Favorite';
+            } else {
+                favoriteButton.classList.add(
+                    'is-favorite'
+                );
+                favoriteButton.innerHTML =
+                    '<i class="bi bi-heart-fill"></i> Added to Favorite';
+            }
+        }
+
+        function viewCarMap() {
+            const mapUrl = "https://maps.google.com/?q=Memoire+D'Angkor+Culinary+Boutique+Hotel+Siem+Reap";
+            window.open(mapUrl, '_blank');
+        }
+
+
+
+        // =======================================
+        // =======================================
+
+        function selectGuide(element, name, price, imageUrl, imageNumber) {
+            let cards = document.querySelectorAll('.guide-card');
+
+            cards.forEach(function (card) {
+                card.classList.remove('active');
+            });
+            element.classList.add('active');
+            document.getElementById('guide-display-image').src = imageUrl;
+            document.getElementById('guide-image-counter').innerText =
+                imageNumber + ' / 4';
+
+            document.getElementById('selected-guide-text').innerText = name;
+
+            document.getElementById('guide-total-price-display').innerHTML =
+                `$${price}.00 <small>/ ថ្ងៃ</small>`;
+
+            document.getElementById('guide-book-btn').innerText =
+                `កក់ ${name} ឥឡូវនេះ`;
+        }
+
+        function confirmGuideBooking() {
+            let selectedGuide =
+                document.getElementById('selected-guide-text').innerText;
+
+            alert(`អ្នកបានជ្រើសរើសកក់មគ្គុទ្ទេសក៍: ${selectedGuide} ដោយជោគជ័យ!`);
+        }
+
+        function toggleGuideFavorite() {
+            const favoriteButton =
+                document.getElementById(
+                    'Guide-favorite-btn'
+                );
+            if (
+                favoriteButton.classList.contains(
+                    'is-favorite'
+                )
+            ) {
+                favoriteButton.classList.remove(
+                    'is-favorite'
+                );
+                favoriteButton.innerHTML =
+                    '<i class="bi bi-heart-fill"></i> Add to Favorite';
+            } else {
+                favoriteButton.classList.add(
+                    'is-favorite'
+                );
+                favoriteButton.innerHTML =
+                    '<i class="bi bi-heart-fill"></i> Added to Favorite';
+            }
+        }
+
+        function viewGuideMap() {
+            const mapUrl = "https://maps.google.com/?q=Memoire+D'Angkor+Culinary+Boutique+Hotel+Siem+Reap";
+            window.open(mapUrl, '_blank');
+        }
+
+    </script>
 </body>
 
 </html>
