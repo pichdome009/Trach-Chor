@@ -6,11 +6,33 @@
     box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
 
 :root {
     --primary: #0F172A;
     --primary-hover: #1E293B;
+    --primary-color: #0B8457;
+    /* Forest Green */
+    --primary-dark: #086341;
+    --primary-light: #12a870;
+    --primary-bg-subtle: #e6f5ef;
+    --secondary-color: #F4B400;
+    /* Golden */
+    --secondary-dark: #d29b00;
+    --secondary-light: #f7cd4d;
+    --accent-color: #4DA8DA;
+    /* Sky Blue */
+    --bg-color: #F8FAFC;
+    /* Spacious Background */
+    --bg-white: #FFFFFF;
+    --text-dark: #1E293B;
+    /* Dark Gray */
+    --text-muted: #64748B;
+    --text-light: #94A3B8;
+    --border-color: #E2E8F0;
     --accent: #C5A880;
     --accent-hover: #B3956D;
     --dark: #0F172A;
@@ -27,6 +49,22 @@ html { scroll-behavior: smooth; font-size: 16px; }
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --glass-bg: rgba(255, 255, 255, 0.85);
     --glass-border: rgba(255, 255, 255, 0.4);
+
+    --shadow-sm: 0 2px 4px rgba(11, 132, 87, 0.04);
+    --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    --shadow-lg: 0 20px 40px -15px rgba(11, 132, 87, 0.1);
+    --shadow-xl: 0 25px 50px -12px rgba(11, 132, 87, 0.18);
+    --shadow-golden: 0 15px 35px -10px rgba(244, 180, 0, 0.4);
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    --radius-full: 9999px;
+
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --transition-slow: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 body {
@@ -37,6 +75,212 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
+
+
+
+
+.navbar {
+    background: var(--primary-dark);
+}
+
+.navbar .dropdown-menu {
+    background: var(--text-dark);
+    /* top: 0px !important; */
+
+    /* left: 0px !important; */
+}
+
+.navbar .dropdown-item {
+    color: var(--text-light);
+    transition: var(--transition-normal);
+}
+
+.navbar .dropdown-item:hover {
+    background: var(--primary-dark);
+    color: var(--text-white);
+    transition: var(--transition-normal);
+    transform: translateY(-2px);
+}
+
+/* .navbar .dropdown:hover .dropdown-menu{
+    display: block;
+    margin-top: 0;
+    top: 100%;
+} */
+
+/* --- Footer --- */
+.footer-luxury {
+    background: #0F172A;
+    color: #94A3B8;
+    padding: 80px 0 30px 0;
+    font-size: 0.95rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer-logo span {
+    color: var(--secondary-color);
+}
+
+.footer-heading {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    transition: var(--transition-normal);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+    padding-left: 5px;
+    transition: var(--transition-normal);
+}
+
+.social-icon-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #ffffff14;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    transition: var(--transition-normal);
+}
+
+.social-icon-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* profile */
+.profile-dropdown {
+    position: relative;
+    background-color: #0F172A;
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    width: fit-content;
+}
+
+.nav-profile-btn {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 6px 6px !important;
+    /* Uniform padding for a perfect circle on mobile */
+}
+
+.profile-dropdown .dropdown-menu {
+    background-color: #0F172A !important;
+}
+
+.btn-login .btn {
+    gap: 20px;
+    background-color: #0F172A !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 10px 20px !important;
+}
+
+/* Custom Dropdown Styling for Notifications & Cart */
+.dropdown-menu-glass {
+    background-color: rgba(17, 21, 28, 0.85) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(244, 180, 0, 0.15) !important;
+    animation: slideUpFade 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform-origin: top;
+}
+
+.dropdown-item-custom {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.3s ease;
+}
+
+.dropdown-item-custom:hover {
+    background-color: rgba(255, 255, 255, 0.09) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.notification-badge-pulse {
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 6px rgba(220, 53, 69, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+    }
+}
+
+.btn-gradient-green {
+    background: linear-gradient(135deg, #12a870, #0B8457);
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(11, 132, 87, 0.4);
+}
+
+.btn-gradient-green:hover {
+    background: linear-gradient(135deg, #0B8457, #086341);
+    box-shadow: 0 6px 20px rgba(11, 132, 87, 0.5);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
 
 .kh-card {
     background: #fff;
