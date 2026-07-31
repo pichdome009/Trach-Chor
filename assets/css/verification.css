@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Kantumruy Pro", sans-serif;
+  background-image: url(../images/SEAVTHEAN/golden-beach-resort-koh-rong-main.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.glass-bac {
+  background-color: rgba(255, 255, 255, 0.148);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Container centering */
+.reset-container {
+  max-width: 420px;
+  width: 100%;
+}
+
+/* Icon wrapper style */
+.icon-box {
+  width: 56px;
+  height: 56px;
+  border: 1px solid #e4e7ec;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.icon-box i {
+  font-size: 24px;
+  color: #344054;
+  margin: auto;
+}
+
+/* Code input styles */
+.code-input {
+  width: 64px;
+  height: 64px;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  color: #101828;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Active/focused state or pre-filled active style matching your image */
+.code-input:focus,
+.code-input.has-value {
+  border-color: #00ff9133;
+  /* box-shadow: 0 0 2px 4px #00ff9133; */
+  outline: none;
+  box-shadow: 0px 0px 0px 4px rgba(0, 255, 145, 0.2) !important;
+}
+
+/* Custom helper utilities for exact color matching */
+/* .text-muted-custom {
+  color: #667085;
+} */
+
+.btn-primary-custom {
+  background-color: #1570ef;
+  border-color: #1570ef;
+  padding: 10px 18px;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.btn-primary-custom:hover {
+  background-color: #175cd3;
+  border-color: #175cd3;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #175cd3;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  color: #1570ef;
+}
