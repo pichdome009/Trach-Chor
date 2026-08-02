@@ -1,0 +1,213 @@
+/* ==========================================================
+   about.css — page-specific styles for about.html
+   Loads AFTER index.css, reuses the same :root color tokens
+   ========================================================== */
+
+/* --- About Hero (shorter than homepage hero) --- */
+.about-hero {
+  height: 55vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(11, 132, 87, 0.55) 0%,
+      rgba(15, 23, 42, 0.75) 100%
+    ),
+    url('../images/Pich-Udom/Angkor_Wat.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Hero already carries its own dark overlay via .hero-overlay,
+   this just softens it further so the green tint shows through */
+.about-hero .hero-overlay {
+  background: transparent;
+}
+
+/* --- Our Story image --- */
+.story-img-wrap {
+  min-height: 420px;
+}
+
+/* --- Stats Band --- */
+.stats-band {
+  background-color: var(--primary-color);
+  padding: 4rem 0;
+}
+
+.stats-number {
+  color: var(--secondary-color);
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.stats-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* --- Mission & Vision Cards --- */
+.value-card {
+  padding: 2.5rem;
+}
+
+.value-card h4 {
+  color: var(--text-dark);
+}
+
+/* --- Team Cards --- */
+.team-img {
+  height: 260px;
+}
+
+.team-card-body {
+  padding: 1.1rem;
+}
+
+.team-name {
+  color: var(--text-dark);
+  margin-bottom: 0.15rem;
+}
+
+.team-role {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* --- About CTA banner --- */
+.about-cta {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.about-cta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.about-cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(11, 132, 87, 0.85), rgba(15, 23, 42, 0.75));
+  z-index: 1;
+}
+
+.about-cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= Breakpoints ================= */
+
+/* Tablets */
+@media (max-width: 991.98px) {
+  .about-hero {
+    height: 48vh;
+  }
+
+  .story-img-wrap {
+    min-height: 320px;
+  }
+
+  .stats-number {
+    font-size: 2.2rem;
+  }
+
+  .stats-band {
+    padding: 3rem 0;
+  }
+
+  .value-card {
+    padding: 2rem;
+  }
+
+  .team-img {
+    height: 220px;
+  }
+
+  .about-cta {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 767.98px) {
+  .about-hero {
+    height: 42vh;
+  }
+
+  .story-img-wrap {
+    min-height: 260px;
+  }
+
+  .stats-number {
+    font-size: 1.9rem;
+  }
+
+  .stats-label {
+    font-size: 0.85rem;
+  }
+
+  .stats-band {
+    padding: 2.5rem 0;
+  }
+
+  .value-card {
+    padding: 1.75rem;
+  }
+
+  .team-img {
+    height: 200px;
+  }
+
+  .team-card-body {
+    padding: 0.9rem;
+  }
+
+  .about-cta {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .about-cta h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .about-hero {
+    height: 38vh;
+  }
+
+  .story-img-wrap {
+    min-height: 220px;
+  }
+
+  .stats-band .row > div {
+    margin-bottom: 0.5rem;
+  }
+
+  .stats-number {
+    font-size: 1.6rem;
+  }
+
+  .value-card {
+    padding: 1.5rem;
+  }
+
+  .about-cta {
+    padding: 2rem 1rem;
+  }
+}
