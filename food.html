@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>រសជាតិពិតនៃម្ហូបខ្មែរ ពីខេត្តមួយទៅខេត្តមួយ- ត្រាច់ចរ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/food.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/sak/leaf-fill-yellow.svg">
+</head>
+
+<body>
+    <section class="adventure-layout">
+        <div class="container">
+
+            <div class="adventure-hero-banner-food animate__animated animate__fadeInDown">
+                <div class="position-relative z-2 max-w-850">
+                    <span class="adventure-badge-pill mb-3"><i class="fas fa-compass me-2"></i> TRACH CHOR</span>
+                    <h1 class="display-4 fw-bold text-white mb-3">រសជាតិពិតនៃម្ហូបខ្មែរ ពីខេត្តមួយទៅខេត្តមួយ</h1>
+                    <p class="text-light fs-5 mb-4 opacity-90">
+                        ស្វែងរកមុខម្ហូបល្បីៗប្រចាំតំបន់ ពិនិត្យម៉ោងដំណើរការ និងរូបភាពហាងពិតៗក្បែរអ្នក។
+                        ទៅញ៉ាំផ្ទាល់តាមផែនទី ឬកម្ម៉ង់ដឹកជញ្ជូនទាន់ចិត្ត។
+                    </p>
+                </div>
+            </div>
+
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <!-- Heading -->
+            <div class="text-center mb-5">
+                <small class="text-success fw-bold">មុខម្ហូបពិសេសរបស់យើង</small>
+                <h2 class="fw-bold">មុខម្ហូបប្រចាំតំបន់ល្បីៗ</h2>
+                <p class="text-muted">
+                    ស្វែងរក និងភ្លក់រសជាតិមុខម្ហូបខ្មែរប្រពៃណីដែលមានឱជារសឈ្ងុយឆ្ងាញ់។
+                </p>
+            </div>
+
+            <!-- Cards -->
+            <div class="row g-4">
+
+                <!-- 1. Fish Amok -->
+                <div class="col-lg-3 col-md-6 restaurant-search-item" 
+                            data-name="Traditional Fish Amok"
+                            data-title="អាម៉ុកត្រីប្រពៃណី" data-category="ម្ហូបប្រចាំតំបន់ &amp; បុរាណ"
+                            data-location="ខេត្តសៀមរាប" data-rating="5.0" data-price="6.50"
+                            data-image="assets/images/sak/fish-amok.png"
+                            data-description="អាម៉ុកត្រីរលក់ស្ទើរលាយក្នុងមាត់ ចំអិនតាមបែបប្រពៃណីខ្មែរជាមួយគ្រឿងខ្ទិះដូង ខ្ទឹមស ស្លឹកក្រូចសើច និងចាត់ទុកជាអត្តសញ្ញាណជាតិ។"
+                            data-weight="១ ចាន" data-type="ម្ហូបប្រពៃណីខ្មែរ" data-origin="Siem Reap Heritage"
+                            data-gift="ម្ហូបល្បីល្បាញប្រចាំប្រទេស" data-available="true">
+
+                    <div class="card menu-card" data-bs-toggle="modal" data-bs-target="#amokModal">
+                        <div class="position-relative">
+                            <img src="assets/images/sak/fish-amok.png" class="card-img-top" alt="អាម៉ុកត្រីប្រពៃណី">
+                            <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill">
+                                ● ពេញនិយមខ្លាំង
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">
+                                អាម៉ុកត្រីប្រពៃណី
+                            </h5>
+                            <p class="text-muted small">
+                                អាម៉ុកត្រីប្រពៃណីខ្មែរ ចំអិនជាមួយគ្រឿងខ្ទិះដូង វេចក្នុងស្លឹកចេក។
+                            </p>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                            <h5 class="text-success fw-bold mb-0">
+                                $6
+                            </h5>
+                            <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Royal Samlor Korko -->
+                <div class="col-lg-3 col-md-6 restaurant-search-item" data-name="Royal Samlor Korko"
+                            data-title="សម្លកកូរប្រពៃណីខ្មែរ" data-category="សម្ល និងស៊ុប"
+                            data-location="រាជធានីភ្នំពេញ" data-rating="4.9" data-price="5.50"
+                            data-image="assets/images/sak/samlor-korko.png"
+                            data-description="សម្លកកូរជារូបមន្តបុរាណដែលផ្សំឡើងពីបន្លែធម្មជាតិចម្រុះ សាច់ត្រីស្រស់ និងអង្ករលីងបុក ផ្តល់នូវរសជាតិផ្អែមប្រៃ និងក្លិនប្រហើរ។"
+                            data-weight="១ ចាន" data-type="សម្លបុរាណ" data-origin="Phnom Penh"
+                            data-gift="អត្ថប្រយោជន៍សុខភាព និងអាហារូបត្ថម្ភ" data-available="true">
+
+                    <div class="card menu-card" data-bs-toggle="modal" data-bs-target="#korkoModal"
+                        >
+                        <div class="position-relative">
+                            <img src="assets/images/sak/samlor-korko.png" class="card-img-top"
+                                alt="សម្លកកូរប្រពៃណីខ្មែរ">
+                            <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill">
+                                ● ពេញនិយម
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">
+                                សម្លកកូរប្រពៃណីខ្មែរ
+                            </h5>
+                            <p class="text-muted small">
+                                សម្លកកូរប្រពៃណីខ្មែរ សំបូរដោយបន្លែធម្មជាតិ និងអង្ករលីងឈ្ងុយឆ្ងាញ់។
+                            </p>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                            <h5 class="text-success fw-bold mb-0">
+                                $5
+                            </h5>
+                            <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Nom Banh Chok -->
+                <div class="col-lg-3 col-md-6 restaurant-search-item" data-name="Khmer Rice Noodle Nom Banh Chok"
+                            data-title="នំបញ្ចុកទឹកប្រហុក / ទឹកសម្លប្រហើរ" data-category="អាហារពេលព្រឹក &amp; នំ"
+                            data-location="ខេត្តកំពង់ឆ្នាំង" data-rating="4.8" data-price="2.50"
+                            data-image="assets/images/sak/nom-banh-chok.png"
+                            data-description="នំបញ្ចុកសរសៃស្រស់ ស្រោចដោយទឹកសម្លប្រហើរត្រីបុកជាមួយគ្រឿងខ្មែរ និងបន្លែស្រស់ៗចម្រុះជាច្រើនមុខ។"
+                            data-weight="១ ចាន" data-type="អាហារប្រជាប្រិយ" data-origin="Kampong Chhnang"
+                            data-gift="រសជាតិដើមបែបអ្នកភូមិ">
+
+                    <div class="card menu-card" data-bs-toggle="modal" data-bs-target="#nomBanhChokModal"
+                        >
+                        <div class="position-relative">
+                            <img src="assets/images/sak/nom-banh-chok.png" class="card-img-top"
+                                alt="នំបញ្ចុកទឹកសម្លប្រហើរ">
+                            <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill">
+                                ● ពេញនិយម
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">
+                                នំបញ្ចុកទឹកសម្លប្រហើរ
+                            </h5>
+                            <p class="text-muted small">
+                                នំបញ្ចុកសម្លប្រហើរត្រីស្រស់ ញ៉ាំជាមួយបន្លែស្រស់ៗចម្រុះមុខ។
+                            </p>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                            <h5 class="text-success fw-bold mb-0">
+                                $3
+                            </h5>
+                            <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Beef Lok Lak -->
+                <div class="col-lg-3 col-md-6 restaurant-search-item" data-name="Khmer Stir-Fried Beef Lok Lak"
+                            data-title="ឡុកឡាក់សាច់គោខ្មែរ" data-category="ឆា &amp; គ្រឿងក្លែម"
+                            data-location="រាជធានីភ្នំពេញ" data-rating="4.9" data-price="7.00"
+                            data-image="assets/images/sak/beef-loklak.png"
+                            data-description="សាច់គោបន្ទះទន់ៗឆាក្តៅៗជាមួយជ្រក់អ៊ំ និងទឹកជ្រលក់អំបិលម្រេចកំពតក្រូចឆ្មារ ញ៉ាំជាមួយបាយ ឬដំឡូងបារាំង។"
+                            data-weight="១ ចាន" data-type="អាហារពេញនិយម" data-origin="Phnom Penh Signature"
+                            data-gift="រសជាតិដិតដល់ប្រចាំហាង" data-available="true">
+
+                    <div class="card menu-card" data-bs-toggle="modal" data-bs-target="#lokLakModal"
+                        >
+                        <div class="position-relative">
+                            <img src="assets/images/sak/beef-loklak.png" class="card-img-top"
+                                alt="ឡុកឡាក់សាច់គោខ្មែរ">
+                            <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill">
+                                ● ពេញនិយមខ្លាំង
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">
+                                ឡុកឡាក់សាច់គោខ្មែរ
+                            </h5>
+                            <p class="text-muted small">
+                                ឡុកឡាក់សាច់គោទន់ឆ្ងាញ់ អមដោយទឹកជ្រលក់អំបិលម្រេចកំពត។
+                            </p>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                            <h5 class="text-success fw-bold mb-0">
+                                $7
+                            </h5>
+                            <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- RESTAURANT SEARCH -->
+    <section id="restaurantSearch" class="restaurant-search-section py-5" aria-labelledby="restaurant-search-title">
+        <div class="container">
+            <div class="restaurant-search-heading">
+                <span class="section-kicker"><i class="fa-solid fa-magnifying-glass me-2"></i>FIND YOUR NEXT
+                    SOUVENIR</span>
+                <h2 id="restaurant-search-title" class="mt-2 mb-1">ស្វែងរកវត្ថុអនុស្សាវរីយ៍ខ្មែរ</h2>
+                <p class="mb-3">ស្វែងរកតាមឈ្មោះផលិតផល ប្រភេទសិប្បកម្ម ទីតាំង ឬចន្លោះតម្លៃដែលអ្នកចង់បាន។</p>
+            </div>
+
+            <div class="row g-4 align-items-start">
+                <div class="col-lg-4" aria-label="តម្រងវត្ថុអនុស្សាវរីយ៍">
+                    <form id="restaurantSearchFilters" class="restaurant-filter-sidebar">
+                        <div class="restaurant-filter-title"><i class="fa-solid fa-sliders me-2"></i>តម្រងស្វែងរក</div>
+
+                        <button id="restaurantResetFilters" type="button" class="btn restaurant-reset-btn w-100 mb-4">
+                            <i class="fa-solid fa-rotate-left me-2"></i>សម្អាតតម្រង
+                        </button>
+
+                        <label class="form-label" for="restaurantKeyword">ពាក្យគន្លឹះ</label>
+                        <div class="restaurant-search-input mb-4">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input id="restaurantKeyword" type="search" class="form-control"
+                                placeholder="ឧ. ម្រេច, សូត្រ, ចម្លាក់..." autocomplete="off">
+                        </div>
+
+                        <div class="restaurant-filter-divider"></div>
+
+                        <div class="form-label">ទីតាំង (ខេត្ត / ក្រុង)</div>
+                        <button id="restaurantLocationButton" type="button"
+                            class="btn restaurant-location-modal-btn w-100 mb-4" data-bs-toggle="modal"
+                            data-bs-target="#restaurantLocationModal">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="restaurant-location-button-text">ជ្រើសរើសខេត្ត / ក្រុង</span>
+                            <i class="fa-solid fa-chevron-right ms-auto"></i>
+                        </button>
+
+                        <div class="restaurant-filter-divider"></div>
+
+                        <div class="restaurant-filter-group">
+                            <div class="form-label mb-3">តម្រៀបតាម</div>
+                            <label class="restaurant-filter-option">
+                                <input class="restaurant-sort" type="radio" name="restaurantSort" value="rating-desc">
+                                <span>ការវាយតម្លៃ (ខ្ពស់បំផុត → ទាបបំផុត)</span>
+                            </label>
+                            <label class="restaurant-filter-option">
+                                <input class="restaurant-sort" type="radio" name="restaurantSort" value="price-asc">
+                                <span>តម្លៃ (ទាបបំផុត → ខ្ពស់បំផុត)</span>
+                            </label>
+                            <label class="restaurant-filter-option">
+                                <input class="restaurant-sort" type="radio" name="restaurantSort" value="price-desc">
+                                <span>តម្លៃ (ខ្ពស់បំផុត → ទាបបំផុត)</span>
+                            </label>
+                        </div>
+
+                        <div class="restaurant-filter-divider"></div>
+
+                        <div class="restaurant-filter-group">
+                            <div class="form-label mb-3">ចន្លោះតម្លៃ</div>
+                            <label class="restaurant-filter-option"><input class="restaurant-price-filter" type="radio"
+                                    name="restaurantPrice" value="under-5"><span>ក្រោម $៥</span></label>
+                            <label class="restaurant-filter-option"><input class="restaurant-price-filter" type="radio"
+                                    name="restaurantPrice" value="5-10"><span>$៥–១០</span></label>
+                            <label class="restaurant-filter-option"><input class="restaurant-price-filter" type="radio"
+                                    name="restaurantPrice" value="10-20"><span>$១០–២០</span></label>
+                            <label class="restaurant-filter-option"><input class="restaurant-price-filter" type="radio"
+                                    name="restaurantPrice" value="20-plus"><span>$២០+</span></label>
+                        </div>
+
+                        <div class="restaurant-filter-divider"></div>
+
+                        <label class="restaurant-filter-option mb-0"><input id="restaurantAvailableNow"
+                                type="checkbox"><span>ផលិតផលមានក្នុងស្តុក</span></label>
+                    </form>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="restaurant-results-header">
+                        <div>
+                            <h3>លទ្ធផលស្វែងរក</h3>
+                            <p id="restaurantResultCount" class="mb-0" aria-live="polite">បង្ហាញ 6 ភោជនីយដ្ឋាន</p>
+                        </div>
+                        <span class="restaurant-results-icon"><i class="fa-solid fa-utensils"></i></span>
+                    </div>
+
+                    <div id="restaurantResultsGrid" class="row g-4">
+                        <!-- 1. Fish Amok -->
+                        <div class="col-md-6 restaurant-search-item" data-name="Traditional Fish Amok"
+                            data-title="អាម៉ុកត្រីប្រពៃណី" data-category="ម្ហូបប្រចាំតំបន់ &amp; បុរាណ"
+                            data-location="ខេត្តសៀមរាប" data-rating="5.0" data-price="6.50"
+                            data-image="assets/images/sak/fish-amok.png"
+                            data-description="អាម៉ុកត្រីរលក់ស្ទើរលាយក្នុងមាត់ ចំអិនតាមបែបប្រពៃណីខ្មែរជាមួយគ្រឿងខ្ទិះដូង ខ្ទឹមស ស្លឹកក្រូចសើច និងចាត់ទុកជាអត្តសញ្ញាណជាតិ។"
+                            data-weight="១ ចាន" data-type="ម្ហូបប្រពៃណីខ្មែរ" data-origin="Siem Reap Heritage"
+                            data-gift="ម្ហូបល្បីល្បាញប្រចាំប្រទេស" data-available="true">
+
+                            <div class="restaurant-result-card">
+                                <div class="restaurant-image">
+                                    <img class="custom-img" src="assets/images/sak/fish-amok.png"
+                                        alt="អាម៉ុកត្រីប្រពៃណី">
+                                </div>
+                                <div class="restaurant-result-content">
+                                    <div class="d-flex justify-content-between gap-2 align-items-start">
+                                        <div>
+                                            <span class="restaurant-category">ម្ហូបប្រចាំតំបន់ &amp; បុរាណ</span>
+                                            <h3>អាម៉ុកត្រីប្រពៃណី</h3>
+                                        </div>
+                                        <span class="restaurant-rating"><i class="fas fa-star"></i> 5.0</span>
+                                    </div>
+                                    <p><i class="fas fa-map-marker-alt"></i> ខេត្តសៀមរាប</p>
+                                    <div
+                                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <h5 class="text-success mb-0">$6.50</h5>
+                                        <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Samlor Korko -->
+                        <div class="col-md-6 restaurant-search-item" data-name="Royal Samlor Korko"
+                            data-title="សម្លកកូរប្រពៃណីខ្មែរ" data-category="សម្ល និងស៊ុប"
+                            data-location="រាជធានីភ្នំពេញ" data-rating="4.9" data-price="5.50"
+                            data-image="assets/images/sak/samlor-korko.png"
+                            data-description="សម្លកកូរជារូបមន្តបុរាណដែលផ្សំឡើងពីបន្លែធម្មជាតិចម្រុះ សាច់ត្រីស្រស់ និងអង្ករលីងបុក ផ្តល់នូវរសជាតិផ្អែមប្រៃ និងក្លិនប្រហើរ។"
+                            data-weight="១ ចាន" data-type="សម្លបុរាណ" data-origin="Phnom Penh"
+                            data-gift="អត្ថប្រយោជន៍សុខភាព និងអាហារូបត្ថម្ភ" data-available="true">
+
+                            <div class="restaurant-result-card">
+                                <div class="restaurant-image">
+                                    <img class="custom-img" src="assets/images/sak/samlor-korko.png"
+                                        alt="សម្លកកូរប្រពៃណីខ្មែរ">
+                                </div>
+                                <div class="restaurant-result-content">
+                                    <div class="d-flex justify-content-between gap-2 align-items-start">
+                                        <div>
+                                            <span class="restaurant-category">សម្ល និងស៊ុប</span>
+                                            <h3>សម្លកកូរប្រពៃណីខ្មែរ</h3>
+                                        </div>
+                                        <span class="restaurant-rating"><i class="fas fa-star"></i> 4.9</span>
+                                    </div>
+                                    <p><i class="fas fa-map-marker-alt"></i> រាជធានីភ្នំពេញ</p>
+                                    <div
+                                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <h5 class="text-success mb-0">$5.50</h5>
+                                        <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Nom Banh Chok -->
+                        <div class="col-md-6 restaurant-search-item" data-name="Khmer Rice Noodle Nom Banh Chok"
+                            data-title="នំបញ្ចុកទឹកប្រហុក / ទឹកសម្លប្រហើរ" data-category="អាហារពេលព្រឹក &amp; នំ"
+                            data-location="ខេត្តកំពង់ឆ្នាំង" data-rating="4.8" data-price="2.50"
+                            data-image="assets/images/sak/nom-banh-chok.png"
+                            data-description="នំបញ្ចុកសរសៃស្រស់ ស្រោចដោយទឹកសម្លប្រហើរត្រីបុកជាមួយគ្រឿងខ្មែរ និងបន្លែស្រស់ៗចម្រុះជាច្រើនមុខ។"
+                            data-weight="១ ចាន" data-type="អាហារប្រជាប្រិយ" data-origin="Kampong Chhnang"
+                            data-gift="រសជាតិដើមបែបអ្នកភូមិ">
+
+                            <div class="restaurant-result-card">
+                                <div class="restaurant-image">
+                                    <img class="custom-img" src="assets/images/sak/nom-banh-chok.png"
+                                        alt="នំបញ្ចុកទឹកប្រហុក / ទឹកសម្លប្រហើរ">
+                                </div>
+                                <div class="restaurant-result-content">
+                                    <div class="d-flex justify-content-between gap-2 align-items-start">
+                                        <div>
+                                            <span class="restaurant-category">អាហារពេលព្រឹក &amp; នំ</span>
+                                            <h3>នំបញ្ចុកទឹកសម្លប្រហើរ</h3>
+                                        </div>
+                                        <span class="restaurant-rating"><i class="fas fa-star"></i> 4.8</span>
+                                    </div>
+                                    <p><i class="fas fa-map-marker-alt"></i> ខេត្តកំពង់ឆ្នាំង</p>
+                                    <div
+                                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <h5 class="text-success mb-0">$2.50</h5>
+                                        <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Lok Lak Beef -->
+                        <div class="col-md-6 restaurant-search-item" data-name="Khmer Stir-Fried Beef Lok Lak"
+                            data-title="ឡុកឡាក់សាច់គោខ្មែរ" data-category="ឆា &amp; គ្រឿងក្លែម"
+                            data-location="រាជធានីភ្នំពេញ" data-rating="4.9" data-price="7.00"
+                            data-image="assets/images/sak/beef-loklak.png"
+                            data-description="សាច់គោបន្ទះទន់ៗឆាក្តៅៗជាមួយជ្រក់អ៊ំ និងទឹកជ្រលក់អំបិលម្រេចកំពតក្រូចឆ្មារ ញ៉ាំជាមួយបាយ ឬដំឡូងបារាំង។"
+                            data-weight="១ ចាន" data-type="អាហារពេញនិយម" data-origin="Phnom Penh Signature"
+                            data-gift="រសជាតិដិតដល់ប្រចាំហាង" data-available="true">
+
+                            <div class="restaurant-result-card">
+                                <div class="restaurant-image">
+                                    <img class="custom-img" src="assets/images/sak/beef-loklak.png"
+                                        alt="ឡុកឡាក់សាច់គោខ្មែរ">
+                                </div>
+                                <div class="restaurant-result-content">
+                                    <div class="d-flex justify-content-between gap-2 align-items-start">
+                                        <div>
+                                            <span class="restaurant-category">ឆា &amp; គ្រឿងក្លែម</span>
+                                            <h3>ឡុកឡាក់សាច់គោខ្មែរ</h3>
+                                        </div>
+                                        <span class="restaurant-rating"><i class="fas fa-star"></i> 4.9</span>
+                                    </div>
+                                    <p><i class="fas fa-map-marker-alt"></i> រាជធានីភ្នំពេញ</p>
+                                    <div
+                                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <h5 class="text-success mb-0">$7.00</h5>
+                                        <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Prahok Ktis -->
+                        <div class="col-md-6 restaurant-search-item" data-name="Prahok Ktis Dip with Vegetables"
+                            data-title="ប្រហុកខ្ទិះសាច់ជ្រូក" data-category="ទឹកជ្រលក់ &amp; គ្រឿងជ្រលក់"
+                            data-location="ខេត្តបាត់ដំបង" data-rating="4.9" data-price="5.00"
+                            data-image="assets/images/sak/prahok-ktis.png"
+                            data-description="ប្រហុកចិញ្ច្រាំឆាជាមួយសាច់ជ្រូកបីជាន់ ខ្ទិះដូង និងគ្រឿងការី អមដោយបន្លែស្រស់ចម្រុះ និងអន្លក់ស្រួយៗ។"
+                            data-weight="១ ឈុត" data-type="អាហារបែបប្រជាប្រិយ" data-origin="Battambang Style"
+                            data-gift="រសជាតិប្រហុកខ្មែរពិតៗ" data-available="true">
+
+                            <div class="restaurant-result-card">
+                                <div class="restaurant-image">
+                                    <img class="custom-img" src="assets/images/sak/prahok-ktis.png"
+                                        alt="ប្រហុកខ្ទិះសាច់ជ្រូក">
+                                </div>
+                                <div class="restaurant-result-content">
+                                    <div class="d-flex justify-content-between gap-2 align-items-start">
+                                        <div>
+                                            <span class="restaurant-category">ទឹកជ្រលក់ &amp; គ្រឿងជ្រលក់</span>
+                                            <h3>ប្រហុកខ្ទិះសាច់ជ្រូក</h3>
+                                        </div>
+                                        <span class="restaurant-rating"><i class="fas fa-star"></i> 4.9</span>
+                                    </div>
+                                    <p><i class="fas fa-map-marker-alt"></i> ខេត្តបាត់ដំបង</p>
+                                    <div
+                                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <h5 class="text-success mb-0">$5.00</h5>
+                                        <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. Pleah Sach Ko -->
+                        <div class="col-md-6 restaurant-search-item" data-name="Spicy Beef Salad Pleah Sach Ko"
+                            data-title="ភ្លាសាច់គោប្រអាក់" data-category="ភ្លា &amp; ញ៉ាំ" data-location="ខេត្តតាកែវ"
+                            data-rating="4.8" data-price="6.00" data-image="assets/images/sak/pleah-sach-ko.png"
+                            data-description="ភ្លាសាច់គោស្រស់ ក្លែមជាមួយទឹកក្រូចឆ្មារ ប្រហុក ជីរវល្លិ៍ ខ្ទឹមក្រហម និងម្ទេសប្លោក ផ្តល់រសជាតិជូរហឹរស្រួយឆ្ងាញ់។"
+                            data-weight="១ ចាន" data-type="អាហារហឹរជូរ" data-origin="Takeo"
+                            data-gift="គ្រឿងក្លែមពេញនិយម" data-available="true">
+
+                            <div class="restaurant-result-card">
+                                <div class="restaurant-image">
+                                    <img class="custom-img" src="assets/images/sak/pleah-sach-ko.png"
+                                        alt="ភ្លាសាច់គោប្រអាក់">
+                                </div>
+                                <div class="restaurant-result-content">
+                                    <div class="d-flex justify-content-between gap-2 align-items-start">
+                                        <div>
+                                            <span class="restaurant-category">ភ្លា &amp; ញ៉ាំ</span>
+                                            <h3>ភ្លាសាច់គោប្រអាក់</h3>
+                                        </div>
+                                        <span class="restaurant-rating"><i class="fas fa-star"></i> 4.8</span>
+                                    </div>
+                                    <p><i class="fas fa-map-marker-alt"></i> ខេត្តតាកែវ</p>
+                                    <div
+                                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <h5 class="text-success mb-0">$6.00</h5>
+                                        <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7. Samlor Machu Khmer -->
+                        <div class="col-md-6 restaurant-search-item" data-name="Khmer Sour Soup Samlor Machu Kreung"
+                            data-title="សម្លម្ជូរគ្រឿងសាច់គោ" data-category="សម្ល និងស៊ុប" data-location="ខេត្តកណ្តាល"
+                            data-rating="4.7" data-price="4.50" data-image="assets/images/sak/samlor-machu.png"
+                            data-description="សម្លម្ជូរគ្រឿងបែបបុរាណ ផ្សំពីគ្រឿងបុកខ្មែរ ប្រហុក សាច់គោ និងត្រកួន ឬប្រឡាក់ជាមួយស្លឹកទ្រមូង។"
+                            data-weight="១ ចាន" data-type="សម្លប្រពៃណី" data-origin="Kandal"
+                            data-gift="អាហារគ្រួសារប្រចាំថ្ងៃ" data-available="true">
+
+                            <div class="restaurant-result-card">
+                                <div class="restaurant-image">
+                                    <img class="custom-img" src="assets/images/sak/samlor-machu.png"
+                                        alt="សម្លម្ជូរគ្រឿងសាច់គោ">
+                                </div>
+                                <div class="restaurant-result-content">
+                                    <div class="d-flex justify-content-between gap-2 align-items-start">
+                                        <div>
+                                            <span class="restaurant-category">សម្ល និងស៊ុប</span>
+                                            <h3>សម្លម្ជូរគ្រឿងសាច់គោ</h3>
+                                        </div>
+                                        <span class="restaurant-rating"><i class="fas fa-star"></i> 4.7</span>
+                                    </div>
+                                    <p><i class="fas fa-map-marker-alt"></i> ខេត្តកណ្តាល</p>
+                                    <div
+                                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <h5 class="text-success mb-0">$4.50</h5>
+                                        <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 8. Kuy Teav Phnom Penh -->
+                        <div class="col-md-6 restaurant-search-item" data-name="Phnom Penh Noodle Soup Kuy Teav"
+                            data-title="កុយទាវភ្នំពេញពិសេស" data-category="សរសៃ &amp; អាហារពេលព្រឹក"
+                            data-location="រាជធានីភ្នំពេញ" data-rating="5.0" data-price="3.50"
+                            data-image="assets/images/sak/kuy-teav.png"
+                            data-description="កុយទាវសរសៃតូច ទឹកស៊ុបឆ្អឹងជ្រូកផ្អែមឆ្ងាញ់ ជាមួយប្រកបដោយសាច់ជ្រូកចិញ្ច្រាំ ប្រហិត និងគ្រឿងក្នុងស្រស់ៗ។"
+                            data-weight="១ ចាន" data-type="អាហារពេលព្រឹក" data-origin="Phnom Penh Special"
+                            data-gift="អាហារពេលព្រឹកល្បីបំផុត">
+
+                            <div class="restaurant-result-card">
+                                <div class="restaurant-image">
+                                    <img class="custom-img" src="assets/images/sak/kuy-teav.png"
+                                        alt="កុយទាវភ្នំពេញពិសេស">
+                                </div>
+                                <div class="restaurant-result-content">
+                                    <div class="d-flex justify-content-between gap-2 align-items-start">
+                                        <div>
+                                            <span class="restaurant-category">សរសៃ &amp; អាហារពេលព្រឹក</span>
+                                            <h3>កុយទាវភ្នំពេញពិសេស</h3>
+                                        </div>
+                                        <span class="restaurant-rating"><i class="fas fa-star"></i> 5.0</span>
+                                    </div>
+                                    <p><i class="fas fa-map-marker-alt"></i> រាជធានីភ្នំពេញ</p>
+                                    <div
+                                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <h5 class="text-success mb-0">$3.50</h5>
+                                        <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 9. Num Ansom Chek -->
+                        <div class="col-md-6 restaurant-search-item" data-name="Sticky Rice Cake Num Ansom Chek"
+                            data-title="នំអន្សមចេកប្រពៃណី" data-category="បង្អែម &amp; នំខ្មែរ"
+                            data-location="ខេត្តកំពង់ស្ពឺ" data-rating="4.9" data-price="2.00"
+                            data-image="assets/images/sak/num-ansom.png"
+                            data-description="នំអន្សមខ្ចប់ស្លឹកចេក ធ្វើពីអង្ករដំណើប ខ្ទិះដូង និងស្នូលចេកណាំវ៉ាទុំ ស្ងោររហូតដល់ទន់ស្អិតឈ្ងុយ។"
+                            data-weight="១ ដុំ" data-type="នំប្រពៃណីពិធីបុណ្យ" data-origin="Kampong Speu"
+                            data-gift="នំតំណាងពិធីបុណ្យភ្ជុំបិណ្ឌ និងចូលឆ្នាំ" data-available="true">
+
+                            <div class="restaurant-result-card">
+                                <div class="restaurant-image">
+                                    <img class="custom-img" src="assets/images/sak/num-ansom.png"
+                                        alt="នំអន្សមចេកប្រពៃណី">
+                                </div>
+                                <div class="restaurant-result-content">
+                                    <div class="d-flex justify-content-between gap-2 align-items-start">
+                                        <div>
+                                            <span class="restaurant-category">បង្អែម &amp; នំខ្មែរ</span>
+                                            <h3>នំអន្សមចេកប្រពៃណី</h3>
+                                        </div>
+                                        <span class="restaurant-rating"><i class="fas fa-star"></i> 4.9</span>
+                                    </div>
+                                    <p><i class="fas fa-map-marker-alt"></i> ខេត្តកំពង់ស្ពឺ</p>
+                                    <div
+                                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <h5 class="text-success mb-0">$2.00</h5>
+                                        <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 10. Crab with Kampot Pepper -->
+                        <div class="col-md-6 restaurant-search-item" data-name="Stir-Fried Crab with Kampot Pepper"
+                            data-title="ក្តាមសេះឆាម្រេចខ្មៅកំពត" data-category="អាហារសមុទ្រ" data-location="ខេត្តកំពត"
+                            data-rating="5.0" data-price="12.00" data-image="assets/images/sak/crab-kampot-pepper.png"
+                            data-description="ក្តាមសេះសមុទ្រស្រស់ៗឆាជាមួយចង្កោមម្រេចខ្ចីកំពត ផ្តល់រសជាតិហឹរប្រហើរ និងផ្អែមឆ្ងាញ់ដោយជាតិសាច់ក្តាមធម្មជាតិ។"
+                            data-weight="១ ចាន (៥០០ក្រាម)" data-type="អាហារសមុទ្រពិសេស" data-origin="Kampot & Kep"
+                            data-gift="ម្ហូបល្បីប្រចាំតំបន់ឆ្នេរ">
+
+                            <div class="restaurant-result-card">
+                                <div class="restaurant-image">
+                                    <img class="custom-img" src="assets/images/sak/crab-kampot-pepper.png"
+                                        alt="ក្តាមសេះឆាម្រេចខ្មៅកំពត">
+                                </div>
+                                <div class="restaurant-result-content">
+                                    <div class="d-flex justify-content-between gap-2 align-items-start">
+                                        <div>
+                                            <span class="restaurant-category">អាហារសមុទ្រ</span>
+                                            <h3>ក្តាមសេះឆាម្រេចខ្មៅកំពត</h3>
+                                        </div>
+                                        <span class="restaurant-rating"><i class="fas fa-star"></i> 5.0</span>
+                                    </div>
+                                    <p><i class="fas fa-map-marker-alt"></i> ខេត្តកំពត</p>
+                                    <div
+                                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <h5 class="text-success mb-0">$12.00</h5>
+                                        <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 11. Kha Sach Ko -->
+                        <div class="col-md-6 restaurant-search-item" data-name="Khmer Beef Stew Kha Sach Ko"
+                            data-title="ខសាច់គោនំប៉័ងខ្មែរ" data-category="ខ &amp; អាហារចម្អិនយូរ"
+                            data-location="ខេត្តបាត់ដំបង" data-rating="4.8" data-price="5.00"
+                            data-image="assets/images/sak/kha-sach-ko.png"
+                            data-description="សាច់គោរំងាស់ជាមួយគ្រឿងការី និងបន្លែរហូតដល់ផុយ រូបមន្តបែបបុរាណ ទទួលទានជាមួយនំប៉័ងស្រួយៗ។"
+                            data-weight="១ ឈុត" data-type="អាហារប្រពៃណី" data-origin="Battambang Heritage"
+                            data-gift="អាហារពេលល្ងាចដ៏ឈ្ងុយឆ្ងាញ់" data-available="true">
+
+                            <div class="restaurant-result-card">
+                                <div class="restaurant-image">
+                                    <img class="custom-img" src="assets/images/sak/kha-sach-ko.png"
+                                        alt="ខសាច់គោនំប៉័ងខ្មែរ">
+                                </div>
+                                <div class="restaurant-result-content">
+                                    <div class="d-flex justify-content-between gap-2 align-items-start">
+                                        <div>
+                                            <span class="restaurant-category">ខ &amp; អាហារចម្អិនយូរ</span>
+                                            <h3>ខសាច់គោនំប៉័ងខ្មែរ</h3>
+                                        </div>
+                                        <span class="restaurant-rating"><i class="fas fa-star"></i> 4.8</span>
+                                    </div>
+                                    <p><i class="fas fa-map-marker-alt"></i> ខេត្តបាត់ដំបង</p>
+                                    <div
+                                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <h5 class="text-success mb-0">$5.00</h5>
+                                        <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 12. Num Krok -->
+                        <div class="col-md-6 restaurant-search-item" data-name="Traditional Coconut Rice Cake Num Krok"
+                            data-title="នំគ្រក់ខ្ទិះដូងបុរាណ" data-category="សម្រន់ &amp; បង្អែម"
+                            data-location="ខេត្តពោធិ៍សាត់" data-rating="4.8" data-price="1.50"
+                            data-image="assets/images/sak/num-krok.png"
+                            data-description="នំគ្រក់ធ្វើពីម្សៅអង្ករ និងខ្ទិះដូង ចំអិនលើពុម្ពដីដុតក្តៅៗ ស្រួយខាងក្រៅ ទន់ខាងក្នុង អមដោយទឹកត្រីផ្អែម។"
+                            data-weight="១ ចាន (១០ ដុំ)" data-type="អាហារសម្រន់ប្រជាប្រិយ" data-origin="Pursat"
+                            data-gift="អាហារសម្រន់ផ្លូវថ្នល់ខ្មែរ" data-available="true">
+
+                            <div class="restaurant-result-card">
+                                <div class="restaurant-image">
+                                    <img class="custom-img" src="assets/images/sak/num-krok.png"
+                                        alt="នំគ្រក់ខ្ទិះដូងបុរាណ">
+                                </div>
+                                <div class="restaurant-result-content">
+                                    <div class="d-flex justify-content-between gap-2 align-items-start">
+                                        <div>
+                                            <span class="restaurant-category">សម្រន់ &amp; បង្អែម</span>
+                                            <h3>នំគ្រក់ខ្ទិះដូងបុរាណ</h3>
+                                        </div>
+                                        <span class="restaurant-rating"><i class="fas fa-star"></i> 4.8</span>
+                                    </div>
+                                    <p><i class="fas fa-map-marker-alt"></i> ខេត្តពោធិ៍សាត់</p>
+                                    <div
+                                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <h5 class="text-success mb-0">$1.50</h5>
+                                        <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 13. Angkor Beer Curry -->
+                        <div class="col-md-6 restaurant-search-item" data-name="Khmer Red Chicken Curry"
+                            data-title="ការីក្រហមសាច់មាន់ខ្មែរ" data-category="សម្ល និងស៊ុប" data-location="ខេត្តសៀមរាប"
+                            data-rating="4.9" data-price="6.00" data-image="assets/images/sak/khmer-red-curry.png"
+                            data-description="ការីក្រហមសាច់មាន់ចម្អិនជាមួយខ្ទិះដូង ដំឡូងឈ្វា និងគ្រឿងការីខ្មែរ មិនហឹរពេកទេ ញ៉ាំជាមួយនំប៉័ង ឬបាយស។"
+                            data-weight="១ ចាន" data-type="ម្ហូបប្រពៃណី" data-origin="Siem Reap"
+                            data-gift="អាហារពេញនិយមក្នុងពិធីមង្គលការ">
+
+                            <div class="restaurant-result-card">
+                                <div class="restaurant-image">
+                                    <img class="custom-img" src="assets/images/sak/khmer-red-curry.png"
+                                        alt="ការីក្រហមសាច់មាន់ខ្មែរ">
+                                </div>
+                                <div class="restaurant-result-content">
+                                    <div class="d-flex justify-content-between gap-2 align-items-start">
+                                        <div>
+                                            <span class="restaurant-category">សម្ល និងស៊ុប</span>
+                                            <h3>ការីក្រហមសាច់មាន់ខ្មែរ</h3>
+                                        </div>
+                                        <span class="restaurant-rating"><i class="fas fa-star"></i> 4.9</span>
+                                    </div>
+                                    <p><i class="fas fa-map-marker-alt"></i> ខេត្តសៀមរាប</p>
+                                    <div
+                                        class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <h5 class="text-success mb-0">$6.00</h5>
+                                        <button class="btn btn-outline-success rounded-pill"
+                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="restaurantEmptyState" class="restaurant-empty-state d-none">
+                        <i class="fa-solid fa-store-slash"></i>
+                        <h3>មិនមានភោជនីយដ្ឋានត្រូវនឹងការស្វែងរកទេ</h3>
+                        <p class="mb-0">សាកល្បងប្តូរពាក្យគន្លឹះ ឬកំណត់តម្រងផ្សេងទៀត។</p>
+                    </div>
+                    <div id="restaurantPagination" class="restaurant-pagination" aria-label="Restaurant pages">
+                        <button id="restaurantPreviousPage" type="button" class="btn restaurant-page-control"
+                            aria-label="Previous page"><i class="fa-solid fa-chevron-left"></i> ទំព័រមុន</button>
+                        <div id="restaurantPageButtons" class="restaurant-page-numbers"></div>
+                        <button id="restaurantNextPage" type="button" class="btn restaurant-page-control"
+                            aria-label="Next page">ទំព័របន្ទាប់ <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION SELECTION MODAL -->
+    <div class="modal fade" id="restaurantLocationModal" aria-labelledby="restaurantLocationModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content restaurant-location-modal">
+                <div class="modal-header">
+                    <div>
+                        <h2 id="restaurantLocationModalTitle" class="modal-title">ជ្រើសរើសខេត្ត / ក្រុង</h2>
+                        <p class="mb-0">ជ្រើសរើសទីតាំងមួយ ឬច្រើន ដើម្បីមើលវត្ថុអនុស្សាវរីយ៍។</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
+                            value="ភ្នំពេញ"><span><i class="fa-solid fa-city"></i> រាជធានីភ្នំពេញ</span></label>
+                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
+                            value="សៀមរាប"><span><i class="fa-solid fa-landmark"></i> ខេត្តសៀមរាប</span></label>
+                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
+                            value="កំពត"><span><i class="fa-solid fa-mountain-sun"></i> ខេត្តកំពត</span></label>
+                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
+                            value="បាត់ដំបង"><span><i class="fa-solid fa-store"></i> ខេត្តបាត់ដំបង</span></label>
+                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
+                            value="តាកែវ"><span><i class="fa-solid fa-scythe"></i> ខេត្តតាកែវ</span></label>
+                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
+                            value="កំពង់ឆ្នាំង"><span><i class="fa-solid fa-jar"></i> ខេត្តកំពង់ឆ្នាំង</span></label>
+                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
+                            value="កំពង់ស្ពឺ"><span><i class="fa-solid fa-tree"></i> ខេត្តកំពង់ស្ពឺ</span></label>
+                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
+                            value="កណ្តាល"><span><i class="fa-solid fa-basket-shopping"></i> ខេត្តកណ្តាល</span></label>
+                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
+                            value="ពោធិ៍សាត់"><span><i class="fa-solid fa-gem"></i> ខេត្តពោធិ៍សាត់</span></label>
+                    <label class="restaurant-location-option mb-0"><input class="restaurant-location-filter"
+                            type="checkbox" value="មណ្ឌលគិរី"><span><i class="fa-solid fa-mug-hot"></i>
+                            ខេត្តមណ្ឌលគិរី</span></label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn restaurant-modal-done-btn" data-bs-dismiss="modal">រួចរាល់</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="souvenirModal">
+
+        <div class="souvenir-modal-box">
+
+            <!-- MODAL HEADER -->
+            <div class="souvenir-modal-header">
+
+                <div>
+                    <span id="modalCategory" class="restaurant-category"></span>
+
+                    <h2 id="modalTitle"></h2>
+                </div>
+
+                <button class="modal-close-btn" onclick="closeSouvenirModal()">
+
+                    &times;
+
+                </button>
+
+            </div>
+
+
+            <!-- MODAL CONTENT -->
+            <div class="souvenir-modal-content">
+
+                <!-- IMAGE -->
+                <div class="souvenir-modal-image">
+
+                    <img id="modalImage" src="" alt="">
+
+                    <div id="modalImageCounter" class="image-counter">
+
+                        1 / 1
+
+                    </div>
+
+                </div>
+
+
+                <!-- DETAILS -->
+                <div class="souvenir-modal-details">
+
+                    <div class="product-top-info">
+
+                        <div>
+
+                            <h3 id="modalProductTitle"></h3>
+
+                            <p id="modalLocation" class="location">
+
+                            </p>
+
+                        </div>
+
+
+                        <span id="modalRating" class="restaurant-rating">
+
+                        </span>
+
+                    </div>
+
+
+                    <p id="modalDescription" class="product-description">
+
+                    </p>
+
+
+                    <div class="product-features">
+
+                        <div>
+                            <i class="fas fa-weight-hanging"></i>
+
+                            <span id="modalWeight"></span>
+                        </div>
+
+
+                        <div>
+                            <i class="fas fa-leaf"></i>
+
+                            <span id="modalType"></span>
+                        </div>
+
+
+                        <div>
+                            <i class="fas fa-certificate"></i>
+
+                            <span id="modalOrigin"></span>
+                        </div>
+
+
+                        <div>
+                            <i class="fas fa-gift"></i>
+
+                            <span id="modalGift"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="price-section">
+
+                        <div>
+
+                            <small>តម្លៃ</small>
+
+                            <div id="modalPrice" class="price">
+
+                            </div>
+
+                        </div>
+
+
+                        <span id="modalAvailability" class="available-status">
+
+                            <i class="fas fa-circle"></i>
+
+                            មានទំនិញ
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MODAL FOOTER -->
+            <div class="souvenir-modal-footer">
+
+                <button class="btn btn-outline-success rounded-pill map-button" onclick="viewOnMap()">
+
+                    <i class="fas fa-map-marker-alt"></i>
+
+                    មើលនៅលើផែនទី
+
+                </button>
+
+
+                <button class="btn btn-success rounded-pill grab-button" onclick="deliverByGrab()">
+
+                    <i class="fas fa-motorcycle"></i>
+
+                    ដឹកជញ្ជូនតាម Grab
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Restaurant carousel, filters, location modal, and pagination for this page.
+        (() => {
+            const provinceFilterBtns = document.querySelectorAll('.province-filter-btn');
+            const popularRestaurantsCarousel = document.getElementById('popularRestaurantsCarousel');
+
+            if (popularRestaurantsCarousel && provinceFilterBtns.length && window.bootstrap) {
+                const restaurantCarousel = bootstrap.Carousel.getOrCreateInstance(popularRestaurantsCarousel, { interval: false, touch: true });
+                const restaurantSlides = Array.from(popularRestaurantsCarousel.querySelectorAll('.carousel-item'));
+
+                const setActiveProvinceButton = province => {
+                    provinceFilterBtns.forEach(button => {
+                        const isSelected = button.dataset.province === province;
+                        button.classList.toggle('active', isSelected);
+                        button.classList.toggle('btn-primary-luxury', isSelected);
+                        button.classList.toggle('btn-outline-luxury', !isSelected);
+                    });
+                };
+
+                provinceFilterBtns.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const slideIndex = restaurantSlides.findIndex(slide => slide.dataset.province === button.dataset.province);
+                        setActiveProvinceButton(button.dataset.province);
+                        if (slideIndex >= 0) restaurantCarousel.to(slideIndex);
+                    });
+                });
+
+                popularRestaurantsCarousel.addEventListener('slid.bs.carousel', event => {
+                    if (event.relatedTarget.dataset.province) setActiveProvinceButton(event.relatedTarget.dataset.province);
+                });
+            }
+
+            const restaurantResultsGrid = document.getElementById('restaurantResultsGrid');
+            if (!restaurantResultsGrid) return;
+
+            const restaurantKeyword = document.getElementById('restaurantKeyword');
+            const restaurantLocationButtonText = document.querySelector('.restaurant-location-button-text');
+            const restaurantLocationFilters = document.querySelectorAll('.restaurant-location-filter');
+            const restaurantRatingFilters = document.querySelectorAll('input[name="restaurantRating"]');
+            const restaurantSortFilters = document.querySelectorAll('.restaurant-sort');
+            const restaurantCategoryFilters = document.querySelectorAll('.restaurant-category-filter');
+            const restaurantPriceFilters = document.querySelectorAll('.restaurant-price-filter');
+            const restaurantAvailableNow = document.getElementById('restaurantAvailableNow');
+            const restaurantResetFilters = document.getElementById('restaurantResetFilters');
+            const restaurantResultCount = document.getElementById('restaurantResultCount');
+            const restaurantEmptyState = document.getElementById('restaurantEmptyState');
+            const restaurantPagination = document.getElementById('restaurantPagination');
+            const restaurantPreviousPage = document.getElementById('restaurantPreviousPage');
+            const restaurantNextPage = document.getElementById('restaurantNextPage');
+            const restaurantPageButtons = document.getElementById('restaurantPageButtons');
+            const restaurantItems = Array.from(restaurantResultsGrid.querySelectorAll('.restaurant-search-item'));
+            const restaurantsPerPage = 6;
+            let currentRestaurantPage = 1;
+
+            // 1. Dedicated function ONLY for updating the dropdown button UI text
+            const updateLocationButton = () => {
+                const selectedNames = Array.from(restaurantLocationFilters)
+                    .filter(filter => filter.checked)
+                    .map(filter => filter.closest('label')?.querySelector('span')?.textContent.trim() || filter.value.trim())
+                    .filter(Boolean);
+
+                if (restaurantLocationButtonText) {
+                    restaurantLocationButtonText.textContent = selectedNames.length
+                        ? selectedNames.join(', ')
+                        : 'ជ្រើសរើសខេត្ត / ក្រុង';
+                }
+            };
+
+            // 2. Master filter function handling matching, sorting, and pagination
+            const filterRestaurants = (resetPage = false) => {
+                const keyword = restaurantKeyword?.value.toLowerCase().trim() || '';
+
+                // Extract selected location filter values/names for flexible matching
+                const selectedLocations = Array.from(restaurantLocationFilters)
+                    .filter(filter => filter.checked)
+                    .map(filter => filter.value.trim());
+
+                const minRating = Number(document.querySelector('input[name="restaurantRating"]:checked')?.value || 0);
+                const selectedSort = document.querySelector('.restaurant-sort:checked')?.value || '';
+                const selectedPrice = document.querySelector('.restaurant-price-filter:checked')?.value || '';
+
+                const selectedCategories = Array.from(restaurantCategoryFilters)
+                    .filter(filter => filter.checked)
+                    .map(filter => filter.value.trim());
+
+                const matchedItems = restaurantItems.filter(item => {
+                    // Match search keywords against Name, Title, Description, or raw text content
+                    const searchableText = [
+                        item.dataset.name,
+                        item.dataset.title,
+                        item.dataset.description,
+                        item.textContent
+                    ].join(' ').toLowerCase();
+
+                    const price = Number(item.dataset.price);
+                    const priceMatches = !selectedPrice
+                        || (selectedPrice === 'under-5' && price < 5)
+                        || (selectedPrice === '5-10' && price >= 5 && price <= 10)
+                        || (selectedPrice === '10-20' && price > 10 && price <= 20)
+                        || (selectedPrice === '20-plus' && price > 20);
+
+                    // Flexible Location Matching (e.g., "ភ្នំពេញ" matches "រាជធានីភ្នំពេញ")
+                    const itemLocation = item.dataset.location || '';
+                    const locationMatches = !selectedLocations.length || selectedLocations.some(loc =>
+                        itemLocation.includes(loc) || loc.includes(itemLocation)
+                    );
+
+                    // Flexible Category Matching (handles "គ្រឿងទេស & ម្ហូបអាហារ")
+                    const itemCategory = item.dataset.category || '';
+                    const categoryMatches = !selectedCategories.length || selectedCategories.some(cat =>
+                        itemCategory.includes(cat) || cat.includes(itemCategory)
+                    );
+
+                    return (!keyword || searchableText.includes(keyword))
+                        && locationMatches
+                        && Number(item.dataset.rating) >= minRating
+                        && categoryMatches
+                        && priceMatches
+                        && (!restaurantAvailableNow?.checked || item.dataset.available === 'true');
+                });
+
+                const sortedItems = selectedSort ? [...matchedItems].sort((a, b) => {
+                    if (selectedSort === 'rating-desc') return Number(b.dataset.rating) - Number(a.dataset.rating);
+                    if (selectedSort === 'price-asc') return Number(a.dataset.price) - Number(b.dataset.price);
+                    return Number(b.dataset.price) - Number(a.dataset.price);
+                }) : matchedItems;
+
+                const totalPages = Math.max(1, Math.ceil(sortedItems.length / restaurantsPerPage));
+                if (resetPage) currentRestaurantPage = 1;
+                currentRestaurantPage = Math.min(currentRestaurantPage, totalPages);
+
+                const pageItems = sortedItems.slice((currentRestaurantPage - 1) * restaurantsPerPage, currentRestaurantPage * restaurantsPerPage);
+                const pageItemSet = new Set(pageItems);
+                const hiddenItems = restaurantItems.filter(item => !matchedItems.includes(item));
+
+                // Reorder DOM elements and toggle visibility cleanly via Bootstrap classes
+                [...sortedItems, ...hiddenItems].forEach(item => restaurantResultsGrid.appendChild(item));
+                restaurantItems.forEach(item => item.classList.toggle('d-none', !pageItemSet.has(item)));
+
+                if (restaurantResultCount) restaurantResultCount.textContent = `បង្ហាញ ${sortedItems.length} ផលិតផល`;
+                if (restaurantEmptyState) restaurantEmptyState.classList.toggle('d-none', sortedItems.length !== 0);
+
+                if (restaurantPagination) {
+                    restaurantPagination.classList.toggle('d-none', sortedItems.length === 0);
+                    if (restaurantPreviousPage) restaurantPreviousPage.disabled = currentRestaurantPage === 1;
+                    if (restaurantNextPage) restaurantNextPage.disabled = currentRestaurantPage === totalPages;
+                    if (restaurantPageButtons) restaurantPageButtons.innerHTML = Array.from({ length: totalPages }, (_, index) => {
+                        const page = index + 1;
+                        return `<button type="button" class="btn restaurant-page-number${page === currentRestaurantPage ? ' active' : ''}" data-page="${page}" aria-label="Page ${page}">${page}</button>`;
+                    }).join('');
+                }
+            };
+
+            if (restaurantKeyword) restaurantKeyword.addEventListener('input', () => filterRestaurants(true));
+
+            restaurantLocationFilters.forEach(filter => filter.addEventListener('change', () => {
+                updateLocationButton();
+                filterRestaurants(true);
+            }));
+
+            [...restaurantRatingFilters, ...restaurantSortFilters, ...restaurantPriceFilters].forEach(filter => {
+                const option = filter.closest('label');
+                const rememberRadioState = () => { filter.dataset.wasChecked = String(filter.checked); };
+                if (option) option.addEventListener('pointerdown', rememberRadioState);
+                filter.addEventListener('keydown', event => {
+                    if (event.key === ' ' || event.key === 'Enter') rememberRadioState();
+                });
+                filter.addEventListener('click', () => {
+                    if (filter.dataset.wasChecked === 'true') filter.checked = false;
+                    filter.dataset.wasChecked = 'false';
+                    filterRestaurants(true);
+                });
+            });
+
+            restaurantCategoryFilters.forEach(filter => filter.addEventListener('change', () => filterRestaurants(true)));
+            if (restaurantAvailableNow) restaurantAvailableNow.addEventListener('change', () => filterRestaurants(true));
+
+            if (restaurantPreviousPage) restaurantPreviousPage.addEventListener('click', () => {
+                if (currentRestaurantPage > 1) {
+                    currentRestaurantPage -= 1;
+                    filterRestaurants();
+                }
+            });
+
+            if (restaurantNextPage) restaurantNextPage.addEventListener('click', () => {
+                currentRestaurantPage += 1;
+                filterRestaurants();
+            });
+
+            if (restaurantPageButtons) restaurantPageButtons.addEventListener('click', event => {
+                const pageButton = event.target.closest('[data-page]');
+                if (!pageButton) return;
+                currentRestaurantPage = Number(pageButton.dataset.page);
+                filterRestaurants();
+            });
+
+            if (restaurantResetFilters) restaurantResetFilters.addEventListener('click', () => {
+                if (restaurantKeyword) restaurantKeyword.value = '';
+                restaurantLocationFilters.forEach(filter => filter.checked = false);
+                restaurantRatingFilters.forEach(filter => filter.checked = filter.value === '0');
+                restaurantSortFilters.forEach(filter => filter.checked = false);
+                restaurantCategoryFilters.forEach(filter => filter.checked = false);
+                restaurantPriceFilters.forEach(filter => filter.checked = false);
+                if (restaurantAvailableNow) restaurantAvailableNow.checked = false;
+                updateLocationButton();
+                filterRestaurants(true);
+            });
+
+            // Initial trigger
+            updateLocationButton();
+            filterRestaurants(true);
+        })();
+
+        function openSouvenirModal(button) {
+
+            const card = button.closest(".restaurant-search-item");
+
+            const data = card.dataset;
+
+
+            // Category
+            document.getElementById("modalCategory").textContent =
+                data.category;
+
+
+            // Title
+            document.getElementById("modalTitle").textContent =
+                data.title;
+
+            document.getElementById("modalProductTitle").textContent =
+                data.title;
+
+
+            // Image
+            const modalImage =
+                document.getElementById("modalImage");
+
+            modalImage.src = data.image;
+            modalImage.alt = data.title;
+
+
+            // Location
+            document.getElementById("modalLocation").innerHTML =
+                `<i class="fas fa-map-marker-alt"></i> ${data.location}`;
+
+
+            // Rating
+            document.getElementById("modalRating").innerHTML =
+                `<i class="fas fa-star"></i> ${data.rating}`;
+
+
+            // Description
+            document.getElementById("modalDescription").textContent =
+                data.description;
+
+
+            // Features
+            document.getElementById("modalWeight").textContent =
+                data.weight;
+
+            document.getElementById("modalType").textContent =
+                data.type;
+
+            document.getElementById("modalOrigin").textContent =
+                data.origin;
+
+            document.getElementById("modalGift").textContent =
+                data.gift;
+
+
+            // Price
+            document.getElementById("modalPrice").innerHTML =
+                `$${data.price} <span>/ កញ្ចប់</span>`;
+
+
+            // Availability
+            document.getElementById("modalAvailability").innerHTML =
+                `<i class="fas fa-circle"></i> មានទំនិញ`;
+
+
+            // Open modal
+            document
+                .getElementById("souvenirModal")
+                .classList.add("show");
+
+            document.body.style.overflow = "hidden";
+
+        }
+
+
+        function closeSouvenirModal() {
+
+            document
+                .getElementById("souvenirModal")
+                .classList.remove("show");
+
+            document.body.style.overflow = "auto";
+
+        }
+
+
+        function viewOnMap() {
+
+            const location = document.getElementById("modalLocation").textContent.trim();
+            const product = document.getElementById("modalProductTitle").textContent.trim();
+            const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${product} ${location}`)}`;
+
+            window.open(mapUrl, "_blank", "noopener");
+
+        }
+
+
+        function deliverByGrab() {
+
+            window.open("https://www.grab.com/kh/en/food/", "_blank", "noopener");
+
+        }
+
+
+        document
+            .getElementById("souvenirModal")
+            .addEventListener("click", function (event) {
+
+                if (event.target === this) {
+
+                    closeSouvenirModal();
+
+                }
+
+            });
+    </script>
+
+</body>
+
+</html>
