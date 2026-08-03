@@ -1,9 +1,4 @@
-/* ==========================================================
-   about.css — page-specific styles for about.html
-   Loads AFTER index.css, reuses the same :root color tokens
-   ========================================================== */
 
-/* --- About Hero (shorter than homepage hero) --- */
 .about-hero {
   height: 55vh;
   background-image: linear-gradient(
@@ -16,8 +11,7 @@
   background-position: center;
 }
 
-/* Hero already carries its own dark overlay via .hero-overlay,
-   this just softens it further so the green tint shows through */
+
 .about-hero .hero-overlay {
   background: transparent;
 }
