@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Trach Chor</title>
+  <!-- link bootstrap -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+  <!-- link bootstrap-icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- custom css -->
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <aside class="admin-sidebar" id="sidebar">
+    <a href="admin-dashboard.html" class="sidebar-brand">
+      Trach <span>Chor</span>
+    </a>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <a href="admin-dashboard.html" class="sidebar-link active">
+          <i class="bi bi-grid-1x2-fill"></i> ទិដ្ឋភាពទូទៅ (Dashboard)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-bookings.html" class="sidebar-link">
+          <i class="bi bi-calendar-check-fill"></i> ការកក់ (Bookings)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-services.html" class="sidebar-link">
+          <i class="bi bi-box-seam-fill"></i> សេវាកម្ម (Services)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-customers.html" class="sidebar-link">
+          <i class="bi bi-people-fill"></i> អតិថិជន (Customers)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-reports.html" class="sidebar-link">
+          <i class="bi bi-bar-chart-fill"></i> របាយការណ៍ (Reports)
+        </a>
+      </li>
+      <li class="sidebar-item mt-4">
+        <a href="admin-settings.html" class="sidebar-link">
+          <i class="bi bi-gear-fill"></i> ការកំណត់ (Settings)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="index.html" class="sidebar-link text-danger">
+          <i class="bi bi-box-arrow-left"></i> ចាកចេញ (Logout)
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="admin-main">
+    <!-- Header -->
+    <header class="admin-header">
+      <div class="d-flex align-items-center">
+        <button class="sidebar-toggler me-3" id="sidebarToggle">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="header-search d-none d-md-block">
+          <i class="bi bi-search"></i>
+          <input type="text" placeholder="ស្វែងរក...">
+        </div>
+      </div>
+      
+      <div class="d-flex align-items-center gap-3">
+        <div class="position-relative cursor-pointer">
+          <i class="bi bi-bell-fill fs-5 text-muted"></i>
+          <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+            <span class="visually-hidden">New alerts</span>
+          </span>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://ui-avatars.com/api/?name=Admin&background=0B8457&color=fff" alt="Admin" width="36" height="36" class="rounded-circle me-2">
+            <span class="d-none d-md-block fw-bold">អ្នកគ្រប់គ្រង</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-2">
+            <li><a class="dropdown-item" href="#">ប្រវត្តិរូប (Profile)</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="index.html">ចាកចេញ (Log out)</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <div class="admin-content">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="h3 mb-0 text-gray-800 fw-bold">ទិដ្ឋភាពទូទៅ (Dashboard Overview)</h2>
+        <button class="btn btn-sm btn-primary" style="background-color: var(--admin-primary); border-color: var(--admin-primary);" onclick="alert('របាយការណ៍កំពុងត្រូវបានទាញយក...')">
+          <i class="bi bi-download fa-sm text-white-50"></i> ទាញយករាយការណ៍
+        </button>
+      </div>
+
+      <!-- Content Row -->
+      <div class="row g-4 mb-4">
+        
+        <!-- Total Revenue Card -->
+        <div class="col-xl-3 col-md-6">
+          <div class="admin-card p-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <p class="text-muted mb-1 fw-bold text-uppercase" style="font-size: 0.8rem;">ចំណូលសរុប</p>
+                <h3 class="mb-0 fw-bold text-dark">$40,000</h3>
+              </div>
+              <div class="stat-icon bg-light-success">
+                <i class="bi bi-currency-dollar"></i>
+              </div>
+            </div>
+            <div class="mt-3 text-success" style="font-size: 0.85rem;">
+              <i class="bi bi-arrow-up-short"></i> +15% ធៀបនឹងខែមុន
+            </div>
+          </div>
+        </div>
+
+        <!-- Total Bookings Card -->
+        <div class="col-xl-3 col-md-6">
+          <div class="admin-card p-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <p class="text-muted mb-1 fw-bold text-uppercase" style="font-size: 0.8rem;">ការកក់សរុប</p>
+                <h3 class="mb-0 fw-bold text-dark">215</h3>
+              </div>
+              <div class="stat-icon bg-light-primary">
+                <i class="bi bi-calendar-check"></i>
+              </div>
+            </div>
+            <div class="mt-3 text-success" style="font-size: 0.85rem;">
+              <i class="bi bi-arrow-up-short"></i> +5% ធៀបនឹងខែមុន
+            </div>
+          </div>
+        </div>
+
+        <!-- Pending Bookings Card -->
+        <div class="col-xl-3 col-md-6">
+          <div class="admin-card p-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <p class="text-muted mb-1 fw-bold text-uppercase" style="font-size: 0.8rem;">ការកក់រង់ចាំ</p>
+                <h3 class="mb-0 fw-bold text-dark">18</h3>
+              </div>
+              <div class="stat-icon bg-light-warning">
+                <i class="bi bi-clock-history"></i>
+              </div>
+            </div>
+            <div class="mt-3 text-danger" style="font-size: 0.85rem;">
+              <i class="bi bi-arrow-up-short"></i> +2% ធៀបនឹងសប្តាហ៍មុន
+            </div>
+          </div>
+        </div>
+
+        <!-- Total Users Card -->
+        <div class="col-xl-3 col-md-6">
+          <div class="admin-card p-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <p class="text-muted mb-1 fw-bold text-uppercase" style="font-size: 0.8rem;">អតិថិជនសរុប</p>
+                <h3 class="mb-0 fw-bold text-dark">1,245</h3>
+              </div>
+              <div class="stat-icon bg-light-danger">
+                <i class="bi bi-people"></i>
+              </div>
+            </div>
+            <div class="mt-3 text-success" style="font-size: 0.85rem;">
+              <i class="bi bi-arrow-up-short"></i> +8% ធៀបនឹងខែមុន
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table Row -->
+      <div class="row">
+        <div class="col-12">
+          <div class="admin-card p-4">
+            <h5 class="fw-bold mb-4">ការកក់ថ្មីៗ (Recent Bookings)</h5>
+            <div class="table-responsive">
+              <table class="table table-hover align-middle">
+                <thead class="table-light">
+                  <tr>
+                    <th>លេខកូដ (ID)</th>
+                    <th>អតិថិជន</th>
+                    <th>សេវាកម្ម</th>
+                    <th>កាលបរិច្ឆេទ</th>
+                    <th>តម្លៃ</th>
+                    <th>ស្ថានភាព</th>
+                    <th>សកម្មភាព</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#TR001</td>
+                    <td>សុខ វិសាល</td>
+                    <td>សណ្ឋាគារផ្កាយ៥</td>
+                    <td>03 សីហា 2026</td>
+                    <td>$120.00</td>
+                    <td><span class="badge bg-success rounded-pill px-3">បានទូទាត់</span></td>
+                    <td><button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewBookingModal">មើល</button></td>
+                  </tr>
+                  <tr>
+                    <td>#TR002</td>
+                    <td>ពេជ្រ ឧត្តម</td>
+                    <td>សេវាកម្មជួលឡាន (SUV)</td>
+                    <td>03 សីហា 2026</td>
+                    <td>$45.00</td>
+                    <td><span class="badge bg-warning text-dark rounded-pill px-3">រង់ចាំ</span></td>
+                    <td><button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewBookingModal">មើល</button></td>
+                  </tr>
+                  <tr>
+                    <td>#TR003</td>
+                    <td>ចាន់ ធីតា</td>
+                    <td>កញ្ចប់ដំណើរកម្សាន្តទៅសៀមរាប</td>
+                    <td>02 សីហា 2026</td>
+                    <td>$250.00</td>
+                    <td><span class="badge bg-success rounded-pill px-3">បានទូទាត់</span></td>
+                    <td><button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#viewBookingModal">មើល</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- View Booking Modal -->
+  <div class="modal fade" id="viewBookingModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+        <div class="modal-header border-bottom-0 pb-0">
+          <h5 class="modal-title fw-bold">ព័ត៌មានលម្អិតការកក់</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-2"><strong>លេខកូដ:</strong> #TR001</p>
+          <p class="mb-2"><strong>អតិថិជន:</strong> សុខ វិសាល</p>
+          <p class="mb-2"><strong>សេវាកម្ម:</strong> សណ្ឋាគារផ្កាយ៥ (VIP Suite)</p>
+          <p class="mb-2"><strong>តម្លៃសរុប:</strong> $120.00</p>
+          <p class="mb-2"><strong>ស្ថានភាព:</strong> <span class="badge bg-success">បានទូទាត់</span></p>
+        </div>
+        <div class="modal-footer border-top-0 pt-0">
+          <button type="button" class="btn btn-light rounded-pill px-4" data-bs-dismiss="modal">បិទ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Sidebar toggle for mobile
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
