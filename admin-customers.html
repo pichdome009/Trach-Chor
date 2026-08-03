@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>គ្រប់គ្រងអតិថិជន - Trach Chor Admin</title>
+  <!-- link bootstrap -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+  <!-- link bootstrap-icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- custom css -->
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <aside class="admin-sidebar" id="sidebar">
+    <a href="admin-dashboard.html" class="sidebar-brand">
+      Trach <span>Chor</span>
+    </a>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <a href="admin-dashboard.html" class="sidebar-link">
+          <i class="bi bi-grid-1x2-fill"></i> ទិដ្ឋភាពទូទៅ (Dashboard)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-bookings.html" class="sidebar-link">
+          <i class="bi bi-calendar-check-fill"></i> ការកក់ (Bookings)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-services.html" class="sidebar-link">
+          <i class="bi bi-box-seam-fill"></i> សេវាកម្ម (Services)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-customers.html" class="sidebar-link active">
+          <i class="bi bi-people-fill"></i> អតិថិជន (Customers)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-reports.html" class="sidebar-link">
+          <i class="bi bi-bar-chart-fill"></i> របាយការណ៍ (Reports)
+        </a>
+      </li>
+      <li class="sidebar-item mt-4">
+        <a href="admin-settings.html" class="sidebar-link">
+          <i class="bi bi-gear-fill"></i> ការកំណត់ (Settings)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="index.html" class="sidebar-link text-danger">
+          <i class="bi bi-box-arrow-left"></i> ចាកចេញ (Logout)
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="admin-main">
+    <!-- Header -->
+    <header class="admin-header">
+      <div class="d-flex align-items-center">
+        <button class="sidebar-toggler me-3" id="sidebarToggle">
+          <i class="bi bi-list"></i>
+        </button>
+        <h4 class="mb-0 fw-bold d-none d-md-block">បញ្ជីអតិថិជន (Customers)</h4>
+      </div>
+      
+      <div class="d-flex align-items-center gap-3">
+        <div class="position-relative cursor-pointer">
+          <i class="bi bi-bell-fill fs-5 text-muted"></i>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://ui-avatars.com/api/?name=Admin&background=0B8457&color=fff" alt="Admin" width="36" height="36" class="rounded-circle me-2">
+            <span class="d-none d-md-block fw-bold">អ្នកគ្រប់គ្រង</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-2">
+            <li><a class="dropdown-item" href="#">ប្រវត្តិរូប (Profile)</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="index.html">ចាកចេញ (Log out)</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Customers Content -->
+    <div class="admin-content">
+      
+      <!-- Action Bar -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+        <div class="header-search">
+          <i class="bi bi-search"></i>
+          <input type="text" placeholder="ស្វែងរកតាមឈ្មោះ ឬអ៊ីមែល..." style="width: 350px;">
+        </div>
+        <div>
+          <button class="btn text-white fw-bold px-4" style="background-color: var(--admin-primary);" data-bs-toggle="modal" data-bs-target="#addCustomerModal">
+            <i class="bi bi-person-plus-fill me-2"></i> បន្ថែមអតិថិជនថ្មី
+          </button>
+        </div>
+      </div>
+
+      <!-- Customers Table -->
+      <div class="admin-card p-4">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>ឈ្មោះអតិថិជន (Name)</th>
+                <th>លេខទូរស័ព្ទ (Phone)</th>
+                <th>កាលបរិច្ឆេទចូលរួម (Joined)</th>
+                <th>ការកក់សរុប (Bookings)</th>
+                <th>ចំណាយសរុប (Spent)</th>
+                <th>ស្ថានភាព (Status)</th>
+                <th class="text-end">សកម្មភាព</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <img src="https://ui-avatars.com/api/?name=Sokh+Visal&background=random" alt="Avatar" class="rounded-circle me-3" width="45" height="45">
+                    <div>
+                      <h6 class="mb-0 fw-bold">សុខ វិសាល (Sokh Visal)</h6>
+                      <small class="text-muted">sokhvisal@email.com</small>
+                    </div>
+                  </div>
+                </td>
+                <td>012 345 678</td>
+                <td>15 មករា 2026</td>
+                <td class="fw-bold">12 ដង</td>
+                <td class="fw-bold text-success">$1,450.00</td>
+                <td><span class="badge bg-success rounded-pill px-3 py-1">សកម្ម (Active)</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary" title="មើលព័ត៌មាន" onclick="alert('កំពុងបើកមើលព័ត៌មានលម្អិតអតិថិជន...')"><i class="bi bi-person-lines-fill"></i></button>
+                  <button class="btn btn-sm btn-outline-danger ms-1" title="បិទគណនី" onclick="if(confirm('តើអ្នកពិតជាចង់បិទគណនីនេះមែនទេ?')) alert('បានបិទគណនីដោយជោគជ័យ!');"><i class="bi bi-slash-circle"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <img src="https://ui-avatars.com/api/?name=Pich+Oudom&background=random" alt="Avatar" class="rounded-circle me-3" width="45" height="45">
+                    <div>
+                      <h6 class="mb-0 fw-bold">ពេជ្រ ឧត្តម (Pich Oudom)</h6>
+                      <small class="text-muted">oudompich@email.com</small>
+                    </div>
+                  </div>
+                </td>
+                <td>098 765 432</td>
+                <td>02 កុម្ភៈ 2026</td>
+                <td class="fw-bold">5 ដង</td>
+                <td class="fw-bold text-success">$320.00</td>
+                <td><span class="badge bg-success rounded-pill px-3 py-1">សកម្ម (Active)</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary" title="មើលព័ត៌មាន" onclick="alert('កំពុងបើកមើលព័ត៌មានលម្អិតអតិថិជន...')"><i class="bi bi-person-lines-fill"></i></button>
+                  <button class="btn btn-sm btn-outline-danger ms-1" title="បិទគណនី" onclick="if(confirm('តើអ្នកពិតជាចង់បិទគណនីនេះមែនទេ?')) alert('បានបិទគណនីដោយជោគជ័យ!');"><i class="bi bi-slash-circle"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <img src="https://ui-avatars.com/api/?name=Chan+Thida&background=random" alt="Avatar" class="rounded-circle me-3" width="45" height="45">
+                    <div>
+                      <h6 class="mb-0 fw-bold text-decoration-line-through text-muted">ចាន់ ធីតា (Chan Thida)</h6>
+                      <small class="text-muted">chanthida@email.com</small>
+                    </div>
+                  </div>
+                </td>
+                <td>010 111 222</td>
+                <td>10 ឧសភា 2026</td>
+                <td class="fw-bold">0 ដង</td>
+                <td class="fw-bold text-muted">$0.00</td>
+                <td><span class="badge bg-secondary rounded-pill px-3 py-1">បានបិទ (Blocked)</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary" title="មើលព័ត៌មាន" onclick="alert('កំពុងបើកមើលព័ត៌មានលម្អិតអតិថិជន...')"><i class="bi bi-person-lines-fill"></i></button>
+                  <button class="btn btn-sm btn-outline-success ms-1" title="បើកគណនីវិញ" onclick="if(confirm('តើអ្នកពិតជាចង់បើកគណនីនេះមែនទេ?')) alert('បានបើកគណនីដោយជោគជ័យ!');"><i class="bi bi-check-circle"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <!-- Pagination -->
+        <nav aria-label="Page navigation" class="mt-4">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">មុន</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">បន្ទាប់</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Add Customer Modal -->
+  <div class="modal fade" id="addCustomerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+        <div class="modal-header border-bottom-0 pb-0">
+          <h5 class="modal-title fw-bold">បន្ថែមអតិថិជនថ្មី</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label fw-bold">ឈ្មោះពេញ</label>
+              <input type="text" class="form-control" placeholder="ឧ. សុខ វិសាល">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-bold">លេខទូរស័ព្ទ</label>
+              <input type="text" class="form-control" placeholder="ឧ. 012 345 678">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-bold">អ៊ីមែល (មិនចាំបាច់)</label>
+              <input type="email" class="form-control" placeholder="ឧ. email@example.com">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-top-0 pt-0">
+          <button type="button" class="btn btn-light rounded-pill px-4" data-bs-dismiss="modal">បោះបង់</button>
+          <button type="button" class="btn text-white rounded-pill px-4" style="background-color: var(--admin-primary);" onclick="alert('បានរក្សាទុកដោយជោគជ័យ!');" data-bs-dismiss="modal">រក្សាទុក</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Sidebar toggle for mobile
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('show');
+    });
+
+    // Handle Pagination Active State
+    const pageItems = document.querySelectorAll('.pagination .page-item:not(.disabled)');
+    pageItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        const link = item.querySelector('.page-link');
+        if(link.textContent === 'បន្ទាប់' || link.textContent === 'មុន') return;
+        e.preventDefault();
+        document.querySelectorAll('.pagination .page-item').forEach(p => p.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

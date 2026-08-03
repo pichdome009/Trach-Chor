@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>គ្រប់គ្រងការកក់ - Trach Chor Admin</title>
+  <!-- link bootstrap -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+  <!-- link bootstrap-icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- custom css -->
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <aside class="admin-sidebar" id="sidebar">
+    <a href="admin-dashboard.html" class="sidebar-brand">
+      Trach <span>Chor</span>
+    </a>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <a href="admin-dashboard.html" class="sidebar-link">
+          <i class="bi bi-grid-1x2-fill"></i> ទិដ្ឋភាពទូទៅ (Dashboard)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-bookings.html" class="sidebar-link active">
+          <i class="bi bi-calendar-check-fill"></i> ការកក់ (Bookings)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-services.html" class="sidebar-link">
+          <i class="bi bi-box-seam-fill"></i> សេវាកម្ម (Services)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-customers.html" class="sidebar-link">
+          <i class="bi bi-people-fill"></i> អតិថិជន (Customers)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-reports.html" class="sidebar-link">
+          <i class="bi bi-bar-chart-fill"></i> របាយការណ៍ (Reports)
+        </a>
+      </li>
+      <li class="sidebar-item mt-4">
+        <a href="admin-settings.html" class="sidebar-link">
+          <i class="bi bi-gear-fill"></i> ការកំណត់ (Settings)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="index.html" class="sidebar-link text-danger">
+          <i class="bi bi-box-arrow-left"></i> ចាកចេញ (Logout)
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="admin-main">
+    <!-- Header -->
+    <header class="admin-header">
+      <div class="d-flex align-items-center">
+        <button class="sidebar-toggler me-3" id="sidebarToggle">
+          <i class="bi bi-list"></i>
+        </button>
+        <h4 class="mb-0 fw-bold d-none d-md-block">បញ្ជីការកក់ទំនិញ និងសេវាកម្ម</h4>
+      </div>
+      
+      <div class="d-flex align-items-center gap-3">
+        <div class="position-relative cursor-pointer">
+          <i class="bi bi-bell-fill fs-5 text-muted"></i>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://ui-avatars.com/api/?name=Admin&background=0B8457&color=fff" alt="Admin" width="36" height="36" class="rounded-circle me-2">
+            <span class="d-none d-md-block fw-bold">អ្នកគ្រប់គ្រង</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-2">
+            <li><a class="dropdown-item" href="#">ប្រវត្តិរូប (Profile)</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="index.html">ចាកចេញ (Log out)</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Bookings Content -->
+    <div class="admin-content">
+      
+      <!-- Action Bar -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+        <div class="header-search">
+          <i class="bi bi-search"></i>
+          <input type="text" placeholder="ស្វែងរកលេខកូដ, ឈ្មោះ..." style="width: 300px;">
+        </div>
+        <div class="d-flex gap-2">
+          <button class="btn btn-outline-secondary" onclick="alert('កំពុងបើកផ្ទាំងតម្រង (Filter) ...')"><i class="bi bi-filter"></i> តម្រង</button>
+          <button class="btn btn-outline-success" onclick="alert('កំពុងទាញយកឯកសារ CSV...')"><i class="bi bi-file-earmark-excel"></i> Export CSV</button>
+        </div>
+      </div>
+
+      <!-- Status Tabs -->
+      <nav class="admin-tabs">
+        <a href="#" class="admin-tab-btn active">ទាំងអស់ (All)</a>
+        <a href="#" class="admin-tab-btn"><i class="bi bi-clock-history text-warning"></i> រង់ចាំ (Pending)</a>
+        <a href="#" class="admin-tab-btn"><i class="bi bi-check-circle-fill text-success"></i> បានទូទាត់ (Confirmed)</a>
+        <a href="#" class="admin-tab-btn"><i class="bi bi-x-circle-fill text-danger"></i> បោះបង់ (Cancelled)</a>
+      </nav>
+
+      <!-- Bookings Table -->
+      <div class="admin-card p-4">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>លេខកូដ (Booking ID)</th>
+                <th>អតិថិជន</th>
+                <th>កាលបរិច្ឆេទកក់</th>
+                <th>សេវាកម្ម</th>
+                <th>តម្លៃសរុប</th>
+                <th>ស្ថានភាព</th>
+                <th class="text-end">សកម្មភាព</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-bold">#BK-90234</td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <div class="bg-primary text-white rounded-circle d-flex justify-content-center align-items-center me-2" style="width: 35px; height: 35px;">ស.វ</div>
+                    <div>
+                      <h6 class="mb-0 fw-bold">សុខ វិសាល</h6>
+                      <small class="text-muted">sokhvisal@email.com</small>
+                    </div>
+                  </div>
+                </td>
+                <td>03 សីហា 2026, 10:30 AM</td>
+                <td>
+                  <span class="d-block">សណ្ឋាគារផ្កាយ ៥ អង្គរ</span>
+                  <small class="text-muted">បន្ទប់: VIP Suite (2 យប់)</small>
+                </td>
+                <td class="fw-bold text-success">$240.00</td>
+                <td><span class="badge bg-success rounded-pill px-3 py-2">បានទូទាត់</span></td>
+                <td class="text-end">
+                  <div class="dropdown">
+                    <button class="btn btn-sm btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
+                      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#viewBookingModal"><i class="bi bi-eye text-primary me-2"></i> មើលលម្អិត</a></li>
+                      <li><a class="dropdown-item" href="#" onclick="alert('មុខងារកែប្រែស្ថានភាពកំពុងត្រូវបានអភិវឌ្ឍន៍!')"><i class="bi bi-pencil-square text-warning me-2"></i> កែប្រែស្ថានភាព</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item text-danger" href="#" onclick="if(confirm('តើអ្នកពិតជាចង់លុបការកក់នេះមែនទេ?')) alert('ការកក់ត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash text-danger me-2"></i> លុបការកក់</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold">#BK-90233</td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <div class="bg-warning text-dark rounded-circle d-flex justify-content-center align-items-center me-2" style="width: 35px; height: 35px;">ព.ឧ</div>
+                    <div>
+                      <h6 class="mb-0 fw-bold">ពេជ្រ ឧត្តម</h6>
+                      <small class="text-muted">oudompich@email.com</small>
+                    </div>
+                  </div>
+                </td>
+                <td>02 សីហា 2026, 04:15 PM</td>
+                <td>
+                  <span class="d-block">សេវាកម្មជួលឡាន (SUV)</span>
+                  <small class="text-muted">Toyota Fortuner 2023 (1 ថ្ងៃ)</small>
+                </td>
+                <td class="fw-bold text-success">$45.00</td>
+                <td><span class="badge bg-warning text-dark rounded-pill px-3 py-2">រង់ចាំការទូទាត់</span></td>
+                <td class="text-end">
+                  <div class="dropdown">
+                    <button class="btn btn-sm btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
+                      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#viewBookingModal"><i class="bi bi-eye text-primary me-2"></i> មើលលម្អិត</a></li>
+                      <li><a class="dropdown-item" href="#" onclick="alert('មុខងារកែប្រែស្ថានភាពកំពុងត្រូវបានអភិវឌ្ឍន៍!')"><i class="bi bi-pencil-square text-warning me-2"></i> កែប្រែស្ថានភាព</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item text-danger" href="#" onclick="if(confirm('តើអ្នកពិតជាចង់លុបការកក់នេះមែនទេ?')) alert('ការកក់ត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash text-danger me-2"></i> លុបការកក់</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold">#BK-90232</td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <div class="bg-danger text-white rounded-circle d-flex justify-content-center align-items-center me-2" style="width: 35px; height: 35px;">ច.ធ</div>
+                    <div>
+                      <h6 class="mb-0 fw-bold">ចាន់ ធីតា</h6>
+                      <small class="text-muted">chanthida@email.com</small>
+                    </div>
+                  </div>
+                </td>
+                <td>01 សីហា 2026, 09:00 AM</td>
+                <td>
+                  <span class="d-block">កញ្ចប់ដំណើរកម្សាន្តទៅសៀមរាប</span>
+                  <small class="text-muted">សម្រាប់ 2 នាក់</small>
+                </td>
+                <td class="fw-bold text-success">$250.00</td>
+                <td><span class="badge bg-danger rounded-pill px-3 py-2">បោះបង់</span></td>
+                <td class="text-end">
+                  <div class="dropdown">
+                    <button class="btn btn-sm btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
+                      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#viewBookingModal"><i class="bi bi-eye text-primary me-2"></i> មើលលម្អិត</a></li>
+                      <li><a class="dropdown-item" href="#" onclick="alert('មុខងារកែប្រែស្ថានភាពកំពុងត្រូវបានអភិវឌ្ឍន៍!')"><i class="bi bi-pencil-square text-warning me-2"></i> កែប្រែស្ថានភាព</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item text-danger" href="#" onclick="if(confirm('តើអ្នកពិតជាចង់លុបការកក់នេះមែនទេ?')) alert('ការកក់ត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash text-danger me-2"></i> លុបការកក់</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <!-- Pagination -->
+        <nav aria-label="Page navigation" class="mt-4">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">មុន</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">បន្ទាប់</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- View Booking Modal -->
+  <div class="modal fade" id="viewBookingModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+        <div class="modal-header border-bottom-0 pb-0">
+          <h5 class="modal-title fw-bold">ព័ត៌មានលម្អិតការកក់</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-2"><strong>លេខកូដ:</strong> #BK-90234</p>
+          <p class="mb-2"><strong>អតិថិជន:</strong> សុខ វិសាល</p>
+          <p class="mb-2"><strong>សេវាកម្ម:</strong> សណ្ឋាគារផ្កាយ ៥ អង្គរ (VIP Suite)</p>
+          <p class="mb-2"><strong>កាលបរិច្ឆេទ:</strong> 03 សីហា 2026, 10:30 AM</p>
+          <p class="mb-2"><strong>តម្លៃសរុប:</strong> $240.00</p>
+          <p class="mb-2"><strong>ស្ថានភាព:</strong> <span class="badge bg-success">បានទូទាត់</span></p>
+        </div>
+        <div class="modal-footer border-top-0 pt-0">
+          <button type="button" class="btn btn-light rounded-pill px-4" data-bs-dismiss="modal">បិទ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Sidebar toggle for mobile
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('show');
+    });
+
+    // Handle Tabs Active State
+    const tabs = document.querySelectorAll('.admin-tab-btn');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+
+    // Handle Pagination Active State
+    const pageItems = document.querySelectorAll('.pagination .page-item:not(.disabled)');
+    pageItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        const link = item.querySelector('.page-link');
+        if(link.textContent === 'បន្ទាប់' || link.textContent === 'មុន') return;
+        e.preventDefault();
+        document.querySelectorAll('.pagination .page-item').forEach(p => p.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

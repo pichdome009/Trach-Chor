@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ការកំណត់ទូទៅ - Trach Chor Admin</title>
+  <!-- link bootstrap -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+  <!-- link bootstrap-icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- custom css -->
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <aside class="admin-sidebar" id="sidebar">
+    <a href="admin-dashboard.html" class="sidebar-brand">
+      Trach <span>Chor</span>
+    </a>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <a href="admin-dashboard.html" class="sidebar-link">
+          <i class="bi bi-grid-1x2-fill"></i> ទិដ្ឋភាពទូទៅ (Dashboard)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-bookings.html" class="sidebar-link">
+          <i class="bi bi-calendar-check-fill"></i> ការកក់ (Bookings)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-services.html" class="sidebar-link">
+          <i class="bi bi-box-seam-fill"></i> សេវាកម្ម (Services)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-customers.html" class="sidebar-link">
+          <i class="bi bi-people-fill"></i> អតិថិជន (Customers)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-reports.html" class="sidebar-link">
+          <i class="bi bi-bar-chart-fill"></i> របាយការណ៍ (Reports)
+        </a>
+      </li>
+      <li class="sidebar-item mt-4">
+        <a href="admin-settings.html" class="sidebar-link active">
+          <i class="bi bi-gear-fill"></i> ការកំណត់ (Settings)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="index.html" class="sidebar-link text-danger">
+          <i class="bi bi-box-arrow-left"></i> ចាកចេញ (Logout)
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="admin-main">
+    <!-- Header -->
+    <header class="admin-header">
+      <div class="d-flex align-items-center">
+        <button class="sidebar-toggler me-3" id="sidebarToggle">
+          <i class="bi bi-list"></i>
+        </button>
+        <h4 class="mb-0 fw-bold d-none d-md-block">ការកំណត់ប្រព័ន្ធ (System Settings)</h4>
+      </div>
+      
+      <div class="d-flex align-items-center gap-3">
+        <div class="position-relative cursor-pointer">
+          <i class="bi bi-bell-fill fs-5 text-muted"></i>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://ui-avatars.com/api/?name=Admin&background=0B8457&color=fff" alt="Admin" width="36" height="36" class="rounded-circle me-2">
+            <span class="d-none d-md-block fw-bold">អ្នកគ្រប់គ្រង</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-2">
+            <li><a class="dropdown-item" href="#">ប្រវត្តិរូប (Profile)</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="index.html">ចាកចេញ (Log out)</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Settings Content -->
+    <div class="admin-content">
+      
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <!-- Setting Navigation -->
+          <div class="admin-card p-4">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <button class="nav-link active text-start mb-2 text-dark fw-bold" id="v-pills-general-tab" data-bs-toggle="pill" data-bs-target="#v-pills-general" type="button" role="tab" style="background-color: var(--admin-primary); color: white !important;">ការកំណត់ទូទៅ (General)</button>
+              <button class="nav-link text-start mb-2 text-dark fw-bold" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab">គណនីគ្រប់គ្រង (Admin Profile)</button>
+              <button class="nav-link text-start mb-2 text-dark fw-bold" id="v-pills-payment-tab" data-bs-toggle="pill" data-bs-target="#v-pills-payment" type="button" role="tab">ការទូទាត់ប្រាក់ (Payments)</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-8">
+          <!-- Settings Content Area -->
+          <div class="admin-card p-4">
+            <div class="tab-content" id="v-pills-tabContent">
+              
+              <!-- General Settings -->
+              <div class="tab-pane fade show active" id="v-pills-general" role="tabpanel">
+                <h5 class="fw-bold border-bottom pb-3 mb-4">ព័ត៌មានគេហទំព័រ (Website Information)</h5>
+                <form>
+                  <div class="mb-3">
+                    <label class="form-label fw-bold">ឈ្មោះវិបសាយ (Website Name)</label>
+                    <input type="text" class="form-control" value="Trach Chor Tourism">
+                  </div>
+                  <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold">អ៊ីមែលទំនាក់ទំនង (Contact Email)</label>
+                      <input type="email" class="form-control" value="info@trachchor.com">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold">លេខទូរស័ព្ទ (Phone Number)</label>
+                      <input type="text" class="form-control" value="+855 12 345 678">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label fw-bold">អាសយដ្ឋាន (Address)</label>
+                    <textarea class="form-control" rows="2">ផ្ទះលេខ ១២៣, ផ្លូវ ៤៥៦, សង្កាត់បឹងកេងកង, រាជធានីភ្នំពេញ</textarea>
+                  </div>
+                  <button type="button" class="btn text-white fw-bold mt-3 px-4" style="background-color: var(--admin-primary);" onclick="alert('ការកំណត់ត្រូវបានរក្សាទុកដោយជោគជ័យ!');">រក្សាទុក (Save Changes)</button>
+                </form>
+              </div>
+
+              <!-- Admin Profile -->
+              <div class="tab-pane fade" id="v-pills-profile" role="tabpanel">
+                <h5 class="fw-bold border-bottom pb-3 mb-4">ការកំណត់គណនីអ្នកគ្រប់គ្រង (Admin Account)</h5>
+                <form>
+                  <div class="d-flex align-items-center mb-4">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=0B8457&color=fff" alt="Admin" width="80" height="80" class="rounded-circle me-3">
+                    <div>
+                      <button type="button" class="btn btn-outline-primary btn-sm mb-2">ប្តូររូបថត</button>
+                      <p class="text-muted mb-0 small">ទំហំអតិបរមា 2MB (JPG, PNG)</p>
+                    </div>
+                  </div>
+                  <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold">នាមត្រកូល និងនាមខ្លួន (Full Name)</label>
+                      <input type="text" class="form-control" value="អ្នកគ្រប់គ្រង">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold">ឈ្មោះគណនី (Username)</label>
+                      <input type="text" class="form-control" value="admin123">
+                    </div>
+                  </div>
+                  <h6 class="fw-bold mt-4 mb-3">ប្តូរពាក្យសម្ងាត់ (Change Password)</h6>
+                  <div class="mb-3">
+                    <label class="form-label fw-bold">ពាក្យសម្ងាត់ចាស់ (Current Password)</label>
+                    <input type="password" class="form-control">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label fw-bold">ពាក្យសម្ងាត់ថ្មី (New Password)</label>
+                    <input type="password" class="form-control">
+                  </div>
+                  <button type="button" class="btn text-white fw-bold mt-3 px-4" style="background-color: var(--admin-primary);" onclick="alert('ការកំណត់ត្រូវបានរក្សាទុកដោយជោគជ័យ!');">រក្សាទុក (Save Changes)</button>
+                </form>
+              </div>
+
+              <!-- Payment Settings -->
+              <div class="tab-pane fade" id="v-pills-payment" role="tabpanel">
+                <h5 class="fw-bold border-bottom pb-3 mb-4">ជម្រើសទូទាត់ប្រាក់ (Payment Gateways)</h5>
+                <div class="list-group">
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked>
+                    <span>
+                      <span class="fw-bold d-block">ABA Pay / KHQR</span>
+                      <small class="text-muted d-block">អនុញ្ញាតឱ្យអតិថិជនស្កេនបង់ប្រាក់តាមរយៈ ABA និងធនាគារក្នុងស្រុកផ្សេងទៀត។</small>
+                    </span>
+                  </label>
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked>
+                    <span>
+                      <span class="fw-bold d-block">Visa / Mastercard</span>
+                      <small class="text-muted d-block">ទទួលយកកាតឥណទានអន្តរជាតិ។</small>
+                    </span>
+                  </label>
+                  <label class="list-group-item d-flex gap-2">
+                    <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                    <span>
+                      <span class="fw-bold d-block">បង់សាច់ប្រាក់សុទ្ធ (Cash on Delivery)</span>
+                      <small class="text-muted d-block">ទូទាត់ប្រាក់នៅពេលមកដល់។</small>
+                    </span>
+                  </label>
+                </div>
+                <button type="button" class="btn text-white fw-bold mt-4 px-4" style="background-color: var(--admin-primary);" onclick="alert('ការកំណត់ត្រូវបានរក្សាទុកដោយជោគជ័យ!');">រក្សាទុក (Save Changes)</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Sidebar toggle for mobile
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('show');
+    });
+
+    // Handle pill tab background color change dynamically
+    const tabBtns = document.querySelectorAll('#v-pills-tab .nav-link');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        tabBtns.forEach(b => {
+          b.style.backgroundColor = 'transparent';
+          b.style.color = '#1F2937';
+        });
+        this.style.backgroundColor = 'var(--admin-primary)';
+        this.style.color = 'white';
+      });
+    });
+  </script>
+</body>
+</html>
