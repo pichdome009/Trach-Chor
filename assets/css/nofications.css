@@ -29,10 +29,6 @@ body{
     background:rgba(201,168,76,.15);
 }
 
-.dropdown-divider{
-    border-color:rgba(13,46,28,.15);
-}
-
 /* 6. SIDEBAR */
 .sidebar,
 .notification-sidebar{
