@@ -44,16 +44,13 @@ body {
   --transition-normal: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   --transition-slow: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 
-  /* Short aliases — contact.html references var(--primary) / var(--accent) directly */
   --primary: var(--primary-color);
   --accent: var(--secondary-color);
   /* hotels.html modal inline styles reference var(--tc-gold) directly */
   --tc-gold: var(--secondary-color);
 }
 
-/* ==========================================================
-   Hero
-   ========================================================== */
+
 .contact-hero.hero-banner {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
   color: white;
@@ -85,9 +82,6 @@ body {
   max-width: 700px;
 }
 
-/* ==========================================================
-   Section spacing / headings
-   ========================================================== */
 .section-pad {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -113,9 +107,7 @@ body {
   border-radius: var(--radius-full);
 }
 
-/* ==========================================================
-   Contact Info Cards
-   ========================================================== */
+
 .contact-info-card {
   background: var(--bg-white);
   border-radius: var(--radius-lg);
@@ -151,9 +143,6 @@ body {
   transform: scale(1.08);
 }
 
-/* ==========================================================
-   Contact Form
-   ========================================================== */
 .contact-form-wrap {
   background: var(--bg-white);
   border-radius: var(--radius-lg);
@@ -200,9 +189,6 @@ body {
   color: var(--text-dark);
 }
 
-/* ==========================================================
-   Map + Social
-   ========================================================== */
 .map-wrap {
   background: var(--bg-white);
   border-radius: var(--radius-lg);
@@ -235,9 +221,6 @@ body {
   color: var(--primary-color);
 }
 
-/* ==========================================================
-   FAQ Accordion
-   ========================================================== */
 .accordion-tc .accordion-item {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md) !important;
@@ -274,9 +257,7 @@ body {
   font-size: 0.92rem;
 }
 
-/* ==========================================================
-   Jungle Theme — shared across hotels.html & rental.html
-   ========================================================== */
+
 
 /* --- Color utilities --- */
 .text-jungle { color: var(--primary-color) !important; }
@@ -285,16 +266,17 @@ body {
 .text-gold { color: var(--secondary-dark) !important; }
 .bg-gold { background-color: var(--secondary-color) !important; }
 
-/* Bring Bootstrap's default warning/primary closer to the brand palette
-   wherever they show up on these pages (rating stars, badges, icons) */
+
 .text-warning { color: var(--secondary-dark) !important; }
 .badge.bg-warning { background-color: var(--secondary-color) !important; color: var(--text-dark) !important; }
 .text-primary { color: var(--accent-color) !important; }
 
-/* --- Hero box (replaces bg-success/border-success on hotels & rental hero) --- */
-.hero-jungle-box {
+
+.hero-jungle-box{
+  padding-top: 10rem !important;
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
   color: #fff;
+ 
 }
 
 .hero-jungle-box .lead {
@@ -315,7 +297,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* --- Buttons --- */
+
 .btn-jungle {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
   color: #fff;
@@ -345,7 +327,6 @@ body {
   color: #fff;
 }
 
-/* Checked state when paired with a hidden .btn-check radio (seat picker) */
 .btn-check:checked + .btn-outline-jungle {
   background: var(--primary-color);
   color: #fff;
@@ -474,7 +455,6 @@ body {
   transform: scale(1.1);
 }
 
-/* --- Vehicle cards (rental.html) --- */
 .vehicle-card {
   border: none;
   border-radius: var(--radius-lg);
@@ -533,7 +513,7 @@ body {
   color: #fff;
 }
 
-/* --- Hotel detail modal (tc- prefix, hotels.html) --- */
+
 .tc-gallery-main img {
   width: 100%;
   height: 260px;
