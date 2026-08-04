@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>របាយការណ៍ - Trach Chor Admin</title>
+  <!-- link bootstrap -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+  <!-- link bootstrap-icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- custom css -->
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <aside class="admin-sidebar" id="sidebar">
+    <a href="admin-dashboard.html" class="sidebar-brand">
+      Trach <span>Chor</span>
+    </a>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <a href="admin-dashboard.html" class="sidebar-link">
+          <i class="bi bi-grid-1x2-fill"></i> ទិដ្ឋភាពទូទៅ (Dashboard)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-bookings.html" class="sidebar-link">
+          <i class="bi bi-calendar-check-fill"></i> ការកក់ (Bookings)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-services.html" class="sidebar-link">
+          <i class="bi bi-box-seam-fill"></i> សេវាកម្ម (Services)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-customers.html" class="sidebar-link">
+          <i class="bi bi-people-fill"></i> អតិថិជន (Customers)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="admin-reports.html" class="sidebar-link active">
+          <i class="bi bi-bar-chart-fill"></i> របាយការណ៍ (Reports)
+        </a>
+      </li>
+      <li class="sidebar-item mt-4">
+        <a href="admin-settings.html" class="sidebar-link">
+          <i class="bi bi-gear-fill"></i> ការកំណត់ (Settings)
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="index.html" class="sidebar-link text-danger">
+          <i class="bi bi-box-arrow-left"></i> ចាកចេញ (Logout)
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="admin-main">
+    <!-- Header -->
+    <header class="admin-header">
+      <div class="d-flex align-items-center">
+        <button class="sidebar-toggler me-3" id="sidebarToggle">
+          <i class="bi bi-list"></i>
+        </button>
+        <h4 class="mb-0 fw-bold d-none d-md-block">របាយការណ៍ហិរញ្ញវត្ថុ និងស្ថិតិ</h4>
+      </div>
+      
+      <div class="d-flex align-items-center gap-3">
+        <div class="position-relative cursor-pointer">
+          <i class="bi bi-bell-fill fs-5 text-muted"></i>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://ui-avatars.com/api/?name=Admin&background=0B8457&color=fff" alt="Admin" width="36" height="36" class="rounded-circle me-2">
+            <span class="d-none d-md-block fw-bold">អ្នកគ្រប់គ្រង</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-2">
+            <li><a class="dropdown-item" href="#">ប្រវត្តិរូប (Profile)</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="index.html">ចាកចេញ (Log out)</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Reports Content -->
+    <div class="admin-content">
+      
+      <!-- Action Bar -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+        <div class="d-flex gap-2 align-items-center">
+          <select class="form-select" style="width: auto;">
+            <option selected>ប្រចាំខែនេះ</option>
+            <option value="1">ខែមុន</option>
+            <option value="2">ឆ្នាំនេះ</option>
+            <option value="3">ជ្រើសរើសថ្ងៃទី...</option>
+          </select>
+        </div>
+        <div class="d-flex gap-2">
+          <button class="btn btn-outline-primary" onclick="window.print()"><i class="bi bi-printer"></i> បោះពុម្ព (Print)</button>
+          <button class="btn text-white fw-bold" style="background-color: var(--admin-primary);" onclick="alert('កំពុងទាញយកឯកសារ PDF...')"><i class="bi bi-download"></i> ទាញយក (Export PDF)</button>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <!-- Big Metric 1 -->
+        <div class="col-lg-6">
+          <div class="admin-card p-4">
+            <h5 class="fw-bold mb-3">ចំណូលសរុប (Total Revenue)</h5>
+            <h1 class="display-5 fw-bold text-success">$12,450.00</h1>
+            <p class="text-muted mb-0"><i class="bi bi-arrow-up-right text-success"></i> កើនឡើង 24% ធៀបនឹងខែមុន</p>
+            <div class="mt-4" style="height: 200px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #adb5bd;">
+              <i class="bi bi-bar-chart-line display-1"></i>
+              <span class="ms-3">Chart Placeholder</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Big Metric 2 -->
+        <div class="col-lg-6">
+          <div class="admin-card p-4">
+            <h5 class="fw-bold mb-3">ការបញ្ជាទិញតាមប្រភេទសេវាកម្ម</h5>
+            <div class="mt-2">
+              <div class="d-flex justify-content-between mb-1">
+                <span>សណ្ឋាគារ (Hotel)</span>
+                <span class="fw-bold">45%</span>
+              </div>
+              <div class="progress mb-3" style="height: 10px;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+
+              <div class="d-flex justify-content-between mb-1">
+                <span>កញ្ចប់ដំណើរកម្សាន្ត (Tours)</span>
+                <span class="fw-bold">30%</span>
+              </div>
+              <div class="progress mb-3" style="height: 10px;">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+
+              <div class="d-flex justify-content-between mb-1">
+                <span>ជួលយានយន្ត (Rentals)</span>
+                <span class="fw-bold">15%</span>
+              </div>
+              <div class="progress mb-3" style="height: 10px;">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              
+              <div class="d-flex justify-content-between mb-1">
+                <span>ផ្សេងៗ (Food, Souvenirs)</span>
+                <span class="fw-bold">10%</span>
+              </div>
+              <div class="progress mb-3" style="height: 10px;">
+                <div class="progress-bar bg-secondary" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Sidebar toggle for mobile
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

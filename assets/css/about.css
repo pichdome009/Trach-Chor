@@ -41,7 +41,7 @@
   font-weight: 400;
 }
 
-/* --- Mission & Vision Cards --- */
+
 .value-card {
   padding: 2.5rem;
 }
@@ -50,9 +50,9 @@
   color: var(--text-dark);
 }
 
-/* --- Team Cards --- */
+
 .team-img {
-  height: 260px;
+  height: 370px;
 }
 
 .team-card-body {

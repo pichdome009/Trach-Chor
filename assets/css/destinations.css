@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Battambang:wght@100;300;400;700;900&family=Bayon&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Khmer&family=Noto+Sans+Khmer:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --tc-green: #0f8a5f;
+  --tc-green-dark: #0b6b48;
+  --tc-gold: #f0a500;
+  --tc-ink: #173b2e;
+  --tc-muted: #5f7a70;
+  --tc-bg: #f6f8f7;
+  --tc-line: #e4e9e6;
+  --tc-teal-deep: #0a3d3a;
+}
+
+* {
+  font-family: "Kantumruy Pro", sans-serif;
+}
+
+body {
+  background: var(--tc-bg);
+  color: var(--tc-ink);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---------- NAVBAR ---------- */
+.tc-navbar {
+  background: #fff;
+  border-bottom: 1px solid var(--tc-line);
+  padding: 0.7rem 0;
+}
+.tc-brand {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--tc-ink);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.tc-brand i {
+  color: var(--tc-green);
+  font-size: 1.3rem;
+}
+.tc-nav-link {
+  color: #33473d;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.4rem 0.9rem !important;
+  border-radius: 8px;
+}
+.tc-nav-link.active,
+.tc-nav-link:hover {
+  color: var(--tc-green-dark);
+  background: #eaf6f1;
+}
+.tc-user-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f4f7f6;
+  border: 1px solid var(--tc-line);
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem 0.25rem 0.25rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.tc-user-pill img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.tc-vip-badge {
+  background: linear-gradient(135deg, #f0a500, #d98c00);
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 800;
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  margin-left: 0.25rem;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- HERO ---------- */
+.tc-hero {
+  position: relative;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background:
+    linear-gradient(
+      100deg,
+      rgba(6, 40, 35, 0.72) 0%,
+      rgba(6, 60, 55, 0.42) 45%,
+      rgba(10, 90, 95, 0.35) 100%
+    ),
+    url("../images/SEAVTHEAN/photo-1573843981267-be1999ff37cd.avif")
+      center/cover no-repeat;
+  overflow: hidden;
+}
+.tc-hero-badge {
+  background: var(--tc-gold);
+  color: #3a2600;
+  font-weight: 800;
+  font-size: 0.82rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.tc-hero h1 {
+  font-weight: 800;
+  font-size: 2.6rem;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+  margin-bottom: 0.75rem;
+}
+.tc-hero p {
+  font-size: 1.02rem;
+  max-width: 760px;
+  margin: 0 auto;
+  opacity: 0.95;
+  font-weight: 600;
+}
+
+/* ---------- SEARCH BAR ---------- */
+.tc-searchbar {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(15, 60, 45, 0.1);
+  padding: 1rem 1.25rem;
+  margin-top: -34px;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tc-search-input {
+  flex: 1 1 320px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--tc-bg);
+  border: 1px solid var(--tc-line);
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+}
+.tc-search-input i {
+  color: var(--tc-muted);
+}
+.tc-search-input input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--tc-ink);
+}
+.tc-search-input input::placeholder {
+  color: #93a6a0;
+}
+.tc-result-count {
+  font-weight: 700;
+  color: var(--tc-ink);
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+.tc-sort-select {
+  border: 1px solid var(--tc-line);
+  border-radius: 10px;
+  padding: 0.55rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--tc-ink);
+  background: #fff;
+}
+
+/* ---------- MAIN LAYOUT ---------- */
+.tc-main {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+/* ---------- SIDEBAR ---------- */
+.tc-sidebar {
+  background: #fff;
+  border: 1px solid var(--tc-line);
+  border-radius: 16px;
+  padding: 1.2rem;
+}
+.tc-sidebar-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: 1.02rem;
+  margin-bottom: 1rem;
+}
+.tc-sidebar-title .tc-reset {
+  font-size: 0.8rem;
+  color: #e2564d;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+.tc-map-label {
+  font-weight: 700;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+.tc-map-thumb {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 130px;
+  margin-bottom: 1.3rem;
+  background: url("../images/SEAVTHEAN/Angkor-Wat-Equinox.jpg") center/cover;
+}
+.tc-map-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 30, 25, 0.15),
+    rgba(6, 20, 17, 0.75)
+  );
+}
+.tc-map-gps {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  background: var(--tc-gold);
+  color: #3a2600;
+  font-weight: 800;
+  font-size: 0.72rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.tc-map-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 2;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.tc-filter-group {
+  margin-bottom: 1.4rem;
+}
+.tc-filter-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: 0.92rem;
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+}
+.tc-filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #33473d;
+}
+.tc-filter-row .form-check {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+}
+.tc-filter-row .form-check-input {
+  width: 1.05rem;
+  height: 1.05rem;
+  margin-top: 0;
+  cursor: pointer;
+}
+.tc-filter-count {
+  background: var(--tc-bg);
+  color: var(--tc-muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.05rem 0.45rem;
+  border-radius: 6px;
+}
+.tc-category-icon {
+  font-size: 1rem;
+  margin-right: 0.2rem;
+}
+
+.tc-price-value {
+  color: var(--tc-green-dark);
+  font-weight: 800;
+}
+.tc-price-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--tc-muted);
+  font-weight: 700;
+  margin-top: 0.2rem;
+}
+.form-range::-webkit-slider-thumb {
+  background: var(--tc-green);
+}
+.form-range::-moz-range-thumb {
+  background: var(--tc-green);
+}
+.form-range::-webkit-slider-runnable-track {
+  background: #d7ece3;
+}
+
+.tc-rating-row .form-check-input {
+  accent-color: var(--tc-gold);
+}
+
+/* ---------- CARDS ---------- */
+.tc-card {
+  background: #fff;
+  border: 1px solid var(--tc-line);
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.tc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(15, 60, 45, 0.14);
+}
+.tc-card-media {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+}
+.tc-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tc-rating-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #12a374;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.78rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.tc-rating-badge i {
+  color: #ffd84d;
+}
+.tc-heart-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2564d;
+  cursor: pointer;
+  border: none;
+}
+.tc-heart-btn.liked i {
+  font-weight: 900;
+}
+.tc-card-body {
+  padding: 1rem 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.tc-card-title {
+  font-weight: 800;
+  font-size: 1.02rem;
+  margin-bottom: 0.35rem;
+  color: var(--tc-ink);
+}
+.tc-card-location {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--tc-green-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.tc-card-desc {
+  font-size: 0.82rem;
+  color: var(--tc-muted);
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  flex: 1;
+  line-height: 1.5;
+}
+.tc-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px dashed var(--tc-line);
+  padding-top: 0.8rem;
+  gap: 0.6rem;
+}
+.tc-price {
+  font-weight: 800;
+  color: var(--tc-ink);
+  font-size: 1.05rem;
+  line-height: 1.1;
+}
+.tc-price small {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--tc-muted);
+}
+.btn-tc-primary {
+  background: var(--tc-green);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.btn-tc-primary:hover {
+  background: var(--tc-green-dark);
+  color: #fff;
+}
+.btn-tc-outline {
+  background: #fff;
+  border: 1.5px solid var(--tc-green);
+  color: var(--tc-green-dark);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.48rem 1rem;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.btn-tc-outline:hover {
+  background: #eaf6f1;
+  color: var(--tc-green-dark);
+}
+
+/* ---------- PAGINATION ---------- */
+.tc-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2.2rem;
+}
+.tc-page-btn {
+  border: 1px solid var(--tc-line);
+  background: #fff;
+  color: var(--tc-ink);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+.tc-page-btn.active {
+  background: var(--tc-green);
+  border-color: var(--tc-green);
+  color: #fff;
+}
+.tc-page-btn:disabled {
+  opacity: 0.5;
+}
+
+@media (max-width: 991px) {
+  .tc-hero h1 {
+    font-size: 1.9rem;
+  }
+  .tc-searchbar {
+    margin-top: 1rem;
+  }
+}

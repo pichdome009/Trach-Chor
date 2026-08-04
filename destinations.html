@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ក្រាច់ជរ | Trach Chor — គោលដៅទេសចរណ៍កម្ពុជា</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Khmer-capable font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Battambang:wght@100;300;400;700;900&family=Bayon&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Khmer&family=Noto+Sans+Khmer:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/destinations.css" />
+  </head>
+  <body>
+    <!-- ================= HERO ================= -->
+    <section class="tc-hero">
+      <div class="container">
+        <span class="tc-hero-badge"
+          ><i class="bi bi-geo-alt-fill"></i> ស្វែងរក និងកំណត់គោលដៅ</span
+        >
+        <h1>គោលដៅទេសចរណ៍កម្ពុជា</h1>
+        <p>
+          ស្វែងរកកន្លែងកម្សាន្តតាមខេត្ត ប្រភេទ តម្លៃ និងពិន្ទុវាយតម្លៃ
+          ជាមួយបទពិសោធន៍ប្រណីត
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= SEARCH BAR ================= -->
+    <div class="container">
+      <div class="tc-searchbar">
+        <div class="tc-search-input">
+          <i class="bi bi-search"></i>
+          <input
+            type="text"
+            placeholder="ស្វែងរកឈ្មោះគោលដៅ ឬខេត្ត (ឧ. អង្គរវត្ត, កោះរុង, មណ្ឌលគិរី)..."
+          />
+        </div>
+        <div class="tc-result-count">បង្ហាញ ៩ គោលដៅ</div>
+        <select class="tc-sort-select">
+          <option>តម្រៀបតាមប្រជាប្រិយ (Popular)</option>
+          <option>តម្លៃ - ទាបទៅខ្ពស់</option>
+          <option>តម្លៃ - ខ្ពស់ទៅទាប</option>
+          <option>ការវាយតម្លៃខ្ពស់បំផុត</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="container tc-main">
+      <div class="row g-4">
+        <!-- SIDEBAR -->
+        <aside class="col-lg-3">
+          <div class="tc-sidebar">
+            <div class="tc-sidebar-title">
+              <span><i class="bi bi-sliders me-1"></i> តម្រងស្វែងរក</span>
+              <span class="tc-reset"
+                ><i class="bi bi-arrow-clockwise"></i> កំណត់ឡើងវិញ</span
+              >
+            </div>
+
+            <div class="tc-map-label">
+              <i class="bi bi-map-fill"></i> ផែនទីគោលដៅ
+            </div>
+            <div class="tc-map-thumb">
+              <span class="tc-map-gps"
+                ><i class="bi bi-geo-alt-fill"></i> GPS ផ្ទាល់</span
+              >
+              <span class="tc-map-caption">ចុចដើម្បីមើលទីតាំងទាំងអស់</span>
+            </div>
+
+            <div class="tc-filter-group">
+              <div class="tc-filter-heading">
+                ខេត្ត / ក្រុង (Province)
+                <i class="bi bi-chevron-down"></i>
+              </div>
+              <div class="tc-filter-row">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="p1" />
+                  <label class="form-check-label" for="p1"
+                    >ខេត្តសៀមរាប (Angkor)</label
+                  >
+                </div>
+                <span class="tc-filter-count">12</span>
+              </div>
+              <div class="tc-filter-row">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="p2" />
+                  <label class="form-check-label" for="p2"
+                    >ខេត្តព្រះសីហនុ (កោះរុង)</label
+                  >
+                </div>
+                <span class="tc-filter-count">9</span>
+              </div>
+              <div class="tc-filter-row">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="p3" />
+                  <label class="form-check-label" for="p3"
+                    >ខេត្តមណ្ឌលគិរី</label
+                  >
+                </div>
+                <span class="tc-filter-count">6</span>
+              </div>
+              <div class="tc-filter-row">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="p4" />
+                  <label class="form-check-label" for="p4"
+                    >រាជធានីភ្នំពេញ</label
+                  >
+                </div>
+                <span class="tc-filter-count">5</span>
+              </div>
+              <div class="tc-filter-row">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="p5" />
+                  <label class="form-check-label" for="p5"
+                    >ខេត្តកោះកុង (ត្រាត)</label
+                  >
+                </div>
+                <span class="tc-filter-count">4</span>
+              </div>
+            </div>
+
+            <div class="tc-filter-group">
+              <div class="tc-filter-heading">
+                ប្រភេទគោលដៅ (Category)
+                <i class="bi bi-chevron-down"></i>
+              </div>
+              <div class="tc-filter-row">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="c1" />
+                  <label class="form-check-label" for="c1"
+                    ><span class="tc-category-icon">🏛️</span> ប្រាសាទបុរាណ &
+                    វប្បធម៌</label
+                  >
+                </div>
+              </div>
+              <div class="tc-filter-row">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="c2" />
+                  <label class="form-check-label" for="c2"
+                    ><span class="tc-category-icon">🏝️</span> ឆ្នេរសមុទ្រ &
+                    កោះ</label
+                  >
+                </div>
+              </div>
+              <div class="tc-filter-row">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="c3" />
+                  <label class="form-check-label" for="c3"
+                    ><span class="tc-category-icon">🌲</span> ធម្មជាតិ &
+                    ទឹកជ្រោះ</label
+                  >
+                </div>
+              </div>
+              <div class="tc-filter-row">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="c4" />
+                  <label class="form-check-label" for="c4"
+                    ><span class="tc-category-icon">🏙️</span> ទីក្រុងទំនើប &
+                    សណ្ឋាគារ</label
+                  >
+                </div>
+              </div>
+              <div class="tc-filter-row">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="c5" />
+                  <label class="form-check-label" for="c5"
+                    ><span class="tc-category-icon">⛺</span> អេកូទេសចរណ៍ &
+                    Glamping</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="tc-filter-group">
+              <div class="tc-filter-heading">
+                តម្លៃអតិបរមា (Price)
+                <span class="tc-price-value">$500 / យប់</span>
+              </div>
+              <input
+                type="range"
+                class="form-range"
+                min="50"
+                max="500"
+                value="500"
+              />
+              <div class="tc-price-scale">
+                <span>$50</span><span>$250</span><span>$500+</span>
+              </div>
+            </div>
+
+            <div class="tc-filter-group mb-0">
+              <div class="tc-filter-heading">ពិន្ទុវាយតម្លៃ (Rating)</div>
+              <div class="tc-filter-row tc-rating-row">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="rating"
+                    id="r1"
+                  />
+                  <label class="form-check-label" for="r1"
+                    >★★★★★ 4.9★ ឡើងទៅ (ពិសេស)</label
+                  >
+                </div>
+              </div>
+              <div class="tc-filter-row tc-rating-row">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="rating"
+                    id="r2"
+                  />
+                  <label class="form-check-label" for="r2"
+                    >★★★★☆ 4.8★ ឡើងទៅ</label
+                  >
+                </div>
+              </div>
+              <div class="tc-filter-row tc-rating-row">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="rating"
+                    id="r3"
+                    checked
+                  />
+                  <label class="form-check-label" for="r3"
+                    >បង្ហាញគ្រប់កម្រិតពិន្ទុទាំងអស់</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- CARDS GRID -->
+        <section class="col-lg-9">
+          <div class="row g-4" id="cardGrid">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-xl-4">
+              <div class="tc-card">
+                <div class="tc-card-media">
+                  <img
+                    src="assets/images/SEAVTHEAN/Angkor-Wat-Equinox.jpg"
+                    alt="អង្គរវត្ត"
+                  />
+                  <span class="tc-rating-badge"
+                    ><i class="bi bi-star-fill"></i> 4.9 (520 ភ្ញៀវ)</span
+                  >
+                  <button class="tc-heart-btn">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="tc-card-body">
+                  <div class="tc-card-title">
+                    ប្រាសាទអង្គរវត្ត និងឧទ្យានបុរាណ
+                  </div>
+                  <div class="tc-card-location">
+                    <i class="bi bi-geo-alt-fill"></i> ខេត្តសៀមរាប (Siem Reap)
+                  </div>
+                  <p class="tc-card-desc">
+                    ទស្សនាព្រះអាទិត្យរះលើកំពូលប្រាសាទអង្គរ អមដោយមគ្គុទេសក៍ VIP
+                    និងចង់ចាំមួយជីវិត។
+                  </p>
+                  <div class="tc-card-footer">
+                    <div class="tc-price">$120 <small>/ យប់</small></div>
+                    <div class="d-flex gap-2">
+                      <a href="destination_detail.html" class="btn-tc-outline"
+                        >មើលលម្អិត</a
+                      >
+                      <a href="#" class="btn-tc-primary">កក់ឥឡូវនេះ</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-xl-4">
+              <div class="tc-card">
+                <div class="tc-card-media">
+                  <img
+                    src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=800&auto=format&fit=crop"
+                    alt="វិសាលទីក"
+                  />
+                  <span class="tc-rating-badge"
+                    ><i class="bi bi-star-fill"></i> 4.95 (410 ភ្ញៀវ)</span
+                  >
+                  <button class="tc-heart-btn">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="tc-card-body">
+                  <div class="tc-card-title">រីសតលើទឹក ឆ្នេឋានសួគ៏កោះរុង</div>
+                  <div class="tc-card-location">
+                    <i class="bi bi-geo-alt-fill"></i> កោះរុង, ព្រះសីហនុ
+                  </div>
+                  <p class="tc-card-desc">
+                    សម្រាកកាយលើបឹងឡាធួលីទឹកសមុទ្រថ្លា និងដីខ្សាច់ស
+                    មានទស្សនីយភាពថ្លៃថ្នូរ។
+                  </p>
+                  <div class="tc-card-footer">
+                    <div class="tc-price">$280 <small>/ យប់</small></div>
+                    <a href="#" class="btn-tc-primary">កក់ឥឡូវនេះ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-xl-4">
+              <div class="tc-card">
+                <div class="tc-card-media">
+                  <img
+                    src="assets/images/SEAVTHEAN/images (2).jpg"
+                    alt="ទឹកជ្រោះ"
+                  />
+                  <span class="tc-rating-badge"
+                    ><i class="bi bi-star-fill"></i> 4.88 (310 ភ្ញៀវ)</span
+                  >
+                  <button class="tc-heart-btn">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="tc-card-body">
+                  <div class="tc-card-title">ទឹកជ្រោះបូស្រា និង Eco-Lodge</div>
+                  <div class="tc-card-location">
+                    <i class="bi bi-geo-alt-fill"></i> ខេត្តមណ្ឌលគិរី
+                  </div>
+                  <p class="tc-card-desc">
+                    លំហកាយក្តៅជាបំផុត ជួបធម្មជាតិសម្រស់ស្រស់ស្អាតនៅក្នុង
+                    Eco-Lodge ប្រណីត។
+                  </p>
+                  <div class="tc-card-footer">
+                    <div class="tc-price">$150 <small>/ យប់</small></div>
+                    <a href="#" class="btn-tc-primary">កក់ឥឡូវនេះ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 col-xl-4">
+              <div class="tc-card">
+                <div class="tc-card-media">
+                  <img
+                    src="assets/images/SEAVTHEAN/Cover_phnom-penh-travel-guide (1).jpg"
+                    alt="រាជធានីភ្នំពេញ"
+                  />
+                  <span class="tc-rating-badge"
+                    ><i class="bi bi-star-fill"></i> 4.85 (480 ភ្ញៀវ)</span
+                  >
+                  <button class="tc-heart-btn">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="tc-card-body">
+                  <div class="tc-card-title">រាជធានីភ្នំពេញ និងទន្លេចតុមុខ</div>
+                  <div class="tc-card-location">
+                    <i class="bi bi-geo-alt-fill"></i> រាជធានីភ្នំពេញ
+                  </div>
+                  <p class="tc-card-desc">
+                    បទពិសោធន៍ដីរបស់រាជវិល័យ ភោជនីយដ្ឋានលើទូក
+                    និងទស្សនាទិដ្ឋភាពទីក្រុងពេលយប់។
+                  </p>
+                  <div class="tc-card-footer">
+                    <div class="tc-price">$180 <small>/ យប់</small></div>
+                    <a href="#" class="btn-tc-primary">កក់ឥឡូវនេះ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-6 col-xl-4">
+              <div class="tc-card">
+                <div class="tc-card-media">
+                  <img
+                    src="assets/images/SEAVTHEAN/img_0552.jpg"
+                    alt="Glamping"
+                  />
+                  <span class="tc-rating-badge"
+                    ><i class="bi bi-star-fill"></i> 4.92 (290 ភ្ញៀវ)</span
+                  >
+                  <button class="tc-heart-btn">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="tc-card-body">
+                  <div class="tc-card-title">
+                    Glamping ជួរភ្នំក្រវាញ (Cardamom)
+                  </div>
+                  <div class="tc-card-location">
+                    <i class="bi bi-geo-alt-fill"></i> ខេត្តកោះកុង & កោះជីសាវ
+                  </div>
+                  <p class="tc-card-desc">
+                    ស្នាក់នៅតង់ប្រណីត Glamping ក្នុងព្រៃឈើទុកម្មជាតិ
+                    និងស្រូបយប់បរិយាកាសស្ងប់។
+                  </p>
+                  <div class="tc-card-footer">
+                    <div class="tc-price">$50 <small>/ យប់</small></div>
+                    <a href="#" class="btn-tc-primary">កក់ឥឡូវនេះ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-6 col-xl-4">
+              <div class="tc-card">
+                <div class="tc-card-media">
+                  <img
+                    src="assets/images/SEAVTHEAN/10-09-2023-1.jpg"
+                    alt="ប្រាសាទបន្ទាយស្រី"
+                  />
+                  <span class="tc-rating-badge"
+                    ><i class="bi bi-star-fill"></i> 4.89 (380 ភ្ញៀវ)</span
+                  >
+                  <button class="tc-heart-btn">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="tc-card-body">
+                  <div class="tc-card-title">ប្រាសាទបន្ទាយស្រី បុរាណវិទ្យា</div>
+                  <div class="tc-card-location">
+                    <i class="bi bi-geo-alt-fill"></i> ខេត្តសៀមរាប (Siem Reap)
+                  </div>
+                  <p class="tc-card-desc">
+                    ប្រាសាទថ្មពណ៌ផ្កាឈូកឆ្លាក់ដ៏ស្រស់ស្អាត
+                    អមដោយការទស្សនាភូមិបុរាណ។
+                  </p>
+                  <div class="tc-card-footer">
+                    <div class="tc-price">$75 <small>/ យប់</small></div>
+                    <a href="#" class="btn-tc-primary">កក់ឥឡូវនេះ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-md-6 col-xl-4">
+              <div class="tc-card">
+                <div class="tc-card-media">
+                  <img
+                    src="assets/images/SEAVTHEAN/cambodia_beach_resorts_2-1200x840.jpg"
+                    alt="កោះរុងសន្ទឹម"
+                  />
+                  <span class="tc-rating-badge"
+                    ><i class="bi bi-star-fill"></i> 4.87 (450 ភ្ញៀវ)</span
+                  >
+                  <button class="tc-heart-btn">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="tc-card-body">
+                  <div class="tc-card-title">កោះរុងសន្លឹម ឆ្នេរខ្សាច់សរ</div>
+                  <div class="tc-card-location">
+                    <i class="bi bi-geo-alt-fill"></i> ក្រុងព្រះសីហនុ
+                  </div>
+                  <p class="tc-card-desc">
+                    ឆ្នេរសមុទ្រស្អាត និងទឹកជ្រៅថ្លាឈូស បុរណឹកមើលថ្លា
+                    និងបំពង់ហូបអាហារសមុទ្រ។
+                  </p>
+                  <div class="tc-card-footer">
+                    <div class="tc-price">$250 <small>/ យប់</small></div>
+                    <a href="#" class="btn-tc-primary">កក់ឥឡូវនេះ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-md-6 col-xl-4">
+              <div class="tc-card">
+                <div class="tc-card-media">
+                  <img
+                    src="assets/images/SEAVTHEAN/images.jpg"
+                    alt="ទឹកជ្រោះ 1500"
+                  />
+                  <span class="tc-rating-badge"
+                    ><i class="bi bi-star-fill"></i> 4.91 (280 ភ្ញៀវ)</span
+                  >
+                  <button class="tc-heart-btn">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="tc-card-body">
+                  <div class="tc-card-title">
+                    សមុទ្រពពក ភ្នំ ១៥០០ ភូមិអូរស្អម
+                  </div>
+                  <div class="tc-card-location">
+                    <i class="bi bi-geo-alt-fill"></i> ខេត្តកោះនិសាត & ក្រូបាវ
+                  </div>
+                  <p class="tc-card-desc">
+                    ទស្សនាសមុទ្រពពកពេលព្រឹកព្រលឹមលើកម្ពស់ធ្លាក់អស្ចារ្យ
+                    ស្រស់ស្អាត និងស្ងប់ស្ងាត់។
+                  </p>
+                  <div class="tc-card-footer">
+                    <div class="tc-price">$50 <small>/ យប់</small></div>
+                    <a href="#" class="btn-tc-primary">កក់ឥឡូវនេះ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="col-md-6 col-xl-4">
+              <div class="tc-card">
+                <div class="tc-card-media">
+                  <img
+                    src="assets/images/SEAVTHEAN/images (3).jpg"
+                    alt="សណ្ឋាគារប្រវត្តិសាស្ត្រ"
+                  />
+                  <span class="tc-rating-badge"
+                    ><i class="bi bi-star-fill"></i> 4.96 (510 ភ្ញៀវ)</span
+                  >
+                  <button class="tc-heart-btn">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+                <div class="tc-card-body">
+                  <div class="tc-card-title">ភ្នំជីសូរ</div>
+                  <div class="tc-card-location">
+                    <i class="bi bi-geo-alt-fill"></i> ខេត្តតាកែវ (Ta keo)
+                  </div>
+                  <p class="tc-card-desc">
+                    ប្រាសាទបុរាណដែលមានវ័យចំណាស់ជាងគេក្នុងចំណោមប្រាសាទនានាក្នុងប្រទេសកម្ពុជា
+                  </p>
+                  <div class="tc-card-footer">
+                    <div class="tc-price">$15 <small>/ យប់</small></div>
+                    <a href="#" class="btn-tc-primary">កក់ឥឡូវនេះ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PAGINATION -->
+          <nav class="tc-pagination">
+            <button class="tc-page-btn" disabled>
+              <i class="bi bi-chevron-left"></i> មុន
+            </button>
+            <button class="tc-page-btn active">១ (1)</button>
+            <button class="tc-page-btn">២ (2)</button>
+            <button class="tc-page-btn">៣ (3)</button>
+            <button class="tc-page-btn">
+              បន្ទាប់ <i class="bi bi-chevron-right"></i>
+            </button>
+          </nav>
+        </section>
+      </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Heart toggle
+      document.querySelectorAll(".tc-heart-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btn.classList.toggle("liked");
+          const icon = btn.querySelector("i");
+          if (btn.classList.contains("liked")) {
+            icon.classList.remove("bi-heart");
+            icon.classList.add("bi-heart-fill");
+          } else {
+            icon.classList.remove("bi-heart-fill");
+            icon.classList.add("bi-heart");
+          }
+        });
+      });
+
+      // Price range live label
+      const range = document.querySelector(".form-range");
+      const priceLabel = document.querySelector(".tc-price-value");
+      range.addEventListener("input", () => {
+        priceLabel.textContent = "$" + range.value + " / យប់";
+      });
+    </script>
+  </body>
+</html>

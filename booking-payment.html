@@ -1,207 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="km">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ការកក់ និងការបង់ប្រាក់</title>
 
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎁</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="assets/css/booking-payment.css">
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/booking-payment.css">
 </head>
 
 <body>
 
-    <section class=" pt-5">
-        <div class="container animate__animated animate__fadeInDown">
+    <div class="bg-blur-shape shape-1"></div>
+    <div class="bg-blur-shape shape-2"></div>
+
+    <section class="py-4 py-md-5 position-relative z-1">
+        <div class="container animate__animated animate__fadeIn">
             <div class="row justify-content-center">
-                <div class="col-lg-5">
-                    <div id="panelBooking" class="kh-form-card p-4">
-                        <h4 class="mb-4">
-                            <i
-                                class="bi bi-calendar-check me-2 text-success btn bg-success-subtle fs-4"></i>ព័ត៌មានការកក់
-                        </h4>
-                        <form onsubmit="goToPayment(event)">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label>នាមត្រកូល</label>
-                                    <input type="text" class="form-control" placeholder="" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label>នាមខ្លួន</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
-                                <div class="col-12">
-                                    <label>បញ្ចូលលេខទូរស័ព្ទ</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label>កាលបរិច្ឆេទចេញដំណើរ</label>
-                                    <input type="date" class="form-control" required value="2026-08-14">
-                                </div>
-                                <div class="col-md-6">
-                                    <label>ចំនួនអ្នកដំណើរ</label>
-                                    <input type="number" class="form-control" min="1" value="2" required>
-                                </div>
-                                <div class="col-12">
-                                    <label>ទីតាំងជួបជុំ</label>
-                                    <select class="form-select">
-                                        <option>ខាងមុខសណ្ឋាគារ Angkor Palace</option>
-                                        <option>ព្រលានយន្តហោះសៀមរាប</option>
-                                        <option>ស្ថានីយឡានក្រុងសៀមរាប</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <label>កំណត់ចំណាំបន្ថែម (ស្រេចចិត្ត)</label>
-                                    <textarea class="form-control" rows="2"
-                                        placeholder="ឧ. ត្រូវការគ្រែបន្ថែម, អាហារបួស..."></textarea>
-                                </div>
+                <div class="col-lg-6 col-md-8">
+                    <div class="stepper-card mb-4">
+                        <div class="checkout-stepper">
+                            <div class="step-item active" id="step1">
+                                <span class="step-num"><i class="bi bi-person-fill fs-7"></i></span>
+                                <span class="step-text">ព័ត៌មាន</span>
                             </div>
-                            <button class="btn btn-gold w-100 mt-4 btn-outline-success">បន្តទៅការបង់ប្រាក់ <i
-                                    class="fa-solid fa-arrow-right ms-1"></i></button>
-                        </form>
+                            <div class="step-line"></div>
+                            <div class="step-item" id="step2">
+                                <span class="step-num"><i class="bi bi-credit-card-fill fs-7"></i></span>
+                                <span class="step-text">បង់ប្រាក់</span>
+                            </div>
+                            <div class="step-line"></div>
+                            <div class="step-item" id="step3">
+                                <span class="step-num"><i class="bi bi-check-lg fs-6"></i></span>
+                                <span class="step-text">ជោគជ័យ</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div id="panelPayment" class="kh-form-card d-none p-4">
-                        <h4 class="mb-4">
-                            <i class="bi bi-credit-card text-success btn me-2 bg-success-subtle fs-4"></i>ជ្រើសរើសវិធីបង់ប្រាក់
-                        </h4>
-                        <div class="d-flex flex-column gap-2 mb-4">
-                            <div class="payment-methods">
-                                <label class="payment-card active-payment">
+                    <div class="kh-card p-4 p-sm-5">
+                        <div id="panelBooking">
+                            <div class="panel-header mb-4 pb-3 border-bottom d-flex gap-3">
+                                <div class="icon-avatar text-white bg-success">
+                                    <i class="bi bi-calendar2-check-fill fs-5"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-0 text-dark">ព័ត៌មានការកក់</h5>
+                                    <small class="text-muted">សូមបញ្ចូលព័ត៌មានរបស់អ្នកឱ្យបានត្រឹមត្រូវ</small>
+                                </div>
+                            </div>
+
+                            <form onsubmit="goToPayment(event)">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">នាមត្រកូល</label>
+                                        <input type="text" class="form-control" placeholder="ឧ. ចាន់" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">នាមខ្លួន</label>
+                                        <input type="text" class="form-control" placeholder="ឧ. សុខា" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">លេខទូរស័ព្ទ</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">+855</span>
+                                            <input type="tel" class="form-control" placeholder="12 345 678" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">កាលបរិច្ឆេទចេញដំណើរ</label>
+                                        <input type="date" class="form-control" value="2026-08-14" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">ចំនួនអ្នកដំណើរ</label>
+                                        <input type="number" class="form-control" min="1" value="2" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">ទីតាំងជួបជុំ</label>
+                                        <select class="form-select">
+                                            <option selected>ខាងមុខសណ្ឋាគារ Angkor Palace</option>
+                                            <option>ព្រលានយន្តហោះសៀមរាប</option>
+                                            <option>ស្ថានីយឡានក្រុងសៀមរាប</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">កំណត់ចំណាំបន្ថែម <span
+                                                class="text-muted fw-normal">(ស្រេចចិត្ត)</span></label>
+                                        <textarea class="form-control" rows="2"
+                                            placeholder="ឧ. ត្រូវការគ្រែបន្ថែម, អាហារបួស..."></textarea>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-emerald w-100 mt-4 py-3">
+                                    បន្តទៅការបង់ប្រាក់ <i class="fa-solid fa-arrow-right ms-2 fs-7"></i>
+                                </button>
+                            </form>
+                        </div>
+
+                        <div id="panelPayment" class="d-none">
+                            <div class="panel-header mb-4 pb-3 border-bottom d-flex gap-3">
+                                <div class="icon-avatar bg-success text-white">
+                                    <i class="bi bi-wallet2 fs-5"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-0 text-dark">ជ្រើសរើសវិធីបង់ប្រាក់</h5>
+                                    <small class="text-muted">រើសវិធីបង់ប្រាក់ដែលអ្នកងាយស្រួល</small>
+                                </div>
+                            </div>
+
+                            <div class="payment-options d-flex flex-column gap-3 mb-4">
+                                <label class="payment-option active">
                                     <input type="radio" name="paymentMethod" value="aba" checked>
-                                    <div class="payment-content">
-                                        <div class="payment-icon bg-success">
+                                    <div class="option-content">
+                                        <div class="option-icon bg-danger-subtle text-danger">
                                             <i class="fas fa-qrcode"></i>
                                         </div>
-                                        <div class="payment-text">
-                                            <h6>ABA / KHQR</h6>
-                                            <small>Scan QR Code</small>
+                                        <div class="option-details">
+                                            <span class="option-title">ABA / KHQR</span>
+                                            <small class="text-muted">ស្កេនទូទាត់រហ័សតាម KHQR</small>
                                         </div>
-                                        <i class="fas fa-check-circle payment-check"></i>
+                                        <div class="radio-indicator"></div>
                                     </div>
                                 </label>
-                                <label class="payment-card">
+                                <label class="payment-option">
                                     <input type="radio" name="paymentMethod" value="visa">
-                                    <div class="payment-content">
-                                        <div class="payment-icon bg-primary">
+                                    <div class="option-content">
+                                        <div class="option-icon bg-primary-subtle text-primary">
                                             <i class="far fa-credit-card"></i>
                                         </div>
-                                        <div class="payment-text">
-                                            <h6>Visa / MasterCard</h6>
-                                            <small>Debit & Credit Card</small>
+                                        <div class="option-details">
+                                            <span class="option-title">Visa / MasterCard</span>
+                                            <small class="text-muted">ប័ណ្ណឥណទាន ឬឥណពន្ធ</small>
                                         </div>
-                                        <i class="fas fa-check-circle payment-check"></i>
+                                        <div class="radio-indicator"></div>
                                     </div>
                                 </label>
-                                <label class="payment-card">
+                                <label class="payment-option">
                                     <input type="radio" name="paymentMethod" value="bank">
-                                    <div class="payment-content">
-                                        <div class="payment-icon bg-warning">
-                                            <i class="fas fa-building"></i>
+                                    <div class="option-content">
+                                        <div class="option-icon bg-warning-subtle text-warning-emphasis">
+                                            <i class="fas fa-building-columns"></i>
                                         </div>
-                                        <div class="payment-text">
-                                            <h6>Bank Transfer</h6>
-                                            <small>Transfer via Bank</small>
+                                        <div class="option-details">
+                                            <span class="option-title">Bank Transfer</span>
+                                            <small class="text-muted">ផ្ទេរប្រាក់តាមគណនីធនាគារ</small>
                                         </div>
-                                        <i class="fas fa-check-circle payment-check"></i>
+                                        <div class="radio-indicator"></div>
                                     </div>
                                 </label>
 
-                                <label class="payment-card">
+                                <label class="payment-option">
                                     <input type="radio" name="paymentMethod" value="cash">
-                                    <div class="payment-content">
-                                        <div class="payment-icon bg-primary">
-                                            <i class="far fa-credit-card"></i>
+                                    <div class="option-content">
+                                        <div class="option-icon bg-info-subtle text-info-emphasis">
+                                            <i class="fas fa-money-bill-wave"></i>
                                         </div>
-                                        <div class="payment-text">
-                                            <h6>Pay on Cash</h6>
-                                            <small>Pay on Arrival</small>
+                                        <div class="option-details">
+                                            <span class="option-title">Pay Cash</span>
+                                            <small class="text-muted">បង់ប្រាក់ផ្ទាល់ពេលមកដល់</small>
                                         </div>
-                                        <i class="fas fa-check-circle payment-check"></i>
+                                        <div class="radio-indicator"></div>
                                     </div>
                                 </label>
                             </div>
-                            <div id="abaPayment" class="payment-box">
-                                <div class="text-center">
-                                    <img src="assets/images/naret/photo_2026-07-21_16-01-58.jpg" width="180"
-                                        class=" rounded">
-                                    <h6 class="mt-3">Scan ABA KHQR</h6>
-                                    <p class="text-muted">ស្កេនកូដ QR នេះដោយប្រើ ABA Mobile ឬកម្មវិធីធនាគារណាមួយដែលគាំទ្រ KHQR។</p>
+
+                            <div id="abaPayment" class="payment-detail-card">
+                                <div class="text-center py-2">
+                                    <div class="qr-wrapper d-inline-block p-2 bg-white rounded-3 shadow-sm mb-2 border">
+                                        <img src="assets/images/naret/photo_2026-07-21_16-01-58.jpg" alt="ABA KHQR"
+                                            class="img-fluid rounded-2" style="max-width: 150px;">
+                                    </div>
+                                    <h6 class="fw-bold mb-1 text-dark">Scan ABA KHQR</h6>
+                                    <p class="text-muted small mb-0 fs-7">ស្កេនកូដ QR នេះដោយប្រើ ABA Mobile ឬ App
+                                        ធនាគារផ្សេងៗ</p>
                                 </div>
                             </div>
-                            <div id="visaPayment" class="payment-box d-none">
+
+                            <div id="visaPayment" class="payment-detail-card d-none">
                                 <div class="row g-3">
-                                    <div class="col-md-12">
-                                        <input class="form-control" placeholder="Card Holder Name">
+                                    <div class="col-12">
+                                        <input type="text" class="form-control"
+                                            placeholder="ឈ្មោះលើប័ណ្ណ (Card Holder)">
                                     </div>
-                                    <div class="col-md-12">
-                                        <input class="form-control" placeholder="Card Number">
+                                    <div class="col-12">
+                                        <input type="text" class="form-control"
+                                            placeholder="លេខប័ណ្ណ (0000 0000 0000 0000)">
                                     </div>
-                                    <div class="col-md-6">
-                                        <input class="form-control" placeholder="MM / YY">
+                                    <div class="col-6">
+                                        <input type="text" class="form-control" placeholder="MM / YY">
                                     </div>
-                                    <div class="col-md-6">
-                                        <input class="form-control" placeholder="CVV">
+                                    <div class="col-6">
+                                        <input type="password" class="form-control" placeholder="CVV">
                                     </div>
-                                </div>
-                            </div>
-                            <div id="bankPayment" class="payment-box d-none">
-                                <div class="alert alert-light border">
-                                    <h6 class="fw-bold">ABA Bank</h6>
-                                    Account Name :
-                                    <b>Trach Chor Travel</b>
-                                    <br>
-                                    Account Number :
-                                    <b>001 234 567</b>
-                                    <br>
-                                    Swift :
-                                    <b>ABAAKHPP</b>
                                 </div>
                             </div>
 
-                            <div id="cashPayment" class="payment-box d-none">
-                                <div class="text-center">
-                                    <p class="text-muted">អ្នកនឹងបង់ប្រាក់នៅពេលមកដល់ទីតាំងទទួលសេវា មុនពេលដំណើរកម្សាន្ត ឬសេវាកម្មរបស់អ្នកចាប់ផ្តើម។</p>
+                            <div id="bankPayment" class="payment-detail-card d-none">
+                                <div class="bank-info-box p-3 rounded-3 bg-white border">
+                                    <div
+                                        class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+                                        <span class="fw-bold text-dark">ABA Bank</span>
+                                        <span
+                                            class="badge bg-primary-subtle text-primary border border-primary-subtle fs-7">001
+                                            234 567</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between fs-7 text-secondary mb-1">
+                                        <span>Account Name:</span>
+                                        <strong class="text-dark">Trach Chor Travel</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-between fs-7 text-secondary">
+                                        <span>Swift Code:</span>
+                                        <strong class="text-dark">ABAAKHPP</strong>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="d-flex justify-content-between fw-bold mb-3"><span>ចំនួនត្រូវបង់សរុប</span><span
-                                style="color:var(--clay)" id="payAmount">$0.00</span></div>
-                        <button class="btn btn-gold w-100 btn-outline-success"
-                            onclick="confirmPayment()">បញ្ជាក់ការបង់ប្រាក់</button>
-                    </div>
 
-                    <div id="panelReceipt" class="kh-form-card p-4 d-none text-center">
-                        <i class="fa-solid fa-circle-check text-success fa-3x mb-3"></i>
-                        <h4>ការកក់ជោគជ័យ!</h4>
-                        <p class="text-muted small">ការជូនដំណឹង៖ អ៊ីមែលបញ្ជាក់ការកក់ត្រូវបានផ្ញើទៅអ្នកហើយ។
-                            យើងខ្ញុំនឹងរំលឹកអ្នកម្តងទៀត ១ថ្ងៃ មុនកាលបរិច្ឆេទចេញដំណើរ។</p>
-                        <div class="border rounded p-3 text-start small mt-3 border-success bg-warning-subtle">
-                            <div class="d-flex justify-content-between mb-1"><span>លេខកក់</span><strong>BK-<span
-                                        id="rcptId"></span></strong></div>
-                            <div class="d-flex justify-content-between mb-1"><span>ស្ថានភាព</span><span
-                                    class="status-pill status-confirmed text-success rounded-pill border px-3 py-1 bg-success-subtle">Confirmed</span>
+                            <div id="cashPayment" class="payment-detail-card d-none">
+                                <div class="text-center p-2 text-secondary fs-7">
+                                    <i class="bi bi-info-circle me-1 text-primary"></i>
+                                    អ្នកនឹងបង់ប្រាក់នៅពេលមកដល់ទីតាំងទទួលសេវា មុនពេលដំណើរកម្សាន្តចាប់ផ្តើម។
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between mb-1">
-                                <span>កាលបរិច្ឆេទ</span><span>2026-08-14</span>
-                            </div>
-                            <div class="d-flex justify-content-between"><span>ចំនួនទឹកប្រាក់</span><strong
-                                    id="rcptAmount"></strong>
+                            <div
+                                class="total-summary-card d-flex justify-content-between align-items-center mt-4 p-3 rounded-3">
+                                <div>
+                                    <span class="text-muted fs-7 d-block">ចំនួនត្រូវបង់សរុប</span>
+                                    <span class="fw-bold fs-3 text-success" id="payAmount">$0.00</span>
+                                </div>
+                                <button class="btn btn-emerald px-4 py-3" onclick="confirmPayment()">
+                                    បញ្ជាក់ការបង់ប្រាក់ <i class="fa-solid fa-arrow-right ms-2 fs-7"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="d-flex gap-2 mt-4">
-                            <a href="profile.html" class="btn btn-jungle text-success w-100">មើលប្រវត្តិកក់</a>
-                            <a href="index.html"
-                                class="btn btn-outline-secondary btn-outline-success w-100">ត្រឡប់ទំព័រដើម</a>
+
+                        <div id="panelReceipt" class="d-none text-center py-2">
+                            <div class="success-icon-wrap mb-3">
+                                <i class="bi bi-check-circle-fill text-success display-3"></i>
+                            </div>
+                            <h4 class="fw-bold mb-1 text-dark">ការកក់ជោគជ័យ!</h4>
+                            <p class="text-muted small mb-4">អ៊ីមែលបញ្ជាក់ការកក់ត្រូវបានផ្ញើទៅអ្នកហើយ។ យើងនឹងរំលឹកអ្នក
+                                ១ថ្ងៃ មុនកាលបរិច្ឆេទចេញដំណើរ។</p>
+
+                            <div class="receipt-card p-3 text-start mb-4">
+                                <div class="d-flex justify-content-between fs-7 mb-2">
+                                    <span class="text-muted">លេខកក់:</span>
+                                    <strong class="text-dark">BK-<span id="rcptId"></span></strong>
+                                </div>
+                                <div class="d-flex justify-content-between fs-7 mb-2 align-items-center">
+                                    <span class="text-muted">ស្ថានភាព:</span>
+                                    <span
+                                        class="badge bg-success-subtle text-success border border-success-subtle px-2-5 py-1 rounded-pill">Confirmed</span>
+                                </div>
+                                <div class="d-flex justify-content-between fs-7 mb-2">
+                                    <span class="text-muted">កាលបរិច្ឆេទ:</span>
+                                    <span class="text-dark">2026-08-14</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center pt-2 border-top mt-2">
+                                    <span class="fw-bold text-dark fs-7">ទឹកប្រាក់សរុប:</span>
+                                    <strong class=" text-success fs-5" id="rcptAmount">$0.00</strong>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-2">
+                                <a href="profile.html" class="btn btn-light-emerald w-100 py-2">មើលប្រវត្តិកក់</a>
+                                <a href="index.html" class="btn btn-emerald w-100 py-2">ត្រឡប់ទំព័រដើម</a>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -209,92 +284,62 @@
     </section>
 
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-
-        const paymentRadios = document.querySelectorAll(
-            'input[name="paymentMethod"]'
-        );
+        const paymentRadios = document.querySelectorAll('input[name="paymentMethod"]');
+        const paymentBoxes = {
+            aba: document.getElementById("abaPayment"),
+            visa: document.getElementById("visaPayment"),
+            bank: document.getElementById("bankPayment"),
+            cash: document.getElementById("cashPayment")
+        };
 
         paymentRadios.forEach(radio => {
-
             radio.addEventListener("change", () => {
+                document.querySelectorAll('.payment-option').forEach(opt => opt.classList.remove('active'));
+                radio.closest('.payment-option').classList.add('active');
 
-                document.getElementById("abaPayment").classList.add("d-none");
-                document.getElementById("visaPayment").classList.add("d-none");
-                document.getElementById("bankPayment").classList.add("d-none");
-                document.getElementById("cashPayment").classList.add("d-none");
-
-                if (radio.value == "aba")
-                    document.getElementById("abaPayment").classList.remove("d-none");
-
-                if (radio.value == "visa")
-                    document.getElementById("visaPayment").classList.remove("d-none");
-
-                if (radio.value == "bank")
-                    document.getElementById("bankPayment").classList.remove("d-none");
-                if (radio.value == "cash")
-                    document.getElementById("cashPayment").classList.remove("d-none");
-
-
+                Object.values(paymentBoxes).forEach(box => box.classList.add("d-none"));
+                if (paymentBoxes[radio.value]) {
+                    paymentBoxes[radio.value].classList.remove("d-none");
+                }
             });
-
         });
 
         document.addEventListener("DOMContentLoaded", () => {
-
-            const total =
-                Number(localStorage.getItem("grandTotal")) || 0;
-
-            document.getElementById("payAmount").innerHTML =
-                "$" + total.toFixed(2);
-
+            const total = Number(localStorage.getItem("grandTotal")) || 0;
+            document.getElementById("payAmount").textContent = "$" + total.toFixed(2);
         });
 
-
-        // ===========================
-        // Next
-        // ===========================
-
         function goToPayment(e) {
-
             e.preventDefault();
-
             const total = Number(localStorage.getItem("grandTotal")) || 0;
-
-            console.log("Grand Total =", total);
 
             document.getElementById("panelBooking").classList.add("d-none");
             document.getElementById("panelPayment").classList.remove("d-none");
 
-            document.getElementById("payAmount").textContent =
-                "$" + total.toFixed(2);
+            document.getElementById("step1").classList.remove("active");
+            document.getElementById("step1").classList.add("completed");
+            document.getElementById("step2").classList.add("active");
 
+            document.getElementById("payAmount").textContent = "$" + total.toFixed(2);
         }
 
-
-        // ===========================
-        // Confirm
-        // ===========================
-
         function confirmPayment() {
-
             const total = Number(localStorage.getItem("grandTotal")) || 0;
 
             document.getElementById("panelPayment").classList.add("d-none");
             document.getElementById("panelReceipt").classList.remove("d-none");
 
-            document.getElementById("rcptId").textContent =
-                Math.floor(1000 + Math.random() * 9000);
+            document.getElementById("step2").classList.remove("active");
+            document.getElementById("step2").classList.add("completed");
+            document.getElementById("step3").classList.add("active");
 
-            document.getElementById("rcptAmount").textContent =
-                "$" + total.toFixed(2);
+            document.getElementById("rcptId").textContent = Math.floor(1000 + Math.random() * 9000);
+            document.getElementById("rcptAmount").textContent = "$" + total.toFixed(2);
 
-            // បើចង់ Clear Cart ក្រោយបង់ប្រាក់ជោគជ័យ
             localStorage.removeItem("cart");
             localStorage.removeItem("grandTotal");
         }
-
     </script>
 </body>
 
