@@ -261,6 +261,11 @@ body {
     border: 1px solid var(--admin-border);
 }
 
+/* Hide caret on specific dropdowns */
+.no-caret::after {
+    display: none !important;
+}
+
 /* Login Page Styles */
 .login-wrapper {
     min-height: 100vh;
@@ -269,7 +274,7 @@ body {
 
 .login-image-side {
     flex: 1.2;
-    background-image: url('https://img.magnific.com/premium-vector/admin-clerk-with-laptop-icon_1076610-101107.jpg?semt=ais_hybrid&w=740&q=80');
+    background-image: url('../images/Pich-Udom/admin-image.jpeg');
     background-size: cover;
     background-position: center;
     position: relative;
