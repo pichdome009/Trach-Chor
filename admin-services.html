@@ -71,8 +71,36 @@
       </div>
       
       <div class="d-flex align-items-center gap-3">
-        <div class="position-relative cursor-pointer">
-          <i class="bi bi-bell-fill fs-5 text-muted"></i>
+        <div class="dropdown">
+          <a href="#" class="position-relative d-block text-decoration-none dropdown-toggle no-caret p-1 text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-bell-fill fs-5"></i>
+            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+              <span class="visually-hidden">New alerts</span>
+            </span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-3" style="width: 300px;">
+            <li><h6 class="dropdown-header fw-bold text-dark fs-6">ការជូនដំណឹងថ្មីៗ</h6></li>
+            <li><a class="dropdown-item py-2" href="#">
+              <div class="d-flex align-items-center">
+                <div class="bg-light-success rounded-circle p-2 me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-calendar-check text-success fs-5"></i></div>
+                <div>
+                  <p class="mb-0 fw-bold text-dark" style="font-size: 0.9rem;">ការកក់ថ្មីពី សុខ វិសាល</p>
+                  <small class="text-muted" style="font-size: 0.8rem;">2 នាទីមុន</small>
+                </div>
+              </div>
+            </a></li>
+            <li><a class="dropdown-item py-2" href="#">
+              <div class="d-flex align-items-center">
+                <div class="bg-light-warning rounded-circle p-2 me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="bi bi-star text-warning fs-5"></i></div>
+                <div>
+                  <p class="mb-0 fw-bold text-dark" style="font-size: 0.9rem;">មតិយោបល់ថ្មី (5 ផ្កាយ)</p>
+                  <small class="text-muted" style="font-size: 0.8rem;">1 ម៉ោងមុន</small>
+                </div>
+              </div>
+            </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-center text-primary fw-bold" href="#" style="font-size: 0.9rem;" onclick="alert('កំពុងបើកទំព័រការជូនដំណឹងទាំងអស់...')">មើលការជូនដំណឹងទាំងអស់</a></li>
+          </ul>
         </div>
         <div class="dropdown">
           <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false">
@@ -80,7 +108,7 @@
             <span class="d-none d-md-block fw-bold">អ្នកគ្រប់គ្រង</span>
           </a>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-2">
-            <li><a class="dropdown-item" href="#">ប្រវត្តិរូប (Profile)</a></li>
+            <li><a class="dropdown-item" href="admin-settings.html">ប្រវត្តិរូប (Profile)</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item text-danger" href="index.html">ចាកចេញ (Log out)</a></li>
           </ul>
@@ -127,7 +155,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr data-category="សណ្ឋាគារ">
                 <td><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Hotel" class="service-thumbnail"></td>
                 <td>
                   <h6 class="mb-0 fw-bold">សណ្ឋាគារផ្កាយ ៥ អង្គរ</h6>
@@ -141,7 +169,7 @@
                   <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
                 </td>
               </tr>
-              <tr>
+              <tr data-category="សណ្ឋាគារ">
                 <td><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Hotel" class="service-thumbnail"></td>
                 <td>
                   <h6 class="mb-0 fw-bold">Boutique Resort</h6>
@@ -155,7 +183,7 @@
                   <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
                 </td>
               </tr>
-              <tr>
+              <tr data-category="សណ្ឋាគារ">
                 <td><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Hotel" class="service-thumbnail"></td>
                 <td>
                   <h6 class="mb-0 fw-bold">Eco Lodge</h6>
@@ -164,6 +192,231 @@
                 <td>មណ្ឌលគិរី, កម្ពុជា</td>
                 <td class="fw-bold text-success">$45.00</td>
                 <td><span class="badge bg-secondary rounded-pill px-3">បិទបណ្តោះអាសន្ន</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="ជួលយានយន្ត" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Car" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">Toyota Fortuner 2023</h6>
+                  <small class="text-muted">ប្រភេទ: SUV, ៧ កៅអី</small>
+                </td>
+                <td>ភ្នំពេញ, កម្ពុជា</td>
+                <td class="fw-bold text-success">$65.00</td>
+                <td><span class="badge bg-success rounded-pill px-3">បើកដំណើរការ</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="ភោជនីយដ្ឋាន" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Restaurant" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">ភោជនីយដ្ឋាន ម្លប់ជ្រៃ</h6>
+                  <small class="text-muted">ប្រភេទ: អាហារខ្មែរ និងអឺរ៉ុប</small>
+                </td>
+                <td>បាត់ដំបង, កម្ពុជា</td>
+                <td class="fw-bold text-success">$15.00</td>
+                <td><span class="badge bg-success rounded-pill px-3">បើកដំណើរការ</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="វត្ថុអនុស្សាវរីយ៍" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Souvenir" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">កាបូបស្ពាយរចនាខ្មែរ</h6>
+                  <small class="text-muted">ប្រភេទ: ត្បាញដោយដៃ</small>
+                </td>
+                <td>សៀមរាប, កម្ពុជា</td>
+                <td class="fw-bold text-success">$25.00</td>
+                <td><span class="badge bg-secondary rounded-pill px-3">អស់ពីស្តុក</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="កាតកាដូ" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?w=150&q=80" alt="Gift Card" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">Gift Card Premium</h6>
+                  <small class="text-muted">ប្រភេទ: កាតសម្រាប់ទិញទំនិញ</small>
+                </td>
+                <td>គ្រប់សាខា</td>
+                <td class="fw-bold text-success">$100.00</td>
+                <td><span class="badge bg-success rounded-pill px-3">បើកដំណើរការ</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="កញ្ចប់ដំណើរកម្សាន្ត" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=150&q=80" alt="Tour" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">កញ្ចប់ទេសចរណ៍ ៣ថ្ងៃ២យប់</h6>
+                  <small class="text-muted">ប្រភេទ: រួមបញ្ចូលការធ្វើដំណើរ និងស្នាក់នៅ</small>
+                </td>
+                <td>កោះរ៉ុង, កម្ពុជា</td>
+                <td class="fw-bold text-success">$350.00</td>
+                <td><span class="badge bg-success rounded-pill px-3">បើកដំណើរការ</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <!-- Added More Products -->
+              <tr data-category="សណ្ឋាគារ" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Resort" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">រីសត សមុទ្រខៀវ</h6>
+                  <small class="text-muted">បន្ទប់: Sea View Villa</small>
+                </td>
+                <td>កែប, កម្ពុជា</td>
+                <td class="fw-bold text-success">$75.00</td>
+                <td><span class="badge bg-success rounded-pill px-3">បើកដំណើរការ</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="ជួលយានយន្ត" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Car" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">Honda CR-V 2022</h6>
+                  <small class="text-muted">ប្រភេទ: SUV, ៥ កៅអី</small>
+                </td>
+                <td>ភ្នំពេញ, កម្ពុជា</td>
+                <td class="fw-bold text-success">$55.00</td>
+                <td><span class="badge bg-success rounded-pill px-3">បើកដំណើរការ</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="ជួលយានយន្ត" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Car" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">Ford Ranger Wildtrak</h6>
+                  <small class="text-muted">ប្រភេទ: Pickup, សមរម្យសម្រាប់ការធ្វើដំណើរឆ្ងាយ</small>
+                </td>
+                <td>សៀមរាប, កម្ពុជា</td>
+                <td class="fw-bold text-success">$70.00</td>
+                <td><span class="badge bg-secondary rounded-pill px-3">អស់ពីស្តុក</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="ភោជនីយដ្ឋាន" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Cafe" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">Brown Coffee & Bakery</h6>
+                  <small class="text-muted">ប្រភេទ: កាហ្វេ និងនំ</small>
+                </td>
+                <td>ភ្នំពេញ, កម្ពុជា</td>
+                <td class="fw-bold text-success">$5.00</td>
+                <td><span class="badge bg-success rounded-pill px-3">បើកដំណើរការ</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="ភោជនីយដ្ឋាន" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Seafood" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">ភោជនីយដ្ឋាន គ្រឿងសមុទ្រស្រស់</h6>
+                  <small class="text-muted">ប្រភេទ: អាហារសមុទ្រ</small>
+                </td>
+                <td>ព្រះសីហនុ, កម្ពុជា</td>
+                <td class="fw-bold text-success">$25.00</td>
+                <td><span class="badge bg-success rounded-pill px-3">បើកដំណើរការ</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="វត្ថុអនុស្សាវរីយ៍" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Wood Carving" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">រូបចម្លាក់អប្សរាឈើ</h6>
+                  <small class="text-muted">ប្រភេទ: ចម្លាក់ឈើ</small>
+                </td>
+                <td>សៀមរាប, កម្ពុជា</td>
+                <td class="fw-bold text-success">$35.00</td>
+                <td><span class="badge bg-success rounded-pill px-3">បើកដំណើរការ</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="វត្ថុអនុស្សាវរីយ៍" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Scarf" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">ក្រមាខ្មែរសូត្រពិត</h6>
+                  <small class="text-muted">ប្រភេទ: សូត្រត្បាញដោយដៃ</small>
+                </td>
+                <td>ភ្នំពេញ, កម្ពុជា</td>
+                <td class="fw-bold text-success">$12.00</td>
+                <td><span class="badge bg-success rounded-pill px-3">បើកដំណើរការ</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="កាតកាដូ" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Gift Card" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">Gift Card Standard ($50)</h6>
+                  <small class="text-muted">ប្រភេទ: កាតសម្រាប់ទិញទំនិញ</small>
+                </td>
+                <td>គ្រប់សាខា</td>
+                <td class="fw-bold text-success">$50.00</td>
+                <td><span class="badge bg-success rounded-pill px-3">បើកដំណើរការ</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="កាតកាដូ" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Gift Card" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">VIP Spa Gift Card</h6>
+                  <small class="text-muted">ប្រភេទ: កាតម៉ាស្សា និងស្ប៉ា</small>
+                </td>
+                <td>សៀមរាប</td>
+                <td class="fw-bold text-success">$80.00</td>
+                <td><span class="badge bg-success rounded-pill px-3">បើកដំណើរការ</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="កញ្ចប់ដំណើរកម្សាន្ត" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1560969184-10fe8719e047?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Tour" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">ទស្សនាប្រាសាទអង្គរវត្ត ១ថ្ងៃ</h6>
+                  <small class="text-muted">ប្រភេទ: រួមបញ្ចូលមគ្គុទ្ទេសក៍ និងការធ្វើដំណើរ</small>
+                </td>
+                <td>សៀមរាប, កម្ពុជា</td>
+                <td class="fw-bold text-success">$45.00</td>
+                <td><span class="badge bg-success rounded-pill px-3">បើកដំណើរការ</span></td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr data-category="កញ្ចប់ដំណើរកម្សាន្ត" style="display: none;">
+                <td><img src="https://images.unsplash.com/photo-1542224566-6e85f2e6772f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Tour" class="service-thumbnail"></td>
+                <td>
+                  <h6 class="mb-0 fw-bold">ភ្នំបូកគោ ២ថ្ងៃ១យប់</h6>
+                  <small class="text-muted">ប្រភេទ: រួមបញ្ចូលការស្នាក់នៅ អាហារ និងមគ្គុទ្ទេសក៍</small>
+                </td>
+                <td>កំពត, កម្ពុជា</td>
+                <td class="fw-bold text-success">$120.00</td>
+                <td><span class="badge bg-success rounded-pill px-3">បើកដំណើរការ</span></td>
                 <td class="text-end">
                   <button class="btn btn-sm btn-outline-primary me-1" title="កែប្រែ" data-bs-toggle="modal" data-bs-target="#addServiceModal"><i class="bi bi-pencil-square"></i></button>
                   <button class="btn btn-sm btn-outline-danger" title="លុប" onclick="if(confirm('តើអ្នកពិតជាចង់លុបសេវាកម្មនេះមែនទេ?')) alert('សេវាកម្មត្រូវបានលុបដោយជោគជ័យ!');"><i class="bi bi-trash"></i></button>
@@ -251,13 +504,26 @@
       document.getElementById('sidebar').classList.toggle('show');
     });
 
-    // Handle Tabs Active State
+    // Handle Tabs Active State and Filter Rows
     const tabs = document.querySelectorAll('.admin-tab-btn');
+    const tableRows = document.querySelectorAll('tbody tr');
+    
     tabs.forEach(tab => {
       tab.addEventListener('click', (e) => {
         e.preventDefault();
         tabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
+        
+        const filterCategory = tab.textContent.trim();
+        
+        tableRows.forEach(row => {
+          const rowCategory = row.getAttribute('data-category');
+          if (rowCategory === filterCategory || !rowCategory) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
       });
     });
 
