@@ -20,9 +20,523 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/nav-footer.css" />
     <link rel="stylesheet" href="assets/css/tours.css" />
   </head>
   <body>
+    <!-- start navbar -->
+    <section class="sec-navbar">
+      <nav class="navbar navbar-expand-lg py-3" data-bs-theme="dark">
+        <div class="container">
+          <a class="navbar-brand text-white fs-2 fw-bold" href="index.html"
+            ><i class="bi bi-leaf-fill text-warning"></i> ត្រាច់ចរ​</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent2"
+            aria-controls="navbarSupportedContent2"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0 fs-5 fw-medium gap-4">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >ទំព័រដើម</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">អំពីយើង</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="service nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  សេវាកម្ម
+                </a>
+                <ul class="dropdown-menu shadow border-0 rounded-4 p-3 fs-5">
+                  <li>
+                    <a
+                      class="dropdown-item rounded-3 py-2 text-white"
+                      href="tours.html"
+                      ><i class="bi bi-box2-heart-fill"></i>
+                      កញ្ជប់ដំណើរកម្សាន្ដ</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item rounded-3 py-2 text-white"
+                      href="destinations.html"
+                      ><i class="bi bi-geo-alt-fill"></i> គោលដៅទេសចរណ៍</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item rounded-3 py-2 text-white"
+                      href="hotel.html"
+                      ><i class="bi bi-house-down-fill"></i>
+                      កក់កន្លែងស្នាក់នៅ</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item rounded-3 py-2 text-white"
+                      href="rentals.html"
+                      ><i class="bi bi-car-front"></i> ជួលយានជំនិះ</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item rounded-3 py-2 text-white"
+                      href="food.html"
+                      ><i class="bi bi-fork-knife"></i> កម្មង់ម្ហូប</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item rounded-3 py-2 text-white"
+                      href="souvenir.html"
+                      ><i class="bi bi-shop"></i> សិប្បកម្ម</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item rounded-3 py-2 text-white"
+                      href="giftsard.html"
+                      ><i class="bi bi-postcard-heart-fill"></i> កាតកាដូ</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item rounded-3 py-2 text-white" href="#"
+                      ><i class="bi bi-calculator"></i> គណនាចំណាយ</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">ទំនាក់ទំនង</a>
+              </li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-3">
+              <!-- Cart Dropdown -->
+              <div class="dropdown">
+                <a
+                  href="#"
+                  class="position-relative d-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="
+                    width: 44px;
+                    height: 44px;
+                    background-color: rgba(255, 255, 255, 0.15);
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    transition: all 0.3s ease;
+                  "
+                  onmouseover="
+                    this.style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+                    this.style.transform = 'scale(1.08)';
+                  "
+                  onmouseout="
+                    this.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+                    this.style.transform = 'scale(1)';
+                  "
+                >
+                  <i class="bi bi-cart-fill text-white fs-5"></i>
+                  <span
+                    class="position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold notification-badge-pulse"
+                    style="
+                      top: -2px;
+                      right: -2px;
+                      width: 18px;
+                      height: 18px;
+                      font-size: 0.65rem;
+                    "
+                    >3</span
+                  >
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-lg-end dropdown-menu-glass rounded-4 p-3 mt-2"
+                  style="width: 340px"
+                >
+                  <li
+                    class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-3"
+                  >
+                    <h6
+                      class="mb-0 text-white fw-bold d-flex align-items-center"
+                    >
+                      <i class="bi bi-cart-fill text-warning me-2 fs-5"></i
+                      >កន្ត្រកទំនិញ (Your Cart)
+                    </h6>
+                    <span
+                      class="badge bg-light text-success fw-bold rounded-pill px-2 py-1 shadow-sm"
+                      style="font-size: 0.75rem"
+                      >3 ទំនិញ</span
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="d-block p-3 mb-2 rounded-3 text-decoration-none dropdown-item-custom"
+                    >
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="bg-success rounded-circle d-flex justify-content-center align-items-center me-3 shadow-sm"
+                          style="width: 40px; height: 40px; flex-shrink: 0"
+                        >
+                          <i class="bi bi-box2-heart-fill text-white fs-5"></i>
+                        </div>
+                        <div>
+                          <span class="fw-bold text-white d-block mb-1"
+                            >កញ្ចប់ដំណើរកម្សាន្តទៅសៀមរាប</span
+                          >
+                          <span
+                            class="text-success fw-bold"
+                            style="font-size: 0.85rem"
+                            >$120.00
+                            <span class="text-white-50 fw-normal ms-1"
+                              >x 2</span
+                            ></span
+                          >
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="d-block p-3 mb-3 rounded-3 text-decoration-none dropdown-item-custom"
+                    >
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-3 shadow-sm"
+                          style="width: 40px; height: 40px; flex-shrink: 0"
+                        >
+                          <i class="bi bi-car-front-fill text-white fs-5"></i>
+                        </div>
+                        <div>
+                          <span class="fw-bold text-white d-block mb-1"
+                            >សេវាកម្មជួលឡាន (SUV)</span
+                          >
+                          <span
+                            class="text-success fw-bold"
+                            style="font-size: 0.85rem"
+                            >$45.00
+                            <span class="text-white-50 fw-normal ms-1"
+                              >x 1</span
+                            ></span
+                          >
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-3 px-2 mt-2"
+                    >
+                      <span class="text-white-50 fw-bold">សរុប (Total):</span>
+                      <span class="text-warning fw-bold fs-5">$285.00</span>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="cart.html"
+                      class="btn w-100 rounded-pill fw-bold text-white btn-gradient-green transition-fast"
+                      >ពិនិត្យមើល និងបង់ប្រាក់</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Bell Dropdown -->
+              <div class="dropdown">
+                <a
+                  href="#"
+                  class="position-relative d-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="
+                    width: 44px;
+                    height: 44px;
+                    background-color: rgba(255, 255, 255, 0.15);
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    transition: all 0.3s ease;
+                  "
+                  onmouseover="
+                    this.style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
+                    this.style.transform = 'scale(1.08)';
+                  "
+                  onmouseout="
+                    this.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+                    this.style.transform = 'scale(1)';
+                  "
+                >
+                  <i class="bi bi-bell-fill text-white fs-5"></i>
+                  <span
+                    class="position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold notification-badge-pulse"
+                    style="
+                      top: -2px;
+                      right: -2px;
+                      width: 18px;
+                      height: 18px;
+                      font-size: 0.65rem;
+                    "
+                    >2</span
+                  >
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-lg-end dropdown-menu-glass rounded-4 p-3 mt-2"
+                  style="width: 340px"
+                >
+                  <li
+                    class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-3"
+                  >
+                    <h6
+                      class="mb-0 text-white fw-bold d-flex align-items-center"
+                    >
+                      <i class="bi bi-bell-fill text-warning me-2 fs-5"></i
+                      >ការជូនដំណឹង (Notifications)
+                    </h6>
+                    <span
+                      class="badge bg-light text-success fw-bold rounded-pill px-2 py-1 shadow-sm"
+                      style="font-size: 0.75rem"
+                      >ថ្មី 2</span
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="d-block p-3 mb-2 rounded-3 text-decoration-none dropdown-item-custom"
+                    >
+                      <div class="d-flex align-items-center mb-2">
+                        <div
+                          class="bg-success-subtle rounded-circle d-flex justify-content-center align-items-center me-3"
+                          style="width: 28px; height: 28px; flex-shrink: 0"
+                        >
+                          <i class="bi bi-check text-success fs-5"></i>
+                        </div>
+                        <span class="fw-bold text-white">ការកក់ជោគជ័យ!</span>
+                        <span
+                          class="ms-auto text-white-50"
+                          style="font-size: 0.75rem"
+                          >1 ម៉ោងមុន</span
+                        >
+                      </div>
+                      <p
+                        class="mb-0 text-white-50"
+                        style="
+                          font-size: 0.85rem;
+                          padding-left: 44px;
+                          line-height: 1.5;
+                        "
+                      >
+                        បន្ទប់ស្នាក់នៅរបស់អ្នកត្រូវបានកក់ប្រកបដោយជោគជ័យ។
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="d-block p-3 mb-3 rounded-3 text-decoration-none dropdown-item-custom"
+                    >
+                      <div class="d-flex align-items-center mb-2">
+                        <div
+                          class="bg-warning-subtle rounded-circle d-flex justify-content-center align-items-center me-3"
+                          style="width: 28px; height: 28px; flex-shrink: 0"
+                        >
+                          <i class="bi bi-gift-fill text-warning fs-6"></i>
+                        </div>
+                        <span class="fw-bold text-white">កាដូពិសេស!</span>
+                        <span
+                          class="ms-auto text-white-50"
+                          style="font-size: 0.75rem"
+                          >9 ម៉ោងមុន</span
+                        >
+                      </div>
+                      <p
+                        class="mb-0 text-white-50"
+                        style="
+                          font-size: 0.85rem;
+                          padding-left: 44px;
+                          line-height: 1.5;
+                        "
+                      >
+                        ទទួលបានបញ្ចុះតម្លៃ ២០% សម្រាប់សមាជិក VIP Explorer។
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <hr
+                      class="dropdown-divider border-secondary opacity-50 mb-3"
+                    />
+                  </li>
+                  <li>
+                    <a
+                      href="notifications.html"
+                      class="btn w-100 rounded-pill fw-bold text-white"
+                      style="
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                        background-color: rgba(255, 255, 255, 0.05);
+                        transition: 0.3s;
+                      "
+                      onmouseover="
+                        this.style.backgroundColor = 'rgba(255,255,255,0.1)';
+                        this.style.borderColor = 'rgba(255,255,255,0.3)';
+                      "
+                      onmouseout="
+                        this.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                        this.style.borderColor = 'rgba(255,255,255,0.2)';
+                      "
+                      >មើលការជូនដំណឹងទាំងអស់</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="profile-dropdown border border-warning px-1">
+                <button
+                  class="btn nav-profile-btn d-flex align-items-center gap-2"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <div class="d-flex flex-column text-end d-none d-xl-flex p-2">
+                    <span class="fw-bold fs-7 text-white">ពេជ្រ ឧត្តម</span>
+                  </div>
+                  <div class="position-relative">
+                    <img
+                      src="assets/images/Pich-Udom/profile.jpg"
+                      class="rounded-circle object-fit-cover border border-2 border-warning shadow-sm"
+                      width="38"
+                      height="38"
+                      alt="Profile"
+                    />
+                    <span
+                      class="position-absolute bottom-0 end-0 p-1 bg-success border border-white rounded-circle"
+                    ></span>
+                  </div>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-lg-end shadow-lg border-0 rounded-4 p-2"
+                  style="width: 270px"
+                >
+                  <li
+                    class="p-3 text-center border-bottom mb-2 dropdown-profile-header rounded-3"
+                  >
+                    <div class="position-relative d-inline-block mb-2">
+                      <img
+                        src="assets/images/Pich-Udom/profile.jpg"
+                        class="rounded-circle object-fit-cover border border-3 border-success shadow-sm"
+                        width="60"
+                        height="60"
+                        alt="Profile"
+                      />
+                      <span
+                        class="position-absolute bottom-0 end-0 p-1 bg-success border border-2 border-white rounded-circle"
+                        title="Active Now"
+                      ></span>
+                    </div>
+                    <h6 class="mb-0 fw-bold fs-5">ពេជ្រ ឧត្តម</h6>
+                    <span
+                      class="badge bg-warning text-dark mt-1 px-3 py-1 rounded-pill fw-bold shadow-sm"
+                      style="font-size: 0.7rem"
+                      ><i class="fas fa-crown me-1"></i> (Pich Udom)</span
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1"
+                      href="profile.html"
+                    >
+                      <div
+                        class="icon-box-sm bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center"
+                        style="width: 34px; height: 34px; flex-shrink: 0"
+                      >
+                        <i class="bi bi-person-circle fs-5"></i>
+                      </div>
+                      <span class="fw-semibold" style="font-size: 0.9rem"
+                        >គណនីរបស់ខ្ញុំ</span
+                      >
+                    </a>
+                  </li>
+                  <!-- <li>
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1" href="#">
+                  <div
+                    class="icon-box-sm bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 34px; height: 34px; flex-shrink: 0;">
+                    <i class="bi bi-cart-plus-fill fs-5"></i>
+                  </div>
+                  <span class="fw-semibold" style="font-size: 0.9rem;">ទំនិញរបស់អ្នក</span>
+                </a>
+              </li> -->
+                  <li>
+                    <a
+                      class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1"
+                      href="favorites.html"
+                    >
+                      <div
+                        class="icon-box-sm bg-danger-subtle text-danger rounded-circle d-flex align-items-center justify-content-center"
+                        style="width: 34px; height: 34px; flex-shrink: 0"
+                      >
+                        <i class="bi bi-heart-fill fs-5 mt-1"></i>
+                      </div>
+                      <span class="fw-semibold" style="font-size: 0.9rem"
+                        >គោលដៅចំណូលចិត្ត</span
+                      >
+                    </a>
+                  </li>
+                  <!-- <li>
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1"
+                  href="notifications.html">
+                  <div
+                    class="icon-box-sm bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 34px; height: 34px; flex-shrink: 0;">
+                    <i class="bi bi-bell-fill fs-5"></i>
+                  </div>
+                  <span class="fw-semibold" style="font-size: 0.9rem;">ការជូនដំណឹង</span>
+                </a>
+              </li> -->
+                  <li>
+                    <hr class="dropdown-divider my-2" />
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 logout-item"
+                      href="index-no-login.html"
+                    >
+                      <div
+                        class="icon-box-sm bg-danger-subtle text-danger rounded-circle d-flex align-items-center justify-content-center"
+                        style="width: 34px; height: 34px; flex-shrink: 0"
+                      >
+                        <i class="bi bi-box-arrow-right fs-5 ms-1 mt-1"></i>
+                      </div>
+                      <span class="fw-bold" style="font-size: 0.9rem"
+                        >ចាកចេញ</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- end navbar -->
     <section class="hero-banner py-5">
       <div class="container">
         <div class="row">
@@ -44,7 +558,7 @@
       <div class="container">
         <div class="row gap-5">
           <div class="col-12">
-            <div class="row g-0 rounded-4 overflow-hidden shadow">
+            <div class="row g-0 rounded-4 overflow-hidden shadow tc-card">
               <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 p-0">
                 <div class="card">
                   <img
@@ -83,35 +597,31 @@
                     ដើម្បីរុករកអច្ឆរិយវត្ថុនៃកម្ពុជាបុរាណ! ជិះរថយន្ត Jeep
                     បុរាណទស្សនាប្រាសាទអាថ៌កំបាំងក្នុងព្រៃ
                     ទស្សនាព្រះអាទិត្យរះនៅអង្គរវត្ត សម្រស់ប្រាសាទបន្ទាយស្រី
-                    និងរីករាយជាមួយអាហារក្នុងស្រុកនៅកណ្តាលប្រាសាទបុរាណ។
+                    និងរីករាយជាមួយអាហារក្នុងស្រុក។
                   </p>
-                  <div class="d-flex align-content-center gap-1">
-                    <i class="bi bi-list-task text-primary"></i>
+                  <div class="d-flex gap-5">
+                    <div class="me-5">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        ចូលទស្សនាតំបន់រមណីយដ្ឋានអង្គរ
+                      </p>
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
 
-                    <p class="fw-bold">កម្មវិធីសង្ខេបប្រចាំថ្ងៃ៖</p>
+                        រថយន្តដឹកជញ្ជូន និងមគ្គុទ្ទេសក៍ទេសចរណ៍ជំនាញ
+                      </p>
+                    </div>
+                    <div class="ms-5">
+                      <p class="text-capitalize">
+                        <i class="fa-solid fa-check text-success"></i>
+                        ស្នាក់នៅសណ្ឋាគារលំដាប់ ៤ផ្កាយ ជាមួយអាងហែលទឹក
+                      </p>
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        អាហារប៊ូហ្វេ (Buffet) អមដោយការសម្តែងរបាំព្រះរាជទ្រព្យ
+                      </p>
+                    </div>
                   </div>
-                  <select
-                    class="form-select mb-3"
-                    aria-label="Default select example"
-                  >
-                    <option selected>
-                      ថ្ងៃទី​ ​១​៖ ស្វាគមន៍​ VIP & ថ្ងៃលិចភ្នំបាខែង
-                    </option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                  <select
-                    class="form-select mb-3"
-                    aria-label="Default select example "
-                  >
-                    <option selected>
-                      ថ្ងៃទី​ ​២៖ ព្រះអាទិត្យរះអង្គរវត្ត​ & ប្រាសាទបន្ទាយស្រី
-                    </option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
                   <div
                     class="d-flex align-items-center justify-content-between"
                   >
@@ -140,7 +650,7 @@
             </div>
           </div>
           <div class="col-12">
-            <div class="row g-0 rounded-4 overflow-hidden shadow">
+            <div class="row g-0 rounded-4 overflow-hidden shadow tc-card">
               <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 p-0">
                 <div class="card position-relative">
                   <img
@@ -178,23 +688,27 @@
                     ជាជម្រើសដ៏ល្អឥតខ្ចោះសម្រាប់ការសម្រាកលំហែកាយបែបឯកជនភាពជាមួយគ្រួសារ
                     ឬមិត្តភក្តិ។
                   </p>
-                  <div class="d-flex gap-5">
-                    <div class="me-5">
+                  <div class="row">
+                    <div class="col-xxl-6 col-md-6 col-12">
                       <p>
                         <i class="fa-solid fa-check text-success"></i>
                         វីឡាលើទឹកឯកជនផ្កាយ៥
                       </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
                       <p>
                         <i class="fa-solid fa-check text-success"></i>
 
                         ឧបករណ៍មុជទឹក scuba diving
                       </p>
                     </div>
-                    <div class="ms-5">
+                    <div class="col-xxl-6 col-md-6 col-12">
                       <p class="text-capitalize">
                         <i class="fa-solid fa-check text-success"></i>
                         ទូកឯកជន & អ្នកបើកបរ
                       </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
                       <p>
                         <i class="fa-solid fa-check text-success"></i>
                         អាហារសមុទ្រ BBQ លើឆ្នេរ
@@ -229,9 +743,862 @@
               </div>
             </div>
           </div>
+          <div class="col-12">
+            <div class="row g-0 rounded-4 overflow-hidden shadow tc-card">
+              <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 p-0">
+                <div class="card position-relative">
+                  <img
+                    src="assets/images/SEAVTHEAN/ea9d6117-850b-494a-a214-dd98f7638492.avif"
+                    alt=""
+                    class="image"
+                  />
+                  <span class="badge text-bg-success position-absolute m-4 p-2"
+                    ><i class="fa-solid fa-fire"></i>លក់ដាច់បំផុត</span
+                  >
+                  <span class="badge py-2 position-absolute end-0 top-0 m-2"
+                    ><button class="tc-heart-btn rounded-circle">
+                      <i class="bi bi-heart fs-5"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12">
+                <div class="card p-5 pb-3">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-warning fw-bold"
+                      ><i class="fa-solid fa-clock"></i>២ ថ្ងៃ ១ យប់</span
+                    >
+                    <span
+                      class="bg-secondary-subtle p-1 rounded-2 small fw-bold"
+                      ><i class="fa-solid fa-place-of-worship"></i>
+                      ប្រាសាទបុរាណ</span
+                    >
+                  </div>
+                  <h2 class="fw-bold">
+                    ទស្សនាប្រាសាទបុរាណ និងជិះទូកកម្សាន្តនៅភ្នំដា
+                  </h2>
+                  <p>
+                    ទស្សនាប្រាសាទបុរាណ និងជិះទូកកម្សាន្តនៅភ្នំដា
+                    ស្វែងយល់ពីប្រវត្តិសាស្ត្រដ៏យូរលង់នៃអាណាចក្រភ្នំ
+                    ទស្សនាប្រាសាទបុរាណលើកំពូលភ្នំ
+                    និងរីករាយជាមួយខ្យល់អាកាសបរិសុទ្ធតាមដងព្រែក
+                    ព្រមទាំងភ្លក់រសជាតិបង្កងទឹកសាបដ៏ល្បីល្បាញ។
+                  </p>
+                  <div class="row">
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        ជិះទូកកម្សាន្តទៅកាន់ប្រាសាទភ្នំដា
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+
+                        សំបុត្រចូលទស្សនាតំបន់ប្រវត្តិសាស្ត្រ
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p class="text-capitalize">
+                        <i class="fa-solid fa-check text-success"></i>
+                        មគ្គុទ្ទេសក៍ទេសចរណ៍ជំនាញ
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        អាហារប្រចាំតំបន់ (បង្កងតាកែវ)
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="">
+                      <span class="small text-secondary"
+                        >តម្លៃសរុបសម្រាប់ ១ នាក់៖</span
+                      >
+                      <p class="fs-2 fw-bold text-primary">
+                        85$
+                        <span class="fs-6 text-secondary fw-normal"
+                          >/កញ្ចប់</span
+                        >
+                      </p>
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        class="btn btn-success rounded-pill px-5 py-2 border-hover"
+                        ><i class="fa-solid fa-calendar-days"></i>
+                        កក់កញ្ចប់ឥឡូវនេះ</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row g-0 rounded-4 overflow-hidden shadow tc-card">
+              <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 p-0">
+                <div class="card position-relative">
+                  <img
+                    src="assets/images/SEAVTHEAN/Lok-Ta-Dombong-Kronhoung-1-1200x800.jpg"
+                    alt=""
+                    class="image"
+                  />
+                  <span class="badge text-bg-warning position-absolute m-4 p-2"
+                    ><i class="fa-solid fa-gem"></i>លំដាប់ប្រណិត</span
+                  >
+                  <span class="badge py-2 position-absolute end-0 top-0 m-2"
+                    ><button class="tc-heart-btn rounded-circle">
+                      <i class="bi bi-heart fs-5"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12">
+                <div class="card p-5 pb-3">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-warning fw-bold"
+                      ><i class="fa-solid fa-clock"></i> ៣ ថ្ងៃ ២ យប់</span
+                    >
+                    <span
+                      class="bg-secondary-subtle p-1 rounded-2 small fw-bold"
+                      ><i class="fa-solid fa-train-subway"></i> ជិះឡូរី</span
+                    >
+                  </div>
+                  <h2 class="fw-bold">
+                    ជិះឡូរី និងទស្សនាហ្វូងប្រជៀវនៅភ្នំសំពៅ
+                  </h2>
+                  <p>
+                    ទទួលបានបទពិសោធន៍ប្លែកអារម្មណ៍ជាមួយការជិះឡូរី (Bamboo Train)
+                    ទស្សនាស្ថាបត្យកម្មសម័យបារាំង
+                    និងទស្សនីយភាពប្រជៀវរាប់លានក្បាលហោះចេញពីរូងភ្នំនាល្ងាចលិច។
+                  </p>
+
+                  <div class="row">
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        សំបុត្រជិះឡូរីបាត់ដំបង
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+
+                        រថយន្ត VIP ដឹកជញ្ជូនពេញដំណើរកម្សាន្ត
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p class="text-capitalize">
+                        <i class="fa-solid fa-check text-success"></i>
+                        ស្នាក់នៅសណ្ឋាគារលំដាប់ ៤ផ្កាយ
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        ទស្សនាភ្នំសំពៅ និងល្អាងប្រជៀវ
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="">
+                      <span class="small text-secondary"
+                        >តម្លៃសរុបសម្រាប់ ១​ នាក់៖</span
+                      >
+                      <p class="fs-2 fw-bold text-primary">
+                        180$
+                        <span class="fs-6 text-secondary fw-normal"
+                          >/កញ្ចប់</span
+                        >
+                      </p>
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        class="btn btn-success rounded-pill px-5 py-2 border-hover"
+                        ><i class="fa-solid fa-calendar-days"></i>
+                        កក់កញ្ចប់ឥឡូវនេះ</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row g-0 rounded-4 overflow-hidden shadow tc-card">
+              <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 p-0">
+                <div class="card position-relative">
+                  <img
+                    src="assets/images/SEAVTHEAN/Kratie-01.jpg"
+                    alt=""
+                    class="image"
+                  />
+                  <span class="badge text-bg-warning position-absolute m-4 p-2"
+                    ><i class="fa-solid fa-gem"></i>លំដាប់ប្រណិត</span
+                  >
+                  <span class="badge py-2 position-absolute end-0 top-0 m-2"
+                    ><button class="tc-heart-btn rounded-circle">
+                      <i class="bi bi-heart fs-5"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12">
+                <div class="card p-5 pb-3">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-warning fw-bold"
+                      ><i class="fa-solid fa-clock"></i> ២ ថ្ងៃ ១ យប់</span
+                    >
+                    <span
+                      class="bg-secondary-subtle p-1 rounded-2 small fw-bold"
+                      ><i class="fa-solid fa-otter"></i> មើលផ្សោត</span
+                    >
+                  </div>
+                  <h2 class="fw-bold">
+                    មើលផ្សោតក្បាលត្រឡោក និងទស្សនាថ្ងៃលិចលើទន្លេមេគង្គ
+                  </h2>
+                  <p>
+                    ជិះទូកមើលសត្វផ្សោតទឹកសាបដ៏កម្រនៅកញ្ចុំ
+                    និងសម្រាកលម្ហែកាយយ៉ាងស្ងប់ស្ងាត់លើកោះទ្រង់
+                    ជាមួយបរិយាកាសធម្មជាតិ និងជីវភាពអ្នកស្រុកដ៏កក់ក្តៅ។
+                  </p>
+                  <div class="row">
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        សំបុត្រជិះទូកមើលសត្វផ្សោត
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+
+                        ជិះកង់កម្សាន្តជុំវិញកោះទ្រង់
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p class="text-capitalize">
+                        <i class="fa-solid fa-check text-success"></i>
+                        រមណីយដ្ឋានស្នាក់នៅបែបធម្មជាតិ
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        អាហារ ៣ ពេល និងភេសជ្ជៈ
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="">
+                      <span class="small text-secondary"
+                        >តម្លៃសរុបសម្រាប់ ១​ នាក់៖</span
+                      >
+                      <p class="fs-2 fw-bold text-primary">
+                        120$
+                        <span class="fs-6 text-secondary fw-normal"
+                          >/កញ្ចប់</span
+                        >
+                      </p>
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        class="btn btn-success rounded-pill px-5 py-2 border-hover"
+                        ><i class="fa-solid fa-calendar-days"></i>
+                        កក់កញ្ចប់ឥឡូវនេះ</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row g-0 rounded-4 overflow-hidden shadow tc-card">
+              <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 p-0">
+                <div class="card position-relative">
+                  <img
+                    src="assets/images/SEAVTHEAN/images (5).jpg"
+                    alt=""
+                    class="image"
+                  />
+                  <span class="badge text-bg-warning position-absolute m-4 p-2"
+                    ><i class="fa-solid fa-gem"></i>លំដាប់ប្រណិត</span
+                  >
+                  <span class="badge py-2 position-absolute end-0 top-0 m-2"
+                    ><button class="tc-heart-btn rounded-circle">
+                      <i class="bi bi-heart fs-5"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12">
+                <div class="card p-5 pb-3">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-warning fw-bold"
+                      ><i class="fa-solid fa-clock"></i> ៣ ថ្ងៃ ២ យប់</span
+                    >
+                    <span
+                      class="bg-secondary-subtle p-1 rounded-2 small fw-bold"
+                      ><i class="fa-solid fa-house-flood-water"></i>
+                      ផ្ទះបណ្តែតទឹក</span
+                    >
+                  </div>
+                  <h2 class="fw-bold">
+                    ផ្សងព្រេងព្រៃកោងកាង និងលម្ហែកាយនៅទឹកធ្លាក់តាតៃ
+                  </h2>
+                  <p>
+                    ស្រូបយកខ្យល់អាកាសបរិសុទ្ធនៃព្រៃកោងកាងដ៏ធំល្វឹងល្វើយ
+                    ជិះកាយ៉ាក់តាមដងព្រែកតាតៃ
+                    និងសម្រាកនៅផ្ទះបណ្តែតទឹកលំដាប់ប្រណីតកណ្តាលធម្មជាតិ។
+                  </p>
+                  <div class="row">
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        ផ្ទះបណ្តែតទឹក (Floating Bungalow)
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+
+                        សកម្មភាពជិះទូកកាយ៉ាក់ និងហែលទឹក
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p class="text-capitalize">
+                        <i class="fa-solid fa-check text-success"></i>
+                        ដំណើរទស្សនាទឹកធ្លាក់តាតៃ
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        អាហារសមុទ្រស្រស់ៗ និង BBQ
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="">
+                      <span class="small text-secondary"
+                        >តម្លៃសរុបសម្រាប់ ១​ នាក់៖</span
+                      >
+                      <p class="fs-2 fw-bold text-primary">
+                        250$
+                        <span class="fs-6 text-secondary fw-normal"
+                          >/កញ្ចប់</span
+                        >
+                      </p>
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        class="btn btn-success rounded-pill px-5 py-2 border-hover"
+                        ><i class="fa-solid fa-calendar-days"></i>
+                        កក់កញ្ចប់ឥឡូវនេះ</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row g-0 rounded-4 overflow-hidden shadow tc-card">
+              <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 p-0">
+                <div class="card position-relative">
+                  <img
+                    src="assets/images/SEAVTHEAN/mondulkiri cambodia bousra waterfall.jpg"
+                    alt=""
+                    class="image"
+                  />
+                  <span class="badge text-bg-warning position-absolute m-4 p-2"
+                    ><i class="fa-solid fa-gem"></i>លំដាប់ប្រណិត</span
+                  >
+                  <span class="badge py-2 position-absolute end-0 top-0 m-2"
+                    ><button class="tc-heart-btn rounded-circle">
+                      <i class="bi bi-heart fs-5"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12">
+                <div class="card p-5 pb-3">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-warning fw-bold"
+                      ><i class="fa-solid fa-clock"></i> ៣ ថ្ងៃ ២ យប់</span
+                    >
+                    <span
+                      class="bg-secondary-subtle p-1 rounded-2 small fw-bold"
+                      ><i class="fa-solid fa-water"></i> ទឹកធ្លាក់</span
+                    >
+                  </div>
+                  <h2 class="fw-bold">
+                    មើលដំរីក្នុងព្រៃធម្មជាតិ និងលម្ហែកាយនៅទឹកធ្លាក់ប៊ូស្រា
+                  </h2>
+                  <p>
+                    បទពិសោធន៍ប្លែកជាមួយការដើរព្រៃ លេងជាមួយសត្វដំរីតាមបែបធម្មជាតិ
+                    ស្រូបយកខ្យល់ត្រជាក់លើវាលស្មៅបៃតង
+                    និងទស្សនាទឹកធ្លាក់ប៊ូស្រាដ៏ស្រស់ស្អាត។
+                  </p>
+                  <div class="row">
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        កម្មវិធីថែរក្សា និងលេងជាមួយដំរី
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+
+                        រមណីយដ្ឋានស្នាក់នៅបែប Eco-Resort
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p class="text-capitalize">
+                        <i class="fa-solid fa-check text-success"></i>
+                        ដំណើរទស្សនាទឹកធ្លាក់ប៊ូស្រា និងវាលស្មៅ
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        មគ្គុទ្ទេសក៍ និងអាហារ ៣ ពេល
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="">
+                      <span class="small text-secondary"
+                        >តម្លៃសរុបសម្រាប់ ១​ នាក់៖</span
+                      >
+                      <p class="fs-2 fw-bold text-primary">
+                        220$
+                        <span class="fs-6 text-secondary fw-normal"
+                          >/កញ្ចប់</span
+                        >
+                      </p>
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        class="btn btn-success rounded-pill px-5 py-2 border-hover"
+                        ><i class="fa-solid fa-calendar-days"></i>
+                        កក់កញ្ចប់ឥឡូវនេះ</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row g-0 rounded-4 overflow-hidden shadow tc-card">
+              <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 p-0">
+                <div class="card position-relative">
+                  <img
+                    src="assets/images/SEAVTHEAN/Ratanakiri-Province.webp"
+                    alt=""
+                    class="image"
+                  />
+                  <span class="badge text-bg-warning position-absolute m-4 p-2"
+                    ><i class="fa-solid fa-gem"></i>លំដាប់ប្រណិត</span
+                  >
+                  <span class="badge py-2 position-absolute end-0 top-0 m-2"
+                    ><button class="tc-heart-btn rounded-circle">
+                      <i class="bi bi-heart fs-5"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12">
+                <div class="card p-5 pb-3">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-warning fw-bold"
+                      ><i class="fa-solid fa-clock"></i> ៣ ថ្ងៃ ២ យប់</span
+                    >
+                    <span
+                      class="bg-secondary-subtle p-1 rounded-2 small fw-bold"
+                      ><i class="fa-solid fa-person-hiking"></i>
+                      ទស្សនានិងស្វែងយល់</span
+                    >
+                  </div>
+                  <h2 class="fw-bold">
+                    សម្រាកលម្ហែជុំវិញបឹងយក្សឡោម និងស្វែងយល់កុលសម្ព័ន្ធ
+                  </h2>
+                  <p>
+                    សម្រាកលម្ហែជុំវិញបឹងភ្នំភ្លើងយក្សឡោមដ៏ស្អាតប្លែក
+                    ទស្សនាទឹកធ្លាក់កាចាញ
+                    និងស្វែងយល់ពីវប្បធម៌រស់នៅដ៏សម្បូរបែបរបស់ជនជាតិដើមភាគតិច។
+                  </p>
+                  <div class="row">
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        ទស្សនាបឹងយក្សឡោម
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+
+                        ដំណើរកម្សាន្តទស្សនាភូមិជនជាតិដើមភាគតិច
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p class="text-capitalize">
+                        <i class="fa-solid fa-check text-success"></i>
+                        សណ្ឋាគារ/បឹងកាឡូស្នាក់នៅលំដាប់ខ្ពស់
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        រថយន្តដឹកជញ្ជូនពេលដំណើរកម្សាន្ត
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="">
+                      <span class="small text-secondary"
+                        >តម្លៃសរុបសម្រាប់ ១​ នាក់៖</span
+                      >
+                      <p class="fs-2 fw-bold text-primary">
+                        210$
+                        <span class="fs-6 text-secondary fw-normal"
+                          >/កញ្ចប់</span
+                        >
+                      </p>
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        class="btn btn-success rounded-pill px-5 py-2 border-hover"
+                        ><i class="fa-solid fa-calendar-days"></i>
+                        កក់កញ្ចប់ឥឡូវនេះ</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row g-0 rounded-4 overflow-hidden shadow tc-card">
+              <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 p-0">
+                <div class="card position-relative">
+                  <img
+                    src="assets/images/SEAVTHEAN/images (4).jpg"
+                    alt=""
+                    class="image"
+                  />
+                  <span class="badge text-bg-warning position-absolute m-4 p-2"
+                    ><i class="fa-solid fa-gem"></i>លំដាប់ប្រណិត</span
+                  >
+                  <span class="badge py-2 position-absolute end-0 top-0 m-2"
+                    ><button class="tc-heart-btn rounded-circle">
+                      <i class="bi bi-heart fs-5"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12">
+                <div class="card p-5 pb-3">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-warning fw-bold"
+                      ><i class="fa-solid fa-clock"></i> ២ ថ្ងៃ ១ យប់</span
+                    >
+                    <span
+                      class="bg-secondary-subtle p-1 rounded-2 small fw-bold"
+                      ><i class="fa-solid fa-sailboat"></i> ទូកកាយ៉ាក់</span
+                    >
+                  </div>
+                  <h2 class="fw-bold">
+                    ជិះទូកកាយ៉ាក់កាត់ព្រៃរ៉ាមសារ និងទស្សនាទន្លេបួនមុខ
+                  </h2>
+                  <p>
+                    ផ្សងព្រេងជិះទូកកាយ៉ាក់មើលព្រៃលិចទឹក
+                    និងល្អាងធម្មជាតិនៅតំបន់រ៉ាមសារ (Ramsar Site)
+                    ព្រមទាំងទស្សនាចំណុចប្រសព្វនៃទន្លេសេកុង និងទន្លេមេគង្គ។
+                  </p>
+                  <div class="row">
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        សកម្មភាពជិះទូកកាយ៉ាក់កាត់ព្រៃរ៉ាមសារ
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+
+                        ទូកម៉ាស៊ីនទស្សនាទន្លេបួនមុខ
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p class="text-capitalize">
+                        <i class="fa-solid fa-check text-success"></i>
+                        កន្លែងស្នាក់នៅ និងអាហារប្រចាំតំបន់
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        មគ្គុទ្ទេសក៍ទេសចរណ៍ក្នុងស្រុក
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="">
+                      <span class="small text-secondary"
+                        >តម្លៃសរុបសម្រាប់ ១​ នាក់៖</span
+                      >
+                      <p class="fs-2 fw-bold text-primary">
+                        450$
+                        <span class="fs-6 text-secondary fw-normal"
+                          >/កញ្ចប់</span
+                        >
+                      </p>
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        class="btn btn-success rounded-pill px-5 py-2 border-hover"
+                        ><i class="fa-solid fa-calendar-days"></i>
+                        កក់កញ្ចប់ឥឡូវនេះ</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row g-0 rounded-4 overflow-hidden shadow tc-card">
+              <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 p-0">
+                <div class="card position-relative">
+                  <img
+                    src="assets/images/SEAVTHEAN/ee.jpg"
+                    alt=""
+                    class="image"
+                  />
+                  <span class="badge text-bg-warning position-absolute m-4 p-2"
+                    ><i class="fa-solid fa-gem"></i>លំដាប់ប្រណិត</span
+                  >
+                  <span class="badge py-2 position-absolute end-0 top-0 m-2"
+                    ><button class="tc-heart-btn rounded-circle">
+                      <i class="bi bi-heart fs-5"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12">
+                <div class="card p-5 pb-3">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-warning fw-bold"
+                      ><i class="fa-solid fa-clock"></i> ២ ថ្ងៃ ១ យប់</span
+                    >
+                    <span
+                      class="bg-secondary-subtle p-1 rounded-2 small fw-bold"
+                      ><i class="fa-solid fa-mountain"></i>
+                      លម្ហែកាយលើកំពូលភ្នំ</span
+                    >
+                  </div>
+                  <h2 class="fw-bold">
+                    ជិះទូកមើលអំពិលអំពែក និងលម្ហែកាយលើកំពូលភ្នំបូកគោ
+                  </h2>
+                  <p>
+                    ស្រូបខ្យល់អាកាសត្រជាក់ត្រជុំលើកំពូលភ្នំបូកគោ
+                    ទស្សនាចម្ការម្រេចដ៏ល្បីល្បាញ
+                    និងជិះទូកកម្សាន្តតាមដងព្រែកកំពតមើលអំពិលអំពែកនាល្ងាច។
+                  </p>
+                  <div class="row">
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        ជិះទូកកម្សាន្តមើលអំពិលអំពែក
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+
+                        ដំណើរទស្សនាភ្នំបូកគោ និងចម្ការម្រេច
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p class="text-capitalize">
+                        <i class="fa-solid fa-check text-success"></i>
+                        រមណីយដ្ឋានស្នាក់នៅជាប់មាត់ព្រែក
+                      </p>
+                    </div>
+                    <div class="col-xxl-6 col-md-6 col-12">
+                      <p>
+                        <i class="fa-solid fa-check text-success"></i>
+                        អាហារសមុទ្រ និងម្រេចខ្ចីកំពត
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="">
+                      <span class="small text-secondary"
+                        >តម្លៃសរុបសម្រាប់ ១​ នាក់៖</span
+                      >
+                      <p class="fs-2 fw-bold text-primary">
+                        110$
+                        <span class="fs-6 text-secondary fw-normal"
+                          >/កញ្ចប់</span
+                        >
+                      </p>
+                    </div>
+                    <div>
+                      <a
+                        href="#"
+                        class="btn btn-success rounded-pill px-5 py-2 border-hover"
+                        ><i class="fa-solid fa-calendar-days"></i>
+                        កក់កញ្ចប់ឥឡូវនេះ</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <!-- start footer -->
+    <section class="sec-footer bg-success">
+      <footer class="footer-luxury">
+        <div class="container">
+          <div class="row g-4 mb-5">
+            <div class="col-lg-4 col-md-6">
+              <a class="footer-logo"
+                ><i class="bi bi-leaf-fill text-warning"></i> ត្រាច់ចរ
+                <span>| Trach Chor</span></a
+              >
+              <p class="mb-4">
+                វេទិកាទេសចរណ៍
+                និងការធ្វើដំណើរលំដាប់ខ្ពស់ឈានមុខគេក្នុងប្រទេសកម្ពុជា។
+                យើងភ្ជាប់លោកអ្នកទៅកាន់គោលដៅធម្មជាតិ វប្បធម៌
+                និងការស្នាក់នៅដ៏ប្រណីតបំផុត។
+              </p>
+              <div class="d-flex text-align-center">
+                <a href="#" class="social-icon-btn"
+                  ><i class="bi bi-facebook fs-5"></i
+                ></a>
+                <a href="#" class="social-icon-btn"
+                  ><i class="bi bi-instagram fs-5"></i
+                ></a>
+                <a href="#" class="social-icon-btn"
+                  ><i class="bi bi-telegram fs-5"></i
+                ></a>
+                <a href="#" class="social-icon-btn"
+                  ><i class="bi bi-youtube fs-5"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <h5 class="footer-heading">តំណភ្ជាប់</h5>
+              <ul class="footer-links">
+                <li><a href="index.html">ទំព័រដើម</a></li>
+                <li><a href="about.html">អំពីយើង</a></li>
+                <li><a href="services.html">សេវាកម្ម</a></li>
+                <li><a href="contact.html">ទំនាក់ទំនង</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="footer-heading">គោលដៅពេញនិយម</h5>
+              <ul class="footer-links">
+                <li>
+                  <a href="destinations.html"
+                    ><i class="bi bi-chevron-right text-success fs-7 me-2"></i
+                    >ខេត្តសៀមរាប (អង្គរវត្ត)</a
+                  >
+                </li>
+                <li>
+                  <a href="destinations.html"
+                    ><i class="bi bi-chevron-right text-success fs-7 me-2"></i
+                    >កោះរ៉ុង & ឆ្នេរសមុទ្រ</a
+                  >
+                </li>
+                <li>
+                  <a href="destinations.html"
+                    ><i class="bi bi-chevron-right text-success fs-7 me-2"></i
+                    >មណ្ឌលគិរី & ធម្មជាតិ</a
+                  >
+                </li>
+                <li>
+                  <a href="destinations.html"
+                    ><i class="bi bi-chevron-right text-success fs-7 me-2"></i
+                    >រាជធានីភ្នំពេញ</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="footer-heading">ទំនាក់ទំនង</h5>
+              <ul class="footer-links text-light">
+                <li class="d-flex align-items-start gap-3 mb-3">
+                  <i class="bi bi-geo-alt-fill text-success mt-1 fs-5"></i
+                  ><span>អគារ Vamco, មហាវិថីព្រះមុនីវង្ស, រាជធានីភ្នំពេញ</span>
+                </li>
+                <li class="d-flex align-items-center gap-3 mb-3">
+                  <i class="bi bi-telephone-fill text-primary fs-5"></i
+                  ><span>+855 (0) 23 999 888</span>
+                </li>
+                <li class="d-flex align-items-center gap-3">
+                  <i class="bi bi-envelope-fill text-warning fs-5"></i
+                  ><span>trachchor.travel@gmail.com</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr class="border-secondary opacity-25" />
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center py-3"
+          >
+            <p class="mb-0 small">
+              &copy; 2026 ត្រាច់ចរ (Trach Chor). រក្សាសិទ្ធិគ្រប់យ៉ាង។ Designed
+              with
+              <i class="bi bi-heart text-danger"></i>
+              ដើម្បីសម្រេចចិត្តការធ្វើដំណើរកម្ពុជា។
+            </p>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <!-- end footer -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script>
       // Heart toggle
