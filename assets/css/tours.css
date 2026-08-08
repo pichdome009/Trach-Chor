@@ -7,6 +7,7 @@
 body {
   font-family: "Kantumruy Pro", sans-serif;
 }
+
 .hero-banner {
   position: relative;
   width: 100%;
@@ -37,7 +38,7 @@ body {
   height: 100%;
   border: none;
 }
-img {
+.image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -67,4 +68,20 @@ img {
 }
 .tc-heart-btn.liked i {
   font-weight: 900;
+}
+.tc-card {
+  /* background: #fff; */
+  /* border: 1px solid var(--tc-line); */
+  /* border-radius: 16px; */
+  /* overflow: hidden; */
+  /* height: 100%; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.tc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(15, 60, 45, 0.14) !important;
 }
