@@ -1,0 +1,164 @@
+
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes softBounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-5px); }
+}
+
+@keyframes badgePop {
+  0%   { transform: scale(0.4); opacity: 0; }
+  60%  { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes gentlePulse {
+  0%   { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.55); }
+  70%  { box-shadow: 0 0 0 9px rgba(220, 53, 69, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+}
+
+@keyframes leafSway {
+  0%, 100% { transform: rotate(0deg); }
+  50%      { transform: rotate(-8deg); }
+}
+
+/* ---------- Hero entrance (plays on page load) ---------- */
+.hero-anim-item {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+.hero-anim-item.delay-1 { animation-delay: 0.05s; }
+.hero-anim-item.delay-2 { animation-delay: 0.2s; }
+.hero-anim-item.delay-3 { animation-delay: 0.4s; }
+
+/* ---------- Info cards row (plays on load, staggered) ---------- */
+.info-cards-row > div {
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+}
+.info-cards-row > div:nth-child(1) { animation-delay: 0.1s; }
+.info-cards-row > div:nth-child(2) { animation-delay: 0.2s; }
+.info-cards-row > div:nth-child(3) { animation-delay: 0.3s; }
+.info-cards-row > div:nth-child(4) { animation-delay: 0.4s; }
+
+.
+.dropdown-menu {
+  animation: fadeInUp 0.25s ease;
+}
+.dropdown-item {
+  transition: transform 0.2s ease;
+}
+.dropdown-item:hover {
+  transform: translateX(4px);
+}
+
+.notification-badge-pulse {
+  animation: badgePop 0.5s ease, gentlePulse 2.2s ease-in-out 0.5s infinite;
+}
+
+
+.contact-info-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.contact-info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.12);
+}
+.contact-info-card .icon-circle {
+  transition: transform 0.4s ease;
+}
+.contact-info-card:hover .icon-circle {
+  transform: scale(1.12) rotate(-6deg);
+}
+
+
+.form-control-tc,
+.form-select.form-control-tc {
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+.form-control-tc:focus,
+.form-select.form-control-tc:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Send button */
+.btn-accent {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-accent:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+.btn-accent:active {
+  transform: translateY(0) scale(0.97);
+}
+.btn-accent i {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.btn-accent:hover i {
+  transform: translateX(4px);
+}
+
+/* ---------- Map + social links ---------- */
+.map-wrap a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: transform 0.25s ease;
+}
+.map-wrap a:hover {
+  transform: translateX(6px);
+}
+.map-wrap a:hover i {
+  animation: softBounce 0.6s ease;
+}
+
+/* ---------- FAQ accordion ---------- */
+.accordion-tc .accordion-button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.accordion-tc .accordion-button::after {
+  transition: transform 0.35s ease;
+}
+.accordion-tc .accordion-body {
+  animation: fadeIn 0.45s ease;
+}
+
+/* ---------- Footer ---------- */
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.social-icon-btn:hover {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+}
+
+.footer-links a {
+  transition: color 0.25s ease, transform 0.25s ease, padding-left 0.25s ease;
+}
+.footer-links a:hover {
+  padding-left: 4px;
+}

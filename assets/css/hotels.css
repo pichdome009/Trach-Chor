@@ -5,6 +5,9 @@
 .text-gold     { color: var(--secondary-color) !important; }
 .bg-gold       { background-color: var(--secondary-color) !important; color: var(--text-dark) !important; }
 
+.bg-hero{
+  background-color: var(--primary-color);
+}
 
 .btn-jungle {
   background-color: var(--primary-color);
