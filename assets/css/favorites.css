@@ -331,6 +331,7 @@ body {
 .product-img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .img-bade {
@@ -525,10 +526,11 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 15px 17px;
-    background: #f5eee9;
-    border: 1px solid #eadbd4;
+    background-color: #e7f1ff;
     border-radius: 12px;
+    border-left: 4px solid #0d6efd;
 }
+
 
 .koh-rong-price-box span {
     color: #5d4037;
@@ -1348,58 +1350,11 @@ body {
     box-shadow: 0 6px 15px rgba(46, 125, 50, 0.25);
 }
 
-@media (max-width: 768px) {
 
-    .yeak-laom-grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    .yeak-laom-options {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-}
-
-@media (max-width: 520px) {
-
-    .yeak-laom-modal-card {
-        padding: 16px;
-    }
-
-    .yeak-laom-header {
-        padding-right: 35px;
-
-        font-size: 18px;
-    }
-
-    .yeak-laom-main-img-container {
-        height: 220px;
-    }
-
-    .yeak-laom-options {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .yeak-laom-info-pills {
-        grid-template-columns: 1fr;
-    }
-
-    .yeak-laom-action-btns {
-        grid-template-columns: 1fr;
-    }
-
-}
 
 
 
 /* ============================================================ */
-
-
-.sambor-prei-kuk-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-}
 
 .sambor-prei-kuk-main-img-container {
     position: relative;
@@ -1643,47 +1598,10 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-
-    .sambor-prei-kuk-grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    .sambor-prei-kuk-options {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-}
-
-@media (max-width: 520px) {
-
-    .sambor-prei-kuk-main-img-container {
-        height: 220px;
-    }
-
-    .sambor-prei-kuk-options {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .sambor-prei-kuk-info-pills {
-        grid-template-columns: 1fr;
-    }
-
-    .sambor-prei-kuk-action-btns {
-        grid-template-columns: 1fr;
-    }
-
-}
-
 
 
 /* ================================================================================== */
 
-.chanrasmey-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
-}
 
 .chanrasmey-main-img-container {
     position: relative;
@@ -1902,50 +1820,9 @@ body {
     transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-
-    .chanrasmey-grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    .chanrasmey-options {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-
-}
-
-@media (max-width: 480px) {
-
-    .chanrasmey-main-img-container {
-        height: 220px;
-    }
-
-    .chanrasmey-info-pills {
-        grid-template-columns: 1fr;
-    }
-
-    .d-flex.justify-content-around {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .chanrasmey-btn {
-        width: 100%;
-        justify-content: center;
-    }
-}
 
 
 /* ================================================================================= */
-
-
-.memoire-grid-container {
-    display: grid;
-    background-color: white;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
-}
 
 .memoire-main-img-container {
     position: relative;
@@ -2167,58 +2044,10 @@ body {
 }
 
 
-@media (max-width: 768px) {
-
-    .memoire-grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    .memoire-room-options {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .d-flex.justify-content-around {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .memoire-btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-}
-
-
-@media (max-width: 480px) {
-
-    .memoire-main-img-container {
-        height: 220px;
-    }
-
-    .memoire-info-pills {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
 
 
 
 /* ======================================================== */
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-}
 
 .main-img-container {
     position: relative;
@@ -2422,12 +2251,6 @@ body {
     gap: 20px;
 }
 
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-}
-
 .main-img-container {
     position: relative;
     border-radius: 12px;
@@ -2622,4 +2445,97 @@ body {
     background-color: #157347;
     color: #ffffff;
     border-color: #146c43;
+}
+
+
+
+@media (max-width: 576px) {
+    .guide-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .motor-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .car-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .boat-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .memoire-room-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chanrasmey-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sambor-prei-kuk-main-img-container {
+        height: 220px;
+    }
+
+    .sambor-prei-kuk-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sambor-prei-kuk-info-pills {
+        grid-template-columns: 1fr;
+    }
+
+    .sambor-prei-kuk-action-btns {
+        grid-template-columns: 1fr;
+    }
+
+    .yeak-laom-modal-card {
+        padding: 16px;
+    }
+
+    .yeak-laom-header {
+        padding-right: 35px;
+
+        font-size: 18px;
+    }
+
+    .yeak-laom-main-img-container {
+        height: 220px;
+    }
+
+    .yeak-laom-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .yeak-laom-info-pills {
+        grid-template-columns: 1fr;
+    }
+
+    .yeak-laom-action-btns {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .d-flex.justify-content-around {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .d-flex.justify-content-around {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
