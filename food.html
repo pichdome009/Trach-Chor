@@ -5,22 +5,316 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>រសជាតិពិតនៃម្ហូបខ្មែរ ពីខេត្តមួយទៅខេត្តមួយ- ត្រាច់ចរ</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/sak/leaf-fill-yellow.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/food.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="assets/images/sak/leaf-fill-yellow.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/food.css">
+    <link rel="stylesheet" href="assets/css/nav-footer.css">
 </head>
 
 <body>
+    <section class="sec-navbar">
+        <nav class="navbar navbar-expand-lg py-3" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand text-white fs-2 fw-bold" href="index.html"><i
+                        class="bi bi-leaf-fill text-warning"></i>
+                    ត្រាច់ចរ​</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0 fs-5 fw-medium gap-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">ទំព័រដើម</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">អំពីយើង</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="service nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                សេវាកម្ម
+                            </a>
+                            <ul class="dropdown-menu shadow border-0 rounded-4 p-3 fs-5 ">
+                                <li><a class="dropdown-item rounded-3 py-2 text-white " href="#"><i
+                                            class="bi bi-box2-heart-fill "></i>
+                                        កញ្ជប់ដំណើរកម្សាន្ដ</a></li>
+                                <li><a class="dropdown-item rounded-3 py-2 text-white" href="#"><i
+                                            class="bi bi-geo-alt-fill"></i>
+                                        គោលដៅទេសចរណ៍</a></li>
+                                <li><a class="dropdown-item rounded-3 py-2 text-white" href="#"><i
+                                            class="bi bi-house-down-fill"></i>
+                                        កក់កន្លែងស្នាក់នៅ</a></li>
+                                <li><a class="dropdown-item rounded-3 py-2 text-white" href="#"><i
+                                            class="bi bi-car-front"></i>
+                                        ជួលយានជំនិះ</a></li>
+                                <li><a class="dropdown-item rounded-3 py-2 text-white" href="#"><i
+                                            class="bi bi-fork-knife"></i>
+                                        កម្មង់ម្ហូប</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item rounded-3 py-2 text-white" href="#"><i
+                                            class="bi bi-shop"></i> សិប្បកម្ម</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item rounded-3 py-2 text-white" href="#"><i
+                                            class="bi bi-postcard-heart-fill"></i> កាតកាដូ</a></li>
+                                <li><a class="dropdown-item rounded-3 py-2 text-white" href="#"><i
+                                            class="bi bi-calculator"></i>
+                                        គណនាចំណាយ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ទំនាក់ទំនង</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- Cart Dropdown -->
+                        <div class="dropdown">
+                            <a href="#"
+                                class="position-relative d-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                                data-bs-toggle="dropdown" aria-expanded="false"
+                                style="width: 44px; height: 44px; background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;"
+                                onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.25)'; this.style.transform='scale(1.08)';"
+                                onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.15)'; this.style.transform='scale(1)';">
+                                <i class="bi bi-cart-fill text-white fs-5"></i>
+                                <span
+                                    class="position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold notification-badge-pulse"
+                                    style="top: -2px; right: -2px; width: 18px; height: 18px; font-size: 0.65rem;">3</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-glass rounded-4 p-3 mt-2"
+                                style="width: 340px;">
+                                <li
+                                    class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-3">
+                                    <h6 class="mb-0 text-white fw-bold d-flex align-items-center"><i
+                                            class="bi bi-cart-fill text-warning me-2 fs-5"></i>កន្ត្រកទំនិញ (Your Cart)
+                                    </h6>
+                                    <span class="badge bg-light text-success fw-bold rounded-pill px-2 py-1 shadow-sm"
+                                        style="font-size: 0.75rem;">3 ទំនិញ</span>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="d-block p-3 mb-2 rounded-3 text-decoration-none dropdown-item-custom">
+                                        <div class="d-flex align-items-center">
+                                            <div class="bg-success rounded-circle d-flex justify-content-center align-items-center me-3 shadow-sm"
+                                                style="width: 40px; height: 40px; flex-shrink: 0;"><i
+                                                    class="bi bi-box2-heart-fill text-white fs-5"></i></div>
+                                            <div>
+                                                <span
+                                                    class="fw-bold text-white d-block mb-1">កញ្ចប់ដំណើរកម្សាន្តទៅសៀមរាប</span>
+                                                <span class="text-success fw-bold" style="font-size: 0.85rem;">$120.00
+                                                    <span class="text-white-50 fw-normal ms-1">x 2</span></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="d-block p-3 mb-3 rounded-3 text-decoration-none dropdown-item-custom">
+                                        <div class="d-flex align-items-center">
+                                            <div class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-3 shadow-sm"
+                                                style="width: 40px; height: 40px; flex-shrink: 0;"><i
+                                                    class="bi bi-car-front-fill text-white fs-5"></i></div>
+                                            <div>
+                                                <span class="fw-bold text-white d-block mb-1">សេវាកម្មជួលឡាន
+                                                    (SUV)</span>
+                                                <span class="text-success fw-bold" style="font-size: 0.85rem;">$45.00
+                                                    <span class="text-white-50 fw-normal ms-1">x 1</span></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="d-flex justify-content-between align-items-center mb-3 px-2 mt-2">
+                                        <span class="text-white-50 fw-bold">សរុប (Total):</span>
+                                        <span class="text-warning fw-bold fs-5">$285.00</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="cart.html"
+                                        class="btn w-100 rounded-pill fw-bold text-white btn-gradient-green transition-fast">ពិនិត្យមើល
+                                        និងបង់ប្រាក់</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Bell Dropdown -->
+                        <div class="dropdown">
+                            <a href="#"
+                                class="position-relative d-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                                data-bs-toggle="dropdown" aria-expanded="false"
+                                style="width: 44px; height: 44px; background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;"
+                                onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.25)'; this.style.transform='scale(1.08)';"
+                                onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.15)'; this.style.transform='scale(1)';">
+                                <i class="bi bi-bell-fill text-white fs-5"></i>
+                                <span
+                                    class="position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold notification-badge-pulse"
+                                    style="top: -2px; right: -2px; width: 18px; height: 18px; font-size: 0.65rem;">2</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-glass rounded-4 p-3 mt-2"
+                                style="width: 340px;">
+                                <li
+                                    class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-3">
+                                    <h6 class="mb-0 text-white fw-bold d-flex align-items-center"><i
+                                            class="bi bi-bell-fill text-warning me-2 fs-5"></i>ការជូនដំណឹង
+                                        (Notifications)</h6>
+                                    <span class="badge bg-light text-success fw-bold rounded-pill px-2 py-1 shadow-sm"
+                                        style="font-size: 0.75rem;">ថ្មី 2</span>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="d-block p-3 mb-2 rounded-3 text-decoration-none dropdown-item-custom">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <div class="bg-success-subtle rounded-circle d-flex justify-content-center align-items-center me-3"
+                                                style="width: 28px; height: 28px; flex-shrink: 0;"><i
+                                                    class="bi bi-check text-success fs-5"></i></div>
+                                            <span class="fw-bold text-white">ការកក់ជោគជ័យ!</span>
+                                            <span class="ms-auto text-white-50" style="font-size: 0.75rem;">1
+                                                ម៉ោងមុន</span>
+                                        </div>
+                                        <p class="mb-0 text-white-50"
+                                            style="font-size: 0.85rem; padding-left: 44px; line-height: 1.5;">
+                                            បន្ទប់ស្នាក់នៅរបស់អ្នកត្រូវបានកក់ប្រកបដោយជោគជ័យ។</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="d-block p-3 mb-3 rounded-3 text-decoration-none dropdown-item-custom">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <div class="bg-warning-subtle rounded-circle d-flex justify-content-center align-items-center me-3"
+                                                style="width: 28px; height: 28px; flex-shrink: 0;"><i
+                                                    class="bi bi-gift-fill text-warning fs-6"></i></div>
+                                            <span class="fw-bold text-white">កាដូពិសេស!</span>
+                                            <span class="ms-auto text-white-50" style="font-size: 0.75rem;">9
+                                                ម៉ោងមុន</span>
+                                        </div>
+                                        <p class="mb-0 text-white-50"
+                                            style="font-size: 0.85rem; padding-left: 44px; line-height: 1.5;">
+                                            ទទួលបានបញ្ចុះតម្លៃ ២០% សម្រាប់សមាជិក VIP Explorer។</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider border-secondary opacity-50 mb-3">
+                                </li>
+                                <li>
+                                    <a href="nofications.html" class="btn w-100 rounded-pill fw-bold text-white"
+                                        style="border: 1px solid rgba(255,255,255,0.2); background-color: rgba(255,255,255,0.05); transition: 0.3s;"
+                                        onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.3)';"
+                                        onmouseout="this.style.backgroundColor='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.2)';">មើលការជូនដំណឹងទាំងអស់</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="profile-dropdown border border-warning px-1">
+                            <button class="btn nav-profile-btn d-flex align-items-center gap-2" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="d-flex flex-column text-end d-none d-xl-flex p-2">
+                                    <span class="fw-bold fs-7 text-white">ពេជ្រ ឧត្តម</span>
+                                </div>
+                                <div class="position-relative">
+                                    <img src="assets/images/Pich-Udom/profile.jpg"
+                                        class="rounded-circle object-fit-cover border border-2 border-warning shadow-sm"
+                                        width="38" height="38" alt="Profile">
+                                    <span
+                                        class="position-absolute bottom-0 end-0 p-1 bg-success border border-white rounded-circle"></span>
+                                </div>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-lg-end shadow-lg border-0 rounded-4 p-2"
+                                style="width: 270px;">
+                                <li class="p-3 text-center border-bottom mb-2 dropdown-profile-header rounded-3">
+                                    <div class="position-relative d-inline-block mb-2">
+                                        <img src="assets/images/Pich-Udom/profile.jpg"
+                                            class="rounded-circle object-fit-cover border border-3 border-success shadow-sm"
+                                            width="60" height="60" alt="Profile">
+                                        <span
+                                            class="position-absolute bottom-0 end-0 p-1 bg-success border border-2 border-white rounded-circle"
+                                            title="Active Now"></span>
+                                    </div>
+                                    <h6 class="mb-0 fw-bold fs-5">ពេជ្រ ឧត្តម</h6>
+                                    <span
+                                        class="badge bg-warning text-dark mt-1 px-3 py-1 rounded-pill fw-bold shadow-sm"
+                                        style="font-size: 0.7rem;"><i class="fas fa-crown me-1"></i> (Pich Udom)</span>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1"
+                                        href="profile.html">
+                                        <div class="icon-box-sm bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center"
+                                            style="width: 34px; height: 34px; flex-shrink: 0;">
+                                            <i class="bi bi-person-circle fs-5 "></i>
+                                        </div>
+                                        <span class="fw-semibold" style="font-size: 0.9rem;">គណនីរបស់ខ្ញុំ</span>
+                                    </a>
+                                </li>
+                                <!-- <li>
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1" href="#">
+                  <div
+                    class="icon-box-sm bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 34px; height: 34px; flex-shrink: 0;">
+                    <i class="bi bi-cart-plus-fill fs-5"></i>
+                  </div>
+                  <span class="fw-semibold" style="font-size: 0.9rem;">ទំនិញរបស់អ្នក</span>
+                </a>
+              </li> -->
+                                <li>
+                                    <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1"
+                                        href="favorites.html">
+                                        <div class="icon-box-sm bg-danger-subtle text-danger rounded-circle d-flex align-items-center justify-content-center"
+                                            style="width: 34px; height: 34px; flex-shrink: 0;">
+                                            <i class="bi bi-heart-fill fs-5 mt-1"></i>
+                                        </div>
+                                        <span class="fw-semibold" style="font-size: 0.9rem;">គោលដៅចំណូលចិត្ត</span>
+                                    </a>
+                                </li>
+                                <!-- <li>
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1"
+                  href="notifications.html">
+                  <div
+                    class="icon-box-sm bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 34px; height: 34px; flex-shrink: 0;">
+                    <i class="bi bi-bell-fill fs-5"></i>
+                  </div>
+                  <span class="fw-semibold" style="font-size: 0.9rem;">ការជូនដំណឹង</span>
+                </a>
+              </li> -->
+                                <li>
+                                    <hr class="dropdown-divider my-2">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 logout-item"
+                                        href="index.html">
+                                        <div class="icon-box-sm bg-danger-subtle text-danger rounded-circle d-flex align-items-center justify-content-center"
+                                            style="width: 34px; height: 34px; flex-shrink: 0;">
+                                            <i class="bi bi-box-arrow-right fs-5 ms-1 mt-1"></i>
+                                        </div>
+                                        <span class="fw-bold" style="font-size: 0.9rem;">ចាកចេញ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </section>
+
     <section class="adventure-layout">
         <div class="container">
 
             <div class="adventure-hero-banner-food animate__animated animate__fadeInDown">
                 <div class="position-relative z-2 max-w-850">
-                    <span class="adventure-badge-pill mb-3"><i class="fas fa-compass me-2"></i> TRACH CHOR</span>
+                    <span class="adventure-badge-pill mb-3"><i class="bi bi-fork-knife"></i>កម្មង់ម្ហូប</span>
                     <h1 class="display-4 fw-bold text-white mb-3">រសជាតិពិតនៃម្ហូបខ្មែរ ពីខេត្តមួយទៅខេត្តមួយ</h1>
                     <p class="text-light fs-5 mb-4 opacity-90">
                         ស្វែងរកមុខម្ហូបល្បីៗប្រចាំតំបន់ ពិនិត្យម៉ោងដំណើរការ និងរូបភាពហាងពិតៗក្បែរអ្នក។
@@ -29,73 +323,99 @@
                 </div>
             </div>
 
+        </div>
     </section>
 
     <section class="py-5 bg-light">
         <div class="container">
-            <!-- Heading -->
+
             <div class="text-center mb-5">
                 <small class="text-success fw-bold">មុខម្ហូបពិសេសរបស់យើង</small>
                 <h2 class="fw-bold">មុខម្ហូបប្រចាំតំបន់ល្បីៗ</h2>
-                <p class="text-muted">
-                    ស្វែងរក និងភ្លក់រសជាតិមុខម្ហូបខ្មែរប្រពៃណីដែលមានឱជារសឈ្ងុយឆ្ងាញ់។
-                </p>
+                <p class="text-muted">ស្វែងរក និងភ្លក់រសជាតិមុខម្ហូបខ្មែរប្រពៃណីដែលមានឱជារសឈ្ងុយឆ្ងាញ់។</p>
             </div>
 
-            <!-- Cards -->
+            <!-- 4 Popular food cards -->
             <div class="row g-4">
-
                 <!-- 1. Fish Amok -->
-                <div class="col-lg-3 col-md-6 restaurant-search-item" 
-                            data-name="Traditional Fish Amok"
-                            data-title="អាម៉ុកត្រីប្រពៃណី" data-category="ម្ហូបប្រចាំតំបន់ &amp; បុរាណ"
-                            data-location="ខេត្តសៀមរាប" data-rating="5.0" data-price="6.50"
-                            data-image="assets/images/sak/fish-amok.png"
-                            data-description="អាម៉ុកត្រីរលក់ស្ទើរលាយក្នុងមាត់ ចំអិនតាមបែបប្រពៃណីខ្មែរជាមួយគ្រឿងខ្ទិះដូង ខ្ទឹមស ស្លឹកក្រូចសើច និងចាត់ទុកជាអត្តសញ្ញាណជាតិ។"
-                            data-weight="១ ចាន" data-type="ម្ហូបប្រពៃណីខ្មែរ" data-origin="Siem Reap Heritage"
-                            data-gift="ម្ហូបល្បីល្បាញប្រចាំប្រទេស" data-available="true">
+                <div class="col-lg-3 col-md-6 restaurant-search-item" data-name="Tonle Sap Fish Amok"
+                    data-title="អាម៉ុកត្រីបឹងទន្លេសាប" data-category="ម្ហូបប្រចាំតំបន់ &amp; បុរាណ"
+                    data-location="ខេត្តសៀមរាប" data-rating="5.0" data-price="18"
+                    data-image="assets/images/foods/amok.png"
+                    data-description="ប្រើប្រាស់ត្រីបឹងទន្លេសាប គ្រឿងខ្មែរ បន្លែធម្មជាតិ និងចម្អិនក្នុងកូនដូងយ៉ាងឈ្ងុយឆ្ងាញ់។"
+                    data-weight="១ ចាន" data-type="ម្ហូបប្រពៃណីខ្មែរ" data-origin="Tonle Sap, Siem Reap"
+                    data-gift="ម្ហូបល្បីល្បាញប្រចាំប្រទេស" data-available="true">
 
                     <div class="card menu-card" data-bs-toggle="modal" data-bs-target="#amokModal">
                         <div class="position-relative">
-                            <img src="assets/images/sak/fish-amok.png" class="card-img-top" alt="អាម៉ុកត្រីប្រពៃណី">
+                            <img src="assets/images/foods/amok.png" class="card-img-top" alt="អាម៉ុកត្រីប្រពៃណី">
                             <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill">
-                                ● ពេញនិយមខ្លាំង
+                                <i class="bi bi-star-fill me-1"></i> ម្ហូបពេញនិយម
                             </span>
                         </div>
                         <div class="card-body">
                             <h5 class="fw-bold">
-                                អាម៉ុកត្រីប្រពៃណី
+                                អាម៉ុកត្រីបឹងទន្លេសាប
                             </h5>
                             <p class="text-muted small">
-                                អាម៉ុកត្រីប្រពៃណីខ្មែរ ចំអិនជាមួយគ្រឿងខ្ទិះដូង វេចក្នុងស្លឹកចេក។
+                                ប្រើប្រាស់ត្រីបឹងទន្លេសាបគ្រឿងខ្មែរបន្លែធម្មជាតិនិងចម្អិនក្នុងកូនដូងយ៉ាងឈ្ងុយឆ្ងាញ់។
                             </p>
                         </div>
                         <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                            <h5 class="text-success fw-bold mb-0">
-                                $6
-                            </h5>
+                            <div class="text-success fw-bold">$18 <span class="text-muted small fw-normal">/ មុខ</span>
+                            </div>
                             <button class="btn btn-outline-success rounded-pill"
-                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2. Royal Samlor Korko -->
-                <div class="col-lg-3 col-md-6 restaurant-search-item" data-name="Royal Samlor Korko"
-                            data-title="សម្លកកូរប្រពៃណីខ្មែរ" data-category="សម្ល និងស៊ុប"
-                            data-location="រាជធានីភ្នំពេញ" data-rating="4.9" data-price="5.50"
-                            data-image="assets/images/sak/samlor-korko.png"
-                            data-description="សម្លកកូរជារូបមន្តបុរាណដែលផ្សំឡើងពីបន្លែធម្មជាតិចម្រុះ សាច់ត្រីស្រស់ និងអង្ករលីងបុក ផ្តល់នូវរសជាតិផ្អែមប្រៃ និងក្លិនប្រហើរ។"
-                            data-weight="១ ចាន" data-type="សម្លបុរាណ" data-origin="Phnom Penh"
-                            data-gift="អត្ថប្រយោជន៍សុខភាព និងអាហារូបត្ថម្ភ" data-available="true">
+                <!-- 2. crab -->
+                <div class="col-lg-3 col-md-6 restaurant-search-item" data-name="Kampot Pepper Crab"
+                    data-title="ក្តាមថ្មឆាម្រេចកំពត" data-category="គ្រឿងសមុទ្រ &amp; ម្ហូបប្រចាំតំបន់" data-location="ខេត្តកែប"
+                    data-rating="4.9" data-price="25" data-image="assets/images/foods/crab.png"
+                    data-description="ក្តាមសមុទ្រស្រស់ៗ ឆាជាមួយម្រេចខ្ចីកំពត ល្បីល្បាញទូទាំងពិភពលោក។"
+                    data-weight="១ ចាន" data-type="ម្ហូបគ្រឿងសមុទ្រ" data-origin="Kep &amp; Kampot"
+                    data-gift="រសជាតិក្តាមសមុទ្រ និងម្រេចកំពត" data-available="true">
 
-                    <div class="card menu-card" data-bs-toggle="modal" data-bs-target="#korkoModal"
-                        >
+                    <div class="card menu-card" data-bs-toggle="modal" data-bs-target="#korkoModal">
                         <div class="position-relative">
-                            <img src="assets/images/sak/samlor-korko.png" class="card-img-top"
-                                alt="សម្លកកូរប្រពៃណីខ្មែរ">
+                            <img src="assets/images/foods/crab.png" class="card-img-top" alt="សម្លកកូរប្រពៃណីខ្មែរ">
                             <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill">
-                                ● ពេញនិយម
+                                <i class="bi bi-droplet-fill me-1"></i> គ្រឿងសមុទ្រ
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold">
+                                ក្តាមថ្មឆាម្រេចកំពត
+                            </h5>
+                            <p class="text-muted small">
+                                ក្តាមសមុទ្រស្រស់ៗ ឆាជាមួយម្រេចខ្ចីកំពត ល្បីល្បាញទូទាំងពិភពលោក។
+                            </p>
+                        </div>
+                        <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                            <div class="text-success fw-bold fs-6">$25 <span class="text-muted small fw-normal"
+                                    style="font-size: 0.75rem;">/ មុខ</span></div>
+                            <button class="btn btn-outline-success rounded-pill"
+                                onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Somlor kor ko -->
+                <div class="col-lg-3 col-md-6 restaurant-search-item" data-name="Royal Samlor Korko"
+                    data-title="សម្លកកូរប្រពៃណីខ្មែរ" data-category="សម្ល និងស៊ុប"
+                    data-location="រាជធានីភ្នំពេញ" data-rating="4.8" data-price="12"
+                    data-image="assets/images/foods/korko.png"
+                    data-description="សម្លដ៏ពេញនិយមដែលមានគ្រឿងផ្សំបន្លែធម្មជាតិច្រើនមុខ ល្អសម្រាប់សុខភាព។"
+                    data-weight="១ ចាន" data-type="សម្លបុរាណ" data-origin="Phnom Penh"
+                    data-gift="អត្ថប្រយោជន៍សុខភាព និងអាហារូបត្ថម្ភ" data-available="true">
+
+                    <div class="card menu-card" data-bs-toggle="modal" data-bs-target="#nomBanhChokModal">
+                        <div class="position-relative">
+                            <img src="assets/images/foods/korko.png" class="card-img-top" alt="នំបញ្ចុកទឹកសម្លប្រហើរ">
+                            <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill">
+                                <i class="bi bi-egg-fried me-1"></i> ម្ហូបប្រពៃណី
                             </span>
                         </div>
                         <div class="card-body">
@@ -103,88 +423,46 @@
                                 សម្លកកូរប្រពៃណីខ្មែរ
                             </h5>
                             <p class="text-muted small">
-                                សម្លកកូរប្រពៃណីខ្មែរ សំបូរដោយបន្លែធម្មជាតិ និងអង្ករលីងឈ្ងុយឆ្ងាញ់។
+                                សម្លដ៏ពេញនិយមដែលមានគ្រឿងផ្សំបន្លែធម្មជាតិច្រើនមុខ ល្អសម្រាប់សុខភាព។
                             </p>
                         </div>
                         <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                            <h5 class="text-success fw-bold mb-0">
-                                $5
-                            </h5>
+                            <div class="text-success fw-bold fs-6">$12 <span class="text-muted small fw-normal"
+                                    style="font-size: 0.75rem;">/ មុខ</span></div>
                             <button class="btn btn-outline-success rounded-pill"
-                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Nom Banh Chok -->
-                <div class="col-lg-3 col-md-6 restaurant-search-item" data-name="Khmer Rice Noodle Nom Banh Chok"
-                            data-title="នំបញ្ចុកទឹកប្រហុក / ទឹកសម្លប្រហើរ" data-category="អាហារពេលព្រឹក &amp; នំ"
-                            data-location="ខេត្តកំពង់ឆ្នាំង" data-rating="4.8" data-price="2.50"
-                            data-image="assets/images/sak/nom-banh-chok.png"
-                            data-description="នំបញ្ចុកសរសៃស្រស់ ស្រោចដោយទឹកសម្លប្រហើរត្រីបុកជាមួយគ្រឿងខ្មែរ និងបន្លែស្រស់ៗចម្រុះជាច្រើនមុខ។"
-                            data-weight="១ ចាន" data-type="អាហារប្រជាប្រិយ" data-origin="Kampong Chhnang"
-                            data-gift="រសជាតិដើមបែបអ្នកភូមិ">
-
-                    <div class="card menu-card" data-bs-toggle="modal" data-bs-target="#nomBanhChokModal"
-                        >
-                        <div class="position-relative">
-                            <img src="assets/images/sak/nom-banh-chok.png" class="card-img-top"
-                                alt="នំបញ្ចុកទឹកសម្លប្រហើរ">
-                            <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill">
-                                ● ពេញនិយម
-                            </span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="fw-bold">
-                                នំបញ្ចុកទឹកសម្លប្រហើរ
-                            </h5>
-                            <p class="text-muted small">
-                                នំបញ្ចុកសម្លប្រហើរត្រីស្រស់ ញ៉ាំជាមួយបន្លែស្រស់ៗចម្រុះមុខ។
-                            </p>
-                        </div>
-                        <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                            <h5 class="text-success fw-bold mb-0">
-                                $3
-                            </h5>
-                            <button class="btn btn-outline-success rounded-pill"
-                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- 4. Beef Lok Lak -->
-                <div class="col-lg-3 col-md-6 restaurant-search-item" data-name="Khmer Stir-Fried Beef Lok Lak"
-                            data-title="ឡុកឡាក់សាច់គោខ្មែរ" data-category="ឆា &amp; គ្រឿងក្លែម"
-                            data-location="រាជធានីភ្នំពេញ" data-rating="4.9" data-price="7.00"
-                            data-image="assets/images/sak/beef-loklak.png"
-                            data-description="សាច់គោបន្ទះទន់ៗឆាក្តៅៗជាមួយជ្រក់អ៊ំ និងទឹកជ្រលក់អំបិលម្រេចកំពតក្រូចឆ្មារ ញ៉ាំជាមួយបាយ ឬដំឡូងបារាំង។"
-                            data-weight="១ ចាន" data-type="អាហារពេញនិយម" data-origin="Phnom Penh Signature"
-                            data-gift="រសជាតិដិតដល់ប្រចាំហាង" data-available="true">
+                <div class="col-lg-3 col-md-6 restaurant-search-item" data-name="Special Khmer Beef Lok Lak"
+                    data-title="ឡុកឡាក់សាច់គោពិសេស" data-category="ឆា &amp; ម្ហូបពិសេស" data-location="រាជធានីភ្នំពេញ"
+                    data-rating="4.9" data-price="20" data-image="assets/images/foods/loklak.png"
+                    data-description="សាច់គោផុយល្អ ឆាជាមួយទឹកត្រីពិសេស អមដោយពងទាជៀន និងបន្លែស្រស់។"
+                    data-weight="១ ចាន" data-type="ម្ហូបឆា" data-origin="Phnom Penh Signature"
+                    data-gift="រសជាតិដិតដល់ប្រចាំហាង" data-available="true">
 
-                    <div class="card menu-card" data-bs-toggle="modal" data-bs-target="#lokLakModal"
-                        >
+                    <div class="card menu-card" data-bs-toggle="modal" data-bs-target="#lokLakModal">
                         <div class="position-relative">
-                            <img src="assets/images/sak/beef-loklak.png" class="card-img-top"
-                                alt="ឡុកឡាក់សាច់គោខ្មែរ">
-                            <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill">
-                                ● ពេញនិយមខ្លាំង
-                            </span>
+                            <img src="assets/images/foods/loklak.png" class="card-img-top" alt="ឡុកឡាក់សាច់គោខ្មែរ">
+                            <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill"> ●
+                                <i class="bi bi-fire me-1"></i> អាំង BBQ </span>
                         </div>
+
                         <div class="card-body">
-                            <h5 class="fw-bold">
-                                ឡុកឡាក់សាច់គោខ្មែរ
-                            </h5>
-                            <p class="text-muted small">
-                                ឡុកឡាក់សាច់គោទន់ឆ្ងាញ់ អមដោយទឹកជ្រលក់អំបិលម្រេចកំពត។
+                            <h5 class="fw-bold">ឡុកឡាក់សាច់គោពិសេស </h5>
+                            <p class="text-muted small"> សាច់គោផុយល្អ ឆាជាមួយទឹកត្រីពិសេស អមដោយពងទាជៀន និងបន្លែស្រស់។
                             </p>
                         </div>
+
                         <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                            <h5 class="text-success fw-bold mb-0">
-                                $7
-                            </h5>
+                            <div class="text-success fw-bold fs-6">$20 <span class="text-muted small fw-normal"
+                                    style="font-size: 0.75rem;">/ មុខ</span></div>
                             <button class="btn btn-outline-success rounded-pill"
-                                            onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ</button>
+                                onclick="openSouvenirModal(this)">កក់កន្លែងរសជាតិ </button>
                         </div>
+
                     </div>
                 </div>
 
@@ -196,8 +474,8 @@
     <section id="restaurantSearch" class="restaurant-search-section py-5" aria-labelledby="restaurant-search-title">
         <div class="container">
             <div class="restaurant-search-heading">
-                <span class="section-kicker"><i class="fa-solid fa-magnifying-glass me-2"></i>FIND YOUR NEXT
-                    SOUVENIR</span>
+                <span class="section-kicker"><i class="fa-solid fa-magnifying-glass me-2"></i>FIND YOUR
+                    NEXTSOUVENIR</span>
                 <h2 id="restaurant-search-title" class="mt-2 mb-1">ស្វែងរកវត្ថុអនុស្សាវរីយ៍ខ្មែរ</h2>
                 <p class="mb-3">ស្វែងរកតាមឈ្មោះផលិតផល ប្រភេទសិប្បកម្ម ទីតាំង ឬចន្លោះតម្លៃដែលអ្នកចង់បាន។</p>
             </div>
@@ -208,8 +486,7 @@
                         <div class="restaurant-filter-title"><i class="fa-solid fa-sliders me-2"></i>តម្រងស្វែងរក</div>
 
                         <button id="restaurantResetFilters" type="button" class="btn restaurant-reset-btn w-100 mb-4">
-                            <i class="fa-solid fa-rotate-left me-2"></i>សម្អាតតម្រង
-                        </button>
+                            <i class="fa-solid fa-rotate-left me-2"></i>សម្អាតតម្រង </button>
 
                         <label class="form-label" for="restaurantKeyword">ពាក្យគន្លឹះ</label>
                         <div class="restaurant-search-input mb-4">
@@ -224,10 +501,71 @@
                         <button id="restaurantLocationButton" type="button"
                             class="btn restaurant-location-modal-btn w-100 mb-4" data-bs-toggle="modal"
                             data-bs-target="#restaurantLocationModal">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span class="restaurant-location-button-text">ជ្រើសរើសខេត្ត / ក្រុង</span>
-                            <i class="fa-solid fa-chevron-right ms-auto"></i>
+                            <i class="fa-solid fa-location-dot"></i> <span
+                                class="restaurant-location-button-text">ជ្រើសរើសខេត្ត / ក្រុង</span> <i
+                                class="fa-solid fa-chevron-right ms-auto"></i>
                         </button>
+
+                        <div class="restaurant-filter-divider"></div>
+
+                        <div class="restaurant-filter-group">
+                            <div class="form-label mb-3">ប្រភេទម្ហូប</div>
+                            <label class="restaurant-filter-option">
+                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
+                                    value="ម្ហូបប្រចាំតំបន់">
+                                <span>ម្ហូបប្រចាំតំបន់ &amp; បុរាណ</span>
+                            </label>
+                            <label class="restaurant-filter-option">
+                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
+                                    value="សម្ល">
+                                <span>សម្ល និងស៊ុប</span>
+                            </label>
+                            <label class="restaurant-filter-option">
+                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
+                                    value="អាហារពេលព្រឹក">
+                                <span>អាហារពេលព្រឹក &amp; នំ</span>
+                            </label>
+                            <label class="restaurant-filter-option">
+                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
+                                    value="ឆា">
+                                <span>ឆា &amp; គ្រឿងក្លែម</span>
+                            </label>
+                            <label class="restaurant-filter-option">
+                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
+                                    value="ទឹកជ្រលក់">
+                                <span>ទឹកជ្រលក់ &amp; គ្រឿងជ្រលក់</span>
+                            </label>
+                            <label class="restaurant-filter-option">
+                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
+                                    value="ភ្លា">
+                                <span>ភ្លា &amp; ញ៉ាំ</span>
+                            </label>
+                            <label class="restaurant-filter-option">
+                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
+                                    value="សរសៃ">
+                                <span>សរសៃ &amp; អាហារពេលព្រឹក</span>
+                            </label>
+                            <label class="restaurant-filter-option">
+                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
+                                    value="បង្អែម">
+                                <span>បង្អែម &amp; នំខ្មែរ</span>
+                            </label>
+                            <label class="restaurant-filter-option">
+                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
+                                    value="អាហារសមុទ្រ">
+                                <span>អាហារសមុទ្រ</span>
+                            </label>
+                            <label class="restaurant-filter-option">
+                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
+                                    value="ខ">
+                                <span>ខ &amp; អាហារចម្អិនយូរ</span>
+                            </label>
+                            <label class="restaurant-filter-option mb-0">
+                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
+                                    value="សម្រន់">
+                                <span>សម្រន់ &amp; បង្អែម</span>
+                            </label>
+                        </div>
 
                         <div class="restaurant-filter-divider"></div>
 
@@ -261,10 +599,6 @@
                                     name="restaurantPrice" value="20-plus"><span>$២០+</span></label>
                         </div>
 
-                        <div class="restaurant-filter-divider"></div>
-
-                        <label class="restaurant-filter-option mb-0"><input id="restaurantAvailableNow"
-                                type="checkbox"><span>ផលិតផលមានក្នុងស្តុក</span></label>
                     </form>
                 </div>
 
@@ -578,7 +912,7 @@
                             data-title="ក្តាមសេះឆាម្រេចខ្មៅកំពត" data-category="អាហារសមុទ្រ" data-location="ខេត្តកំពត"
                             data-rating="5.0" data-price="12.00" data-image="assets/images/sak/crab-kampot-pepper.png"
                             data-description="ក្តាមសេះសមុទ្រស្រស់ៗឆាជាមួយចង្កោមម្រេចខ្ចីកំពត ផ្តល់រសជាតិហឹរប្រហើរ និងផ្អែមឆ្ងាញ់ដោយជាតិសាច់ក្តាមធម្មជាតិ។"
-                            data-weight="១ ចាន (៥០០ក្រាម)" data-type="អាហារសមុទ្រពិសេស" data-origin="Kampot & Kep"
+                            data-weight="១ ចាន (៥០០ក្រាម)" data-type="អាហារសមុទ្រពិសេស" data-origin="Kampot &amp; Kep"
                             data-gift="ម្ហូបល្បីប្រចាំតំបន់ឆ្នេរ">
 
                             <div class="restaurant-result-card">
@@ -726,6 +1060,7 @@
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content restaurant-location-modal">
+
                 <div class="modal-header">
                     <div>
                         <h2 id="restaurantLocationModalTitle" class="modal-title">ជ្រើសរើសខេត្ត / ក្រុង</h2>
@@ -733,234 +1068,206 @@
                     </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
                 <div class="modal-body">
-                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
-                            value="ភ្នំពេញ"><span><i class="fa-solid fa-city"></i> រាជធានីភ្នំពេញ</span></label>
-                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
-                            value="សៀមរាប"><span><i class="fa-solid fa-landmark"></i> ខេត្តសៀមរាប</span></label>
-                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
-                            value="កំពត"><span><i class="fa-solid fa-mountain-sun"></i> ខេត្តកំពត</span></label>
-                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
-                            value="បាត់ដំបង"><span><i class="fa-solid fa-store"></i> ខេត្តបាត់ដំបង</span></label>
-                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
-                            value="តាកែវ"><span><i class="fa-solid fa-scythe"></i> ខេត្តតាកែវ</span></label>
-                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
-                            value="កំពង់ឆ្នាំង"><span><i class="fa-solid fa-jar"></i> ខេត្តកំពង់ឆ្នាំង</span></label>
-                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
-                            value="កំពង់ស្ពឺ"><span><i class="fa-solid fa-tree"></i> ខេត្តកំពង់ស្ពឺ</span></label>
-                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
-                            value="កណ្តាល"><span><i class="fa-solid fa-basket-shopping"></i> ខេត្តកណ្តាល</span></label>
-                    <label class="restaurant-location-option"><input class="restaurant-location-filter" type="checkbox"
-                            value="ពោធិ៍សាត់"><span><i class="fa-solid fa-gem"></i> ខេត្តពោធិ៍សាត់</span></label>
-                    <label class="restaurant-location-option mb-0"><input class="restaurant-location-filter"
-                            type="checkbox" value="មណ្ឌលគិរី"><span><i class="fa-solid fa-mug-hot"></i>
-                            ខេត្តមណ្ឌលគិរី</span></label>
+                    <label class="restaurant-location-option">
+                        <input class="restaurant-location-filter" type="checkbox" value="ភ្នំពេញ">
+                        <span><i class="fa-solid fa-city"></i> រាជធានីភ្នំពេញ</span>
+                    </label>
+                    <label class="restaurant-location-option">
+                        <input class="restaurant-location-filter" type="checkbox" value="សៀមរាប">
+                        <span><i class="fa-solid fa-landmark"></i> ខេត្តសៀមរាប</span>
+                    </label>
+                    <label class="restaurant-location-option">
+                        <input class="restaurant-location-filter" type="checkbox" value="កំពត">
+                        <span><i class="fa-solid fa-mountain-sun"></i> ខេត្តកំពត</span>
+                    </label>
+                    <label class="restaurant-location-option">
+                        <input class="restaurant-location-filter" type="checkbox" value="បាត់ដំបង">
+                        <span><i class="fa-solid fa-store"></i> ខេត្តបាត់ដំបង</span>
+                    </label>
+                    <label class="restaurant-location-option">
+                        <input class="restaurant-location-filter" type="checkbox" value="តាកែវ">
+                        <span><i class="fa-solid fa-scythe"></i> ខេត្តតាកែវ</span>
+                    </label>
+                    <label class="restaurant-location-option">
+                        <input class="restaurant-location-filter" type="checkbox" value="កំពង់ឆ្នាំង">
+                        <span><i class="fa-solid fa-jar"></i> ខេត្តកំពង់ឆ្នាំង</span>
+                    </label>
+                    <label class="restaurant-location-option">
+                        <input class="restaurant-location-filter" type="checkbox" value="កំពង់ស្ពឺ">
+                        <span><i class="fa-solid fa-tree"></i> ខេត្តកំពង់ស្ពឺ</span>
+                    </label>
+                    <label class="restaurant-location-option">
+                        <input class="restaurant-location-filter" type="checkbox" value="កណ្តាល">
+                        <span><i class="fa-solid fa-basket-shopping"></i> ខេត្តកណ្តាល</span>
+                    </label>
+                    <label class="restaurant-location-option">
+                        <input class="restaurant-location-filter" type="checkbox" value="ពោធិ៍សាត់">
+                        <span><i class="fa-solid fa-gem"></i> ខេត្តពោធិ៍សាត់</span>
+                    </label>
+                    <label class="restaurant-location-option mb-0">
+                        <input class="restaurant-location-filter" type="checkbox" value="មណ្ឌលគិរី">
+                        <span><i class="fa-solid fa-mug-hot"></i> ខេត្តមណ្ឌលគិរី</span>
+                    </label>
                 </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn restaurant-modal-done-btn" data-bs-dismiss="modal">រួចរាល់</button>
                 </div>
+
             </div>
         </div>
     </div>
 
+    <!-- MODAL SHOW FOOD -->
     <div class="modal-overlay" id="souvenirModal">
-
         <div class="souvenir-modal-box">
-
-            <!-- MODAL HEADER -->
             <div class="souvenir-modal-header">
-
                 <div>
                     <span id="modalCategory" class="restaurant-category"></span>
-
                     <h2 id="modalTitle"></h2>
                 </div>
-
-                <button class="modal-close-btn" onclick="closeSouvenirModal()">
-
-                    &times;
-
-                </button>
-
+                <button class="modal-close-btn" onclick="closeSouvenirModal()">&times;</button>
             </div>
 
-
-            <!-- MODAL CONTENT -->
             <div class="souvenir-modal-content">
-
-                <!-- IMAGE -->
                 <div class="souvenir-modal-image">
-
                     <img id="modalImage" src="" alt="">
-
-                    <div id="modalImageCounter" class="image-counter">
-
-                        1 / 1
-
-                    </div>
-
                 </div>
-
-
-                <!-- DETAILS -->
                 <div class="souvenir-modal-details">
-
                     <div class="product-top-info">
-
                         <div>
-
                             <h3 id="modalProductTitle"></h3>
-
-                            <p id="modalLocation" class="location">
-
-                            </p>
-
+                            <p id="modalLocation" class="location"></p>
                         </div>
-
-
-                        <span id="modalRating" class="restaurant-rating">
-
-                        </span>
-
+                        <span id="modalRating" class="restaurant-rating"></span>
                     </div>
-
-
-                    <p id="modalDescription" class="product-description">
-
-                    </p>
-
-
+                    <p id="modalDescription" class="product-description"></p>
                     <div class="product-features">
-
                         <div>
                             <i class="fas fa-weight-hanging"></i>
-
                             <span id="modalWeight"></span>
                         </div>
-
-
                         <div>
                             <i class="fas fa-leaf"></i>
-
                             <span id="modalType"></span>
                         </div>
-
-
                         <div>
                             <i class="fas fa-certificate"></i>
-
                             <span id="modalOrigin"></span>
                         </div>
-
-
                         <div>
                             <i class="fas fa-gift"></i>
-
                             <span id="modalGift"></span>
                         </div>
-
                     </div>
-
-
                     <div class="price-section">
-
                         <div>
-
                             <small>តម្លៃ</small>
-
-                            <div id="modalPrice" class="price">
-
-                            </div>
-
+                            <div id="modalPrice" class="price"></div>
                         </div>
-
-
                         <span id="modalAvailability" class="available-status">
-
                             <i class="fas fa-circle"></i>
-
                             មានទំនិញ
-
                         </span>
-
                     </div>
-
                 </div>
-
             </div>
 
-
-            <!-- MODAL FOOTER -->
             <div class="souvenir-modal-footer">
-
                 <button class="btn btn-outline-success rounded-pill map-button" onclick="viewOnMap()">
-
                     <i class="fas fa-map-marker-alt"></i>
-
                     មើលនៅលើផែនទី
-
                 </button>
-
-
                 <button class="btn btn-success rounded-pill grab-button" onclick="deliverByGrab()">
-
                     <i class="fas fa-motorcycle"></i>
-
                     ដឹកជញ្ជូនតាម Grab
-
                 </button>
-
             </div>
-
         </div>
-
     </div>
 
+    <section class="sec-footer bg-success mt-5">
+        <footer class="footer-luxury">
+            <div class="container">
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-4 col-md-6">
+                        <a class="footer-logo"><i class="bi bi-leaf-fill text-warning"></i> ត្រាច់ចរ <span>| Trach
+                                Chor</span></a>
+                        <p class="mb-4">វេទិកាទេសចរណ៍ និងការធ្វើដំណើរលំដាប់ខ្ពស់ឈានមុខគេក្នុងប្រទេសកម្ពុជា។
+                            យើងភ្ជាប់លោកអ្នកទៅកាន់គោលដៅធម្មជាតិ វប្បធម៌ និងការស្នាក់នៅដ៏ប្រណីតបំផុត។</p>
+                        <div class="d-flex text-align-center">
+                            <a href="#" class="social-icon-btn"><i class="bi bi-facebook fs-5"></i></a>
+                            <a href="#" class="social-icon-btn"><i class="bi bi-instagram fs-5"></i></a>
+                            <a href="#" class="social-icon-btn"><i class="bi bi-telegram fs-5"></i></a>
+                            <a href="#" class="social-icon-btn"><i class="bi bi-youtube fs-5"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="footer-heading">តំណភ្ជាប់</h5>
+                        <ul class="footer-links">
+                            <li><a href="index.html">ទំព័រដើម</a></li>
+                            <li><a href="about.html">អំពីយើង</a></li>
+                            <li><a href="services.html">សេវាកម្ម</a></li>
+                            <li><a href="contact.html">ទំនាក់ទំនង</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="footer-heading">គោលដៅពេញនិយម</h5>
+                        <ul class="footer-links">
+                            <li><a href="destinations.html"><i
+                                        class="bi bi-chevron-right text-success fs-7 me-2"></i>ខេត្តសៀមរាប
+                                    (អង្គរវត្ត)</a></li>
+                            <li><a href="destinations.html"><i
+                                        class="bi bi-chevron-right text-success fs-7 me-2"></i>កោះរ៉ុង &
+                                    ឆ្នេរសមុទ្រ</a></li>
+                            <li><a href="destinations.html"><i
+                                        class="bi bi-chevron-right text-success fs-7 me-2"></i>មណ្ឌលគិរី &
+                                    ធម្មជាតិ</a></li>
+                            <li><a href="destinations.html"><i
+                                        class="bi bi-chevron-right text-success fs-7 me-2"></i>រាជធានីភ្នំពេញ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="footer-heading">ទំនាក់ទំនង</h5>
+                        <ul class="footer-links text-light">
+                            <li class="d-flex align-items-start gap-3 mb-3"><i
+                                    class="bi bi-geo-alt-fill text-success mt-1 fs-5"></i><span>អគារ Vamco,
+                                    មហាវិថីព្រះមុនីវង្ស,
+                                    រាជធានីភ្នំពេញ</span></li>
+                            <li class="d-flex align-items-center gap-3 mb-3"><i
+                                    class="bi bi-telephone-fill text-primary fs-5"></i><span>+855 (0) 23 999 888</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-3"><i
+                                    class="bi bi-envelope-fill text-warning fs-5"></i><span>trachchor.travel@gmail.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="border-secondary opacity-25">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+                    <p class="mb-0 small">&copy; 2026 ត្រាច់ចរ (Trach Chor). រក្សាសិទ្ធិគ្រប់យ៉ាង។ Designed with <i
+                            class="bi bi-heart text-danger"></i> ដើម្បីសម្រេចចិត្តការធ្វើដំណើរកម្ពុជា។</p>
+                </div>
+            </div>
+        </footer>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        // Restaurant carousel, filters, location modal, and pagination for this page.
+
+        // Search filters, location modal, and pagination.
         (() => {
-            const provinceFilterBtns = document.querySelectorAll('.province-filter-btn');
-            const popularRestaurantsCarousel = document.getElementById('popularRestaurantsCarousel');
-
-            if (popularRestaurantsCarousel && provinceFilterBtns.length && window.bootstrap) {
-                const restaurantCarousel = bootstrap.Carousel.getOrCreateInstance(popularRestaurantsCarousel, { interval: false, touch: true });
-                const restaurantSlides = Array.from(popularRestaurantsCarousel.querySelectorAll('.carousel-item'));
-
-                const setActiveProvinceButton = province => {
-                    provinceFilterBtns.forEach(button => {
-                        const isSelected = button.dataset.province === province;
-                        button.classList.toggle('active', isSelected);
-                        button.classList.toggle('btn-primary-luxury', isSelected);
-                        button.classList.toggle('btn-outline-luxury', !isSelected);
-                    });
-                };
-
-                provinceFilterBtns.forEach(button => {
-                    button.addEventListener('click', () => {
-                        const slideIndex = restaurantSlides.findIndex(slide => slide.dataset.province === button.dataset.province);
-                        setActiveProvinceButton(button.dataset.province);
-                        if (slideIndex >= 0) restaurantCarousel.to(slideIndex);
-                    });
-                });
-
-                popularRestaurantsCarousel.addEventListener('slid.bs.carousel', event => {
-                    if (event.relatedTarget.dataset.province) setActiveProvinceButton(event.relatedTarget.dataset.province);
-                });
-            }
-
             const restaurantResultsGrid = document.getElementById('restaurantResultsGrid');
             if (!restaurantResultsGrid) return;
 
             const restaurantKeyword = document.getElementById('restaurantKeyword');
             const restaurantLocationButtonText = document.querySelector('.restaurant-location-button-text');
             const restaurantLocationFilters = document.querySelectorAll('.restaurant-location-filter');
-            const restaurantRatingFilters = document.querySelectorAll('input[name="restaurantRating"]');
             const restaurantSortFilters = document.querySelectorAll('.restaurant-sort');
-            const restaurantCategoryFilters = document.querySelectorAll('.restaurant-category-filter');
             const restaurantPriceFilters = document.querySelectorAll('.restaurant-price-filter');
+            const restaurantCategoryFilters = document.querySelectorAll('.restaurant-category-filter');
             const restaurantAvailableNow = document.getElementById('restaurantAvailableNow');
             const restaurantResetFilters = document.getElementById('restaurantResetFilters');
             const restaurantResultCount = document.getElementById('restaurantResultCount');
@@ -996,13 +1303,9 @@
                     .filter(filter => filter.checked)
                     .map(filter => filter.value.trim());
 
-                const minRating = Number(document.querySelector('input[name="restaurantRating"]:checked')?.value || 0);
                 const selectedSort = document.querySelector('.restaurant-sort:checked')?.value || '';
                 const selectedPrice = document.querySelector('.restaurant-price-filter:checked')?.value || '';
-
-                const selectedCategories = Array.from(restaurantCategoryFilters)
-                    .filter(filter => filter.checked)
-                    .map(filter => filter.value.trim());
+                const selectedCategory = document.querySelector('.restaurant-category-filter:checked')?.value || '';
 
                 const matchedItems = restaurantItems.filter(item => {
                     // Match search keywords against Name, Title, Description, or raw text content
@@ -1026,17 +1329,14 @@
                         itemLocation.includes(loc) || loc.includes(itemLocation)
                     );
 
-                    // Flexible Category Matching (handles "គ្រឿងទេស & ម្ហូបអាហារ")
+                    // Category matching (partial match against data-category)
                     const itemCategory = item.dataset.category || '';
-                    const categoryMatches = !selectedCategories.length || selectedCategories.some(cat =>
-                        itemCategory.includes(cat) || cat.includes(itemCategory)
-                    );
+                    const categoryMatches = !selectedCategory || itemCategory.includes(selectedCategory);
 
                     return (!keyword || searchableText.includes(keyword))
                         && locationMatches
-                        && Number(item.dataset.rating) >= minRating
-                        && categoryMatches
                         && priceMatches
+                        && categoryMatches
                         && (!restaurantAvailableNow?.checked || item.dataset.available === 'true');
                 });
 
@@ -1079,7 +1379,7 @@
                 filterRestaurants(true);
             }));
 
-            [...restaurantRatingFilters, ...restaurantSortFilters, ...restaurantPriceFilters].forEach(filter => {
+            [...restaurantSortFilters, ...restaurantPriceFilters, ...restaurantCategoryFilters].forEach(filter => {
                 const option = filter.closest('label');
                 const rememberRadioState = () => { filter.dataset.wasChecked = String(filter.checked); };
                 if (option) option.addEventListener('pointerdown', rememberRadioState);
@@ -1093,7 +1393,6 @@
                 });
             });
 
-            restaurantCategoryFilters.forEach(filter => filter.addEventListener('change', () => filterRestaurants(true)));
             if (restaurantAvailableNow) restaurantAvailableNow.addEventListener('change', () => filterRestaurants(true));
 
             if (restaurantPreviousPage) restaurantPreviousPage.addEventListener('click', () => {
@@ -1118,10 +1417,9 @@
             if (restaurantResetFilters) restaurantResetFilters.addEventListener('click', () => {
                 if (restaurantKeyword) restaurantKeyword.value = '';
                 restaurantLocationFilters.forEach(filter => filter.checked = false);
-                restaurantRatingFilters.forEach(filter => filter.checked = filter.value === '0');
                 restaurantSortFilters.forEach(filter => filter.checked = false);
-                restaurantCategoryFilters.forEach(filter => filter.checked = false);
                 restaurantPriceFilters.forEach(filter => filter.checked = false);
+                restaurantCategoryFilters.forEach(filter => filter.checked = false);
                 if (restaurantAvailableNow) restaurantAvailableNow.checked = false;
                 updateLocationButton();
                 filterRestaurants(true);
@@ -1131,6 +1429,7 @@
             updateLocationButton();
             filterRestaurants(true);
         })();
+
 
         function openSouvenirModal(button) {
 
@@ -1233,7 +1532,7 @@
 
         function deliverByGrab() {
 
-            window.open("https://www.grab.com/kh/en/food/", "_blank", "noopener");
+            window.open("https://www.grab.com/kh/en/mart/", "_blank", "noopener");
 
         }
 
@@ -1249,7 +1548,13 @@
                 }
 
             });
+
+
+
+
+
     </script>
+
 
 </body>
 

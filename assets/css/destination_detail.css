@@ -1,0 +1,500 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Battambang:wght@100;300;400;700;900&family=Bayon&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Khmer&family=Noto+Sans+Khmer:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Kantumruy Pro", sans-serif;
+}
+.card-image {
+  width: 100%;
+  height: 200px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.traveler-card {
+  gap: 100px;
+}
+
+.traveler-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .traveler-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1e293b;
+  margin-bottom: 4px;
+} */
+
+.traveler-display {
+  font-size: 16px;
+  color: #334155;
+}
+
+.counter-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-count {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #cbd5e1;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.btn-count:hover {
+  background-color: #e2e8f0;
+  border-color: #94a3b8;
+}
+.Date:focus {
+  outline: none;
+}
+.booking-card {
+  width: 350px;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  font-family: "Kantumruy Pro", "Siemreap", sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.base-price {
+  font-size: 28px;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.price-unit {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.booking-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.input-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+.addons-section h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.addon-price {
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.free-text {
+  color: #10b981;
+  font-weight: bold;
+}
+
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.total-price {
+  font-size: 24px;
+  font-weight: 800;
+  color: #2563eb;
+}
+/* Reserve Button */
+.reserve-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: green;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.reserve-btn:hover {
+  background-color: rgb(4, 91, 4);
+}
+
+.footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 12px;
+  color: green;
+}
+.tc-heart-btn {
+  /* position: absolute; */
+  /* top: 10px;
+  right: 10px; */
+  width: 34px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2564d;
+  cursor: pointer;
+  border: 1px solid gray;
+}
+.tc-heart-btn.liked i {
+  font-weight: 900;
+}
+
+.schedule-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+}
+
+/* Title styling */
+.schedule-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.schedule-title i {
+  color: #0d6efd;
+  font-size: 1.8rem;
+}
+
+/* Timeline structure */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 15px;
+  bottom: 40px;
+  width: 2px;
+  background-color: #2dd4bf; /* Teal vertical line */
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Yellow outer circle with white dot */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  background-color: #f59e0b; /* Yellow outer circle */
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: -23px;
+  top: 11px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff; /* Inner white dot */
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Day pill badge */
+.day-badge {
+  display: inline-block;
+  background-color: #d1fae5; /* Light green background */
+  color: #047857; /* Dark green text */
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.timeline-subtitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+/* Event list */
+.timeline-events {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.timeline-events li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 6px;
+  color: #64748b;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.timeline-events li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #64748b;
+}
+.main-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Section Title Styling */
+.section-header {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.section-subtitle {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Hero Destination Map Card */
+.map-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 320px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  background: #1e293b;
+  margin-bottom: 40px;
+}
+
+.map-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+}
+
+.map-card-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.9) 0%,
+    rgba(15, 23, 42, 0.2) 60%,
+    transparent 100%
+  );
+}
+
+/* Coordinates Badge */
+.coords-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 50px;
+  width: fit-content;
+  margin-bottom: 12px;
+}
+
+.map-card-title {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.map-card-location {
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* Yellow CTA Button */
+.btn-gps {
+  background-color: #f59e0b;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-gps:hover {
+  background-color: #d97706;
+  color: #0f172a;
+}
+
+/* Rating Header Badge */
+.overall-rating-badge {
+  background-color: #fef3c7;
+  color: #92400e;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 6px 16px;
+  border-radius: 50px;
+}
+
+/* Review Card Styling */
+.review-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.user-meta {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.stars-container {
+  color: #f59e0b;
+  font-size: 0.85rem;
+}
+
+.review-text {
+  color: #64748b;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 16px 0;
+  font-style: italic;
+}
+
+.verified-footer {
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #059669;
+  font-size: 0.82rem;
+  font-weight: 700;
+}

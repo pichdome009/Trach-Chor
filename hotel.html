@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotels page</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/hotels.css">
+  <link rel="stylesheet" href="assets/css/chhenghorng.css">
+</head>
+
+<body>
+  <div id="nav-footer">
+  <section class="py-5">
+    <div class="container bg-success border-success rounded-5">
+      <div class="text-center text-white py-5">
+        <h1 class="fw-bold">រមណីយដ្ឋាន និងសណ្ឋាគារប្រណីតលំដាប់<br>ពិភពលោក</h1>
+        <p class="lead">ស្វែងរក និងកក់វីឡាឯកជនលើទឹក បន្ទប់រាជវាំងស្ងប់ស្ងាត់ និងជំរំធម្មជាតិលំដាប់ផ្កាយ៥
+          ជាមួយបទពិសោធន៍បម្រើសេវាកម្ម VIP ឥតខ្ចោះនៅកម្ពុជា។<br> We're a local
+          Cambodian team sharing the soul of our country, one journey at a time.</p>
+      </div>
+      <div class="text-center py-5">
+        <a href="#" class="btn btn-secondary-luxury px-4 py-2">
+          <i class="bi bi-compass-fill fs-5"></i> ស្វែងរកឥឡូវនេះ
+        </a>
+        <a href="#" class="btn btn-outline-luxury px-4 py-2">
+          <i class="bi bi-eye"></i> មើលគោលដៅទាំងអស់
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light py-4">
+    <div class="container">
+      <div class="search-bar bg-white p-3 p-lg-4">
+        <div class="row gy-3 gx-lg-4 align-items-end">
+          <div class="col-12 col-lg-3 search-field">
+            <label for="fLocation" class="field-label d-flex align-items-center gap-1 mb-2">
+              <i class="bi bi-geo-alt-fill text-jungle"></i> ទីតាំង / រមណីយដ្ឋាន
+            </label>
+            <select id="fLocation" class="form-select">
+              <option value="" selected disabled>ជ្រើសរើសទីតាំង</option>
+              <option value="siemreap">ខេត្តសៀមរាប (Siem Reap)</option>
+              <option value="sihanouk">ខេត្តព្រះសីហនុ (Preah Sihanouk)</option>
+              <option value="mondulkiri">ខេត្តមណ្ឌលគីរី (Mondulkiri)</option>
+              <option value="kratie">ខេត្តក្រចេះ (Kratie)</option>
+              <option value="kohkong">ខេត្តកោះកុង (Koh Kong)</option>
+              <option value="phnompenh">រាជធានីភ្នំពេញ (Phnom Penh)</option>
+            </select>
+          </div>
+          <div class="col-6 col-lg-3 search-field field-divider ps-lg-4">
+            <label class="field-label d-flex align-items-center gap-1 mb-2">
+              <i class="bi bi-calendar-week-fill text-jungle"></i> កាលបរិច្ឆេទចូល-ចេញ
+            </label>
+            <div class="input-group">
+              <input type="date" id="fCheckin" class="form-control" aria-label="ថ្ងៃចូល">
+              <span class="input-group-text bg-white border-0 px-1">
+                <i class="bi bi-arrow-right"></i>
+              </span>
+              <input type="date" id="fCheckout" class="form-control" aria-label="ថ្ងៃចេញ">
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 search-field field-divider ps-lg-4">
+            <label for="fGuests" class="field-label d-flex align-items-center gap-1 mb-2">
+              <i class="bi bi-people-fill text-jungle"></i> ចំនួនភ្ញៀវ &amp; បន្ទប់
+            </label>
+            <select id="fGuests" class="form-select">
+              <option value="1-1" selected>1 ភ្ញៀវ • ១ បន្ទប់</option>
+              <option value="2-1">2 ភ្ញៀវ • 1 បន្ទប់</option>
+              <option value="3-2">3 ភ្ញៀវ • 2 បន្ទប់</option>
+              <option value="4-2">4 ភ្ញៀវ • 2 បន្ទប់</option>
+              <option value="5-3">5+ ភ្ញៀវ • 4 បន្ទប់</option>
+            </select>
+          </div>
+          <div class="col-12 col-lg-3 field-divider ps-lg-4">
+            <button type="submit" class="btn btn-jungle w-100 py-2 fw-bold">
+              <i class="bi bi-search me-1"></i> ស្វែងរកទាំងអស់
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <div class="container py-5">
+          <div class="row g-4">
+            <aside class="col-lg-3">
+              <div class="filter-card bg-white p-3 p-lg-4 sticky-top" style="top:1rem;">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="fw-bold text-jungle mb-0">
+                    <i class="bi bi-sliders me-1"></i>ទីតាំងសម្រិតសម្រាំង
+                  </h5>
+                  <a href="#" class="link-danger small text-decoration-none">
+                    <i class="bi bi-arrow-counterclockwise"></i> កំណត់ឡើងវិញ
+                  </a>
+                </div>
+                <div class="position-relative mb-4">
+                  <img src="assets/images/horng-img/gps.jpg" class="map-thumb w-100" alt="ផែនទី">
+                  <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">
+                    <i class="bi bi-geo-alt-fill"></i> GPS ត្រឹមត្រូវ
+                  </span>
+                  <span class="position-absolute bottom-0 start-0 m-2 text-white small fw-semibold"
+                    style="text-shadow:0 1px 3px rgba(0,0,0,.6);">
+                    ជម្រើសទីតាំងទាំងអស់នៅលើផែនទី
+                  </span>
+                </div>
+                <div class="mb-4">
+                  <h6 class="fw-bold d-flex justify-content-between align-items-center">
+                    ខេត្ត / ក្រុង <small class="text-muted">Province <i class="bi bi-chevron-down"></i></small>
+                  </h6>
+                  <div class="form-check d-flex justify-content-between">
+                    <div><input class="form-check-input" type="checkbox" id="pSiemReap"><label class="form-check-label"
+                        for="pSiemReap"> ខេត្តសៀមរាប (ស្អប)</label></div>
+                    <span class="badge bg-light text-muted">18</span>
+                  </div>
+                  <div class="form-check d-flex justify-content-between">
+                    <div><input class="form-check-input" type="checkbox" id="pPreahSihanouk"><label
+                        class="form-check-label" for="pPreahSihanouk"> ខេត្តព្រះសីហនុ (កោះ)</label></div>
+                    <span class="badge bg-light text-muted">12</span>
+                  </div>
+                  <div class="form-check d-flex justify-content-between">
+                    <div><input class="form-check-input" type="checkbox" id="pMondulkiri"><label
+                        class="form-check-label" for="pMondulkiri"> ខេត្តមណ្ឌលគីរី</label></div>
+                    <span class="badge bg-light text-muted">6</span>
+                  </div>
+                  <div class="form-check d-flex justify-content-between">
+                    <div><input class="form-check-input" type="checkbox" id="pKratie"><label class="form-check-label"
+                        for="pKratie"> ខេត្តក្រចេះ</label></div>
+                    <span class="badge bg-light text-muted">9</span>
+                  </div>
+                  <div class="form-check d-flex justify-content-between">
+                    <div><input class="form-check-input" type="checkbox" id="pKohKong"><label class="form-check-label"
+                        for="pKohKong"> ខេត្តកោះកុង (ព្រៃឈើ)</label></div>
+                    <span class="badge bg-light text-muted">9</span>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <h6 class="fw-bold d-flex justify-content-between align-items-center">
+                    ប្រភេទទីតាំង <small class="text-muted">Category <i class="bi bi-chevron-down"></i></small>
+                  </h6>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="cTemple"><label class="form-check-label"
+                      for="cTemple"><i class="bi bi-bank text-gold me-1"></i> ប្រាសាទបុរាណ &amp; វប្បធម៌</label>
+                  </div>
+                  <div class="form-check"><input class="form-check-input" type="checkbox" id="cBeach"><label
+                      class="form-check-label" for="cBeach"><i class="bi bi-water text-primary me-1"></i> ឆ្នេរសមុទ្រ
+                      &amp; កោះ</label></div>
+                  <div class="form-check"><input class="form-check-input" type="checkbox" id="cNature"><label
+                      class="form-check-label" for="cNature"><i class="bi bi-tree-fill text-jungle me-1"></i>
+                      ធម្មជាតិ &amp; ព្រៃឈើ</label></div>
+                  <div class="form-check"><input class="form-check-input" type="checkbox" id="cHotel"><label
+                      class="form-check-label" for="cHotel"><i class="bi bi-building text-info me-1"></i> សណ្ឋាគារ
+                      &amp; រីសត</label></div>
+                  <div class="form-check"><input class="form-check-input" type="checkbox" id="cCamp"><label
+                      class="form-check-label" for="cCamp"><i class="bi bi-triangle-fill text-danger me-1"></i>
+                      អាហារដ្ឋាន &amp; Glamping</label></div>
+                </div>
+
+                <div class="mb-2">
+                  <h6 class="fw-bold d-flex justify-content-between align-items-center">
+                    តម្លៃប្រហាក់ប្រហែល <span class="text-gold">$500 / យប់</span>
+                  </h6>
+                  <input type="range" class="form-range" min="0" max="500" value="500" id="priceRange">
+                </div>
+
+                <button class="btn btn-jungle w-100 mt-3 fw-semibold">
+                  <i class="bi bi-funnel-fill me-1"></i> អនុវត្ត
+                </button>
+              </div>
+            </aside>
+
+            <section class="col-lg-9">
+              <div class="row g-4 mb-4">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                  <div class="card dest-card h-100">
+                    <img src="assets/images/horng-img/siemreap1.jpg" class="card-img-top" alt="Luxury Hotel Siem Reap">
+                    <div class="card-body d-flex flex-column">
+                      <h6 class="fw-bold mb-1">Luxury Hotel</h6>
+                      <p class="small text-muted mb-2"><i class="bi bi-geo-alt-fill text-jungle"></i> ខេត្តសៀមរាប (Siem
+                        Reap)</p>
+                      <p class="small text-secondary flex-grow-1">
+                        ដំណើរកម្សាន្តទស្សនាកេរ្តិ៍ដំណែលពិភពលោក ព្រមទាំងមគ្គុទ្ទេសក៍ VIP និងចម្ណតទ្វេរដង។
+                      </p>
+                      <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="price-tag">$120 <small class="text-muted fw-normal">/ យប់</small></span>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-outline-jungle btn-sm rounded-pill px-3" data-bs-toggle="modal"
+                            data-bs-target="#hotelModal1">
+                            ព័ត៌មានលម្អិត
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal 1 -->
+                <div class="modal fade" id="hotelModal1" tabindex="-1" aria-labelledby="hotelModal1Label"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">សៀមរាប អង្គរ</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row g-4">
+                          <div class="col-lg-6">
+                            <div class="tc-gallery-main mb-2">
+                              <img src="assets/images/horng-img/srk1.jpg" alt="Siem Reap Hotel">
+                            </div>
+                            <div class="row g-2">
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/srk2.jpg"></div>
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/srk3.jpg"></div>
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/srk4.jpg"></div>
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/srk5.jpg"></div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <h4 class="tc-title mb-1">សៀមរាប អង្គរ</h4>
+                            <p class="tc-subtitle mb-1">សៀមរាប, កម្ពុជា — Siem Reap, Cambodia</p>
+                            <p class="mb-3 text-gold fw-semibold">4.7 ★ (921 reviews)</p>
+                            <p class="tc-desc mb-4">សណ្ឋាគារបែបប្រពៃណីខ្មែរ ជិតប្រាសាទអង្គរវត្តនិងផ្សារយប់
+                              សមស្របសម្រាប់ភ្ញៀវទេសចរដែលចង់ស្វែងយល់ពីបេតិកភណ្ឌវប្បធម៌។</p>
+
+                            <p class="tc-section-label">✨ សេវាកម្ម</p>
+                            <ul class="list-unstyled mb-4">
+                              <li class="mb-2"><i class="bi bi-wifi me-2"></i>Wi-Fi ឥតគិតថ្លៃ</li>
+                              <li class="mb-2"><i class="bi bi-water me-2"></i>អាងហែលទឹកកណ្តាលសួនច្បារត្រូពិច</li>
+                              <li class="mb-2"><i class="bi bi-cup-hot me-2"></i>អាហារពេលព្រឹករួមក្នុងតម្លៃ</li>
+                              <li class="mb-2"><i class="bi bi-bicycle me-2"></i>ជួលកង់ ទៅទស្សនាប្រាសាទ</li>
+                            </ul>
+
+                            <p class="tc-section-label">ព័ត៌មានសណ្ឋាគារ</p>
+                            <div class="row g-2 mb-4">
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-geo-alt me-1"></i> ខេត្តសៀមរាប</div></div>
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-door-open me-1"></i> Khmer Heritage Room</div></div>
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-clock me-1"></i> Check-in ២:០០ រសៀល</div></div>
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-people me-1"></i> ២-៤ នាក់</div></div>
+                            </div>
+
+                            <div class="tc-price-box">
+                              <span><i class="bi bi-tag me-1"></i> តម្លៃចាប់ពី</span>
+                              <span><span class="price">$50.00</span> / យប់</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-tc-primary ms-auto"><i class="bi bi-calendar-check me-1"></i>
+                          កក់ឥឡូវនេះ</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                  <div class="card dest-card h-100">
+                    <img src="assets/images/horng-img/sihaknuk.jpg" class="card-img-top" alt="កោះកូនល្មៀត">
+                    <div class="card-body d-flex flex-column">
+                      <h6 class="fw-bold mb-1">រីសតលើទឹក ផ្ទះបណ្តោលក្នុងកោះ</h6>
+                      <p class="small text-muted mb-2"><i class="bi bi-geo-alt-fill text-jungle"></i> កោះជុំ, ព្រះសីហនុ
+                      </p>
+                      <p class="small text-secondary flex-grow-1">
+                        សម្រាកកន្លែងបែបធម្មជាតិលើទឹកសមុទ្រថ្លា ដោយឡែកឯកជននិងទស្សនីយភាពថ្ងៃលិច។
+                      </p>
+                      <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="price-tag">$280 <small class="text-muted fw-normal">/ យប់</small></span>
+                        <button class="btn btn-outline-jungle btn-sm rounded-pill px-3" data-bs-toggle="modal"
+                          data-bs-target="#hotelModal2">
+                          ព័ត៌មានលម្អិត
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal 2 -->
+                <div class="modal fade" id="hotelModal2" tabindex="-1" aria-labelledby="hotelModal2Label"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">ខេត្តព្រះសីហនុ</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row g-4">
+                          <div class="col-lg-6">
+                            <div class="tc-gallery-main mb-2">
+                              <img src="assets/images/horng-img/sh1.jpg" alt="Sihanoukville Hotel">
+                            </div>
+                            <div class="row g-2">
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/sh2.jpg"></div>
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/sh3.jpg"></div>
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/sh4.jpg"></div>
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/sh5.jpg"></div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <h4 class="tc-title mb-1">សីហនុ</h4>
+                            <p class="tc-subtitle mb-1">ក្រុងព្រះសីហនុ, កម្ពុជា — Sihanoukville, Cambodia</p>
+                            <p class="mb-3 text-gold fw-semibold">4.4 ★ (512 reviews)</p>
+                            <p class="tc-desc mb-4">សណ្ឋាគារមានទីតាំងនៅមាត់សមុទ្រព្រះសីហនុ ជាមួយបន្ទប់ទស្សនាទេសភាពសមុទ្រ
+                              អាងហែលទឹកលាតសន្ធឹង និងបារខាងក្រៅ។</p>
+
+                            <p class="tc-section-label">✨ សេវាកម្ម</p>
+                            <ul class="list-unstyled mb-4">
+                              <li class="mb-2"><i class="bi bi-wifi me-2"></i>Wi-Fi ល្បឿនលឿនឥតគិតថ្លៃ</li>
+                              <li class="mb-2"><i class="bi bi-water me-2"></i>អាងហែលទឹកទស្សនាសមុទ្រ</li>
+                              <li class="mb-2"><i class="bi bi-sun me-2"></i>ទីធ្លាឆ្នេរឯកជន</li>
+                              <li class="mb-2"><i class="bi bi-cup-straw me-2"></i>បារនិងភោជនីយដ្ឋានក្បែរឆ្នេរ</li>
+                            </ul>
+
+                            <p class="tc-section-label">ព័ត៌មានសណ្ឋាគារ</p>
+                            <div class="row g-2 mb-4">
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-geo-alt me-1"></i> ក្រុងព្រះសីហនុ</div></div>
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-door-open me-1"></i> Deluxe Sea View</div></div>
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-clock me-1"></i> Check-in ២:០០ រសៀល</div></div>
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-people me-1"></i> ២-៣ នាក់</div></div>
+                            </div>
+
+                            <div class="tc-price-box">
+                              <span><i class="bi bi-tag me-1"></i> តម្លៃចាប់ពី</span>
+                              <span><span class="price">$60.00</span> / យប់</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-tc-primary ms-auto"><i class="bi bi-calendar-check me-1"></i>កក់ឥឡូវនេះ</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                  <div class="card dest-card h-100">
+                    <img src="assets/images/horng-img/mondulkiri1.jpg" class="card-img-top" alt="Eco Lodge">
+                    <div class="card-body d-flex flex-column">
+                      <h6 class="fw-bold mb-1">ទឺកជ្រោះប៊ូស្រា</h6>
+                      <p class="small text-muted mb-2"><i class="bi bi-geo-alt-fill text-jungle"></i> ខេត្តមណ្ឌលគីរី</p>
+                      <p class="small text-secondary flex-grow-1">
+                        ស្នាក់នៅក្នុងព្រៃឈើដ៏បៃតង ជិតទឹកជ្រោះ រួមទាំងសកម្មភាពដើររុករកធម្មជាតិ។
+                      </p>
+                      <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="price-tag">$150 <small class="text-muted fw-normal">/ យប់</small></span>
+                        <button class="btn btn-outline-jungle btn-sm rounded-pill px-3" data-bs-toggle="modal"
+                          data-bs-target="#hotelModal3">
+                          ព័ត៌មានលម្អិត
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal 3 -->
+              <div class="modal fade" id="hotelModal3" tabindex="-1" aria-labelledby="hotelModal3Label"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">មណ្ឌលគិរី</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row g-4">
+                        <div class="col-lg-6">
+                          <div class="tc-gallery-main mb-2">
+                            <img src="assets/images/horng-img/md1.jpg" alt="Mondulkiri Lodge">
+                          </div>
+                          <div class="row g-2">
+                            <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/md2.jpg"></div>
+                            <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/md3.jpg"></div>
+                            <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/md4.jpg"></div>
+                            <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/md5.jpg"></div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <h4 class="tc-title mb-1">មណ្ឌលគិរី</h4>
+                          <p class="tc-subtitle mb-1">មណ្ឌលគិរី, កម្ពុជា — Mondulkiri, Cambodia</p>
+                          <p class="mb-3 text-gold fw-semibold">4.8 ★ (176 reviews)</p>
+                          <p class="tc-desc mb-4">លីលានៅកណ្តាលភ្នំខ្ពស់ និងព្រៃឈើមណ្ឌលគិរី ជាមួយអាកាសធាតុត្រជាក់ស្រួល
+                            និងទេសភាពទឹកជ្រោះ។ ស័ក្តិសមសម្រាប់អ្នកស្រលាញ់ធម្មជាតិ។</p>
+
+                          <p class="tc-section-label">✨ សេវាកម្ម</p>
+                          <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-wifi me-2"></i>Wi-Fi នៅតំបន់ lobby</li>
+                            <li class="mb-2"><i class="bi bi-fire me-2"></i>ជើងភ្លើងកំដៅសម្រាប់យប់ត្រជាក់</li>
+                            <li class="mb-2"><i class="bi bi-cup-hot me-2"></i>អាហារពេលព្រឹករួមក្នុងតម្លៃ</li>
+                            <li class="mb-2"><i class="bi bi-tree me-2"></i>សកម្មភាពទស្សនាដំរី និងទឹកជ្រោះ</li>
+                          </ul>
+
+                          <p class="tc-section-label">ព័ត៌មានសណ្ឋាគារ</p>
+                          <div class="row g-2 mb-4">
+                            <div class="col-6"><div class="tc-info-box"><i class="bi bi-geo-alt me-1"></i> ខេត្តមណ្ឌលគិរី</div></div>
+                            <div class="col-6"><div class="tc-info-box"><i class="bi bi-door-open me-1"></i> Jungle Bungalow</div></div>
+                            <div class="col-6"><div class="tc-info-box"><i class="bi bi-clock me-1"></i> Check-in ១:០០ រសៀល</div></div>
+                            <div class="col-6"><div class="tc-info-box"><i class="bi bi-people me-1"></i> ២-៥ នាក់</div></div>
+                          </div>
+
+                          <div class="tc-price-box">
+                            <span><i class="bi bi-tag me-1"></i> តម្លៃចាប់ពី</span>
+                            <span><span class="price">$38.00</span> / យប់</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-tc-primary ms-auto"><i class="bi bi-calendar-check me-1"></i>
+                        កក់ឥឡូវនេះ</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-4">
+                <!-- Card 4 -->
+                <div class="col-md-4">
+                  <div class="card dest-card h-100 position-relative">
+                    <span class="badge bg-white text-dark rating-badge shadow-sm">
+                      <i class="bi bi-star-fill text-warning"></i> 4.85 <span
+                        class="text-muted fw-normal">(480ការវាយតម្លៃ)</span>
+                    </span>
+                    <button class="fav-btn"><i class="bi bi-heart text-danger"></i></button>
+                    <img src="assets/images/horng-img/phnompenh1.jpg" class="card-img-top" alt="រាជធានីភ្នំពេញ">
+                    <div class="card-body d-flex flex-column">
+                      <h6 class="fw-bold mb-1">រាជធានីភ្នំពេញ និងទន្លេចតុមុខ</h6>
+                      <p class="small text-muted mb-2"><i class="bi bi-geo-alt-fill text-jungle"></i> ភ្នំពេញ</p>
+                      <p class="small text-secondary flex-grow-1">
+                        បន្ទាត់ដងទន្លេពេលល្ងាច ទស្សនាវិមានឯករាជ្យ ព្រមទាំងទីផ្សារយប់សម្បូរបែប។
+                      </p>
+                      <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="price-tag">$180 <small class="text-muted fw-normal">/ យប់</small></span>
+                        <button class="btn btn-outline-jungle btn-sm rounded-pill px-3" data-bs-toggle="modal"
+                          data-bs-target="#hotelModal4">
+                          ព័ត៌មានលម្អិត
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal 4 -->
+                <div class="modal fade" id="hotelModal4" tabindex="-1" aria-labelledby="hotelModal4Label"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">ភ្នំពេញ រ៉ូយ៉ាល់</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row g-4">
+                          <div class="col-lg-6">
+                            <div class="tc-gallery-main mb-2">
+                              <img src="assets/images/horng-img/pp2.jpg" alt="Phnom Penh Hotel">
+                            </div>
+                            <div class="row g-2">
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/pp1.jpg"></div>
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/pp3.jpg"></div>
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/pp4.jpg"></div>
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/phnompenh.jpg"></div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <h4 class="tc-title mb-1">ភ្នំពេញ រ៉ូយ៉ាល់</h4>
+                            <p class="tc-subtitle mb-1">ភ្នំពេញ, កម្ពុជា — Phnom Penh, Cambodia</p>
+                            <p class="mb-3 text-gold fw-semibold">4.5 ★ (684 reviews)</p>
+                            <p class="tc-desc mb-4">សណ្ឋាគារទំនើបស្ថិតនៅមាត់ទន្លេទន្លេសាប ជិតព្រះបរមរាជវាំង
+                              និងតំបន់ទីផ្សាររាត្រី ងាយស្រួលធ្វើដំណើរទៅគ្រប់កន្លែងទស្សនាក្នុងទីក្រុង។</p>
+
+                            <p class="tc-section-label">✨ សេវាកម្ម</p>
+                            <ul class="list-unstyled mb-4">
+                              <li class="mb-2"><i class="bi bi-wifi me-2"></i>Wi-Fi ល្បឿនលឿនឥតគិតថ្លៃ</li>
+                              <li class="mb-2"><i class="bi bi-water me-2"></i>ស្ទីលទស្សនាទន្លេទន្លេសាប</li>
+                              <li class="mb-2"><i class="bi bi-cup-hot me-2"></i>អាហារពេលព្រឹករួមក្នុងតម្លៃ</li>
+                              <li class="mb-2"><i class="bi bi-building me-2"></i>ហ្សីម និងកន្លែងហាត់ប្រាណ</li>
+                            </ul>
+
+                            <p class="tc-section-label">ព័ត៌មានសណ្ឋាគារ</p>
+                            <div class="row g-2 mb-4">
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-geo-alt me-1"></i> រាជធានីភ្នំពេញ</div></div>
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-door-open me-1"></i> Deluxe River View</div></div>
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-clock me-1"></i> Check-in ២:០០ រសៀល</div></div>
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-people me-1"></i> ២-៣ នាក់</div></div>
+                            </div>
+
+                            <div class="tc-price-box">
+                              <span><i class="bi bi-tag me-1"></i> តម្លៃចាប់ពី</span>
+                              <span><span class="price">$55.00</span> / យប់</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-tc-primary ms-auto"><i class="bi bi-calendar-check me-1"></i>
+                          កក់ឥឡូវនេះ</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-md-4">
+                  <div class="card dest-card h-100 position-relative">
+                    <span class="badge bg-white text-dark rating-badge shadow-sm">
+                      <i class="bi bi-star-fill text-warning"></i> 4.92 <span class="text-muted fw-normal">(290
+                        ការវាយតម្លៃ)</span>
+                    </span>
+                    <button class="fav-btn"><i class="bi bi-heart-fill text-danger"></i></button>
+                    <img src="assets/images/horng-img/kohkong.jpg" class="card-img-top" alt="Glamping ដងព្រៃក្រពុំ">
+                    <div class="card-body d-flex flex-column">
+                      <h6 class="fw-bold mb-1">Glamping ដងព្រៃក្រពុំ (Cardamom)</h6>
+                      <p class="small text-muted mb-2"><i class="bi bi-geo-alt-fill text-jungle"></i> ខេត្តកោះកុង</p>
+                      <p class="small text-secondary flex-grow-1">
+                        ស្នាក់នៅជិត Glamping ក្នុងព្រៃទឹកជ្រោះនិងសំឡេងសត្វព្រៃធម្មជាតិ។
+                      </p>
+                      <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="price-tag">$220 <small class="text-muted fw-normal">/ យប់</small></span>
+                        <button class="btn btn-outline-jungle btn-sm rounded-pill px-3" data-bs-toggle="modal"
+                          data-bs-target="#hotelModal5">
+                          ព័ត៌មានលម្អិត
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal 5 -->
+                <div class="modal fade" id="hotelModal5" tabindex="-1" aria-labelledby="hotelModal5Label"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">កោះកុង</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row g-4">
+                          <div class="col-lg-6">
+                            <div class="tc-gallery-main mb-2">
+                              <img src="assets/images/horng-img/kk2.jpg" alt="Koh Kong Resort">
+                            </div>
+                            <div class="row g-2">
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/kk1.jpg"></div>
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/kk3.jpg"></div>
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/kk4.jpg"></div>
+                              <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/kk.jpg"></div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <h4 class="tc-title mb-1">កោះកុងរីសត</h4>
+                            <p class="tc-subtitle mb-1">កោះកុង, កម្ពុជា — Koh Kong, Cambodia</p>
+                            <p class="mb-3 text-gold fw-semibold">4.6 ★ (238 reviews)</p>
+                            <p class="tc-desc mb-4">ស្ថិតនៅមាត់ទន្លេកោះកុង ជាប់នឹងព្រៃឈើត្រូពិចនិងទឹកជ្រោះ។
+                              សណ្ឋាគារនេះមានបន្ទប់សម្រាកកាយបែបធម្មជាតិ ស័ក្តិសមសម្រាប់អ្នកស្រលាញ់ធម្មជាតិ។</p>
+
+                            <p class="tc-section-label">✨ សេវាកម្ម</p>
+                            <ul class="list-unstyled mb-4">
+                              <li class="mb-2"><i class="bi bi-wifi me-2"></i>Wi-Fi ឥតគិតថ្លៃ</li>
+                              <li class="mb-2"><i class="bi bi-water me-2"></i>ស្ទីលរីមទន្លេ / River view</li>
+                              <li class="mb-2"><i class="bi bi-cup-hot me-2"></i>អាហារពេលព្រឹករួមក្នុងតម្លៃ</li>
+                              <li class="mb-2"><i class="bi bi-bicycle me-2"></i>ជួលកង់ និងកាណូតកម្សាន្ត</li>
+                            </ul>
+
+                            <p class="tc-section-label">ព័ត៌មានសណ្ឋាគារ</p>
+                            <div class="row g-2 mb-4">
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-geo-alt me-1"></i>ខេត្តកោះកុង</div></div>
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-door-open me-1"></i>Bungalow & Riverside</div></div>
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-clock me-1"></i>Check-in ២:០០ រសៀល</div></div>
+                              <div class="col-6"><div class="tc-info-box"><i class="bi bi-people me-1"></i>២-៤ នាក់</div></div>
+                            </div>
+
+                            <div class="tc-price-box">
+                              <span><i class="bi bi-tag me-1"></i> តម្លៃចាប់ពី</span>
+                              <span><span class="price">$45.00</span> / យប់</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-tc-primary ms-auto"><i class="bi bi-calendar-check me-1"></i>កក់ឥឡូវនេះ</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-md-4">
+                  <div class="card dest-card h-100 position-relative">
+                    <span class="badge bg-white text-dark rating-badge shadow-sm">
+                      <i class="bi bi-star-fill text-warning"></i> 4.89 <span class="text-muted fw-normal">(380
+                        ការវាយតម្លៃ)</span>
+                    </span>
+                    <button class="fav-btn"><i class="bi bi-heart text-danger"></i></button>
+                    <img src="assets/images/horng-img/bonteaysrey1.jpg" class="card-img-top" alt="ប្រាសាទបន្ទាយស្រី">
+                    <div class="card-body d-flex flex-column">
+                      <h6 class="fw-bold mb-1">ប្រាសាទបន្ទាយស្រី បុរណវិទ្យា</h6>
+                      <p class="small text-muted mb-2"><i class="bi bi-geo-alt-fill text-jungle"></i> ខេត្តសៀមរាប (Siem
+                        Reap)</p>
+                      <p class="small text-secondary flex-grow-1">
+                        ជម្រើសដ៏ល្អសម្រាប់ការស្នាក់នៅ និងស្វែងយល់ពីសម្រស់ប្រាសាទបន្ទាយស្រី។
+                      </p>
+                      <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="price-tag">$100 <small class="text-muted fw-normal">/ យប់</small></span>
+                        <button class="btn btn-outline-jungle btn-sm rounded-pill px-3" data-bs-toggle="modal"
+                          data-bs-target="#hotelModal6">
+                          ព័ត៌មានលម្អិត
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal 6 -->
+              <div class="modal fade" id="hotelModal6" tabindex="-1" aria-labelledby="hotelModal6Label"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">បន្ទាយស្រី</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row g-4">
+                        <div class="col-lg-6">
+                          <div class="tc-gallery-main mb-2">
+                            <img src="assets/images/horng-img/sr1.jpg" alt="Banteay Srei Retreat">
+                          </div>
+                          <div class="row g-2">
+                            <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/sr2.jpg"></div>
+                            <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/sr3.jpg"></div>
+                            <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/sr4.jpg"></div>
+                            <div class="col-3"><img class="tc-thumb" src="assets/images/horng-img/sr5.jpg"></div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <h4 class="tc-title mb-1">បន្ទាយស្រី</h4>
+                          <p class="tc-subtitle mb-1">ស្រុកបន្ទាយស្រី, សៀមរាប — Banteay Srey, Siem Reap</p>
+                          <p class="mb-3 text-gold fw-semibold">4.7 ★ (142 reviews)</p>
+                          <p class="tc-desc mb-4">សណ្ឋាគារបែបសួនច្បារស្ថិតនៅជិតប្រាសាទបន្ទាយស្រី
+                            ព័ទ្ធជុំវិញដោយស្រែចម្ការ និងភូមិខ្មែរប្រពៃណី។
+                            ស័ក្តិសមសម្រាប់អ្នកចង់ចេញឆ្ងាយពីភាពមមាញឹកនៃទីក្រុង។</p>
+
+                          <p class="tc-section-label">✨ សេវាកម្ម</p>
+                          <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-wifi me-2"></i>Wi-Fi ឥតគិតថ្លៃនៅ lobby</li>
+                            <li class="mb-2"><i class="bi bi-flower1 me-2"></i>សួនច្បារត្រូពិចជុំវិញបន្ទប់</li>
+                            <li class="mb-2"><i class="bi bi-cup-hot me-2"></i>អាហារពេលព្រឹករួមក្នុងតម្លៃ</li>
+                            <li class="mb-2"><i class="bi bi-bicycle me-2"></i>ជួលកង់ទៅទស្សនាប្រាសាទបន្ទាយស្រី</li>
+                          </ul>
+
+                          <p class="tc-section-label">ព័ត៌មានសណ្ឋាគារ</p>
+                          <div class="row g-2 mb-4">
+                            <div class="col-6"><div class="tc-info-box"><i class="bi bi-geo-alt me-1"></i> ស្រុកបន្ទាយស្រី</div></div>
+                            <div class="col-6"><div class="tc-info-box"><i class="bi bi-door-open me-1"></i> Garden Bungalow</div></div>
+                            <div class="col-6"><div class="tc-info-box"><i class="bi bi-clock me-1"></i> Check-in ១:៣០ រសៀល</div></div>
+                            <div class="col-6"><div class="tc-info-box"><i class="bi bi-people me-1"></i> ២-៤ នាក់</div></div>
+                          </div>
+
+                          <div class="tc-price-box">
+                            <span><i class="bi bi-tag me-1"></i> តម្លៃចាប់ពី</span>
+                            <span><span class="price">$32.00</span> / យប់</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-tc-primary ms-auto"><i class="bi bi-calendar-check me-1"></i>
+                        កក់ឥឡូវនេះ</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <nav class="mt-5 d-flex justify-content-center">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">មុន</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">បន្ទាប់</a></li>
+                </ul>
+              </nav>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</div>
+<script src="js/include.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const icon = btn.querySelector('i');
+        icon.classList.toggle('bi-heart');
+        icon.classList.toggle('bi-heart-fill');
+      });
+    });
+  </script>
+</body>
+
+</html>

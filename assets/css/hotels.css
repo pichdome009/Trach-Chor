@@ -1,0 +1,240 @@
+/* =========================================================
+   Trach-Chor — Hotels page theme
+   Built on top of the shared palette in assets/css/index.css
+   (--primary-color forest green, --secondary-color golden, etc.)
+   ========================================================= */
+
+/* ---------- Color + text utilities (replace ad-hoc "jungle/gold" classes) ---------- */
+.text-jungle   { color: var(--primary-color) !important; }
+.bg-jungle     { background-color: var(--primary-color) !important; color: #fff !important; }
+.border-jungle { border-color: var(--primary-color) !important; }
+.text-gold     { color: var(--secondary-color) !important; }
+.bg-gold       { background-color: var(--secondary-color) !important; color: var(--text-dark) !important; }
+
+/* ---------- Buttons ---------- */
+.btn-jungle {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: #fff;
+  transition: var(--transition-fast);
+}
+.btn-jungle:hover,
+.btn-jungle:focus {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #fff;
+}
+
+.btn-outline-jungle {
+  background-color: transparent;
+  border: 1.5px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+.btn-outline-jungle:hover,
+.btn-outline-jungle:focus {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn-primary-luxury {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: #fff;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+.btn-primary-luxury:hover { background-color: var(--primary-dark); color: #fff; }
+
+.btn-secondary-luxury {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  color: var(--text-dark);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  box-shadow: var(--shadow-golden);
+  transition: var(--transition-fast);
+}
+.btn-secondary-luxury:hover {
+  background-color: var(--secondary-dark);
+  border-color: var(--secondary-dark);
+  color: var(--text-dark);
+}
+
+.btn-outline-luxury {
+  background-color: transparent;
+  border: 1.5px solid var(--bg-white);
+  color: var(--bg-white);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+.btn-outline-luxury:hover { background-color: var(--bg-white); color: var(--primary-dark); }
+
+.btn-tc-primary {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: #fff;
+  border-radius: var(--radius-full);
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+.btn-tc-primary:hover { background-color: var(--primary-dark); color: #fff; }
+
+/* ---------- Hero ---------- */
+section.py-5 > .container.bg-success {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)) !important;
+  border-color: var(--primary-dark) !important;
+  box-shadow: var(--shadow-xl);
+}
+
+/* ---------- Search bar ---------- */
+.search-bar {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  margin-top: -3.5rem;
+  position: relative;
+  z-index: 5;
+  border: 1px solid var(--border-color);
+}
+.search-bar .form-select,
+.search-bar .form-control {
+  border-radius: var(--radius-sm);
+  border-color: var(--border-color);
+}
+.search-bar .form-select:focus,
+.search-bar .form-control:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 0.2rem var(--primary-bg-subtle);
+}
+.field-label { font-size: 0.85rem; font-weight: 600; color: var(--text-dark); }
+@media (min-width: 992px) {
+  .field-divider { border-left: 1px solid var(--border-color); }
+}
+
+/* ---------- Filter sidebar ---------- */
+.filter-card {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+.map-thumb { border-radius: var(--radius-md); object-fit: cover; height: 130px; }
+.filter-card .form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.filter-card .form-range::-webkit-slider-thumb { background: var(--secondary-color); }
+
+/* ---------- Destination / hotel cards ---------- */
+.dest-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+.dest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+.dest-card .card-img-top {
+  height: 210px;
+  object-fit: cover;
+}
+.price-tag {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--primary-color);
+}
+.rating-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 3;
+  border-radius: var(--radius-full);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+}
+.fav-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 3;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- Modal / hotel detail styling ---------- */
+.tc-gallery-main img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+.tc-thumb {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.tc-title { color: var(--text-dark); font-weight: 700; }
+.tc-subtitle { color: var(--text-muted); font-size: 0.9rem; }
+.tc-desc { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+.tc-section-label {
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+.tc-info-box {
+  background: var(--primary-bg-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.85rem;
+  color: var(--text-dark);
+}
+.tc-price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-color);
+  border: 1px dashed var(--secondary-color);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.1rem;
+}
+.tc-price-box .price {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* ---------- Pagination ---------- */
+.pagination .page-link { color: var(--primary-color); border-radius: var(--radius-sm); margin: 0 3px; }
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 991.98px) {
+  .search-bar { margin-top: 1.5rem; }
+  .filter-card.sticky-top { position: relative !important; top: 0 !important; }
+}
+@media (max-width: 767.98px) {
+  .dest-card .card-img-top { height: 180px; }
+  .tc-gallery-main img { height: 200px; }
+}

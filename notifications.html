@@ -4,18 +4,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>មជ្ឈមណ្ឌលជូនដំណឹង (Notification Center) - ត្រាច់ចរ (Trach Chor)</title>
+    <title>មជ្ឈមណ្ឌលជូនដំណឹង - ត្រាច់ចរ (Trach Chor)</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/sak/leaf-fill-yellow.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/nofications.css">
+    <link rel="stylesheet" href="assets/css/nav-footer.css">
+    <link rel="stylesheet" href="assets/css/nav-footer.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
 
 </head>
 
 
-<body>
+<body> 
+    <section class="sec-navbar">
+    <nav class="navbar navbar-expand-lg py-3" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand text-white fs-2 fw-bold" href="index.html"><i class="bi bi-leaf-fill text-warning"></i>
+          ត្រាច់ចរ​</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2"
+          aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0 fs-5 fw-medium gap-4">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">ទំព័រដើម</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">អំពីយើង</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="service nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                សេវាកម្ម
+              </a>
+              <ul class="dropdown-menu shadow border-0 rounded-4 p-3 fs-5 ">
+                <li><a class="dropdown-item rounded-3 py-2 text-white " href="#"><i class="bi bi-box2-heart-fill "></i>
+                    កញ្ជប់ដំណើរកម្សាន្ដ</a></li>
+                <li><a class="dropdown-item rounded-3 py-2 text-white" href="#"><i class="bi bi-geo-alt-fill"></i>
+                    គោលដៅទេសចរណ៍</a></li>
+                <li><a class="dropdown-item rounded-3 py-2 text-white" href="#"><i class="bi bi-house-down-fill"></i>
+                    កក់កន្លែងស្នាក់នៅ</a></li>
+                <li><a class="dropdown-item rounded-3 py-2 text-white" href="#"><i class="bi bi-car-front"></i>
+                    ជួលយានជំនិះ</a></li>
+                <li><a class="dropdown-item rounded-3 py-2 text-white" href="#"><i class="bi bi-fork-knife"></i>
+                    កម្មង់ម្ហូប</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item rounded-3 py-2 text-white" href="#"><i class="bi bi-shop"></i> សិប្បកម្ម</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item rounded-3 py-2 text-white" href="#"><i
+                      class="bi bi-postcard-heart-fill"></i> កាតកាដូ</a></li>
+                <li><a class="dropdown-item rounded-3 py-2 text-white" href="#"><i class="bi bi-calculator"></i>
+                    គណនាចំណាយ</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ទំនាក់ទំនង</a>
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-3">
+            <!-- Cart Dropdown -->
+            <div class="dropdown">
+              <a href="#" class="position-relative d-flex align-items-center justify-content-center rounded-circle text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false" style="width: 44px; height: 44px; background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.25)'; this.style.transform='scale(1.08)';" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.15)'; this.style.transform='scale(1)';">
+                <i class="bi bi-cart-fill text-white fs-5"></i>
+                <span class="position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold notification-badge-pulse" style="top: -2px; right: -2px; width: 18px; height: 18px; font-size: 0.65rem;">3</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-glass rounded-4 p-3 mt-2" style="width: 340px;">
+                <li class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-3">
+                  <h6 class="mb-0 text-white fw-bold d-flex align-items-center"><i class="bi bi-cart-fill text-warning me-2 fs-5"></i>កន្ត្រកទំនិញ (Your Cart)</h6>
+                  <span class="badge bg-light text-success fw-bold rounded-pill px-2 py-1 shadow-sm" style="font-size: 0.75rem;">3 ទំនិញ</span>
+                </li>
+                <li>
+                  <a href="#" class="d-block p-3 mb-2 rounded-3 text-decoration-none dropdown-item-custom">
+                    <div class="d-flex align-items-center">
+                      <div class="bg-success rounded-circle d-flex justify-content-center align-items-center me-3 shadow-sm" style="width: 40px; height: 40px; flex-shrink: 0;"><i class="bi bi-box2-heart-fill text-white fs-5"></i></div>
+                      <div>
+                        <span class="fw-bold text-white d-block mb-1">កញ្ចប់ដំណើរកម្សាន្តទៅសៀមរាប</span>
+                        <span class="text-success fw-bold" style="font-size: 0.85rem;">$120.00 <span class="text-white-50 fw-normal ms-1">x 2</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="d-block p-3 mb-3 rounded-3 text-decoration-none dropdown-item-custom">
+                    <div class="d-flex align-items-center">
+                      <div class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-3 shadow-sm" style="width: 40px; height: 40px; flex-shrink: 0;"><i class="bi bi-car-front-fill text-white fs-5"></i></div>
+                      <div>
+                        <span class="fw-bold text-white d-block mb-1">សេវាកម្មជួលឡាន (SUV)</span>
+                        <span class="text-success fw-bold" style="font-size: 0.85rem;">$45.00 <span class="text-white-50 fw-normal ms-1">x 1</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <div class="d-flex justify-content-between align-items-center mb-3 px-2 mt-2">
+                    <span class="text-white-50 fw-bold">សរុប (Total):</span>
+                    <span class="text-warning fw-bold fs-5">$285.00</span>
+                  </div>
+                </li>
+                <li>
+                  <a href="cart.html" class="btn w-100 rounded-pill fw-bold text-white btn-gradient-green transition-fast">ពិនិត្យមើល និងបង់ប្រាក់</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Bell Dropdown -->
+            <div class="dropdown">
+              <a href="#" class="position-relative d-flex align-items-center justify-content-center rounded-circle text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false" style="width: 44px; height: 44px; background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.25)'; this.style.transform='scale(1.08)';" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.15)'; this.style.transform='scale(1)';">
+                <i class="bi bi-bell-fill text-white fs-5"></i>
+                <span class="position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold notification-badge-pulse" style="top: -2px; right: -2px; width: 18px; height: 18px; font-size: 0.65rem;">2</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-glass rounded-4 p-3 mt-2" style="width: 340px;">
+                <li class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-3">
+                  <h6 class="mb-0 text-white fw-bold d-flex align-items-center"><i class="bi bi-bell-fill text-warning me-2 fs-5"></i>ការជូនដំណឹង (Notifications)</h6>
+                  <span class="badge bg-light text-success fw-bold rounded-pill px-2 py-1 shadow-sm" style="font-size: 0.75rem;">ថ្មី 2</span>
+                </li>
+                <li>
+                  <a href="#" class="d-block p-3 mb-2 rounded-3 text-decoration-none dropdown-item-custom">
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="bg-success-subtle rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 28px; height: 28px; flex-shrink: 0;"><i class="bi bi-check text-success fs-5"></i></div>
+                      <span class="fw-bold text-white">ការកក់ជោគជ័យ!</span>
+                      <span class="ms-auto text-white-50" style="font-size: 0.75rem;">1 ម៉ោងមុន</span>
+                    </div>
+                    <p class="mb-0 text-white-50" style="font-size: 0.85rem; padding-left: 44px; line-height: 1.5;">បន្ទប់ស្នាក់នៅរបស់អ្នកត្រូវបានកក់ប្រកបដោយជោគជ័យ។</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="d-block p-3 mb-3 rounded-3 text-decoration-none dropdown-item-custom">
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="bg-warning-subtle rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 28px; height: 28px; flex-shrink: 0;"><i class="bi bi-gift-fill text-warning fs-6"></i></div>
+                      <span class="fw-bold text-white">កាដូពិសេស!</span>
+                      <span class="ms-auto text-white-50" style="font-size: 0.75rem;">9 ម៉ោងមុន</span>
+                    </div>
+                    <p class="mb-0 text-white-50" style="font-size: 0.85rem; padding-left: 44px; line-height: 1.5;">ទទួលបានបញ្ចុះតម្លៃ ២០% សម្រាប់សមាជិក VIP Explorer។</p>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider border-secondary opacity-50 mb-3">
+                </li>
+                <li>
+                  <a href="nofications.html" class="btn w-100 rounded-pill fw-bold text-white" style="border: 1px solid rgba(255,255,255,0.2); background-color: rgba(255,255,255,0.05); transition: 0.3s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.3)';" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.2)';">មើលការជូនដំណឹងទាំងអស់</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="profile-dropdown border border-warning px-1">
+            <button class="btn nav-profile-btn d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <div class="d-flex flex-column text-end d-none d-xl-flex p-2">
+                <span class="fw-bold fs-7 text-white">ពេជ្រ ឧត្តម</span>
+              </div>
+              <div class="position-relative">
+                <img src="assets/images/Pich-Udom/profile.jpg"
+                  class="rounded-circle object-fit-cover border border-2 border-warning shadow-sm" width="38"
+                  height="38" alt="Profile">
+                <span class="position-absolute bottom-0 end-0 p-1 bg-success border border-white rounded-circle"></span>
+              </div>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-lg-end shadow-lg border-0 rounded-4 p-2" style="width: 270px;">
+              <li class="p-3 text-center border-bottom mb-2 dropdown-profile-header rounded-3">
+                <div class="position-relative d-inline-block mb-2">
+                  <img src="assets/images/Pich-Udom/profile.jpg"
+                    class="rounded-circle object-fit-cover border border-3 border-success shadow-sm" width="60"
+                    height="60" alt="Profile">
+                  <span
+                    class="position-absolute bottom-0 end-0 p-1 bg-success border border-2 border-white rounded-circle"
+                    title="Active Now"></span>
+                </div>
+                <h6 class="mb-0 fw-bold fs-5">ពេជ្រ ឧត្តម</h6>
+                <span class="badge bg-warning text-dark mt-1 px-3 py-1 rounded-pill fw-bold shadow-sm"
+                  style="font-size: 0.7rem;"><i class="fas fa-crown me-1"></i> (Pich Udom)</span>
+              </li>
+              <li>
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1" href="profile.html">
+                  <div
+                    class="icon-box-sm bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 34px; height: 34px; flex-shrink: 0;">
+                    <i class="bi bi-person-circle fs-5 "></i>
+                  </div>
+                  <span class="fw-semibold" style="font-size: 0.9rem;">គណនីរបស់ខ្ញុំ</span>
+                </a>
+              </li>
+              <!-- <li>
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1" href="#">
+                  <div
+                    class="icon-box-sm bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 34px; height: 34px; flex-shrink: 0;">
+                    <i class="bi bi-cart-plus-fill fs-5"></i>
+                  </div>
+                  <span class="fw-semibold" style="font-size: 0.9rem;">ទំនិញរបស់អ្នក</span>
+                </a>
+              </li> -->
+              <li>
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1" href="favorites.html">
+                  <div
+                    class="icon-box-sm bg-danger-subtle text-danger rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 34px; height: 34px; flex-shrink: 0;">
+                    <i class="bi bi-heart-fill fs-5 mt-1"></i>
+                  </div>
+                  <span class="fw-semibold" style="font-size: 0.9rem;">គោលដៅចំណូលចិត្ត</span>
+                </a>
+              </li>
+              <!-- <li>
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1"
+                  href="notifications.html">
+                  <div
+                    class="icon-box-sm bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 34px; height: 34px; flex-shrink: 0;">
+                    <i class="bi bi-bell-fill fs-5"></i>
+                  </div>
+                  <span class="fw-semibold" style="font-size: 0.9rem;">ការជូនដំណឹង</span>
+                </a>
+              </li> -->
+              <li>
+                <hr class="dropdown-divider my-2">
+              </li>
+              <li>
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 logout-item"
+                  href="index.html">
+                  <div
+                    class="icon-box-sm bg-danger-subtle text-danger rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 34px; height: 34px; flex-shrink: 0;">
+                    <i class="bi bi-box-arrow-right fs-5 ms-1 mt-1"></i>
+                  </div>
+                  <span class="fw-bold" style="font-size: 0.9rem;">ចាកចេញ</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </section>
+
 
     <!-- Nofication Center Header-->
     <section class="notification-hero container-fluid px-lg-5" aria-labelledby="notification-title">
@@ -29,14 +262,11 @@
                 <button id="btnMarkAllRead" type="button" class="btn btn-mark-read">
                     <i class="bi bi-check2-all"></i> សម្គាល់ថាបានអានទាំងអស់
                 </button>
-                <a href="" class="btn btn-notification-settings" title="ការកំណត់ការជូនដំណឹង">
-                    <i class="bi bi-gear-fill"></i> ការកំណត់
-                </a>
             </div>
         </div>
     </section>
 
-    
+
     <section class="container wrapper">
 
         <div class="row g-3">
@@ -52,7 +282,7 @@
 
                     <a href="#all" class="notification-category active" data-category="all" aria-pressed="true">
                         <i class="bi bi-envelope me-2"></i>
-                        ទាំងអស់ 
+                        ទាំងអស់
                     </a>
 
                     <a href="#booking" class="notification-category" data-category="booking" aria-pressed="false">
@@ -67,7 +297,7 @@
 
                     <a href="#payment" class="notification-category" data-category="payment" aria-pressed="false">
                         <i class="bi bi-qr-code-scan me-2"></i>
-                        ការទូទាត់ប្រាក់ 
+                        ការទូទាត់ប្រាក់
                     </a>
 
                     <a href="#promotion" class="notification-category" data-category="promotion" aria-pressed="false">
@@ -111,19 +341,15 @@
 
             <!-- RIGHT CONTENT -->
             <div class="col-lg-8" id="notification-top">
-                <div class="notification-list-header d-flex justify-content-between align-items-center mb-4">
-
+                <div class="notification-list-header mb-4">
                     <div class="notification-list-title">
-                        <span class="notification-list-title__icon" aria-hidden="true">
-                            <i class="bi bi-bell-fill"></i>
-                        </span>
                         <div>
                             <h2 class="mb-0">សារជូនដំណឹង</h2>
                             <p class="mb-0">ព័ត៌មានថ្មីៗ និងការរំលឹកសម្រាប់អ្នក</p>
                         </div>
                     </div>
 
-                    <div class="btn-group">
+                    <div class="btn-group notification-read-filters" role="group" aria-label="តម្រងសារជូនដំណឹង">
                         <button type="button" class="btn btn-filter active" data-read-filter="all" aria-pressed="true">
                             <i class="bi bi-envelope-fill me-1"></i>
                             សារទាំងអស់
@@ -132,24 +358,53 @@
                         <button type="button" class="btn btn-filter" data-read-filter="unread" aria-pressed="false">
                             <i class="bi bi-envelope-open me-1"></i>
                             សារមិនទាន់អាន
-                            <span id="unreadCount" class="badge bg-danger ms-2">8</span>
+                            <span id="unreadCount" class="badge bg-danger ms-2">0</span>
                         </button>
                     </div>
 
+                </div>
+                <div id="notificationFilterStatus" class="notification-filter-status" role="status"
+                    aria-live="polite"></div>
+                <div id="notificationEmptyState" class="notification-empty-state" hidden>
+                    <i class="bi bi-inbox"></i>
+                    <p class="mb-0">មិនមានសារដែលត្រូវនឹងតម្រងនេះទេ។</p>
                 </div>
                 <section id="booking" class="mt-5">
                     <h3 class="mb-4">
                         <i class="bi bi-calendar3 me-2 me-2"></i>
                         ការកក់
                     </h3>
+                    <div class="content-card" data-unread="true">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-calendar3 me-2 notification-card-icon"></i>
+
+                                </div>
+                                <small class="text-muted">1 ម៉ោងមុន</small>
+                            </div>
+                            <h5 class="mt-3">ការកក់ជោគជ័យ!</h5>
+                            <p class="text-muted mb-0">
+                                បន្ទប់ស្នាក់នៅរបស់អ្នកត្រូវបានកក់ប្រកបដោយជោគជ័យ។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-sm">ចំណាំថាអានរួច</button>
+                                <button class="btn btn-sm">ព័ត៌មានលម្អិត</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+
                     <div class="content-card">
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-calendar3 me-2" style="font-size: 1.2rem;"></i>
+                                    <i class="bi bi-calendar3 me-2 notification-card-icon"></i>
 
                                 </div>
-                                <small class="text-muted">2 នាទីមុន</small>
+                                <small class="text-muted">2 ម៉ោងមុន</small>
                             </div>
                             <h5 class="mt-3">បានបញ្ជាក់ការកក់</h5>
                             <p class="text-muted mb-0">
@@ -169,7 +424,7 @@
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-calendar3 me-2" style="font-size: 1.2rem;"></i>
+                                    <i class="bi bi-calendar3 me-2 notification-card-icon"></i>
 
                                 </div>
                                 <small class="text-muted">3 ម៉ោងមុន</small>
@@ -192,7 +447,7 @@
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-calendar3 me-2" style="font-size: 1.2rem;"></i>
+                                    <i class="bi bi-calendar3 me-2 notification-card-icon"></i>
 
                                 </div>
                                 <small class="text-muted">ម្សិលមិញ</small>
@@ -215,7 +470,7 @@
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-calendar3 me-2" style="font-size: 1.2rem;"></i>
+                                    <i class="bi bi-calendar3 me-2 notification-card-icon"></i>
 
                                 </div>
                                 <small class="text-muted">2 ថ្ងៃមុន</small>
@@ -244,8 +499,8 @@
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-bell me-2" style="font-size: 1.2rem;"></i>
-                                    
+                                    <i class="bi bi-bell me-2 notification-card-icon"></i>
+
                                 </div>
                                 <small class="text-muted">1 ម៉ោងមុន</small>
                             </div>
@@ -267,8 +522,8 @@
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-bell me-2" style="font-size: 1.2rem;"></i>
-                                    
+                                    <i class="bi bi-bell me-2 notification-card-icon"></i>
+
                                 </div>
                                 <small class="text-muted">5 ម៉ោងមុន</small>
                             </div>
@@ -290,8 +545,8 @@
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-bell me-2" style="font-size: 1.2rem;"></i>
-                                    
+                                    <i class="bi bi-bell me-2 notification-card-icon"></i>
+
                                 </div>
                                 <small class="text-muted">ម្សិលមិញ</small>
                             </div>
@@ -314,8 +569,8 @@
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-bell me-2" style="font-size: 1.2rem;"></i>
-                                    
+                                    <i class="bi bi-bell me-2 notification-card-icon"></i>
+
                                 </div>
                                 <small class="text-muted">2 ថ្ងៃមុន</small>
                             </div>
@@ -345,14 +600,15 @@
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-qr-code-scan me-2" style="font-size: 1.2rem;"></i>
-                                    
+                                    <i class="bi bi-qr-code-scan me-2 notification-card-icon"></i>
+
                                 </div>
                                 <small class="text-muted">ថ្ងៃនេះ</small>
                             </div>
                             <h5 class="mt-3">ទទួលបានការទូទាត់ប្រាក់</h5>
                             <p class="text-muted mb-0">
-                                ការទូទាត់ប្រាក់ចំនួន <strong>$45</strong> តាមរយៈ <span style="color:#0033A0"> ABA </span> របស់អ្នកត្រូវបានទទួលដោយជោគជ័យ។
+                                ការទូទាត់ប្រាក់ចំនួន <strong>$45</strong> តាមរយៈ <span style="color:#0033A0"> ABA
+                                </span> របស់អ្នកត្រូវបានទទួលដោយជោគជ័យ។
                             </p>
                         </div>
                         <div class="content-footer d-flex justify-content-between align-items-center">
@@ -368,8 +624,8 @@
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-qr-code-scan me-2" style="font-size: 1.2rem;"></i>
-                                    
+                                    <i class="bi bi-qr-code-scan me-2 notification-card-icon"></i>
+
                                 </div>
                                 <small class="text-muted">ម្សិលមិញ</small>
                             </div>
@@ -392,8 +648,8 @@
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-qr-code-scan me-2" style="font-size: 1.2rem;"></i>
-                                    
+                                    <i class="bi bi-qr-code-scan me-2 notification-card-icon"></i>
+
                                 </div>
                                 <small class="text-muted">2 ថ្ងៃមុន</small>
                             </div>
@@ -416,14 +672,15 @@
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-qr-code-scan me-2" style="font-size: 1.2rem;"></i>
-                                    
+                                    <i class="bi bi-qr-code-scan me-2 notification-card-icon"></i>
+
                                 </div>
                                 <small class="text-muted">3 ថ្ងៃមុន</small>
                             </div>
                             <h5 class="mt-3">បានដំណើរការប្រគល់ប្រាក់វិញ</h5>
                             <p class="text-muted mb-0">
-                                ការប្រគល់ប្រាក់ចំនួន <strong>$15</strong> វិញ តាមរយៈ <span style="color:#a2b01d"> WING </span> សម្រាប់ការកក់ដែលបានលុបចោល
+                                ការប្រគល់ប្រាក់ចំនួន <strong>$15</strong> វិញ តាមរយៈ <span style="color:#a2b01d"> WING
+                                </span> សម្រាប់ការកក់ដែលបានលុបចោល
                                 ត្រូវបានដំណើរការរួចរាល់ហើយ។
                             </p>
                         </div>
@@ -443,14 +700,37 @@
                         ប្រូម៉ូសិន
                     </h3>
 
+                    <div class="content-card" data-unread="true">
+                        <div class="p-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-gift-fill me-2 notification-card-icon"></i>
+
+                                </div>
+                                <small class="text-muted">9 ម៉ោងមុន</small>
+                            </div>
+                            <h5 class="mt-3">កាដូពិសេស!</h5>
+                            <p class="text-muted mb-0">
+                                ទទួលបានបញ្ចុះតម្លៃ ២០% សម្រាប់សមាជិក VIP Explorer។
+                            </p>
+                        </div>
+                        <div class="content-footer d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-sm">ចំណាំថាអានរួច</button>
+                                <button class="btn btn-sm">ស្វែងយល់បន្ថែម</button>
+                            </div>
+                            <i class="bi bi-trash-fill delete-btn"></i>
+                        </div>
+                    </div>
+
                     <div class="content-card">
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-tags me-2" style="font-size: 1.2rem;"></i>
-                                    
+                                    <i class="bi bi-tags me-2 notification-card-icon"></i>
+
                                 </div>
-                                <small class="text-muted">ថ្ងៃនេះ</small>
+                                <small class="text-muted">ម្សិលមិញ</small>
                             </div>
                             <h5 class="mt-3">ប្រូម៉ូសិនខែកក្កដា</h5>
                             <p class="text-muted mb-0">
@@ -471,8 +751,8 @@
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-tags me-2" style="font-size: 1.2rem;"></i>
-                                    
+                                    <i class="bi bi-tags me-2 notification-card-icon"></i>
+
                                 </div>
                                 <small class="text-muted">2 ថ្ងៃមុន</small>
                             </div>
@@ -494,8 +774,8 @@
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-tags me-2" style="font-size: 1.2rem;"></i>
-                                    
+                                    <i class="bi bi-tags me-2 notification-card-icon"></i>
+
                                 </div>
                                 <small class="text-muted">3 ថ្ងៃមុន</small>
                             </div>
@@ -518,8 +798,8 @@
                         <div class="p-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
-                                    <i class="bi bi-tags me-2" style="font-size: 1.2rem;"></i>
-                                    
+                                    <i class="bi bi-tags me-2 notification-card-icon"></i>
+
                                 </div>
                                 <small class="text-muted">1 សប្តាហ៍មុន</small>
                             </div>
@@ -543,44 +823,165 @@
         </div>
     </section>
 
+    <section class="sec-footer bg-success mt-5">
+        <footer class="footer-luxury">
+            <div class="container">
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-4 col-md-6">
+                        <a class="footer-logo"><i class="bi bi-leaf-fill text-warning"></i> ត្រាច់ចរ <span>| Trach
+                                Chor</span></a>
+                        <p class="mb-4">វេទិកាទេសចរណ៍ និងការធ្វើដំណើរលំដាប់ខ្ពស់ឈានមុខគេក្នុងប្រទេសកម្ពុជា។
+                            យើងភ្ជាប់លោកអ្នកទៅកាន់គោលដៅធម្មជាតិ វប្បធម៌ និងការស្នាក់នៅដ៏ប្រណីតបំផុត។</p>
+                        <div class="d-flex text-align-center">
+                            <a href="#" class="social-icon-btn"><i class="bi bi-facebook fs-5"></i></a>
+                            <a href="#" class="social-icon-btn"><i class="bi bi-instagram fs-5"></i></a>
+                            <a href="#" class="social-icon-btn"><i class="bi bi-telegram fs-5"></i></a>
+                            <a href="#" class="social-icon-btn"><i class="bi bi-youtube fs-5"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="footer-heading">តំណភ្ជាប់</h5>
+                        <ul class="footer-links">
+                            <li><a href="index.html">ទំព័រដើម</a></li>
+                            <li><a href="about.html">អំពីយើង</a></li>
+                            <li><a href="services.html">សេវាកម្ម</a></li>
+                            <li><a href="contact.html">ទំនាក់ទំនង</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="footer-heading">គោលដៅពេញនិយម</h5>
+                        <ul class="footer-links">
+                            <li><a href="destinations.html"><i
+                                        class="bi bi-chevron-right text-success fs-7 me-2"></i>ខេត្តសៀមរាប
+                                    (អង្គរវត្ត)</a></li>
+                            <li><a href="destinations.html"><i
+                                        class="bi bi-chevron-right text-success fs-7 me-2"></i>កោះរ៉ុង &
+                                    ឆ្នេរសមុទ្រ</a></li>
+                            <li><a href="destinations.html"><i
+                                        class="bi bi-chevron-right text-success fs-7 me-2"></i>មណ្ឌលគិរី &
+                                    ធម្មជាតិ</a></li>
+                            <li><a href="destinations.html"><i
+                                        class="bi bi-chevron-right text-success fs-7 me-2"></i>រាជធានីភ្នំពេញ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="footer-heading">ទំនាក់ទំនង</h5>
+                        <ul class="footer-links text-light">
+                            <li class="d-flex align-items-start gap-3 mb-3"><i
+                                    class="bi bi-geo-alt-fill text-success mt-1 fs-5"></i><span>អគារ Vamco,
+                                    មហាវិថីព្រះមុនីវង្ស,
+                                    រាជធានីភ្នំពេញ</span></li>
+                            <li class="d-flex align-items-center gap-3 mb-3"><i
+                                    class="bi bi-telephone-fill text-primary fs-5"></i><span>+855 (0) 23 999 888</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-3"><i
+                                    class="bi bi-envelope-fill text-warning fs-5"></i><span>trachchor.travel@gmail.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="border-secondary opacity-25">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+                    <p class="mb-0 small">&copy; 2026 ត្រាច់ចរ (Trach Chor). រក្សាសិទ្ធិគ្រប់យ៉ាង។ Designed with <i
+                            class="bi bi-heart text-danger"></i> ដើម្បីសម្រេចចិត្តការធ្វើដំណើរកម្ពុជា។</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
         const categoryFilters = document.querySelectorAll('.notification-category');
         const readFilters = document.querySelectorAll('[data-read-filter]');
-        const notificationCards = [...document.querySelectorAll('.content-card')];
+        let notificationCards = [...document.querySelectorAll('.content-card')];
         const notificationSections = [...document.querySelectorAll('#booking, #reminder, #payment, #promotion')];
         const markAllReadButton = document.getElementById('btnMarkAllRead');
-        const actionToast = document.getElementById('notifActionToast');
-        const unreadBadge = document.querySelector('.notification-hero__unread');
+        const unreadCount = document.getElementById('unreadCount');
+        const filterStatus = document.getElementById('notificationFilterStatus');
+        const emptyState = document.getElementById('notificationEmptyState');
         let selectedCategory = 'all';
         let selectedReadFilter = 'all';
 
-        // Add state to the existing cards: each category starts with two unread cards (8 total).
         const categoryCardIndexes = {};
         notificationCards.forEach(card => {
             const category = card.closest('section').id;
             categoryCardIndexes[category] = (categoryCardIndexes[category] || 0) + 1;
             card.dataset.category = category;
-            card.dataset.read = categoryCardIndexes[category] <= 2 ? 'false' : 'true';
+            // Preserve unread state for cards marked with data-unread="true"
+            card.dataset.read = card.dataset.unread === 'true' ? 'false' : 'true';
+            card.dataset.recent = /នាទីមុន|ម៉ោងមុន|ថ្ងៃនេះ/.test(
+                card.querySelector('small.text-muted').textContent.trim()
+            );
+
+            const actionButtons = card.querySelectorAll('.content-footer .btn');
+            const markReadButton = actionButtons[0];
+            const deleteButton = card.querySelector('.delete-btn');
+
+            markReadButton.type = 'button';
+            markReadButton.dataset.action = 'mark-read';
+            actionButtons[1].type = 'button';
+
+            deleteButton.setAttribute('role', 'button');
+            deleteButton.setAttribute('tabindex', '0');
+            deleteButton.setAttribute('aria-label', 'លុបសារនេះ');
+
+            markReadButton.addEventListener('click', () => {
+                card.dataset.read = 'true';
+                updateUnreadCount();
+                applyFilters();
+            });
+
+            const deleteNotification = () => {
+                card.remove();
+                notificationCards = notificationCards.filter(item => item !== card);
+                updateUnreadCount();
+                applyFilters();
+            };
+
+            deleteButton.addEventListener('click', deleteNotification);
+            deleteButton.addEventListener('keydown', event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    deleteNotification();
+                }
+            });
         });
 
         function updateUnreadCount() {
             const unreadTotal = notificationCards.filter(card => card.dataset.read === 'false').length;
-            unreadBadge.innerHTML = unreadTotal
-                ? `<i class="bi bi-circle-fill"></i> ${unreadTotal} unread`
-                : '<i class="bi bi-check2-circle"></i> All caught up';
+            unreadCount.textContent = unreadTotal;
             markAllReadButton.disabled = unreadTotal === 0;
+            markAllReadButton.setAttribute('aria-disabled', unreadTotal === 0);
+
+            notificationCards.forEach(card => {
+                const markReadButton = card.querySelector('[data-action="mark-read"]');
+                const isRead = card.dataset.read === 'true';
+                markReadButton.disabled = isRead;
+                markReadButton.textContent = isRead ? 'បានអានរួច' : 'ចំណាំថាអានរួច';
+                markReadButton.setAttribute('aria-label', isRead ? 'សារនេះត្រូវបានអានរួច' : 'សម្គាល់សារនេះថាបានអានរួច');
+            });
         }
 
         function applyFilters() {
+            let visibleTotal = 0;
             notificationCards.forEach(card => {
                 const matchesCategory = selectedCategory === 'all' || card.dataset.category === selectedCategory;
-                const matchesReadStatus = selectedReadFilter === 'all' || card.dataset.read === 'false';
-                card.classList.toggle('is-filtered-out', !(matchesCategory && matchesReadStatus));
+                const matchesReadStatus = selectedReadFilter === 'all'
+                    || (selectedReadFilter === 'unread' && card.dataset.read === 'false')
+                    || (selectedReadFilter === 'recent' && card.dataset.recent === 'true');
+                const isVisible = matchesCategory && matchesReadStatus;
+                card.classList.toggle('is-filtered-out', !isVisible);
+                if (isVisible) visibleTotal += 1;
             });
 
             notificationSections.forEach(section => {
                 section.hidden = !section.querySelector('.content-card:not(.is-filtered-out)');
             });
+
+            const categoryLabel = document.querySelector('.notification-category.active').textContent.trim();
+            const readLabel = document.querySelector('[data-read-filter].active').textContent.trim().replace(/\s+/g, ' ');
+            filterStatus.innerHTML = `<i class="bi bi-funnel-fill" aria-hidden="true"></i> បង្ហាញ៖ <strong>${categoryLabel}</strong> · ${readLabel} <span>(${visibleTotal} សារ)</span>`;
+            emptyState.hidden = visibleTotal !== 0;
         }
 
         categoryFilters.forEach(filter => {
@@ -608,8 +1009,12 @@
             });
         });
 
-        actionToast.querySelector('.btn-close').addEventListener('click', () => {
-            actionToast.classList.add('d-none');
+        markAllReadButton.addEventListener('click', () => {
+            notificationCards.forEach(card => {
+                card.dataset.read = 'true';
+            });
+            updateUnreadCount();
+            applyFilters();
         });
 
         updateUnreadCount();

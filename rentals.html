@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental page</title>
+  <link rel="stylesheet" href="assets/css/rentals.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+  <section class="py-5 ">
+    <div class="container hero-jungle-box rounded-5">
+      <div class="text-center text-white py-5 ">
+        <h1 class="fw-bold">ជួលយានជំនិះកម្សាន្តប្រណីត<br> (Luxury Rentals)</h1>
+        <p class="lead">ជួលម៉ូតូធំផ្សងព្រេង (Adventure Bikes) រថយន្តឯកជន និងម៉ូតូស្កូតទ័រទំនើបៗ ជាមួយការមើលជុំវិញ 360°
+          លក្ខណៈបច្ចេកទេសពេញលេញ <br> គ្រឿងបំពាក់ VIP និងធានារ៉ាប់រង ២៤/៧!</p>
+      </div>
+      <div class="text-center py-5">
+        <a href="" class="btn btn-secondary-luxury px-4 py-2">
+          <i class="bi bi-search fs-5"></i> ស្វែងរកយានជំនិះ
+        </a>
+        <a href="" class="btn btn-lg rounded-pill hero-btn-light px-4">
+          <i class="bi bi-eye me-1"></i> មើលគោលដៅទាំងអស់
+        </a>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="mb-4">
+        <h3 class="fw-bold mb-1">
+          <span class="fs-3"></span> កងយានជំនិះប្រណីតសម្រាប់ជួល <span class="text-secondary fw-normal">(Our
+            Showroom)</span>
+        </h3>
+        <p class="text-secondary mb-3">យានជំនិះគ្រប់គ្រឿងត្រូវបានត្រួតពិនិត្យបចេ្ចកទេស 100% មុនប្រគល់ជូនភ្ញៀវ</p>
+        <div class="d-flex flex-wrap gap-2" role="group" aria-label="ច្រោះប្រភេទយានជំនិះ">
+          <input type="radio" class="btn-check" name="showroomFilter" id="fAll" autocomplete="off" checked>
+          <label class="btn showroom-pill active" for="fAll">ទាំងអស់ (All)</label>
+          <input type="radio" class="btn-check" name="showroomFilter" id="fAdventure" autocomplete="off">
+          <label class="btn showroom-pill" for="fAdventure"> ម៉ូតូជិះផ្សងព្រេង (Adventure Bikes)</label>
+          <input type="radio" class="btn-check" name="showroomFilter" id="fCars" autocomplete="off">
+          <label class="btn showroom-pill" for="fCars">រថយន្ត &amp; SUV (Cars)</label>
+          <input type="radio" class="btn-check" name="showroomFilter" id="fScooters" autocomplete="off">
+          <label class="btn showroom-pill" for="fScooters">ស្កូតែរ៍ (Scooters)</label>
+        </div>
+      </div>
+      <div class="row g-4">
+        <aside class="col-lg-3">
+          <div class="filter-card bg-white p-3 p-lg-4 sticky-top" style="top:1rem;">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-bold text-jungle mb-0">
+                <i class="bi bi-sliders me-1"></i> ច្រោះមធ្យោបាយ
+              </h5>
+              <a href="#" class="link-danger small text-decoration-none">
+                <i class="bi bi-arrow-counterclockwise"></i> កំណត់ឡើងវិញ
+              </a>
+            </div>
+            <div class="mb-4">
+              <h6 class="fw-bold">ប្រភេទមធ្យោបាយ <small class="text-muted fw-normal">Vehicle type</small></h6>
+              <div class="form-check d-flex justify-content-between">
+                <div><input class="form-check-input" type="checkbox" id="tMoto" checked><label class="form-check-label"
+                    for="tMoto"><i class="bi bi-scooter text-jungle me-1"></i> ម៉ូតូ (Moto)</label></div>
+                <span class="badge bg-light text-muted">24</span>
+              </div>
+              <div class="form-check d-flex justify-content-between">
+                <div><input class="form-check-input" type="checkbox" id="tBike"><label class="form-check-label"
+                    for="tBike"><i class="bi bi-bicycle text-jungle me-1"></i> កង់ (Bicycle)</label></div>
+                <span class="badge bg-light text-muted">15</span>
+              </div>
+              <div class="form-check d-flex justify-content-between">
+                <div><input class="form-check-input" type="checkbox" id="tCar"><label class="form-check-label"
+                    for="tCar"><i class="bi bi-car-front-fill text-jungle me-1"></i> ឡាន(Car)</label></div>
+                <span class="badge bg-light text-muted">10</span>
+              </div>
+              <div class="form-check d-flex justify-content-between">
+                <div><input class="form-check-input" type="checkbox" id="tVan"><label class="form-check-label"
+                    for="tVan"><i class="bi bi-truck-front-fill text-jungle me-1"></i> វេន / ក្រុមធំ (Van)</label></div>
+                <span class="badge bg-light text-muted">6</span>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h6 class="fw-bold">ប្រព័ន្ធបញ្ជូនកម្លាំង <small class="text-muted fw-normal">Transmission</small></h6>
+              <div class="form-check"><input class="form-check-input" type="radio" name="trans" id="trAll"
+                  checked><label class="form-check-label" for="trAll"> ទាំងអស់</label></div>
+              <div class="form-check"><input class="form-check-input" type="radio" name="trans" id="trAuto"><label
+                  class="form-check-label" for="trAuto"> ស្វ័យប្រវត្តិ (Automatic)</label></div>
+              <div class="form-check"><input class="form-check-input" type="radio" name="trans" id="trManual"><label
+                  class="form-check-label" for="trManual"> ដោយដៃ (Manual)</label></div>
+            </div>
+            <div class="mb-4">
+              <h6 class="fw-bold mb-2">ចំនួនកៅអី <small class="text-muted fw-normal">Seats</small></h6>
+              <div class="d-flex gap-2 flex-wrap">
+                <input type="radio" class="btn-check" name="seats" id="s2" checked><label
+                  class="btn btn-outline-jungle btn-sm rounded-pill px-3" for="s2">2</label>
+                <input type="radio" class="btn-check" name="seats" id="s4"><label
+                  class="btn btn-outline-jungle btn-sm rounded-pill px-3" for="s4">4</label>
+                <input type="radio" class="btn-check" name="seats" id="s7"><label
+                  class="btn btn-outline-jungle btn-sm rounded-pill px-3" for="s7">7</label>
+                <input type="radio" class="btn-check" name="seats" id="s10"><label
+                  class="btn btn-outline-jungle btn-sm rounded-pill px-3" for="s10">10+</label>
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <h6 class="fw-bold d-flex justify-content-between align-items-center">
+                តម្លៃប្រហាក់ប្រហែល <span class="text-gold">$80 / ថ្ងៃ</span>
+              </h6>
+              <input type="range" class="form-range" min="0" max="80" value="80" id="priceRange">
+            </div>
+
+
+            <button class="btn btn-jungle w-100 mt-3 fw-semibold">
+              <i class="bi bi-funnel-fill me-1"></i> អនុវត្តតម្រង
+            </button>
+          </div>
+        </aside>
+        <section class="col-lg-9">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card vehicle-card h-100 position-relative">
+                <span class="badge bg-jungle type-badge"><i class="bi bi-scooter"></i> ម៉ូតូ</span>
+                <img src="assets/images/horng-img/click.jpg" class="card-img-top" alt="Honda Click 125i">
+                <div class="card-body d-flex flex-column">
+                  <h6 class="fw-bold mb-1">Honda Click 125i</h6>
+                  <p class="spec-pill mb-2">
+                    <i class="bi bi-gear-fill"></i> ស្វ័យប្រវត្តិ &nbsp;•&nbsp;
+                    <i class="bi bi-fuel-pump-fill"></i> សាំង
+                  </p>
+                  <p class="small text-secondary flex-grow-1">ស័ក្តិសមសម្រាប់ធ្វើដំណើរក្នុងទីក្រុង និងផ្លូវជនបទខ្លីៗ។
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center mt-2">
+                    <span class="price-tag">$10 <small class="text-muted fw-normal">/ ថ្ងៃ</small></span>
+                    <button class="btn btn-jungle btn-sm rounded-pill px-3">ជួលឥឡូវនេះ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card vehicle-card h-100 position-relative">
+                <span class="badge bg-jungle type-badge"><i class="bi bi-scooter"></i> ម៉ូតូ</span>
+                <img src="assets/images/horng-img/yamha.jpg" class="card-img-top" alt="Yamaha Nouvo">
+                <div class="card-body d-flex flex-column">
+                  <h6 class="fw-bold mb-1">Yamaha Nouvo</h6>
+                  <p class="spec-pill mb-2">
+                    <i class="bi bi-gear-fill"></i> ស្វ័យប្រវត្តិ &nbsp;•&nbsp;
+                    <i class="bi bi-fuel-pump-fill"></i> សាំង
+                  </p>
+                  <p class="small text-secondary flex-grow-1">ស័ក្តិសមសម្រាប់ដំណើរផ្សងព្រេងលើភ្នំ និងផ្លូវក្រៅទីក្រុង។
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center mt-2">
+                    <span class="price-tag">$30 <small class="text-muted fw-normal">/ ថ្ងៃ</small></span>
+                    <button class="btn btn-jungle btn-sm rounded-pill px-3">ជួលឥឡូវនេះ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card vehicle-card h-100 position-relative">
+                <span class="badge bg-jungle type-badge"><i class="bi bi-bicycle"></i>Scoopy</span>
+                <img src="assets/images/horng-img/scoopy.jpg" class="card-img-top" alt="Scoopy">
+                <div class="card-body d-flex flex-column">
+                  <h6 class="fw-bold mb-1">Scoopy</h6>
+                  <p class="spec-pill mb-2">
+                  </p>
+                  <p class="small text-secondary flex-grow-1">សម្រាប់ដើររុករកព្រៃឈើ និងផ្លូវជនបទក្នុងល្បឿនយឺត។</p>
+                  <div class="d-flex justify-content-between align-items-center mt-2">
+                    <span class="price-tag">$ <small class="text-muted fw-normal">/ ថ្ងៃ</small></span>
+                    <button class="btn btn-jungle btn-sm rounded-pill px-3">ជួលឥឡូវនេះ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card vehicle-card h-100 position-relative">
+                <span class="badge bg-jungle type-badge"><i class="bi bi-bicycle"></i> កង់</span>
+                <img src="assets/images/horng-img/bike.jpg" class="card-img-top" alt="City Bike">
+                <div class="card-body d-flex flex-column">
+                  <h6 class="fw-bold mb-1">កង់ទីក្រុង (City Bike)</h6>
+                  <p class="spec-pill mb-2">
+                    <i class="bi bi-gear-fill"></i> ដោយដៃ &nbsp;•&nbsp;
+                    <i class="bi bi-lightning-charge-fill"></i> ថាមពលកម្លាំងកាយ
+                  </p>
+                  <p class="small text-secondary flex-grow-1">ស័ក្តិសមសម្រាប់ដើររុករកទីក្រុងចាស់ និងផ្សារធម្មជាតិ។</p>
+                  <div class="d-flex justify-content-between align-items-center mt-2">
+                    <span class="price-tag">5$ <small class="text-muted fw-normal">/ ថ្ងៃ</small></span>
+                    <button class="btn btn-jungle btn-sm rounded-pill px-3">ជួលឥឡូវនេះ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car -->
+            <div class="col-md-4">
+              <div class="card vehicle-card h-100 position-relative">
+                <span class="badge bg-jungle type-badge"><i class="bi bi-car-front-fill"></i> ឡាន</span>
+                <img src="assets/images/horng-img/toyota.jpg" class="card-img-top" alt="Toyota Camry">
+                <div class="card-body d-flex flex-column">
+                  <h6 class="fw-bold mb-1">Toyota Camry</h6>
+                  <p class="spec-pill mb-2">
+                    <i class="bi bi-gear-fill"></i> ស្វ័យប្រវត្តិ &nbsp;•&nbsp;
+                    <i class="bi bi-person-fill"></i> 4 កៅអី &nbsp;•&nbsp;
+                    <i class="bi bi-snow"></i> ម៉ាស៊ីនត្រជាក់
+                  </p>
+                  <p class="small text-secondary flex-grow-1">សម្រាប់គ្រួសារ ឬដំណើរអាជីវកម្ម មានអ្នកបើកជូនតាមតម្រូវការ។
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center mt-2">
+                    <span class="price-tag">$45 <small class="text-muted fw-normal">/ ថ្ងៃ</small></span>
+                    <button class="btn btn-jungle btn-sm rounded-pill px-3">ជួលឥឡូវនេះ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card vehicle-card h-100 position-relative">
+                <span class="badge bg-jungle type-badge"><i class="bi bi-truck-front-fill"></i> Van</span>
+                <img src="assets/images/horng-img/toyota1.jpg" class="card-img-top" alt="Toyota Hiace Van">
+                <div class="card-body d-flex flex-column">
+                  <h6 class="fw-bold mb-1">Toyota Hiace (Van)</h6>
+                  <p class="spec-pill mb-2">
+                    <i class="bi bi-gear-fill"></i> ស្វ័យប្រវត្តិ &nbsp;•&nbsp;
+                    <i class="bi bi-snow"></i> ម៉ាស៊ីនត្រជាក់
+                  </p>
+                  <p class="small text-secondary flex-grow-1">ល្អសម្រាប់ក្រុមធំ ឬដំណើរកម្សាន្តជាគ្រួសារធំ។</p>
+                  <div class="d-flex justify-content-between align-items-center mt-2">
+                    <span class="price-tag">$65 <small class="text-muted fw-normal">/ ថ្ងៃ</small></span>
+                    <button class="btn btn-jungle btn-sm rounded-pill px-3">ជួលឥឡូវនេះ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <nav class="mt-5 d-flex justify-content-center">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link text-jungle" href="#">មុន</a></li>
+              <li class="page-item active"><a class="page-link bg-jungle border-jungle" href="#">1</a></li>
+              <li class="page-item"><a class="page-link text-jungle" href="#">2</a></li>
+              <li class="page-item"><a class="page-link text-jungle" href="#">3</a></li>
+              <li class="page-item"><a class="page-link text-jungle" href="#">បន្ទាប់</a></li>
+            </ul>
+          </nav>
+
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

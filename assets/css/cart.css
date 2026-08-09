@@ -573,3 +573,701 @@ body {
     }
 
 }
+
+/* ========================================== */
+
+
+/* .rent-boat-modal {
+    border-radius: 16px;
+    border: none;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+} */
+
+.boat-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.boat-card {
+    position: relative;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    background-color: #fff;
+}
+
+.boat-card:hover {
+    border-color: #0d6efd;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+}
+
+.boat-card.active {
+    border-color: #0d6efd;
+    background-color: #f0f7ff;
+}
+
+.boat-card img {
+    width: 100%;
+    height: 65px;
+    object-fit: contain;
+    margin-bottom: 6px;
+}
+
+.boat-card .boat-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #212529;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.boat-card .boat-price {
+    font-size: 0.8rem;
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+.boat-card.active .check-icon {
+    display: block;
+}
+
+
+/* ========================================== */
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.main-img-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 280px;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.img-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0 10px 0;
+    color: #333;
+}
+
+.car-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.car-card {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.car-card:hover {
+    border-color: #1565c0;
+}
+
+.car-card.active {
+    border-color: #1565c0;
+    background-color: #e3f2fd;
+}
+
+.car-card img {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    object-position: 50% 70%;
+}
+
+.car-name {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.car-price {
+    font-size: 12px;
+    color: #1565c0;
+    font-weight: bold;
+}
+
+.check-icon {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: #1565c0;
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.car-card.active .check-icon {
+    display: flex;
+}
+
+.details-list {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.details-list li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-pills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.price-box {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.total-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1565c0;
+}
+
+.car-btn {
+    padding: 10px 60px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.car-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+}
+
+.car-favorite-btn {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.car-favorite-btn:hover {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.car-favorite-btn.is-favorite {
+    color: #ffffff;
+    background: #e53935;
+    border-color: #e53935;
+}
+
+.car-map-btn:hover {
+    border-color: #dc3545;
+}
+
+.car-contact-btn:hover {
+    border-color: #0d6efd;
+    color: #0d6efd;
+}
+
+.car-book-btn {
+    background-color: #198754;
+    color: #ffffff;
+    border-color: #198754;
+}
+
+.car-book-btn i {
+    color: #ffffff !important;
+}
+
+.car-book-btn:hover {
+    background-color: #157347;
+    color: #ffffff;
+    border-color: #146c43;
+}
+
+
+/* ==================================================================================== */
+
+/* .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 10px;
+} */
+
+
+
+.main-img-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f1f3f5;
+    margin-bottom: 20px;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.img-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    backdrop-filter: blur(4px);
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin: 15px 0 10px 0;
+}
+
+.motor-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.motor-card {
+    position: relative;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    background-color: #fff;
+}
+
+.motor-card:hover {
+    border-color: #0d6efd;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+}
+
+.motor-card.active {
+    border-color: #0d6efd;
+    background-color: #f0f7ff;
+}
+
+.motor-card img {
+    width: 100%;
+    height: 65px;
+    object-fit: contain;
+    margin-bottom: 6px;
+}
+
+.motor-card .motor-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #212529;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.motor-card .motor-price {
+    font-size: 0.8rem;
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+.check-icon {
+    display: none;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #0d6efd;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    line-height: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.motor-card.active .check-icon {
+    display: block;
+}
+
+.details-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.details-list li {
+    padding: 6px 0;
+    font-size: 0.95rem;
+    color: #495057;
+}
+
+.details-list li i {
+    margin-right: 8px;
+}
+
+.info-pills {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 12px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    font-size: 0.9rem;
+    color: #495057;
+    margin-bottom: 20px;
+}
+
+.price-box {
+    background-color: #e7f1ff;
+    border-left: 4px solid #0d6efd;
+    padding: 12px 20px;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.car-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.car-favorite-btn {
+    background-color: #fff1f2;
+    color: #e11d48;
+    border: 1px solid #fecdd3;
+}
+
+.car-favorite-btn:hover {
+    background-color: #ffe4e6;
+}
+
+.car-map-btn,
+.car-contact-btn {
+    background-color: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+}
+
+.car-map-btn:hover,
+.car-contact-btn:hover {
+    background-color: #e2e8f0;
+}
+
+.car-book-btn {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.car-book-btn:hover {
+    background-color: #0b5ed7;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
+
+
+
+/* ====================================================== */
+
+.main-img-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 280px;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 10% 30%;
+}
+
+.img-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px 0 10px 0;
+    color: #333;
+}
+
+.guide-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.guide-card {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.guide-card:hover {
+    border-color: #00796b;
+}
+
+.guide-card.active {
+    border-color: #00796b;
+    background-color: #e0f2f1;
+}
+
+.guide-card img {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    object-position: top;
+}
+
+.guide-name {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.guide-price {
+    font-size: 11px;
+    color: #00796b;
+    font-weight: bold;
+}
+
+.check-icon {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: #00796b;
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.guide-card.active .check-icon {
+    display: flex;
+}
+
+.details-list {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.details-list li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-pills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.price-box {
+    background: #e0f2f1;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.total-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00796b;
+}
+
+
+.guide-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.guide-favorite-btn {
+    background-color: #fff1f2;
+    color: #e11d48;
+    border: 1px solid #fecdd3;
+}
+
+.guide-favorite-btn:hover {
+    background-color: #ffe4e6;
+}
+
+.guide-map-btn,
+.guide-contact-btn {
+    background-color: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+}
+
+.guide-map-btn:hover,
+.guide-contact-btn:hover {
+    background-color: #e2e8f0;
+}
+
+.guide-book-btn {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.guide-book-btn:hover {
+    background-color: #0b5ed7;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
+
+
+
+
+@media (max-width: 576px) {
+    .guide-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .motor-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .car-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .boat-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .d-flex.justify-content-around {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .d-flex.justify-content-around {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
