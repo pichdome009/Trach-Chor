@@ -346,7 +346,7 @@
 
                 <!-- 1. Silk -->
                 <div class="col-lg-3 col-md-6 restaurant-search-item" data-name="Khmer Silk Hol Phamuong Fabric"
-                    data-title="ហូលផាមួង និងសូត្រមាសខ្មែរ" data-category="សម្លៀកបំពាក់ &amp; ត្បាញសូត្រ"
+                    data-title="ហូលផាមួង និងសូត្រមាសខ្មែរ" data-category="ផលិតផលសិប្បកម្មប្រពៃណី"
                     data-location="ខេត្តសៀមរាប និងតាកែវ" data-rating="5.0" data-price="85"
                     data-image="assets/images/products/silk.png"
                     data-description="ត្បាញដោយដៃពីសូត្រធម្មជាតិ ១០០% ដោយសិប្បករខេត្តសៀមរាប និងតាកែវ។ ក្បាច់ហូលផាមួងបញ្ចូលពណ៌ធម្មជាតិ ជ្រលងដោយបែបប្រពៃណីបុរាណ ស្រស់ស្អាត និងប្រណីត។"
@@ -387,7 +387,7 @@
 
                 <!-- 2. Kampot Pepper GI -->
                 <div class="col-lg-3 col-md-6 restaurant-search-item" data-name="Kampot Pepper GI Premium"
-                    data-title="ម្រេចកំពត GI គុណភាពខ្ពស់" data-category="គ្រឿងទេស &amp; ម្ហូបអាហារ"
+                    data-title="ម្រេចកំពត GI គុណភាពខ្ពស់" data-category="អាហារ និងគ្រឿងទេសក្នុងស្រុក"
                     data-location="ខេត្តកំពត" data-rating="4.9" data-price="25"
                     data-image="assets/images/products/pepper.png"
                     data-description="ម្រេចខ្មៅ ក្រហម និងស ទទួលបានការទទួលស្គាល់គុណភាព GI ល្បីល្បាញជាងគេលើពិភពលោក។ ដាំដុះដោយមិនប្រើថ្នាំគីមី លើដីជ្រលក់ទន្លេ ខេត្តកំពត។"
@@ -427,7 +427,7 @@
 
                 <!-- 3. Palm Sugar -->
                 <div class="col-lg-3 col-md-6 restaurant-search-item" data-name="Kampong Speu Organic Palm Sugar"
-                    data-title="ស្ករត្នោតសរីរាង្គកំពង់ស្ពឺ" data-category="ចំណីអាហារ &amp; សម្រាកសម្រួល"
+                    data-title="ស្ករត្នោតសរីរាង្គកំពង់ស្ពឺ" data-category="អាហារ និងគ្រឿងទេសក្នុងស្រុក"
                     data-location="ខេត្តកំពង់ស្ពឺ" data-rating="4.8" data-price="15"
                     data-image="assets/images/products/palm_sugar.png"
                     data-description="ស្ករត្នោតធម្មជាតិ មានក្លិនឈ្ងុយ និងរសជាតិផ្អែមស្រទន់ គ្មានសារធាតុគីមី។ ស្ករដ៏ល្អបំផុតនៅខេត្តកំពង់ស្ពឺ ផ្តល់ជូនដោយធម្មជាតិ ១០០%។"
@@ -467,7 +467,7 @@
 
                 <!-- 4. Silver Sculpture -->
                 <div class="col-lg-3 col-md-6 restaurant-search-item" data-name="Khmer Silver and Bronze Art Sculpture"
-                    data-title="ចម្លាក់ប្រាក់ និងទង់ដែងសិល្បៈ" data-category="សិល្បៈ &amp; ចម្លាក់ដៃ"
+                    data-title="ចម្លាក់ប្រាក់ និងទង់ដែងសិល្បៈ" data-category="ផលិតផលសិប្បកម្មប្រពៃណី"
                     data-location="ខេត្តកណ្តាល និងសៀមរាប" data-rating="5.0" data-price="120"
                     data-image="assets/images/products/silver_sculpture.png"
                     data-description="កន្ត្រកប្រាក់ និងចម្លាក់រូបអប្សរាឆ្លាក់ដោយដៃយ៉ាងប្រណីតពីសិប្បករខេត្តកណ្តាល និងសៀមរាប។ ស្នាដៃដៃគ្រប់ដុំមានតែមួយ ប្រកបដោយភាពល្អិតល្អន់និងបេតិកភណ្ឌ។"
@@ -521,8 +521,89 @@
                 <p class="mb-3">ស្វែងរកតាមឈ្មោះផលិតផល ប្រភេទសិប្បកម្ម ទីតាំង ឬចន្លោះតម្លៃដែលអ្នកចង់បាន។</p>
             </div>
 
+            <!-- Offcanvas button  -->
+            <div class="d-lg-none mb-3">
+                <button class="btn btn-success w-100" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#souvenirFilterOffcanvas">
+                    <i class="fa-solid fa-sliders me-2"></i>តម្រងស្វែងរក &amp; ការកំណត់
+                </button>
+            </div>
+
+            <!-- Offcanvas Top -->
+            <div class="offcanvas offcanvas-top notification-sidebar-offcanvas" id="souvenirFilterOffcanvas"
+                style="height: auto; max-height: 80vh; overflow-y: auto;">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title"><i class="bi bi-funnel-fill"></i> តម្រងស្វែងរក</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="notification-offcanvas-section">
+                        <p class="notification-offcanvas-label">ប្រភេទផលិតផល</p>
+                        <form class="restaurant-filter-sidebar border-0 shadow-none p-0 bg-transparent">
+                            <button type="button" class="btn restaurant-reset-btn w-100 mb-3">
+                                <i class="fa-solid fa-rotate-left me-2"></i>សម្អាតតម្រង
+                            </button>
+                            <label class="form-label">ពាក្យគន្លឹះ</label>
+                            <div class="restaurant-search-input mb-3">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="search" class="form-control" placeholder="ឧ. ម្រេច, សូត្រ, ចម្លាក់..."
+                                    autocomplete="off">
+                            </div>
+                            <div class="restaurant-filter-divider"></div>
+                            <div class="restaurant-filter-group">
+                                <div class="form-label mb-2">ទីតាំង (ខេត្ត / ក្រុង)</div>
+                                <button type="button" class="btn restaurant-location-modal-btn w-100 mb-3" data-bs-toggle="modal" data-bs-target="#restaurantLocationModal">
+                                    <i class="fa-solid fa-location-dot"></i> <span class="restaurant-location-button-text">ជ្រើសរើសខេត្ត / ក្រុង</span> <i class="fa-solid fa-chevron-right ms-auto"></i>
+                                </button>
+                            </div>
+                            <div class="restaurant-filter-divider"></div>
+                            <div class="restaurant-filter-group">
+                                <div class="form-label mb-2">ប្រភេទផលិតផល</div>
+                                <label class="restaurant-filter-option"><input class="restaurant-category-filter"
+                                        type="radio" name="souvenirCategoryM"
+                                        value="អាហារ និងគ្រឿងទេសក្នុងស្រុក"><span>អាហារ
+                                        និងគ្រឿងទេសក្នុងស្រុក</span></label>
+                                <label class="restaurant-filter-option"><input class="restaurant-category-filter"
+                                        type="radio" name="souvenirCategoryM"
+                                        value="ផលិតផលសិប្បកម្មប្រពៃណី"><span>ផលិតផលសិប្បកម្មប្រពៃណី</span></label>
+                                <label class="restaurant-filter-option mb-0"><input class="restaurant-category-filter"
+                                        type="radio" name="souvenirCategoryM"
+                                        value="វត្ថុវប្បធម៌ និងប្រើប្រាស់ប្រចាំថ្ងៃ"><span>វត្ថុវប្បធម៌
+                                        និងប្រើប្រាស់ប្រចាំថ្ងៃ</span></label>
+                            </div>
+                            <div class="restaurant-filter-divider"></div>
+                            <div class="restaurant-filter-group">
+                                <div class="form-label mb-2">តម្រៀបតាម</div>
+                                <label class="restaurant-filter-option"><input class="restaurant-sort" type="radio"
+                                        name="souvenirSortM" value="rating-desc"><span>ការវាយតម្លៃ (ខ្ពស់ →
+                                        ទាប)</span></label>
+                                <label class="restaurant-filter-option"><input class="restaurant-sort" type="radio"
+                                        name="souvenirSortM" value="price-asc"><span>តម្លៃ (ទាប → ខ្ពស់)</span></label>
+                                <label class="restaurant-filter-option"><input class="restaurant-sort" type="radio"
+                                        name="souvenirSortM" value="price-desc"><span>តម្លៃ (ខ្ពស់ → ទាប)</span></label>
+                            </div>
+                            <div class="restaurant-filter-divider"></div>
+                            <div class="restaurant-filter-group">
+                                <div class="form-label mb-2">ចន្លោះតម្លៃ</div>
+                                <label class="restaurant-filter-option"><input class="restaurant-price-filter"
+                                        type="radio" name="souvenirPriceM" value="under-5"><span>ក្រោម $៥</span></label>
+                                <label class="restaurant-filter-option"><input class="restaurant-price-filter"
+                                        type="radio" name="souvenirPriceM" value="5-10"><span>$៥–១០</span></label>
+                                <label class="restaurant-filter-option"><input class="restaurant-price-filter"
+                                        type="radio" name="souvenirPriceM" value="10-20"><span>$១០–២០</span></label>
+                                <label class="restaurant-filter-option"><input class="restaurant-price-filter"
+                                        type="radio" name="souvenirPriceM" value="20-plus"><span>$២០+</span></label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="notification-offcanvas-divider"></div>
+                    <button type="button" class="btn notification-offcanvas-close w-100"
+                        data-bs-dismiss="offcanvas">បិទការកំណត់</button>
+                </div>
+            </div>
+
             <div class="row g-4 align-items-start">
-                <div class="col-lg-4" aria-label="តម្រងវត្ថុអនុស្សាវរីយ៍">
+                <div class="col-lg-4 d-none d-lg-block" aria-label="តម្រងវត្ថុអនុស្សាវរីយ៍">
                     <form id="restaurantSearchFilters" class="restaurant-filter-sidebar">
                         <div class="restaurant-filter-title"><i class="fa-solid fa-sliders me-2"></i>តម្រងស្វែងរក</div>
 
@@ -554,53 +635,18 @@
                             <div class="form-label mb-3">ប្រភេទផលិតផល</div>
                             <label class="restaurant-filter-option">
                                 <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
-                                    value="គ្រឿងទេស">
-                                <span>គ្រឿងទេស &amp; ម្ហូបអាហារ</span>
+                                    value="អាហារ និងគ្រឿងទេសក្នុងស្រុក">
+                                <span>អាហារ និងគ្រឿងទេសក្នុងស្រុក</span>
                             </label>
                             <label class="restaurant-filter-option">
                                 <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
-                                    value="សិល្បៈ">
-                                <span>សិល្បៈ &amp; ចម្លាក់</span>
-                            </label>
-                            <label class="restaurant-filter-option">
-                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
-                                    value="សិប្បកម្ម">
-                                <span>សិប្បកម្ម &amp; ឧបករណ៍</span>
-                            </label>
-                            <label class="restaurant-filter-option">
-                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
-                                    value="សម្លៀកបំពាក់">
-                                <span>សម្លៀកបំពាក់ &amp; ត្បាញសូត្រ</span>
-                            </label>
-                            <label class="restaurant-filter-option">
-                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
-                                    value="ភេសជ្ជៈ">
-                                <span>ភេសជ្ជៈ &amp; កាហ្វេ</span>
-                            </label>
-                            <label class="restaurant-filter-option">
-                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
-                                    value="កាបូប">
-                                <span>កាបូប &amp; ម៉ូដអេកូឡូស៊ី</span>
-                            </label>
-                            <label class="restaurant-filter-option">
-                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
-                                    value="ចំណីអាហារ">
-                                <span>ចំណីអាហារ &amp; សម្រាកសម្រួល</span>
-                            </label>
-                            <label class="restaurant-filter-option">
-                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
-                                    value="សុខភាព">
-                                <span>សុខភាព &amp; សម្រស់ / ស្បា</span>
-                            </label>
-                            <label class="restaurant-filter-option">
-                                <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
-                                    value="គ្រឿងអលង្ការ">
-                                <span>គ្រឿងអលង្ការ &amp; គ្រឿងលម្អ</span>
+                                    value="ផលិតផលសិប្បកម្មប្រពៃណី">
+                                <span>ផលិតផលសិប្បកម្មប្រពៃណី</span>
                             </label>
                             <label class="restaurant-filter-option mb-0">
                                 <input class="restaurant-category-filter" type="radio" name="restaurantCategory"
-                                    value="វប្បធម៌">
-                                <span>សិល្បៈ &amp; វប្បធម៌</span>
+                                    value="វត្ថុវប្បធម៌ និងប្រើប្រាស់ប្រចាំថ្ងៃ">
+                                <span>វត្ថុវប្បធម៌ និងប្រើប្រាស់ប្រចាំថ្ងៃ</span>
                             </label>
                         </div>
 
@@ -652,7 +698,7 @@
 
                         <!-- 1. Kampot Pepper -->
                         <div class="col-md-6 restaurant-search-item" data-name="Kampot Pepper Premium Organic"
-                            data-title="ម្រេចខ្មៅកំពតសរីរាង្គ" data-category="គ្រឿងទេស &amp; ម្ហូបអាហារ"
+                            data-title="ម្រេចខ្មៅកំពតសរីរាង្គ" data-category="អាហារ និងគ្រឿងទេសក្នុងស្រុក"
                             data-location="ខេត្តកំពត" data-rating="4.9" data-price="8"
                             data-image="assets/images/sak/kampotpepper.png"
                             data-description="ម្រេចខ្មៅកំពត ត្រូវបានទទួលស្គាល់ថាជាម្រេចដ៏ល្អបំផុតមួយនៅលើពិភពលោក ដោយសារតែដី និងអាកាសធាតុពិសេសនៅខេត្តកំពត។"
@@ -695,9 +741,8 @@
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
 
-                                        <h5 class="text-success mb-0">
-                                            $8
-                                        </h5>
+                                        <h5 class="text-success mb-0">$8 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
 
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">
@@ -716,7 +761,7 @@
 
                         <!-- 2. Silverware Box -->
                         <div class="col-md-6 restaurant-search-item" data-name="Khmer Hand-Carved Silverware Box"
-                            data-title="ប្រអប់ប្រាក់ចម្លាក់ដៃខ្មែរ" data-category="សិល្បៈ &amp; ចម្លាក់ដៃ"
+                            data-title="ប្រអប់ប្រាក់ចម្លាក់ដៃខ្មែរ" data-category="ផលិតផលសិប្បកម្មប្រពៃណី"
                             data-location="រាជធានីភ្នំពេញ" data-rating="4.9" data-price="25"
                             data-image="assets/images/sak/sliverwarebox.png"
                             data-description="ប្រអប់ប្រាក់ចម្លាក់រចនាបថបុរាណខ្មែរ ធ្វើដោយដៃយ៉ាងស្អាតប្រណិត ឆ្លាក់ក្បាច់ផ្កាចន្ទន៍ និងក្បាច់បុរាណយ៉ាងល្អិតល្អន់។"
@@ -739,7 +784,8 @@
                                     <p><i class="fas fa-map-marker-alt"></i> រាជធានីភ្នំពេញ</p>
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                                        <h5 class="text-success mb-0">$25</h5>
+                                        <h5 class="text-success mb-0">$25 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">មើលលម្អិត</button>
                                     </div>
@@ -749,7 +795,7 @@
 
                         <!-- 3. Clay Pottery Cooking Pot -->
                         <div class="col-md-6 restaurant-search-item" data-name="Traditional Clay Pottery Cooking Pot"
-                            data-title="ឆ្នាំងដីដុតប្រពៃណី" data-category="សិប្បកម្ម &amp; ឧបករណ៍ផ្ទះបាយ"
+                            data-title="ឆ្នាំងដីដុតប្រពៃណី" data-category="វត្ថុវប្បធម៌ និងប្រើប្រាស់ប្រចាំថ្ងៃ"
                             data-location="ខេត្តកំពង់ឆ្នាំង" data-rating="4.8" data-price="10"
                             data-image="assets/images/sak/clay-pottery.png"
                             data-description="ឆ្នាំងដីធ្វើដោយដៃផ្ទាល់ពីអ្នកភូមិខេត្តកំពង់ឆ្នាំង ជួយរក្សារសជាតិម្ហូបអាហារតាមបែបប្រពៃណី និងគ្មានសារធាតុគីមី។"
@@ -772,7 +818,8 @@
                                     <p><i class="fas fa-map-marker-alt"></i> ខេត្តកំពង់ឆ្នាំង</p>
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                                        <h5 class="text-success mb-0">$10</h5>
+                                        <h5 class="text-success mb-0">$10 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">មើលលម្អិត</button>
                                     </div>
@@ -782,7 +829,7 @@
 
                         <!-- 4. Silk Sampot / Hol Phamuong -->
                         <div class="col-md-6 restaurant-search-item" data-name="Khmer Silk Hol Phamuong Fabric"
-                            data-title="ក្រណាត់សូត្រហូលផាមួលខ្មែរ" data-category="សម្លៀកបំពាក់ &amp; ត្បាញសូត្រ"
+                            data-title="ក្រណាត់សូត្រហូលផាមួលខ្មែរ" data-category="ផលិតផលសិប្បកម្មប្រពៃណី"
                             data-location="ខេត្តតាកែវ" data-rating="5.0" data-price="45"
                             data-image="assets/images/sak/silk-sampot.png"
                             data-description="សូត្រខ្មែរត្បាញដោយដៃ ប្រណិតស្រស់ស្អាត គុណភាពខ្ពស់ ជ្រលងពណ៌ធម្មជាតិ និងមានក្បាច់រចនាប្រពៃណីដូនតា។"
@@ -805,7 +852,8 @@
                                     <p><i class="fas fa-map-marker-alt"></i> ខេត្តតាកែវ</p>
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                                        <h5 class="text-success mb-0">$45</h5>
+                                        <h5 class="text-success mb-0">$45 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">មើលលម្អិត</button>
                                     </div>
@@ -815,7 +863,7 @@
 
                         <!-- 5. Wooden Apsara Carving -->
                         <div class="col-md-6 restaurant-search-item" data-name="Wooden Apsara Carving Sculpture"
-                            data-title="រូបចម្លាក់ឈើនាងអប្សរា" data-category="សិល្បៈ &amp; ចម្លាក់ឈើ"
+                            data-title="រូបចម្លាក់ឈើនាងអប្សរា" data-category="ផលិតផលសិប្បកម្មប្រពៃណី"
                             data-location="ខេត្តសៀមរាប" data-rating="4.9" data-price="30"
                             data-image="assets/images/sak/wooden-apsara.png"
                             data-description="ចម្លាក់ឈើក្បាច់រចនានាងអប្សរា ផលិតដោយក្បាច់ដៃប្រណិតនៅខេត្តសៀមរាប តំណាងឱ្យសិល្បៈ និងវប្បធម៌ខ្មែរដ៏រុងរឿង។"
@@ -838,7 +886,8 @@
                                     <p><i class="fas fa-map-marker-alt"></i> ខេត្តសៀមរាប</p>
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                                        <h5 class="text-success mb-0">$30</h5>
+                                        <h5 class="text-success mb-0">$30 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">មើលលម្អិត</button>
                                     </div>
@@ -848,7 +897,7 @@
 
                         <!-- 6. Palm Sugar -->
                         <div class="col-md-6 restaurant-search-item" data-name="Kampong Speu Organic Palm Sugar"
-                            data-title="ស្ករត្នោតសរីរាង្គកំពង់ស្ពឺ" data-category="គ្រឿងទេស &amp; ម្ហូបអាហារ"
+                            data-title="ស្ករត្នោតសរីរាង្គកំពង់ស្ពឺ" data-category="អាហារ និងគ្រឿងទេសក្នុងស្រុក"
                             data-location="ខេត្តកំពង់ស្ពឺ" data-rating="4.9" data-price="5"
                             data-image="assets/images/sak/palm-sugar.png"
                             data-description="ស្ករត្នោតធម្មជាតិពិតៗ ផ្អែមឈ្ងុយឆ្ងាញ់ សុខភាពល្អ មានក្លិនក្រអូបប្រហើរ ទទួលបានការបញ្ជាក់សម្គាល់ភូមិសាស្ត្រ GI។"
@@ -871,7 +920,8 @@
                                     <p><i class="fas fa-map-marker-alt"></i> ខេត្តកំពង់ស្ពឺ</p>
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                                        <h5 class="text-success mb-0">$5</h5>
+                                        <h5 class="text-success mb-0">$5 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">មើលលម្អិត</button>
                                     </div>
@@ -881,7 +931,7 @@
 
                         <!-- 7. Bamboo Basket -->
                         <div class="col-md-6 restaurant-search-item" data-name="Hand-Woven Bamboo Basket"
-                            data-title="កន្ត្រកត្បាញពីឫស្សី" data-category="សិប្បកម្ម &amp; ឧបករណ៍ប្រើប្រាស់"
+                            data-title="កន្ត្រកត្បាញពីឫស្សី" data-category="វត្ថុវប្បធម៌ និងប្រើប្រាស់ប្រចាំថ្ងៃ"
                             data-location="ខេត្តកណ្តាល" data-rating="4.7" data-price="7"
                             data-image="assets/images/sak/bamboo-basket.png"
                             data-description="កន្ត្រកឫស្សីត្បាញដោយដៃយ៉ាងផ្ចិតផ្ចង់ សម្រាប់ដាក់អីវ៉ាន់ ផ្លែឈើ ឬប្រើប្រាស់ជាគ្រឿងលម្អផ្ទះបែបធម្មជាតិ។"
@@ -904,7 +954,8 @@
                                     <p><i class="fas fa-map-marker-alt"></i> ខេត្តកណ្តាល</p>
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                                        <h5 class="text-success mb-0">$7</h5>
+                                        <h5 class="text-success mb-0">$7 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">មើលលម្អិត</button>
                                     </div>
@@ -914,7 +965,7 @@
 
                         <!-- 8. Stone Buddha Statue -->
                         <div class="col-md-6 restaurant-search-item" data-name="Marble Stone Buddha Statue"
-                            data-title="រូបចម្លាក់ព្រះពុទ្ធថ្មម៉ាប" data-category="សិល្បៈ &amp; ចម្លាក់ថ្ម"
+                            data-title="រូបចម្លាក់ព្រះពុទ្ធថ្មម៉ាប" data-category="ផលិតផលសិប្បកម្មប្រពៃណី"
                             data-location="ខេត្តពោធិ៍សាត់" data-rating="5.0" data-price="35"
                             data-image="assets/images/sak/stone-buddha.png"
                             data-description="ចម្លាក់ថ្មម៉ាបឆ្លាក់ដោយដៃយ៉ាងផ្ចិតផ្ចង់ពីជាងជំនាញខេត្តពោធិ៍សាត់ ផ្តល់នូវអារម្មណ៍ស្ងប់ស្ងាត់ និងសិរីសួស្តី។"
@@ -937,7 +988,8 @@
                                     <p><i class="fas fa-map-marker-alt"></i> ខេត្តពោធិ៍សាត់</p>
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                                        <h5 class="text-success mb-0">$35</h5>
+                                        <h5 class="text-success mb-0">$35 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">មើលលម្អិត</button>
                                     </div>
@@ -947,7 +999,7 @@
 
                         <!-- 9. Mondulkiri Coffee -->
                         <div class="col-md-6 restaurant-search-item" data-name="Mondulkiri Organic Coffee Beans"
-                            data-title="គ្រាប់កាហ្វេសរីរាង្គមណ្ឌលគិរី" data-category="ភេសជ្ជៈ &amp; កាហ្វេ"
+                            data-title="គ្រាប់កាហ្វេសរីរាង្គមណ្ឌលគិរី" data-category="អាហារ និងគ្រឿងទេសក្នុងស្រុក"
                             data-location="ខេត្តមណ្ឌលគិរី" data-rating="4.9" data-price="9"
                             data-image="assets/images/sak/mondulkiri-coffee.png"
                             data-description="គ្រាប់កាហ្វេអារ៉ាប៊ីកា និងរ៉ូប៊ូស្តា ដាំលើទឹកដីភ្នំភាគឦសាន ក្លិនឈ្ងុយប្រហើរ រសជាតិកាហ្វេសុទ្ធ ១០០%។"
@@ -970,7 +1022,8 @@
                                     <p><i class="fas fa-map-marker-alt"></i> ខេត្តមណ្ឌលគិរី</p>
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                                        <h5 class="text-success mb-0">$9</h5>
+                                        <h5 class="text-success mb-0">$9 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">មើលលម្អិត</button>
                                     </div>
@@ -980,7 +1033,7 @@
 
                         <!-- 10. Recycled Bag -->
                         <div class="col-md-6 restaurant-search-item" data-name="Upcycled Feed Bag Tote"
-                            data-title="កាបូបកែច្នៃពីការុងចំណី" data-category="កាបូប &amp; ម៉ូដអេកូឡូស៊ី"
+                            data-title="កាបូបកែច្នៃពីការុងចំណី" data-category="វត្ថុវប្បធម៌ និងប្រើប្រាស់ប្រចាំថ្ងៃ"
                             data-location="រាជធានីភ្នំពេញ" data-rating="4.8" data-price="8"
                             data-image="assets/images/sak/recycled-bag.png"
                             data-description="ផលិតផលអេកូឡូស៊ីកែច្នៃឡើងវិញពីការុងចំណីសត្វ ម៉ូដប្លែក ទាន់សម័យ ធន់ស្វិត និងប្រើប្រាស់បានយូរអង្វែង។"
@@ -1003,7 +1056,8 @@
                                     <p><i class="fas fa-map-marker-alt"></i> រាជធានីភ្នំពេញ</p>
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                                        <h5 class="text-success mb-0">$8</h5>
+                                        <h5 class="text-success mb-0">$8 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">មើលលម្អិត</button>
                                     </div>
@@ -1013,7 +1067,7 @@
 
                         <!-- 11. Dried Fruit Mix -->
                         <div class="col-md-6 restaurant-search-item" data-name="Tropical Dried Fruit Mix"
-                            data-title="ស្វាយ និងផ្លែឈើក្រៀមចម្រុះ" data-category="ចំណីអាហារ &amp; សម្រាកសម្រួល"
+                            data-title="ស្វាយ និងផ្លែឈើក្រៀមចម្រុះ" data-category="អាហារ និងគ្រឿងទេសក្នុងស្រុក"
                             data-location="ខេត្តបាត់ដំបង" data-rating="4.8" data-price="6"
                             data-image="assets/images/sak/dried-fruit.png"
                             data-description="ផ្លែឈើក្រៀមធម្មជាតិគ្មានសារធាតុគីមី អនាម័យខ្ពស់ រក្សារសជាតិជូរអែមធម្មជាតិ ឆ្ងាញ់ពិសា និងល្អចំពោះសុខភាព។"
@@ -1036,7 +1090,8 @@
                                     <p><i class="fas fa-map-marker-alt"></i> ខេត្តបាត់ដំបង</p>
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                                        <h5 class="text-success mb-0">$6</h5>
+                                        <h5 class="text-success mb-0">$6 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">មើលលម្អិត</button>
                                     </div>
@@ -1046,7 +1101,7 @@
 
                         <!-- 12. Leather Shadow Puppet -->
                         <div class="col-md-6 restaurant-search-item" data-name="Khmer Traditional Leather Shadow Puppet"
-                            data-title="ចម្លាក់ស្បែកតូចប្រពៃណីខ្មែរ" data-category="សិល្បៈ &amp; វប្បធម៌"
+                            data-title="ចម្លាក់ស្បែកតូចប្រពៃណីខ្មែរ" data-category="ផលិតផលសិប្បកម្មប្រពៃណី"
                             data-location="ខេត្តសៀមរាប" data-rating="4.9" data-price="18"
                             data-image="assets/images/sak/shadow-puppet.png"
                             data-description="សិល្បៈចម្លាក់ស្បែកសែកសម័យបុរាណ ឆ្លាក់ដោយដៃយ៉ាងល្អិតល្អន់ សម្រាប់ដាក់តាំងលម្អ ឬកាតអនុស្សាវរីយ៍។"
@@ -1069,7 +1124,8 @@
                                     <p><i class="fas fa-map-marker-alt"></i> ខេត្តសៀមរាប</p>
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                                        <h5 class="text-success mb-0">$18</h5>
+                                        <h5 class="text-success mb-0">$18 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">មើលលម្អិត</button>
                                     </div>
@@ -1079,7 +1135,7 @@
 
                         <!-- 13. Cold-Pressed Coconut Oil -->
                         <div class="col-md-6 restaurant-search-item" data-name="Cold-Pressed Virgin Coconut Oil"
-                            data-title="ប្រេងដូងធម្មជាតិពន្លត់ត្រជាក់" data-category="សុខភាព &amp; សម្រស់"
+                            data-title="ប្រេងដូងធម្មជាតិពន្លត់ត្រជាក់" data-category="អាហារ និងគ្រឿងទេសក្នុងស្រុក"
                             data-location="ខេត្តកំពត" data-rating="4.9" data-price="7"
                             data-image="assets/images/sak/Natural Coconut Oil.png"
                             data-description="ប្រេងដូងសុទ្ធ ១០០% ផលិតតាមបច្ចេកទេសពន្លត់ត្រជាក់ ល្អបំផុតសម្រាប់ថែរក្សាស្បែក សក់ និងសុខភាពទូទៅ។"
@@ -1102,7 +1158,8 @@
                                     <p><i class="fas fa-map-marker-alt"></i> ខេត្តកំពត</p>
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                                        <h5 class="text-success mb-0">$7</h5>
+                                        <h5 class="text-success mb-0">$7 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">មើលលម្អិត</button>
                                     </div>
@@ -1112,7 +1169,7 @@
 
                         <!-- 14. Buddha Necklace -->
                         <div class="col-md-6 restaurant-search-item" data-name="Buddha Pendant Necklace"
-                            data-title="ខ្សែកព្រះពុទ្ធ" data-category="គ្រឿងអលង្ការ &amp; គ្រឿងលម្អ"
+                            data-title="ខ្សែកព្រះពុទ្ធ" data-category="វត្ថុវប្បធម៌ និងប្រើប្រាស់ប្រចាំថ្ងៃ"
                             data-location="រាជធានីភ្នំពេញ" data-rating="4.9" data-price="15"
                             data-image="assets/images/sak/buddha_necklace.png"
                             data-description="ខ្សែកព្រះពុទ្ធឆ្លាក់ក្បាច់ និងលោហៈប្រណិត ផ្តល់នូវភាពស្ងប់ស្ងាត់ សិរីសួស្តី និងរចនាបថទាន់សម័យ។"
@@ -1135,7 +1192,8 @@
                                     <p><i class="fas fa-map-marker-alt"></i> រាជធានីភ្នំពេញ</p>
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                                        <h5 class="text-success mb-0">$15</h5>
+                                        <h5 class="text-success mb-0">$15 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">មើលលម្អិត</button>
                                     </div>
@@ -1145,7 +1203,7 @@
 
                         <!-- 15. Herbal Bath Salt -->
                         <div class="col-md-6 restaurant-search-item" data-name="Traditional Khmer Herbal Bath Salt"
-                            data-title="អំបិលស្ប៉ាងូតទឹកឱសថបុរាណ" data-category="សុខភាព &amp; ស្ប៉ា"
+                            data-title="អំបិលស្ប៉ាងូតទឹកឱសថបុរាណ" data-category="វត្ថុវប្បធម៌ និងប្រើប្រាស់ប្រចាំថ្ងៃ"
                             data-location="ខេត្តកំពត" data-rating="4.8" data-price="11"
                             data-image="assets/images/sak/Herbal Spa Bath Salt.png"
                             data-description="ផ្សំឡើងពីអំបិលសមុទ្រធម្មជាតិកំពត និងរុក្ខជាតិឱសថបុរាណខ្មែរ ជួយសម្រួលអារម្មណ៍ បំបាត់ភាពនឿយហត់ និងថែរក្សាស្បែក។"
@@ -1168,7 +1226,8 @@
                                     <p><i class="fas fa-map-marker-alt"></i> ខេត្តកំពត</p>
                                     <div
                                         class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
-                                        <h5 class="text-success mb-0">$11</h5>
+                                        <h5 class="text-success mb-0">$11 <span class="text-muted small fw-normal"
+                                                style="font-size: 0.75rem;">/ កញ្ចប់</span></h5>
                                         <button class="btn btn-outline-success rounded-pill"
                                             onclick="openSouvenirModal(this)">មើលលម្អិត</button>
                                     </div>
@@ -1227,7 +1286,7 @@
                     </label>
                     <label class="restaurant-location-option">
                         <input class="restaurant-location-filter" type="checkbox" value="តាកែវ">
-                        <span><i class="fa-solid fa-scythe"></i> ខេត្តតាកែវ</span>
+                        <span><i class="fa-solid fa-wheat-awn"></i> ខេត្តតាកែវ</span>
                     </label>
                     <label class="restaurant-location-option">
                         <input class="restaurant-location-filter" type="checkbox" value="កំពង់ឆ្នាំង">
@@ -1404,7 +1463,7 @@
             if (!restaurantResultsGrid) return;
 
             const restaurantKeyword = document.getElementById('restaurantKeyword');
-            const restaurantLocationButtonText = document.querySelector('.restaurant-location-button-text');
+            const restaurantLocationButtonTexts = document.querySelectorAll('.restaurant-location-button-text');
             const restaurantLocationFilters = document.querySelectorAll('.restaurant-location-filter');
             const restaurantSortFilters = document.querySelectorAll('.restaurant-sort');
             const restaurantPriceFilters = document.querySelectorAll('.restaurant-price-filter');
@@ -1428,11 +1487,11 @@
                     .map(filter => filter.closest('label')?.querySelector('span')?.textContent.trim() || filter.value.trim())
                     .filter(Boolean);
 
-                if (restaurantLocationButtonText) {
-                    restaurantLocationButtonText.textContent = selectedNames.length
+                restaurantLocationButtonTexts.forEach(el => {
+                    el.textContent = selectedNames.length
                         ? selectedNames.join(', ')
                         : 'ជ្រើសរើសខេត្ត / ក្រុង';
-                }
+                });
             };
 
             // 2. Master filter function handling matching, sorting, and pagination
@@ -1631,7 +1690,7 @@
 
             // Price
             document.getElementById("modalPrice").innerHTML =
-                `$${data.price} <span>/ កញ្ចប់</span>`;
+                `$${data.price} <span class="text-muted small fw-normal" style="font-size: 0.75rem;">/ កញ្ចប់</span>`;
 
 
             // Availability

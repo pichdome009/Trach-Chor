@@ -330,10 +330,61 @@
 
     <section class="container wrapper">
 
+        <!-- Offcanvas button -->
+        <div class="d-lg-none mb-3">
+            <button class="btn btn-success w-100" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#notifSidebarOffcanvas">
+                <i class="bi bi-funnel-fill me-2"></i>ស្វែងរកសារ &amp; ការកំណត់
+            </button>
+        </div>
+
+        <!-- Offcanvas Top -->
+        <div class="offcanvas offcanvas-top notification-sidebar-offcanvas" id="notifSidebarOffcanvas"
+            style="height: auto; max-height: 80vh; overflow-y: auto;">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title"><i class="bi bi-funnel-fill"></i> ស្វែងរកសារ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="notification-offcanvas-section">
+                    <p class="notification-offcanvas-label">ស្វែងរកសារ</p>
+                    <div class="notification-offcanvas-categories">
+                        <a href="#all" class="notification-category active" data-category="all" aria-pressed="true"
+                            data-bs-dismiss="offcanvas"><i class="bi bi-envelope"></i>ទាំងអស់</a>
+                        <a href="#booking" class="notification-category" data-category="booking" aria-pressed="false"
+                            data-bs-dismiss="offcanvas"><i class="bi bi-calendar3"></i>ការកក់</a>
+                        <a href="#reminder" class="notification-category" data-category="reminder" aria-pressed="false"
+                            data-bs-dismiss="offcanvas"><i class="bi bi-bell"></i>ការរំលឹក</a>
+                        <a href="#payment" class="notification-category" data-category="payment" aria-pressed="false"
+                            data-bs-dismiss="offcanvas"><i class="bi bi-qr-code-scan"></i>ការទូទាត់ប្រាក់</a>
+                        <a href="#promotion" class="notification-category" data-category="promotion" aria-pressed="false"
+                            data-bs-dismiss="offcanvas"><i class="bi bi-tags"></i>ប្រូម៉ូសិន</a>
+                    </div>
+                </div>
+                <div class="notification-offcanvas-divider"></div>
+                <div class="notification-offcanvas-section">
+                    <p class="notification-offcanvas-label">ការកំណត់ប្រភេទសារ</p>
+                    <div class="setting-row d-flex justify-content-between align-items-center">
+                        <span>សារ SMS</span>
+                        <div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" checked></div>
+                    </div>
+                    <div class="setting-row d-flex justify-content-between align-items-center">
+                        <span>អ៊ីមែល</span>
+                        <div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" checked></div>
+                    </div>
+                    <div class="setting-row d-flex justify-content-between align-items-center">
+                        <span>ប្រូម៉ូសិន</span>
+                        <div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" checked></div>
+                    </div>
+                </div>
+                <button type="button" class="btn notification-offcanvas-close w-100" data-bs-dismiss="offcanvas">បិទការកំណត់</button>
+            </div>
+        </div>
+
         <div class="row g-3">
 
             <!-- LEFT SIDEBAR -->
-            <div class="col-lg-4">
+            <div class="col-lg-4 d-none d-lg-block">
 
                 <div class="sidebar">
 
@@ -401,7 +452,7 @@
             </div>
 
             <!-- RIGHT CONTENT -->
-            <div class="col-lg-8" id="notification-top">
+            <div class="col-12 col-lg-8" id="notification-top">
                 <div class="notification-list-header mb-4">
                     <div class="notification-list-title">
                         <div>
@@ -1050,7 +1101,7 @@
                 event.preventDefault();
                 selectedCategory = filter.dataset.category;
                 categoryFilters.forEach(item => {
-                    const isSelected = item === filter;
+                    const isSelected = item.dataset.category === selectedCategory;
                     item.classList.toggle('active', isSelected);
                     item.setAttribute('aria-pressed', isSelected);
                 });
