@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trach Chor on Telegram</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { background-color: #9aa8b5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; display: flex; justify-content: center; height: 100vh; margin: 0; }
+    .tg-container { width: 100%; max-width: 600px; background-image: url('https://web.telegram.org/a/chat-bg-pattern-dark.png'); background-color: #e5ddd5; display: flex; flex-direction: column; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+    .tg-header { background-color: #fff; padding: 10px 20px; display: flex; align-items: center; box-shadow: 0 1px 2px rgba(0,0,0,0.1); z-index: 10; position: relative; }
+    .profile-pic { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; margin-right: 15px; }
+    .channel-name { font-weight: 600; font-size: 16px; margin-bottom: 2px; color: #000; }
+    .channel-stats { font-size: 13px; color: #707579; }
+    .tg-btn { background-color: #3390ec; color: #fff; font-weight: 500; padding: 6px 16px; border-radius: 20px; border: none; font-size: 14px; text-transform: uppercase; text-decoration: none; }
+    .chat-area { flex-grow: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 15px; }
+    .date-badge { background-color: rgba(0,0,0,0.15); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: 12px; align-self: center; margin-bottom: 10px; }
+    .msg-bubble { background-color: #fff; border-radius: 12px; border-bottom-left-radius: 0; padding: 8px 12px; max-width: 85%; align-self: flex-start; box-shadow: 0 1px 2px rgba(0,0,0,0.1); position: relative; }
+    .msg-img { width: 100%; border-radius: 8px; margin-bottom: 8px; cursor: pointer; object-fit: cover; }
+    .msg-text { font-size: 15px; color: #000; line-height: 1.4; margin-bottom: 15px; }
+    .msg-meta { position: absolute; bottom: 5px; right: 10px; display: flex; align-items: center; gap: 5px; font-size: 11px; color: #8fa0ad; }
+    .bottom-bar { background-color: #fff; padding: 12px 20px; text-align: center; border-top: 1px solid #e1e1e1; font-size: 14px; color: #3390ec; font-weight: 500; cursor: pointer; }
+    .bottom-bar:hover { background-color: #f4f4f5; }
+  </style>
+</head>
+<body>
+
+  <div class="tg-container position-relative">
+    
+    <!-- Top Nav to return -->
+    <div class="position-absolute" style="top: -50px; left: 0;">
+      <a href="index.html" class="btn btn-dark rounded-pill fw-bold shadow"><i class="bi bi-arrow-left me-1"></i> Back to Trach Chor</a>
+    </div>
+
+    <!-- Telegram Header -->
+    <div class="tg-header">
+      <a href="index.html" class="me-3 text-secondary"><i class="bi bi-arrow-left fs-4"></i></a>
+      <div class="profile-pic d-flex justify-content-center align-items-center" style="background-color: #1a1a1a;">
+        <i class="bi bi-leaf-fill text-warning fs-4"></i>
+      </div>
+      <div class="flex-grow-1">
+        <div class="channel-name d-flex align-items-center">Trach Chor Official <i class="bi bi-patch-check-fill text-primary ms-1" style="font-size: 13px;"></i></div>
+        <div class="channel-stats">85.4K subscribers</div>
+      </div>
+      <i class="bi bi-three-dots-vertical fs-5 text-secondary ms-3"></i>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-area">
+      <div class="date-badge">August 10</div>
+      
+      <!-- Message 1 -->
+      <div class="msg-bubble">
+        <div class="fw-bold mb-1" style="color: #3390ec; font-size: 14px;">Trach Chor Official</div>
+        <img src="assets/images/Pich-Udom/Angkor_Wat.jpeg" class="msg-img" style="height: 200px;">
+        <div class="msg-text">
+          ដំណើរកម្សាន្តទៅកាន់ទឹកដីអង្គរអច្ឆរិយៈ! ✨<br><br>
+          👉 កញ្ចប់ពិសេសសម្រាប់ថ្ងៃឈប់សម្រាកខាងមុខនេះត្រឹមតែ <strong>$120/នាក់</strong> ប៉ុណ្ណោះ។<br><br>
+          ✔️ រួមបញ្ចូលការធ្វើដំណើរ សណ្ឋាគារផ្កាយ៤ និងអាហារ៣ពេល។<br>
+          📞 កក់ឥឡូវនេះ៖ 023 999 888 / 012 345 678
+        </div>
+        <div class="msg-meta">
+          <i class="bi bi-eye-fill"></i> 12.5K <span class="ms-1">14:30</span>
+        </div>
+      </div>
+
+      <!-- Message 2 -->
+      <div class="msg-bubble">
+        <div class="fw-bold mb-1" style="color: #3390ec; font-size: 14px;">Trach Chor Official</div>
+        <img src="assets/images/SEAVTHEAN/golden-beach-resort-koh-rong-main.jpg" class="msg-img" style="height: 180px;">
+        <div class="msg-text">
+          ឆ្នេរខ្សាច់សស្គុស និងទឹកសមុទ្រថ្លាឈ្វេងនៅកោះរ៉ុងកំពុងរង់ចាំអ្នក! 🌊🌴<br>
+          ប្រញាប់ឡើង ប្រូម៉ូសិនមានកំណត់។
+        </div>
+        <div class="msg-meta">
+          <i class="bi bi-eye-fill"></i> 8.2K <span class="ms-1">16:45</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Action Bar -->
+    <div class="bottom-bar">
+      MUTE
+    </div>
+  </div>
+
+</body>
+</html>

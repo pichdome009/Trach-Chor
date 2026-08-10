@@ -10,17 +10,251 @@
 
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧮</text></svg>">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/calculator.css">
 
 </head>
 
 <body>
+    
+  <!-- start navbar -->
+    <section class="sec-navbar">
+    <nav class="navbar navbar-expand-lg py-3" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand text-white fs-2 fw-bold" href="index.html"><i class="bi bi-leaf-fill text-warning"></i>
+          ត្រាច់ចរ​</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2"
+          aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0 fs-5 fw-medium gap-4">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">ទំព័រដើម</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">អំពីយើង</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="service nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                សេវាកម្ម
+              </a>
+              <ul class="dropdown-menu shadow border-0 rounded-4 p-3 fs-5 ">
+                <li><a class="dropdown-item rounded-3 py-2 text-white " href="tours.html"><i class="bi bi-box2-heart-fill "></i>
+                    កញ្ជប់ដំណើរកម្សាន្ដ</a></li>
+                <li><a class="dropdown-item rounded-3 py-2 text-white" href="destinations.html"><i class="bi bi-geo-alt-fill"></i>
+                    គោលដៅទេសចរណ៍</a></li>
+                <li><a class="dropdown-item rounded-3 py-2 text-white" href="hotel.html"><i class="bi bi-house-down-fill"></i>
+                    កក់កន្លែងស្នាក់នៅ</a></li>
+                <li><a class="dropdown-item rounded-3 py-2 text-white" href="rentals.html"><i class="bi bi-car-front"></i>
+                    ជួលយានជំនិះ</a></li>
+                <li><a class="dropdown-item rounded-3 py-2 text-white" href="food.html"><i class="bi bi-fork-knife"></i>
+                    កម្មង់ម្ហូប</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item rounded-3 py-2 text-white" href="souvenir.html"><i class="bi bi-shop"></i> សិប្បកម្ម</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item rounded-3 py-2 text-white" href="giftcard.html"><i
+                      class="bi bi-postcard-heart-fill"></i> កាតកាដូ</a></li>
+                <li><a class="dropdown-item rounded-3 py-2 text-white" href="calculator.html"><i class="bi bi-calculator"></i>
+                    គណនាចំណាយ</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">ទំនាក់ទំនង</a>
+            </li>
+          </ul>
 
-    <header class="calc-layout">>
+          <div class="d-flex align-items-center gap-3">
+            <!-- Cart Dropdown -->
+            <div class="dropdown">
+              <a href="#" class="position-relative d-flex align-items-center justify-content-center rounded-circle text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false" style="width: 44px; height: 44px; background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.25)'; this.style.transform='scale(1.08)';" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.15)'; this.style.transform='scale(1)';">
+                <i class="bi bi-cart-fill text-white fs-5"></i>
+                <span class="position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold notification-badge-pulse" style="top: -2px; right: -2px; width: 18px; height: 18px; font-size: 0.65rem;">3</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-glass rounded-4 p-3 mt-2" style="width: 340px;">
+                <li class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-3">
+                  <h6 class="mb-0 text-white fw-bold d-flex align-items-center"><i class="bi bi-cart-fill text-warning me-2 fs-5"></i>កន្ត្រកទំនិញ (Your Cart)</h6>
+                  <span class="badge bg-light text-success fw-bold rounded-pill px-2 py-1 shadow-sm" style="font-size: 0.75rem;">3 ទំនិញ</span>
+                </li>
+                <li>
+                  <a href="#" class="d-block p-3 mb-2 rounded-3 text-decoration-none dropdown-item-custom">
+                    <div class="d-flex align-items-center">
+                      <div class="bg-success rounded-circle d-flex justify-content-center align-items-center me-3 shadow-sm" style="width: 40px; height: 40px; flex-shrink: 0;"><i class="bi bi-box2-heart-fill text-white fs-5"></i></div>
+                      <div>
+                        <span class="fw-bold text-white d-block mb-1">កញ្ចប់ដំណើរកម្សាន្តទៅសៀមរាប</span>
+                        <span class="text-success fw-bold" style="font-size: 0.85rem;">$120.00 <span class="text-white-50 fw-normal ms-1">x 2</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="d-block p-3 mb-3 rounded-3 text-decoration-none dropdown-item-custom">
+                    <div class="d-flex align-items-center">
+                      <div class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-3 shadow-sm" style="width: 40px; height: 40px; flex-shrink: 0;"><i class="bi bi-car-front-fill text-white fs-5"></i></div>
+                      <div>
+                        <span class="fw-bold text-white d-block mb-1">សេវាកម្មជួលឡាន (SUV)</span>
+                        <span class="text-success fw-bold" style="font-size: 0.85rem;">$45.00 <span class="text-white-50 fw-normal ms-1">x 1</span></span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <div class="d-flex justify-content-between align-items-center mb-3 px-2 mt-2">
+                    <span class="text-white-50 fw-bold">សរុប (Total):</span>
+                    <span class="text-warning fw-bold fs-5">$285.00</span>
+                  </div>
+                </li>
+                <li>
+                  <a href="cart.html" class="btn w-100 rounded-pill fw-bold text-white btn-gradient-green transition-fast d-flex align-items-center justify-content-center">ពិនិត្យមើល និងបង់ប្រាក់</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Bell Dropdown -->
+            <div class="dropdown">
+              <a href="#" class="position-relative d-flex align-items-center justify-content-center rounded-circle text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false" style="width: 44px; height: 44px; background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.25)'; this.style.transform='scale(1.08)';" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.15)'; this.style.transform='scale(1)';">
+                <i class="bi bi-bell-fill text-white fs-5"></i>
+                <span class="position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold notification-badge-pulse" style="top: -2px; right: -2px; width: 18px; height: 18px; font-size: 0.65rem;">2</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-glass rounded-4 p-3 mt-2" style="width: 340px;">
+                <li class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-3">
+                  <h6 class="mb-0 text-white fw-bold d-flex align-items-center"><i class="bi bi-bell-fill text-warning me-2 fs-5"></i>ការជូនដំណឹង (Notifications)</h6>
+                  <span class="badge bg-light text-success fw-bold rounded-pill px-2 py-1 shadow-sm" style="font-size: 0.75rem;">ថ្មី 2</span>
+                </li>
+                <li>
+                  <a href="#" class="d-block p-3 mb-2 rounded-3 text-decoration-none dropdown-item-custom">
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="bg-success-subtle rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 28px; height: 28px; flex-shrink: 0;"><i class="bi bi-check text-success fs-5"></i></div>
+                      <span class="fw-bold text-white">ការកក់ជោគជ័យ!</span>
+                      <span class="ms-auto text-white-50" style="font-size: 0.75rem;">1 ម៉ោងមុន</span>
+                    </div>
+                    <p class="mb-0 text-white-50" style="font-size: 0.85rem; padding-left: 44px; line-height: 1.5;">បន្ទប់ស្នាក់នៅរបស់អ្នកត្រូវបានកក់ប្រកបដោយជោគជ័យ។</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="d-block p-3 mb-3 rounded-3 text-decoration-none dropdown-item-custom">
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="bg-warning-subtle rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 28px; height: 28px; flex-shrink: 0;"><i class="bi bi-gift-fill text-warning fs-6"></i></div>
+                      <span class="fw-bold text-white">កាដូពិសេស!</span>
+                      <span class="ms-auto text-white-50" style="font-size: 0.75rem;">9 ម៉ោងមុន</span>
+                    </div>
+                    <p class="mb-0 text-white-50" style="font-size: 0.85rem; padding-left: 44px; line-height: 1.5;">ទទួលបានបញ្ចុះតម្លៃ ២០% សម្រាប់សមាជិក VIP Explorer។</p>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider border-secondary opacity-50 mb-3">
+                </li>
+                <li>
+                  <a href="notifications.html" class="btn w-100 rounded-pill fw-bold text-white d-flex align-items-center justify-content-center" style="border: 1px solid rgba(255,255,255,0.2); background-color: rgba(255,255,255,0.05); transition: 0.3s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.3)';" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.2)';">មើលការជូនដំណឹងទាំងអស់</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="profile-dropdown border border-warning px-1">
+            <button class="btn nav-profile-btn d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <div class="d-flex flex-column text-end d-none d-xl-flex p-2">
+                <span class="fw-bold fs-7 text-white">ពេជ្រ ឧត្តម</span>
+              </div>
+              <div class="position-relative">
+                <img src="assets/images/Pich-Udom/profile.jpg"
+                  class="rounded-circle object-fit-cover border border-2 border-warning shadow-sm" width="38"
+                  height="38" alt="Profile">
+                <span class="position-absolute bottom-0 end-0 p-1 bg-success border border-white rounded-circle"></span>
+              </div>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-lg-end shadow-lg border-0 rounded-4 p-2" style="width: 270px;">
+              <li class="p-3 text-center border-bottom mb-2 dropdown-profile-header rounded-3">
+                <div class="position-relative d-inline-block mb-2">
+                  <img src="assets/images/Pich-Udom/profile.jpg"
+                    class="rounded-circle object-fit-cover border border-3 border-success shadow-sm" width="60"
+                    height="60" alt="Profile">
+                  <span
+                    class="position-absolute bottom-0 end-0 p-1 bg-success border border-2 border-white rounded-circle"
+                    title="Active Now"></span>
+                </div>
+                <h6 class="mb-0 fw-bold fs-5">ពេជ្រ ឧត្តម</h6>
+                <span class="badge bg-warning text-dark mt-1 px-3 py-1 rounded-pill fw-bold shadow-sm"
+                  style="font-size: 0.7rem;"><i class="fas fa-crown me-1"></i> (Pich Udom)</span>
+              </li>
+              <li>
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1" href="profile.html">
+                  <div
+                    class="icon-box-sm bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 34px; height: 34px; flex-shrink: 0;">
+                    <i class="bi bi-person-circle fs-5 "></i>
+                  </div>
+                  <span class="fw-semibold" style="font-size: 0.9rem;">គណនីរបស់ខ្ញុំ</span>
+                </a>
+              </li>
+              <!-- <li>
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1" href="#">
+                  <div
+                    class="icon-box-sm bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 34px; height: 34px; flex-shrink: 0;">
+                    <i class="bi bi-cart-plus-fill fs-5"></i>
+                  </div>
+                  <span class="fw-semibold" style="font-size: 0.9rem;">ទំនិញរបស់អ្នក</span>
+                </a>
+              </li> -->
+              <li>
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1" href="favorites.html">
+                  <div
+                    class="icon-box-sm bg-danger-subtle text-danger rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 34px; height: 34px; flex-shrink: 0;">
+                    <i class="bi bi-heart-fill fs-5 mt-1"></i>
+                  </div>
+                  <span class="fw-semibold" style="font-size: 0.9rem;">គោលដៅចំណូលចិត្ត</span>
+                </a>
+              </li>
+              <!-- <li>
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1"
+                  href="notifications.html">
+                  <div
+                    class="icon-box-sm bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 34px; height: 34px; flex-shrink: 0;">
+                    <i class="bi bi-bell-fill fs-5"></i>
+                  </div>
+                  <span class="fw-semibold" style="font-size: 0.9rem;">ការជូនដំណឹង</span>
+                </a>
+              </li> -->
+              <li>
+                <hr class="dropdown-divider my-2">
+              </li>
+              <li>
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 logout-item"
+                  href="index-no-login.html">
+                  <div
+                    class="icon-box-sm bg-danger-subtle text-danger rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 34px; height: 34px; flex-shrink: 0;">
+                    <i class="bi bi-box-arrow-right fs-5 ms-1 mt-1"></i>
+                  </div>
+                  <span class="fw-bold" style="font-size: 0.9rem;">ចាកចេញ</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </section>
+  <!-- end navbar -->
+
+  <!-- Calculator Section -->
+<header class="calc-layout pt-4 pb-5">
         <div class="container animate__animated animate__fadeInDown">
             <div class=" bg-img">
                 <div class="calc-header-card">
@@ -68,359 +302,320 @@
         </div>
     </header>
 
-    <!-- ================= MAIN ================= -->
-
-    <section class="py-5">
+    <!-- Calculator Section -->
+    <section class="py-5" style="background-color: #f8fafc;">
         <div class="container">
-            <div class="row">
-
-                <!-- LEFT -->
-
-                <div class="col-lg-8">
-                    <div class="card shadow border-0 rounded-4 p-4">
-                        <h3 class="mb-4"><i class="fa-solid fa-suitcase text-primary"></i> ព័ត៌មានលម្អិតអំពីការធ្វើដំណើរ
-                        </h3>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label>គោលដៅ</label>
-                                <select id="destination" class="form-select">
-                                    <option>Siem Reap</option>
-                                    <option>Phnom Penh</option>
-                                    <option>Kampot</option>
-                                    <option>Kep</option>
-                                    <option>Koh Rong</option>
-                                </select>
+            <div class="row g-4">
+                <!-- Left: Form -->
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="card p-4 p-md-5">
+                        <h3 class="mb-4"><i class="bi bi-ui-checks-grid text-primary me-2"></i> បញ្ចូលព័ត៌មានការធ្វើដំណើរ</h3>
+                        <form id="calculatorForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="province" class="form-label text-muted">ខេត្តគោលដៅ <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="province">
+                                        <option value="20" selected>សៀមរាប (អង្គរវត្ត)</option>
+                                        <option value="30">ព្រះសីហនុ (កោះរ៉ុង)</option>
+                                        <option value="15">កំពត / កែប</option>
+                                        <option value="25">មណ្ឌលគិរី / រតនគិរី</option>
+                                        <option value="10">រាជធានីភ្នំពេញ</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="transport" class="form-label text-muted">យានជំនិះ <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="transport">
+                                        <option value="bus" selected>រថយន្តក្រុង / វ៉ែន</option>
+                                        <option value="taxi">រថយន្តឯកជន (Taxi)</option>
+                                        <option value="flight">យន្តហោះ (Flight)</option>
+                                        <option value="none">យានជំនិះផ្ទាល់ខ្លួន</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="days" class="form-label text-muted">ចំនួនថ្ងៃ <span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="days" value="3" min="1">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="people" class="form-label text-muted">ចំនួនអ្នកដំណើរ <span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="people" value="2" min="1">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="hotel" class="form-label text-muted">ការស្នាក់នៅ <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="hotel">
+                                        <option value="15">ផ្ទះសំណាក់ ($15/យប់)</option>
+                                        <option value="40" selected>សណ្ឋាគារផ្កាយ ៣ ($40/យប់)</option>
+                                        <option value="80">សណ្ឋាគារផ្កាយ ៤ ($80/យប់)</option>
+                                        <option value="150">រមណីយដ្ឋានប្រណីត ($150/យប់)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="food" class="form-label text-muted">អាហារ (ក្នុងមួយថ្ងៃ/ម្នាក់) <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="food">
+                                        <option value="10">អាហារតាមផ្លូវ ($10)</option>
+                                        <option value="25" selected>ភោជនីយដ្ឋានធម្មតា ($25)</option>
+                                        <option value="50">ភោជនីយដ្ឋានប្រណីត ($50)</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label>
-                                    អ្នកធ្វើដំណើរ
-                                </label>
-                                <input type="number" id="people" value="2" min="1" class="form-control">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label>
-                                    រយៈពេល
-                                </label>
-                                <input type="number" id="days" value="5" min="1" class="form-control">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label>
-                                    របៀបនៃការធ្វើដំណើរ
-                                </label>
-                                <select id="style" class="form-select">
-                                    <option value="20">
-                                        Budget
-                                    </option>
-                                    <option value="40" selected>
-                                        Mid-range
-                                    </option>
-                                    <option value="80">
-                                        Luxury
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Budget -->
-
-                    <div class="card mt-4 shadow border-0 rounded-4 p-4">
-                        <h3>ប្រភេទថវិកា</h3>
-                        <table class="table align-middle">
-                            <thead>
-                                <tr>
-                                    <th>ប្រភេទ</th>
-                                    <th>តម្លៃ/ថ្ងៃ</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Accommodation</td>
-                                    <td>
-                                        <input type="number" id="hotel" class="form-control" value="30">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Food</td>
-                                    <td>
-                                        <input type="number" id="food" class="form-control" value="20">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Transportation</td>
-                                    <td>
-                                        <input type="number" id="transport" class="form-control" value="15">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Activities</td>
-                                    <td>
-                                        <input type="number" id="activity" class="form-control" value="25">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Shopping</td>
-                                    <td>
-                                        <input type="number" id="shopping" class="form-control" value="10">
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- <button class="btn btn-success w-100" onclick="calculateBudget()">
-                            Calculate Budget
-                        </button> -->
+                            <button type="button" class="btn btn-primary w-100 mt-4 fs-5" id="btnCalculate">
+                                <i class="bi bi-calculator me-2"></i> គណនាចំណាយឥឡូវនេះ
+                            </button>
+                        </form>
                     </div>
                 </div>
-
-                <!-- RIGHT -->
-
-                <div class="col-lg-4">
-                    <div class="card shadow border-0 rounded-4 p-4 sticky-top">
-                        <h3>
-                            ប៉ាន់ស្មានសរុប
-                        </h3>
-                        <div class="text-center">
-                            <h1 class="display-3 text-success fw-bold" id="total">
-                                $0
-                            </h1>
+                
+                <!-- Right: Results -->
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="card p-4 p-md-5 h-100" style="background: linear-gradient(145deg, #0f172a, #1e293b); color: white;">
+                        <h4 class="mb-4 text-warning"><i class="bi bi-receipt me-2"></i> តារាងប៉ាន់ស្មានចំណាយ</h4>
+                        
+                        <div class="text-center mb-4 pb-4 border-bottom border-secondary">
+                            <p class="text-white-50 mb-1">ចំណាយសរុប (Total Budget)</p>
+                            <h2 class="display-4 fw-bold text-success mb-0" id="totalBudget">$0.00</h2>
                         </div>
-                        <hr>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex justify-content-between">
-                                Accommodation
-                                <span id="hotelTotal">
-                                    0
-                                </span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between">
-                                Food
-                                <span id="foodTotal">
-                                    0
-                                </span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between">
-                                Transport
-                                <span id="transportTotal">
-                                    0
-                                </span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between">
-                                Activities
-                                <span id="activityTotal">
-                                    0
-                                </span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between">
-                                Shopping
-                                <span id="shoppingTotal">
-                                    0
-                                </span>
-                            </li>
-                        </ul>
-                        <button class="btn btn-success mt-4" onclick="calculateBudget()">Save Plan</button>
-                        <button class="btn btn-outline-primary mt-2">Share</button>
-                        <button class="btn btn-outline-danger mt-2">Reset</button>
+
+                        <!-- Chart -->
+                        <div class="mb-4" style="height: 200px;">
+                            <canvas id="budgetChart"></canvas>
+                        </div>
+
+                        <!-- Breakdown -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="d-flex align-items-center gap-2"><div style="width: 12px; height: 12px; background: #3b82f6; border-radius: 50%;"></div> យានជំនិះ</span>
+                            <span class="fw-bold" id="costTransport">$0.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="d-flex align-items-center gap-2"><div style="width: 12px; height: 12px; background: #8b5cf6; border-radius: 50%;"></div> ការស្នាក់នៅ</span>
+                            <span class="fw-bold" id="costHotel">$0.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="d-flex align-items-center gap-2"><div style="width: 12px; height: 12px; background: #10b981; border-radius: 50%;"></div> អាហារ</span>
+                            <span class="fw-bold" id="costFood">$0.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="d-flex align-items-center gap-2"><div style="width: 12px; height: 12px; background: #f59e0b; border-radius: 50%;"></div> សកម្មភាព/ផ្សេងៗ</span>
+                            <span class="fw-bold" id="costActivities">$0.00</span>
+                        </div>
+                        
+                        <button class="btn btn-outline-light w-100 mt-3 rounded-pill">
+                            <i class="bi bi-download me-2"></i> ទាញយកជា PDF
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+<!-- start footer -->
+  <section class="sec-footer bg-success">
+    <footer class="footer-luxury">
+      <div class="container">
+        <div class="row g-4 mb-5">
+          <div class="col-lg-4 col-md-6">
+            <a class="footer-logo"><i class="bi bi-leaf-fill text-warning"></i> ត្រាច់ចរ <span>| Trach Chor</span></a>
+            <p class="mb-4">វេទិកាទេសចរណ៍ និងការធ្វើដំណើរលំដាប់ខ្ពស់ឈានមុខគេក្នុងប្រទេសកម្ពុជា។
+              យើងភ្ជាប់លោកអ្នកទៅកាន់គោលដៅធម្មជាតិ វប្បធម៌ និងការស្នាក់នៅដ៏ប្រណីតបំផុត។</p>
+            <div class="d-flex text-align-center">
+              <a href="social-facebook.html" class="social-icon-btn"><i class="bi bi-facebook fs-5"></i></a>
+              <a href="social-instagram.html" class="social-icon-btn"><i class="bi bi-instagram fs-5"></i></a>
+              <a href="social-telegram.html" class="social-icon-btn"><i class="bi bi-telegram fs-5"></i></a>
+              <a href="social-youtube.html" class="social-icon-btn"><i class="bi bi-youtube fs-5"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-heading">តំណភ្ជាប់</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">ទំព័រដើម</a></li>
+              <li><a href="about.html">អំពីយើង</a></li>
+              <li><a href="services.html">សេវាកម្ម</a></li>
+              <li><a href="contact.html">ទំនាក់ទំនង</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-heading">គោលដៅពេញនិយម</h5>
+            <ul class="footer-links">
+              <li><a href="destinations.html"><i class="bi bi-chevron-right text-success fs-7 me-2"></i>ខេត្តសៀមរាប
+                  (អង្គរវត្ត)</a></li>
+              <li><a href="destinations.html"><i class="bi bi-chevron-right text-success fs-7 me-2"></i>កោះរ៉ុង &
+                  ឆ្នេរសមុទ្រ</a></li>
+              <li><a href="destinations.html"><i class="bi bi-chevron-right text-success fs-7 me-2"></i>មណ្ឌលគិរី &
+                  ធម្មជាតិ</a></li>
+              <li><a href="destinations.html"><i
+                    class="bi bi-chevron-right text-success fs-7 me-2"></i>រាជធានីភ្នំពេញ</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-heading">ទំនាក់ទំនង</h5>
+            <ul class="footer-links text-light">
+              <li class="d-flex align-items-start gap-3 mb-3"><i
+                  class="bi bi-geo-alt-fill text-success mt-1 fs-5"></i><span>អគារ Vamco, មហាវិថីព្រះមុនីវង្ស,
+                  រាជធានីភ្នំពេញ</span></li>
+              <li class="d-flex align-items-center gap-3 mb-3"><i
+                  class="bi bi-telephone-fill text-primary fs-5"></i><span>+855 (0) 23 999 888</span></li>
+              <li class="d-flex align-items-center gap-3"><i
+                  class="bi bi-envelope-fill text-warning fs-5"></i><span>trachchor.travel@gmail.com</span></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="border-secondary opacity-25">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+          <p class="mb-0 small">&copy; 2026 ត្រាច់ចរ (Trach Chor). រក្សាសិទ្ធិគ្រប់យ៉ាង។ Designed with <i
+              class="bi bi-heart text-danger"></i> ដើម្បីសម្រេចចិត្តការធ្វើដំណើរកម្ពុជា។</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!-- end footer -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <script src="assets/js/calculator.js"></script>
     <script>
-        const people = document.getElementById("people");
-        const days = document.getElementById("days");
-        const hotel = document.getElementById("hotel");
-        const food = document.getElementById("food");
-        const transport = document.getElementById("transport");
-        const activity = document.getElementById("activity");
-        const shopping = document.getElementById("shopping");
-        const total = document.getElementById("total");
-        const hotelTotal = document.getElementById("hotelTotal");
-        const foodTotal = document.getElementById("foodTotal");
-        const transportTotal = document.getElementById("transportTotal");
-        const activityTotal = document.getElementById("activityTotal");
-        const shoppingTotal = document.getElementById("shoppingTotal");
-
-        function calculateBudget() {
-
-            const traveler = Number(people.value);
-            const tripDays = Number(days.value);
-
-            const hotelCost = Number(hotel.value) * tripDays;
-            const foodCost = Number(food.value) * tripDays;
-            const transportCost = Number(transport.value) * tripDays;
-            const activityCost = Number(activity.value) * tripDays;
-            const shoppingCost = Number(shopping.value);
-
-            const grandTotal =
-                (hotelCost +
-                    foodCost +
-                    transportCost +
-                    activityCost +
-                    shoppingCost) * traveler;
-
-            hotelTotal.innerHTML = "$" + hotelCost * traveler;
-
-            foodTotal.innerHTML = "$" + foodCost * traveler;
-
-            transportTotal.innerHTML =
-                "$" + transportCost * traveler;
-
-            activityTotal.innerHTML =
-                "$" + activityCost * traveler;
-
-            shoppingTotal.innerHTML =
-                "$" + shoppingCost * traveler;
-
-            total.innerHTML =
-                "$" + grandTotal.toLocaleString();
-        }
-        const inputs = document.querySelectorAll("input,select");
-        inputs.forEach(function (item) {
-            item.addEventListener("input", calculateBudget);
-
-        });
-        const saveBtn =
-            document.querySelector(".btn-success");
-
-        saveBtn.addEventListener("click", function () {
-
-            const plan = {
-
-                destination:
-                    document.getElementById("destination").value,
-                travelers:
-                    people.value,
-                days:
-                    days.value,
-                hotel:
-                    hotel.value,
-                food:
-                    food.value,
-                transport:
-                    transport.value,
-
-                activity:
-                    activity.value,
-
-                shopping:
-                    shopping.value,
-
-                total:
-                    total.innerHTML
-
-            };
-
-            localStorage.setItem(
-                "travelPlan",
-                JSON.stringify(plan)
-            );
-
-            alert("Plan Saved Successfully!");
-
-        });
-        window.onload = function () {
-
-            const saved =
-                localStorage.getItem("travelPlan");
-
-            if (saved) {
-
-                const data = JSON.parse(saved);
-
-                document.getElementById("destination").value =
-                    data.destination;
-
-                people.value = data.travelers;
-
-                days.value = data.days;
-
-                hotel.value = data.hotel;
-
-                food.value = data.food;
-
-                transport.value = data.transport;
-
-                activity.value = data.activity;
-
-                shopping.value = data.shopping;
-
-            }
-
-            calculateBudget();
-
-        };
-        const resetBtn =
-            document.querySelector(".btn-outline-danger");
-
-        resetBtn.addEventListener("click", function () {
-
-            people.value = 2;
-
-            days.value = 5;
-
-            hotel.value = 30;
-
-            food.value = 20;
-
-            transport.value = 15;
-
-            activity.value = 25;
-
-            shopping.value = 10;
-
-            document.getElementById("destination").selectedIndex = 0;
-
-            localStorage.removeItem("travelPlan");
-
-            calculateBudget();
-
-        });
-        const shareBtn =
-            document.querySelector(".btn-outline-primary");
-
-        shareBtn.addEventListener("click", function () {
-
-            const text = `
-                Travel Cost Calculator
-
-                Destination : ${document.getElementById("destination").value}
-
-                Travelers : ${people.value}
-
-                Days : ${days.value}
-
-                Estimated Total : ${total.innerHTML}
-                `;
-
-            if (navigator.share) {
-
-                navigator.share({
-
-                    title: "Travel Budget",
-
-                    text: text
-
-                });
-
-            } else {
-
-                navigator.clipboard.writeText(text);
-
-                alert("Plan copied to clipboard.");
-
-            }
-
-        });
-
-        calculateBudget();
+        AOS.init({ duration: 800, once: true });
     </script>
 
-</body>
+<!-- Floating AI Chat Button -->
+  <div class="position-fixed bottom-0 end-0 p-4" style="z-index: 1050;">
+    <button id="aiChatBtn" class="btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center" style="width: 65px; height: 65px; background: linear-gradient(135deg, #0f9d58, #12b866); border: none;">
+      <i class="bi bi-robot fs-3 text-white animate__animated animate__pulse animate__infinite"></i>
+    </button>
+  </div>
 
+  <!-- AI Chat Box (Hidden by default) -->
+  <div id="aiChatBox" class="card shadow-lg border-0 position-fixed" style="bottom: 100px; right: 25px; width: 350px; z-index: 1050; display: none; border-radius: 20px; overflow: hidden; transform-origin: bottom right; transition: all 0.3s ease;">
+    <div class="card-header text-white d-flex justify-content-between align-items-center p-3" style="background: linear-gradient(135deg, #0f9d58, #12b866); border-bottom: none;">
+      <div class="d-flex align-items-center">
+        <i class="bi bi-robot fs-4 me-2"></i>
+        <h5 class="mb-0 fw-bold">TrachChor AI</h5>
+      </div>
+      <button id="closeAiBtn" class="btn-close btn-close-white" aria-label="Close"></button>
+    </div>
+    <div class="card-body bg-light" style="height: 350px; overflow-x: hidden; overflow-y: auto;" id="aiChatBody">
+      <!-- Chat messages -->
+      <div class="d-flex mb-3">
+        <div class="bg-white p-3 shadow-sm" style="border-radius: 15px 15px 15px 0; max-width: 85%;">
+          <p class="mb-0 text-dark" style="font-size: 0.95rem;">សួស្តី! <i class="bi bi-emoji-smile text-warning"></i> ខ្ញុំគឺជាជំនួយការ AI របស់ត្រាច់ចរ។ តើលោកអ្នកមានបំណងចង់ឱ្យខ្ញុំជួយរៀបចំផែនការធ្វើដំណើរ ឬគណនាចំណាយទេ?</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer bg-white p-3 border-top-0">
+      <div class="d-flex bg-white" style="border: 1px solid #dee2e6; border-radius: 20px; overflow: hidden;">
+        <input type="text" id="aiInputText" class="form-control border-0 shadow-none bg-transparent" placeholder="សួរខ្ញុំមក..." style="padding-left: 15px; outline: none; box-shadow: none;">
+        <button id="aiSendBtnText" class="btn text-white px-4" style="background-color: #0f9d58; border: none; border-radius: 0;">
+          <i class="bi bi-send-fill"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+// AI Chat Logic
+      const aiChatBtn = document.getElementById('aiChatBtn');
+      const aiChatBox = document.getElementById('aiChatBox');
+      const closeAiBtn = document.getElementById('closeAiBtn');
+      
+      if(aiChatBtn && aiChatBox && closeAiBtn) {
+        aiChatBtn.addEventListener('click', () => {
+          aiChatBox.style.display = aiChatBox.style.display === 'none' || aiChatBox.style.display === '' ? 'block' : 'none';
+        });
+        closeAiBtn.addEventListener('click', () => {
+          aiChatBox.style.display = 'none';
+        });
+      }
+      // AI Chat Interaction Logic
+      const aiInputText = document.getElementById('aiInputText');
+      const aiSendBtnText = document.getElementById('aiSendBtnText');
+      const aiChatBody = document.getElementById('aiChatBody');
+      
+      if(aiInputText && aiSendBtnText && aiChatBody) {
+        function addMessage(text, isUser) {
+          const msgDiv = document.createElement('div');
+          msgDiv.className = `d-flex mb-3 ${isUser ? 'justify-content-end' : ''}`;
+          
+          if(isUser) {
+            msgDiv.innerHTML = `
+              <div class="p-3 shadow-sm text-white" style="border-radius: 15px 15px 0 15px; max-width: 85%; background-color: #0f9d58;">
+                <p class="mb-0" style="font-size: 0.95rem;">${text}</p>
+              </div>
+            `;
+          } else {
+            msgDiv.innerHTML = `
+              <div class="bg-white p-3 shadow-sm" style="border-radius: 15px 15px 15px 0; max-width: 85%;">
+                <p class="mb-0 text-dark" style="font-size: 0.95rem;">${text}</p>
+              </div>
+            `;
+          }
+          
+          aiChatBody.appendChild(msgDiv);
+          aiChatBody.scrollTop = aiChatBody.scrollHeight;
+        }
+
+        aiSendBtnText.addEventListener('click', async () => {
+          const text = aiInputText.value.trim();
+          if(!text) return;
+          
+          addMessage(text, true);
+          aiInputText.value = '';
+          aiSendBtnText.disabled = true;
+          
+          // Show typing indicator
+          const typingId = 'typing-' + Date.now();
+          const typingDiv = document.createElement('div');
+          typingDiv.id = typingId;
+          typingDiv.className = `d-flex mb-3`;
+          typingDiv.innerHTML = `
+            <div class="bg-white p-3 shadow-sm d-flex align-items-center" style="border-radius: 15px 15px 15px 0; max-width: 85%;">
+              <div class="spinner-grow spinner-grow-sm text-success me-1" role="status" style="width: 1rem; height: 1rem;"></div>
+              <div class="spinner-grow spinner-grow-sm text-success me-1" role="status" style="animation-delay: 0.2s; width: 1rem; height: 1rem;"></div>
+              <div class="spinner-grow spinner-grow-sm text-success" role="status" style="animation-delay: 0.4s; width: 1rem; height: 1rem;"></div>
+            </div>
+          `;
+          aiChatBody.appendChild(typingDiv);
+          aiChatBody.scrollTop = aiChatBody.scrollHeight;
+
+          try {
+            const API_KEY = "YOUR_API_KEY";
+            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-lite-latest:generateContent?key=${API_KEY}`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                system_instruction: { 
+                  parts: [{ text: "You are a customer service AI for TrachChor, a travel agency in Cambodia. You MUST reply strictly in the Cambodian Khmer language. CRITICAL RULE: NEVER use any Thai characters, words, or particles (like 'ค่ะ', 'ครับ', 'จ้า'). Always use authentic Cambodian polite words like 'បាទ' (for male) or 'ចាស' (for female). Keep your answers friendly, polite, and brief." }] 
+                },
+                contents: [{ parts: [{ text: text }] }]
+              })
+            });
+
+            const data = await response.json();
+            document.getElementById(typingId).remove();
+            
+            if (data && data.candidates && data.candidates.length > 0) {
+              const reply = data.candidates[0].content.parts[0].text;
+              const formattedReply = reply.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+              addMessage(formattedReply, false);
+            } else if (data && data.error) {
+              console.error("Gemini API Error:", data.error);
+              addMessage(`មិនអាចភ្ជាប់បានទេ ព្រោះ API Key មានបញ្ហា៖ <code>${data.error.message}</code>`, false);
+            } else {
+              addMessage("សូមអភ័យទោស ខ្ញុំជួបបញ្ហាបន្តិចបន្តួច។ សូមព្យាយាមម្តងទៀត។", false);
+            }
+          } catch (error) {
+            document.getElementById(typingId).remove();
+            console.error("Fetch Error:", error);
+            addMessage("សូមអភ័យទោស មិនអាចភ្ជាប់ទៅកាន់ប្រព័ន្ធបានទេ។ សូមពិនិត្យមើលអ៊ីនធឺណិតរបស់អ្នក។", false);
+          } finally {
+            aiSendBtnText.disabled = false;
+            aiInputText.focus();
+          }
+        });
+
+        aiInputText.addEventListener('keypress', (e) => {
+          if(e.key === 'Enter') aiSendBtnText.click();
+        });
+      }
+    });
+  </script>
+</body>
 </html>

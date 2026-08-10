@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>index</title>
+  <title>index no login</title>
   <!-- link bootstrap icon -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- link bootstrap-icons -->
@@ -23,7 +23,7 @@
   <section class="sec-navbar">
     <nav class="navbar navbar-expand-lg py-3" data-bs-theme="dark">
       <div class="container">
-        <a class="navbar-brand text-white fs-2 fw-bold" href="index.html"><i class="bi bi-leaf-fill text-warning"></i>
+        <a class="navbar-brand text-white fs-2 fw-bold" href="index-no-login.html"><i class="bi bi-leaf-fill text-warning"></i>
           ត្រាច់ចរ​</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2"
           aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent2">
           <ul class="navbar-nav m-auto mb-2 mb-lg-0 fs-5 fw-medium gap-4">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">ទំព័រដើម</a>
+              <a class="nav-link active" aria-current="page" href="index-no-login.html">ទំព័រដើម</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">អំពីយើង</a>
@@ -154,7 +154,7 @@
         <div class="col-12 col-md-6 col-lg-3">
           <div class="luxury-card animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
             <div class="card-img-wrapper" style="height: 160px;">
-              <img src="assets/images/SEAVTHEAN/golden-beach-resort-koh-rong-main.jpg" alt="កន្លែងស្នាក់នៅ">
+              <img src="assets/images/naret/unnamed.jpg" alt="កន្លែងស្នាក់នៅ">
             </div>
             <div class="card-body-luxury d-flex flex-column align-items-center text-center p-3">
               <h5 class="card-title-luxury mb-3 fs-5">កន្លែងស្នាក់នៅ</h5>
@@ -167,7 +167,7 @@
         <div class="col-12 col-md-6 col-lg-3">
           <div class="luxury-card animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
             <div class="card-img-wrapper" style="height: 160px;">
-              <img src="assets/images/naret/fn-2017-07-09-19-44-15-0.jpg" alt="ជួលយានជំនិះ">
+              <img src="assets/images/horng-img/yamha.jpg" alt="ជួលយានជំនិះ">
             </div>
             <div class="card-body-luxury d-flex flex-column align-items-center text-center p-3">
               <h5 class="card-title-luxury mb-3 fs-5">ជួលយានជំនិះ</h5>
@@ -1212,6 +1212,43 @@
       </div>
     </div>
   </div>
+  <!-- Require Login Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const links = document.querySelectorAll('a[href]');
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          // Allow empty hrefs, hashes, index, and login/signup pages
+          if (!href || href.startsWith('#') || href === 'index-no-login.html' || href === 'login.html' || href === 'signup.html') {
+            return;
+          }
+          // Intercept all other links
+          e.preventDefault();
+          if (typeof Swal !== 'undefined') {
+            Swal.fire({
+              icon: 'warning',
+              title: 'តម្រូវឲ្យចូលគណនី',
+              text: 'សូមចូលគណនី (Login) ឬចុះឈ្មោះជាមុនសិន ដើម្បីមើលទំព័រនេះ!',
+              confirmButtonText: 'ចូលគណនីឥឡូវនេះ',
+              confirmButtonColor: '#0B8457',
+              showCancelButton: true,
+              cancelButtonText: 'បោះបង់'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                window.location.href = 'login.html';
+              }
+            });
+          } else {
+            alert('សូមចូលគណនី (Login) ឬចុះឈ្មោះជាមុនសិន ដើម្បីមើលទំព័រនេះ!');
+            window.location.href = 'login.html';
+          }
+        });
+      });
+    });
+  </script>
+  <!-- SweetAlert2 link if not exist -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

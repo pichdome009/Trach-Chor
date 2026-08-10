@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trach Chor on Instagram</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { background-color: #fafafa; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .ig-navbar { background-color: #ffffff; border-bottom: 1px solid #dbdbdb; height: 60px; display: flex; align-items: center; justify-content: space-around; position: sticky; top: 0; z-index: 100; }
+    .ig-logo { font-family: 'Brush Script MT', cursive; font-size: 28px; font-weight: 600; text-decoration: none; color: #000; }
+    .profile-pic { width: 150px; height: 150px; border-radius: 50%; border: 2px solid #dbdbdb; padding: 4px; object-fit: cover; }
+    .stat-number { font-weight: 600; font-size: 16px; color: #262626; }
+    .stat-label { font-size: 14px; color: #262626; }
+    .ig-btn { background-color: #0095f6; color: #fff; font-weight: 600; padding: 6px 20px; border-radius: 8px; border: none; font-size: 14px; }
+    .ig-btn-secondary { background-color: #efefef; color: #262626; font-weight: 600; padding: 6px 20px; border-radius: 8px; border: none; font-size: 14px; }
+    .bio-name { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+    .bio-text { font-size: 14px; line-height: 1.4; color: #262626; }
+    .tabs { border-top: 1px solid #dbdbdb; padding-top: 15px; margin-top: 40px; }
+    .tab-item { font-size: 12px; font-weight: 600; color: #8e8e8e; letter-spacing: 1px; }
+    .tab-item.active { color: #262626; border-top: 1px solid #262626; padding-top: 14px; margin-top: -16px; }
+    .grid-img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; cursor: pointer; }
+    .grid-img:hover { filter: brightness(0.9); }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="ig-navbar px-3">
+    <div class="d-flex align-items-center gap-4 w-100" style="max-width: 935px;">
+      <a href="#" class="ig-logo me-auto"><i class="fa-brands fa-instagram me-2 fs-4"></i>Instagram</a>
+      <div class="bg-light rounded px-3 py-1 d-none d-md-flex align-items-center text-muted" style="width: 250px; border: 1px solid #dbdbdb;">
+        <i class="bi bi-search me-2" style="font-size: 12px;"></i> Search
+      </div>
+      <a href="index.html" class="btn btn-sm btn-dark rounded-pill fw-bold ms-auto"><i class="bi bi-arrow-left me-1"></i> Back to Trach Chor</a>
+    </div>
+  </div>
+
+  <div class="container mt-4 mb-5" style="max-width: 935px;">
+    <!-- Profile Header -->
+    <div class="row mb-5 align-items-center">
+      <div class="col-md-4 text-center d-flex justify-content-center">
+        <div class="profile-pic-container rounded-circle" style="width: 150px; height: 150px; padding: 4px; border: 2px solid #dbdbdb;">
+          <div class="w-100 h-100 rounded-circle d-flex justify-content-center align-items-center" style="background-color: #1a1a1a;">
+            <i class="bi bi-leaf-fill text-warning" style="font-size: 70px;"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <h2 class="mb-0 fw-light" style="font-size: 24px;">trachchor_travel <i class="bi bi-patch-check-fill text-primary fs-5"></i></h2>
+          <button class="ig-btn">Follow</button>
+          <button class="ig-btn-secondary">Message</button>
+          <i class="bi bi-three-dots fs-4"></i>
+        </div>
+        <div class="d-flex gap-4 mb-3">
+          <div><span class="stat-number">45</span> <span class="stat-label">posts</span></div>
+          <div><span class="stat-number">12.4K</span> <span class="stat-label">followers</span></div>
+          <div><span class="stat-number">180</span> <span class="stat-label">following</span></div>
+        </div>
+        <div class="bio-name">ត្រាច់ចរ - Trach Chor</div>
+        <div class="text-muted" style="font-size: 14px; margin-bottom: 2px;">Travel Agency</div>
+        <div class="bio-text">
+          ✈️ ភ្នាក់ងារទេសចរណ៍ឈានមុខគេនៅកម្ពុជា<br>
+          🏨 កក់កញ្ចប់ទេសចរណ៍ និងសណ្ឋាគារផ្កាយ ៥<br>
+          📍 Phnom Penh, Cambodia<br>
+          👇 ចុចទីនេះដើម្បីទទួលបានព័ត៌មានបន្ថែម<br>
+          <a href="#" class="text-decoration-none fw-bold" style="color: #00376b;">trachchor.com/linkinbio</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Highlights -->
+    <div class="d-flex gap-4 mb-4 overflow-auto px-2" style="scrollbar-width: none;">
+      <div class="text-center">
+        <img src="assets/images/naret/Angkorareab.jpg" class="rounded-circle mb-1 object-fit-cover" style="width: 77px; height: 77px; padding: 2px; border: 1px solid #dbdbdb;">
+        <div style="font-size: 12px; font-weight: 600;">Siem Reap</div>
+      </div>
+      <div class="text-center">
+        <img src="assets/images/SEAVTHEAN/golden-beach-resort-koh-rong-main.jpg" class="rounded-circle mb-1 object-fit-cover" style="width: 77px; height: 77px; padding: 2px; border: 1px solid #dbdbdb;">
+        <div style="font-size: 12px; font-weight: 600;">Koh Rong</div>
+      </div>
+      <div class="text-center">
+        <img src="assets/images/naret/fn-2017-07-09-19-44-15-0.jpg" class="rounded-circle mb-1 object-fit-cover" style="width: 77px; height: 77px; padding: 2px; border: 1px solid #dbdbdb;">
+        <div style="font-size: 12px; font-weight: 600;">Bokor</div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs d-flex justify-content-center gap-5">
+      <div class="tab-item active text-uppercase d-flex align-items-center gap-2"><i class="bi bi-grid-3x3"></i> Posts</div>
+      <div class="tab-item text-uppercase d-flex align-items-center gap-2"><i class="bi bi-play-btn"></i> Reels</div>
+      <div class="tab-item text-uppercase d-flex align-items-center gap-2"><i class="bi bi-person-square"></i> Tagged</div>
+    </div>
+
+    <!-- Posts Grid -->
+    <div class="row g-1 mt-3">
+      <div class="col-4 position-relative">
+        <img src="assets/images/naret/Angkorareab.jpg" class="grid-img">
+        <i class="bi bi-images position-absolute text-white fs-5" style="top: 10px; right: 15px;"></i>
+      </div>
+      <div class="col-4"><img src="assets/images/SEAVTHEAN/golden-beach-resort-koh-rong-main.jpg" class="grid-img"></div>
+      <div class="col-4"><img src="assets/images/naret/fn-2017-07-09-19-44-15-0.jpg" class="grid-img"></div>
+      
+      <div class="col-4 position-relative">
+        <img src="assets/images/naret/1.jpg" class="grid-img">
+        <i class="bi bi-play-fill position-absolute text-white fs-3" style="top: 5px; right: 10px;"></i>
+      </div>
+      <div class="col-4"><img src="assets/images/SEAVTHEAN/Cover_phnom-penh-travel-guide (1).jpg" class="grid-img"></div>
+      <div class="col-4"><img src="assets/images/horng-img/yamha.jpg" class="grid-img"></div>
+    </div>
+  </div>
+
+</body>
+</html>

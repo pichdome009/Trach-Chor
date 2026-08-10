@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
   <!-- link css  -->
   <link rel="stylesheet" href="assets/css/profile.css">
+  <link rel="stylesheet" href="assets/css/favorites.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- link nav-footer -->
   <link rel="stylesheet" href="assets/css/nav-footer.css">
@@ -253,9 +255,489 @@
   </section>
   <!-- end navbar login -->
 
+  <!-- Profile Header Banner -->
+  <section class="profile-banner position-relative">
+    <div class="banner-overlay"></div>
+    <div class="container h-100 position-relative z-1">
+      <div class="row h-100 align-items-end pb-4">
+        <div class="col-12">
+          <div class="d-flex align-items-end gap-4 profile-header-content">
+            <div class="position-relative profile-avatar-container">
+              <img src="assets/images/Pich-Udom/profile.jpg" alt="Profile" class="profile-avatar shadow-lg rounded-circle border border-4 border-white object-fit-cover">
+              <label for="avatar-upload" class="edit-avatar-btn btn btn-success rounded-circle position-absolute bottom-0 end-0 shadow d-flex align-items-center justify-content-center p-2" title="ប្ដូររូបភាព">
+                <i class="bi bi-camera-fill"></i>
+              </label>
+              <input type="file" id="avatar-upload" class="d-none" accept="image/*">
+            </div>
+            <div class="profile-title text-white mb-2">
+              <h1 class="fw-bold mb-1 display-5 text-shadow">ពេជ្រ ឧត្តម <i class="bi bi-patch-check-fill text-info fs-3 ms-2 align-middle"></i></h1>
+              <p class="mb-0 fs-5 text-light text-shadow opacity-75 d-flex align-items-center gap-2">
+                <i class="bi bi-envelope-at"></i> pichudom@example.com
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile Main Content -->
+  <section class="profile-main py-5 bg-light min-vh-100">
+    <div class="container">
+      <div class="row g-4">
+        
+        <!-- Sidebar -->
+        <div class="col-lg-3 col-md-4">
+          <div class="profile-sidebar bg-white rounded-4 shadow-sm p-3 position-sticky" style="top: 2rem;">
+            <div class="nav flex-column nav-pills profile-nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <button class="nav-link active text-start py-3 px-4 fw-medium rounded-3 mb-2 d-flex align-items-center gap-3" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="true">
+                <i class="bi bi-person fs-5"></i> ព័ត៌មានផ្ទាល់ខ្លួន
+              </button>
+              <button class="nav-link text-start py-3 px-4 fw-medium rounded-3 mb-2 d-flex align-items-center gap-3" id="v-pills-booking-tab" data-bs-toggle="pill" data-bs-target="#v-pills-booking" type="button" role="tab" aria-controls="v-pills-booking" aria-selected="false">
+                <i class="bi bi-journal-text fs-5"></i> ប្រវត្តិការកក់
+              </button>
+              <button class="nav-link text-start py-3 px-4 fw-medium rounded-3 mb-2 d-flex align-items-center gap-3" id="v-pills-favorite-tab" data-bs-toggle="pill" data-bs-target="#v-pills-favorite" type="button" role="tab" aria-controls="v-pills-favorite" aria-selected="false">
+                <i class="bi bi-heart fs-5"></i> ចំណូលចិត្ត
+              </button>
+              <button class="nav-link text-start py-3 px-4 fw-medium rounded-3 mb-2 d-flex align-items-center gap-3" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                <i class="bi bi-gear fs-5"></i> ការកំណត់
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="col-lg-9 col-md-8">
+          <div class="tab-content" id="v-pills-tabContent">
+            
+            <!-- Personal Info Tab -->
+            <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+              <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4 animate__animated animate__fadeIn">
+                <div class="card-header bg-white border-bottom-0 pt-4 pb-0 px-4 d-flex justify-content-between align-items-center">
+                  <h4 class="fw-bold mb-0 text-dark"><i class="bi bi-person-lines-fill text-success me-2"></i> ព័ត៌មានលម្អិត</h4>
+                  <button class="btn btn-outline-success rounded-pill px-4" id="editProfileBtn"><i class="bi bi-pencil-square me-2"></i>កែប្រែ</button>
+                </div>
+                <div class="card-body p-4">
+                  <form id="profileForm">
+                    <div class="row g-4">
+                      <div class="col-md-6">
+                        <label class="form-label text-muted fw-semibold">នាមត្រកូល (Last Name)</label>
+                        <input type="text" class="form-control form-control-lg profile-input" value="ពេជ្រ" readonly>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label text-muted fw-semibold">នាមខ្លួន (First Name)</label>
+                        <input type="text" class="form-control form-control-lg profile-input" value="ឧត្តម" readonly>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label text-muted fw-semibold">អ៊ីមែល (Email)</label>
+                        <input type="email" class="form-control form-control-lg profile-input" value="pichudom@example.com" readonly>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label text-muted fw-semibold">លេខទូរស័ព្ទ (Phone Number)</label>
+                        <div class="input-group">
+                          <span class="input-group-text bg-light border-end-0 text-muted">+855</span>
+                          <input type="tel" class="form-control form-control-lg profile-input border-start-0" value="12 345 678" readonly>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label text-muted fw-semibold">ថ្ងៃខែឆ្នាំកំណើត (Date of Birth)</label>
+                        <input type="date" class="form-control form-control-lg profile-input" value="1995-10-15" readonly>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label text-muted fw-semibold">ភេទ (Gender)</label>
+                        <select class="form-select form-control-lg profile-input" disabled>
+                          <option value="male" selected>ប្រុស (Male)</option>
+                          <option value="female">ស្រី (Female)</option>
+                          <option value="other">ផ្សេងៗ (Other)</option>
+                        </select>
+                      </div>
+                      <div class="col-12">
+                        <label class="form-label text-muted fw-semibold">អាសយដ្ឋាន (Address)</label>
+                        <textarea class="form-control profile-input" rows="3" readonly>ផ្ទះលេខ១២៣ ផ្លូវ២៧១, សង្កាត់បឹងសាឡាង, ខណ្ឌទួលគោក, រាជធានីភ្នំពេញ</textarea>
+                      </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-top text-end d-none" id="saveProfileActions">
+                      <button type="button" class="btn btn-light rounded-pill px-4 me-2 fw-medium" id="cancelEditBtn">បោះបង់</button>
+                      <button type="button" class="btn btn-success rounded-pill px-5 fw-bold shadow-sm" id="saveProfileBtn">រក្សាទុកការផ្លាស់ប្ដូរ</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Booking History Tab (Placeholder) -->
+            <div class="tab-pane fade" id="v-pills-booking" role="tabpanel" aria-labelledby="v-pills-booking-tab" tabindex="0">
+              <div class="card border-0 shadow-sm rounded-4 animate__animated animate__fadeIn">
+                <div class="card-header bg-white border-bottom-0 pt-4 pb-0 px-4">
+                  <h4 class="fw-bold mb-0 text-dark"><i class="bi bi-clock-history text-primary me-2"></i> ប្រវត្តិការកក់របស់ខ្ញុំ</h4>
+                </div>
+                <div class="card-body p-4 text-center py-5">
+                  <div class="empty-state-icon text-muted opacity-25 mb-3">
+                    <i class="bi bi-journal-x display-1"></i>
+                  </div>
+                  <h5 class="text-muted fw-bold">មិនទាន់មានប្រវត្តិការកក់ទេ</h5>
+                  <p class="text-muted-50 mb-4">តោះ! ចាប់ផ្ដើមស្វែងរកគោលដៅទេសចរណ៍ថ្ងៃនេះ។</p>
+                  <a href="index.html" class="btn btn-primary rounded-pill px-4">ស្វែងរកឥឡូវនេះ</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Favorites Tab -->
+            <div class="tab-pane fade" id="v-pills-favorite" role="tabpanel" aria-labelledby="v-pills-favorite-tab" tabindex="0">
+              <div class="card border-0 shadow-sm rounded-4 animate__animated animate__fadeIn">
+                <div class="card-header bg-white border-bottom-0 pt-4 pb-0 px-4">
+                  <h4 class="fw-bold mb-0 text-dark"><i class="bi bi-heart-fill text-danger me-2"></i> គោលដៅចំណូលចិត្ត</h4>
+                </div>
+                <div class="card-body p-4">
+                  <div class="row g-4">
+                    <!-- Favorite Item 1: កោះរ៉ុងសន្លឹម -->
+                    <div class="col-md-6 col-lg-6 col-xl-6">
+                      <div class="card border-0 rounded-4 shadow-sm h-100">
+                        <div class="img position-relative">
+                          <span class="mt-3 mx-3 position-absolute img-bade btn rounded-pill text-dark fw-bold bg-white" style="font-size: 0.8rem;"><i class="fa-solid fa-umbrella-beach text-info"></i> កោះ</span>
+                          <i class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3 rounded-circle"></i>
+                          <img src="assets/images/naret/9194734.jpg" class="card-img-top product-img object-fit-cover" height="200" alt="...">
+                        </div>
+                        <div class="card-body px-3 pt-3">
+                          <span class="category fw-bold text-dark fs-5">កោះរ៉ុងសន្លឹម</span>
+                          <p class="category pt-2 text-muted small">រីករាយនឹងសម្រស់ធម្មជាតិដ៏ស្រស់ស្អាត និងទេសភាពសមុទ្រដែលគួរឱ្យទាក់ទាញ</p>
+                        </div>
+                        <div class="d-flex justify-content-between px-4 pb-3">
+                          <div class="text-warning small">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            <span class="text-dark fw-bold ms-1">(4.9)</span>
+                          </div>
+                          <div class="small fw-semibold text-muted">
+                            <span><i class="fa-solid fa-location-dot text-success me-1"></i>កំពង់សោម</span>
+                          </div>
+                        </div>
+                        <a href="#" class="card-link text-decoration-none btn-success btn mx-3 mb-3 fw-bold"><i class="bi bi-eye me-2"></i> មើលលម្អិត</a>
+                      </div>
+                    </div>
+                    
+                    <!-- Favorite Item 2: ប្រាសាទអង្គរវត្ត -->
+                    <div class="col-md-6 col-lg-6 col-xl-6">
+                      <div class="card border-0 rounded-4 shadow-sm h-100">
+                        <div class="img position-relative">
+                          <span class="mt-3 mx-3 position-absolute img-bade btn rounded-pill text-dark fw-bold bg-white" style="font-size: 0.8rem;"><i class="fa-solid fa-landmark text-success"></i> វប្បធម៌</span>
+                          <i class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3 rounded-circle"></i>
+                          <img src="assets/images/naret/Angkorareab.jpg" class="card-img-top product-img object-fit-cover" height="200" alt="...">
+                        </div>
+                        <div class="card-body px-3 pt-3">
+                          <span class="category fw-bold text-dark fs-5">ប្រាសាទអង្គរវត្ត</span>
+                          <p class="category pt-2 text-muted small">រីករាយនឹងការទស្សនាបេតិកភណ្ឌពិភពលោក និងស្វែងយល់ពីអរិយធម៌ខ្មែរ</p>
+                        </div>
+                        <div class="d-flex justify-content-between px-4 pb-3">
+                          <div class="text-warning small">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            <span class="text-dark fw-bold ms-1">(4.9)</span>
+                          </div>
+                          <div class="small fw-semibold text-muted">
+                            <span><i class="fa-solid fa-location-dot text-success me-1"></i>សៀមរាប</span>
+                          </div>
+                        </div>
+                        <a href="#" class="card-link text-decoration-none btn-success btn mx-3 mb-3 fw-bold"><i class="bi bi-eye me-2"></i> មើលលម្អិត</a>
+                      </div>
+                    </div>
+
+                    <!-- Favorite Item 3: បឹងយក្សឡោម -->
+                    <div class="col-md-6 col-lg-6 col-xl-6">
+                      <div class="card border-0 rounded-4 shadow-sm h-100">
+                        <div class="img position-relative">
+                          <span class="mt-3 mx-3 position-absolute img-bade btn rounded-pill text-dark fw-bold bg-white" style="font-size: 0.8rem;"><i class="fa-solid fa-tree text-success"></i> ធម្មជាតិ</span>
+                          <i class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3 rounded-circle"></i>
+                          <img src="assets/images/naret/image_1762823797.png" class="card-img-top product-img object-fit-cover" height="200" alt="...">
+                        </div>
+                        <div class="card-body px-3 pt-3">
+                          <span class="category fw-bold text-dark fs-5">បឹងយក្សឡោម</span>
+                          <p class="category pt-2 text-muted small">ស្វែងរកភាពស្រស់ស្អាតនៃបឹងភ្នំភ្លើង និងព្រៃឈើធម្មជាតិដ៏សម្បូរបែប</p>
+                        </div>
+                        <div class="d-flex justify-content-between px-4 pb-3">
+                          <div class="text-warning small">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            <span class="text-dark fw-bold ms-1">(4.9)</span>
+                          </div>
+                          <div class="small fw-semibold text-muted">
+                            <span><i class="fa-solid fa-location-dot text-success me-1"></i>រតនគីរី</span>
+                          </div>
+                        </div>
+                        <a href="#" class="card-link text-decoration-none btn-success btn mx-3 mb-3 fw-bold"><i class="bi bi-eye me-2"></i> មើលលម្អិត</a>
+                      </div>
+                    </div>
+
+                    <!-- Favorite Item 4: ប្រាសាទសំបូរព្រៃគុក -->
+                    <div class="col-md-6 col-lg-6 col-xl-6">
+                      <div class="card border-0 rounded-4 shadow-sm h-100">
+                        <div class="img position-relative">
+                          <span class="mt-3 mx-3 position-absolute img-bade btn rounded-pill text-dark fw-bold bg-white" style="font-size: 0.8rem;"><i class="fa-solid fa-landmark text-success"></i> វប្បធម៌</span>
+                          <i class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3 rounded-circle"></i>
+                          <img src="assets/images/naret/fn-2017-07-09-19-44-15-0.jpg" class="card-img-top product-img object-fit-cover" height="200" alt="...">
+                        </div>
+                        <div class="card-body px-3 pt-3">
+                          <span class="category fw-bold text-dark fs-5">ប្រាសាទសំបូរព្រៃគុក</span>
+                          <p class="category pt-2 text-muted small">ស្វែងរកភាពអស្ចារ្យនៃប្រាសាទបុរាណ ដែលជាស្នាដៃស្ថាបត្យកម្មដ៏លេចធ្លោរបស់ខ្មែរ</p>
+                        </div>
+                        <div class="d-flex justify-content-between px-4 pb-3">
+                          <div class="text-warning small">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            <span class="text-dark fw-bold ms-1">(4.9)</span>
+                          </div>
+                          <div class="small fw-semibold text-muted">
+                            <span><i class="fa-solid fa-location-dot text-success me-1"></i>កំពង់ធំ</span>
+                          </div>
+                        </div>
+                        <a href="#" class="card-link text-decoration-none btn-success btn mx-3 mb-3 fw-bold"><i class="bi bi-eye me-2"></i> មើលលម្អិត</a>
+                      </div>
+                    </div>
+
+                    <!-- Favorite Item 5: ភោជនីយដ្ឋាន ច័ន្ទរស្មី -->
+                    <div class="col-md-6 col-lg-6 col-xl-6">
+                      <div class="card border-0 rounded-4 shadow-sm h-100">
+                        <div class="img position-relative">
+                          <span class="mt-3 mx-3 position-absolute img-bade btn rounded-pill text-dark fw-bold bg-white" style="font-size: 0.8rem;"><i class="bi bi-buildings text-success"></i> ភោជនីយដ្ឋាន</span>
+                          <i class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3 rounded-circle"></i>
+                          <img src="assets/images/naret/1.jpg" class="card-img-top product-img object-fit-cover" height="200" alt="...">
+                        </div>
+                        <div class="card-body px-3 pt-3">
+                          <span class="category fw-bold text-dark fs-5">ភោជនីយដ្ឋាន ច័ន្ទរស្មី</span>
+                          <p class="category pt-2 text-muted small">ទទួលទានអាហារប្រពៃណីខ្មែររសជាតិដើមក្នុងបរិយាកាសសួនច្បារបុរាណ។</p>
+                        </div>
+                        <div class="d-flex justify-content-between px-4 pb-3">
+                          <div class="text-warning small">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            <span class="text-dark fw-bold ms-1">(4.9)</span>
+                          </div>
+                          <div class="small fw-semibold text-muted">
+                            <span><i class="fa-solid fa-location-dot text-success me-1"></i>សៀមរាប</span>
+                          </div>
+                        </div>
+                        <a href="#" class="card-link text-decoration-none btn-success btn mx-3 mb-3 fw-bold"><i class="bi bi-eye me-2"></i> មើលលម្អិត</a>
+                      </div>
+                    </div>
+
+                    <!-- Favorite Item 6: សណ្ឋាគារ ម៉េម័រ សៀមរាប -->
+                    <div class="col-md-6 col-lg-6 col-xl-6">
+                      <div class="card border-0 rounded-4 shadow-sm h-100">
+                        <div class="img position-relative">
+                          <span class="mt-3 mx-3 position-absolute img-bade btn rounded-pill text-dark fw-bold bg-white" style="font-size: 0.8rem;"><i class="bi bi-buildings text-success"></i> សណ្ឋាគារ</span>
+                          <i class="bi bi-heart-fill heart px-2 pt-1 pb-0 bg-body fs-5 position-absolute end-0 text-danger m-3 rounded-circle"></i>
+                          <img src="assets/images/naret/unnamed.jpg" class="card-img-top product-img object-fit-cover" height="200" alt="...">
+                        </div>
+                        <div class="card-body px-3 pt-3">
+                          <span class="category fw-bold text-dark fs-5">សណ្ឋាគារ ម៉េម័រ សៀមរាប</span>
+                          <p class="category pt-2 text-muted small">សណ្ឋាគារប្រណីត បន្ទប់ទំនើប អាហារពេលព្រឹកឥតគិតថ្លៃ អាងហែលទឹក និងស្ប៉ា។</p>
+                        </div>
+                        <div class="d-flex justify-content-between px-4 pb-3">
+                          <div class="text-warning small">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            <span class="text-dark fw-bold ms-1">(4.9)</span>
+                          </div>
+                          <div class="small fw-semibold text-muted">
+                            <span><i class="fa-solid fa-location-dot text-success me-1"></i>សៀមរាប</span>
+                          </div>
+                        </div>
+                        <a href="#" class="card-link text-decoration-none btn-success btn mx-3 mb-3 fw-bold"><i class="bi bi-eye me-2"></i> មើលលម្អិត</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Settings Tab -->
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
+              <div class="card border-0 shadow-sm rounded-4 animate__animated animate__fadeIn">
+                <div class="card-header bg-white border-bottom-0 pt-4 pb-0 px-4">
+                  <h4 class="fw-bold mb-0 text-dark"><i class="bi bi-gear-fill text-secondary me-2"></i> ការកំណត់គណនី</h4>
+                </div>
+                <div class="card-body p-4">
+                  <div class="mb-4">
+                    <h5 class="fw-bold mb-3 fs-6">ការជូនដំណឹង (Notifications)</h5>
+                    <div class="form-check form-switch mb-3">
+                      <input class="form-check-input" type="checkbox" role="switch" id="notifEmail" checked>
+                      <label class="form-check-label ms-2" for="notifEmail">
+                        <span class="fw-semibold d-block">ការជូនដំណឹងតាមអ៊ីមែល</span>
+                        <span class="text-muted small">ទទួលអ៊ីមែលនៅពេលមានប្រូម៉ូសិនថ្មីៗ</span>
+                      </label>
+                    </div>
+                    <div class="form-check form-switch mb-3">
+                      <input class="form-check-input" type="checkbox" role="switch" id="notifSMS" checked>
+                      <label class="form-check-label ms-2" for="notifSMS">
+                        <span class="fw-semibold d-block">ការជូនដំណឹងតាម SMS</span>
+                        <span class="text-muted small">ទទួលសារ SMS នៅពេលការកក់ជោគជ័យ</span>
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <hr class="my-4">
+                  
+                  <div class="mb-4">
+                    <h5 class="fw-bold mb-3 fs-6">ប្ដូរពាក្យសម្ងាត់ (Change Password)</h5>
+                    <form>
+                      <div class="mb-3">
+                        <label class="form-label text-muted fw-semibold">ពាក្យសម្ងាត់បច្ចុប្បន្ន</label>
+                        <input type="password" class="form-control profile-input" placeholder="••••••••">
+                      </div>
+                      <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                          <label class="form-label text-muted fw-semibold">ពាក្យសម្ងាត់ថ្មី</label>
+                          <input type="password" class="form-control profile-input" placeholder="••••••••">
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label text-muted fw-semibold">បញ្ជាក់ពាក្យសម្ងាត់ថ្មី</label>
+                          <input type="password" class="form-control profile-input" placeholder="••••••••">
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-primary rounded-pill px-4 mt-2">អាប់ដេតពាក្យសម្ងាត់</button>
+                    </form>
+                  </div>
+                  
+                  <hr class="my-4">
+                  
+                  <div>
+                    <h5 class="fw-bold mb-3 fs-6 text-danger">លុបគណនី (Delete Account)</h5>
+                    <p class="text-muted small mb-3">ប្រសិនបើអ្នកលុបគណនី នោះទិន្នន័យ ការកក់ និងពិន្ទុរបស់អ្នកទាំងអស់នឹងត្រូវបាត់បង់ជារៀងរហូត។</p>
+                    <button type="button" class="btn btn-outline-danger rounded-pill px-4">លុបគណនីរបស់ខ្ញុំ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <section class="sec-footer mt-auto">
+    <footer class="footer-luxury">
+      <div class="container">
+        <div class="row g-4 mb-5">
+          <div class="col-lg-4 col-md-6">
+            <a class="footer-logo"><i class="bi bi-leaf-fill text-warning"></i> ត្រាច់ចរ <span>| Trach Chor</span></a>
+            <p class="mb-4">វេទិកាទេសចរណ៍ និងការធ្វើដំណើរលំដាប់ខ្ពស់ឈានមុខគេក្នុងប្រទេសកម្ពុជា។
+              យើងភ្ជាប់លោកអ្នកទៅកាន់គោលដៅធម្មជាតិ វប្បធម៌ និងការស្នាក់នៅដ៏ប្រណីតបំផុត។</p>
+            <div class="d-flex text-align-center">
+              <a href="#" class="social-icon-btn"><i class="bi bi-facebook fs-5"></i></a>
+              <a href="#" class="social-icon-btn"><i class="bi bi-instagram fs-5"></i></a>
+              <a href="#" class="social-icon-btn"><i class="bi bi-telegram fs-5"></i></a>
+              <a href="#" class="social-icon-btn"><i class="bi bi-youtube fs-5"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-heading">តំណភ្ជាប់</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">ទំព័រដើម</a></li>
+              <li><a href="about.html">អំពីយើង</a></li>
+              <li><a href="services.html">សេវាកម្ម</a></li>
+              <li><a href="contact.html">ទំនាក់ទំនង</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-heading">គោលដៅពេញនិយម</h5>
+            <ul class="footer-links">
+              <li><a href="destinations.html"><i class="bi bi-chevron-right text-success fs-7 me-2"></i>ខេត្តសៀមរាប
+                  (អង្គរវត្ត)</a></li>
+              <li><a href="destinations.html"><i class="bi bi-chevron-right text-success fs-7 me-2"></i>កោះរ៉ុង &
+                  ឆ្នេរសមុទ្រ</a></li>
+              <li><a href="destinations.html"><i class="bi bi-chevron-right text-success fs-7 me-2"></i>មណ្ឌលគិរី &
+                  ធម្មជាតិ</a></li>
+              <li><a href="destinations.html"><i
+                    class="bi bi-chevron-right text-success fs-7 me-2"></i>រាជធានីភ្នំពេញ</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-heading">ទំនាក់ទំនង</h5>
+            <ul class="footer-links text-light">
+              <li class="d-flex align-items-start gap-3 mb-3"><i
+                  class="bi bi-geo-alt-fill text-success mt-1 fs-5"></i><span>អគារ Vamco, មហាវិថីព្រះមុនីវង្ស,
+                  រាជធានីភ្នំពេញ</span></li>
+              <li class="d-flex align-items-center gap-3 mb-3"><i
+                  class="bi bi-telephone-fill text-primary fs-5"></i><span>+855 (0) 23 999 888</span></li>
+              <li class="d-flex align-items-center gap-3"><i
+                  class="bi bi-envelope-fill text-warning fs-5"></i><span>trachchor.travel@gmail.com</span></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="border-secondary opacity-25">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+          <p class="mb-0 small">&copy; 2026 ត្រាច់ចរ (Trach Chor). រក្សាសិទ្ធិគ្រប់យ៉ាង។ Designed with <i
+              class="bi bi-heart text-danger"></i> ដើម្បីសម្រេចចិត្តការធ្វើដំណើរកម្ពុជា។</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!-- end footer -->
+
   <!-- link js -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const editBtn = document.getElementById('editProfileBtn');
+      const cancelBtn = document.getElementById('cancelEditBtn');
+      const saveBtn = document.getElementById('saveProfileBtn');
+      const actionButtons = document.getElementById('saveProfileActions');
+      const inputs = document.querySelectorAll('.profile-input');
+      const genderSelect = document.querySelector('select.profile-input');
 
+      function toggleEditMode(isEditing) {
+        inputs.forEach(input => {
+          if (input.tagName === 'SELECT') {
+            input.disabled = !isEditing;
+          } else {
+            input.readOnly = !isEditing;
+          }
+        });
+
+        if (isEditing) {
+          editBtn.classList.add('d-none');
+          actionButtons.classList.remove('d-none');
+          // Focus first input
+          inputs[0].focus();
+        } else {
+          editBtn.classList.remove('d-none');
+          actionButtons.classList.add('d-none');
+        }
+      }
+
+      editBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleEditMode(true);
+      });
+
+      cancelBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleEditMode(false);
+      });
+
+      saveBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Here you would typically save data to a backend
+        
+        // Show success visual feedback
+        const originalText = this.innerHTML;
+        this.innerHTML = '<i class="bi bi-check2-circle me-2"></i>រក្សាទុករួចរាល់';
+        this.classList.replace('btn-success', 'btn-primary');
+        
+        setTimeout(() => {
+          this.innerHTML = originalText;
+          this.classList.replace('btn-primary', 'btn-success');
+          toggleEditMode(false);
+        }, 1500);
+      });
+      
+      // Avatar upload simulation
+      document.getElementById('avatar-upload').addEventListener('change', function(e) {
+        if (this.files && this.files[0]) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            document.querySelector('.profile-avatar').src = e.target.result;
+          }
+          reader.readAsDataURL(this.files[0]);
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

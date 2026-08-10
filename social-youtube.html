@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trach Chor on YouTube</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { background-color: #0f0f0f; color: #fff; font-family: "Roboto","Arial",sans-serif; }
+    .yt-navbar { background-color: #0f0f0f; height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; position: sticky; top: 0; z-index: 100; }
+    .yt-logo { color: #fff; font-size: 20px; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 5px; }
+    .search-bar { display: flex; flex: 1; max-width: 600px; margin: 0 40px; }
+    .search-input { background-color: #121212; border: 1px solid #303030; color: #fff; border-radius: 40px 0 0 40px; padding: 8px 16px; width: 100%; outline: none; }
+    .search-btn { background-color: #222222; border: 1px solid #303030; border-left: none; border-radius: 0 40px 40px 0; padding: 0 20px; color: #fff; cursor: pointer; }
+    .banner { height: 16vw; min-height: 150px; max-height: 250px; background: url('https://images.unsplash.com/photo-1542224566-6e85f2e6772f?w=1600') center/cover; width: 100%; border-radius: 12px; margin-top: 16px; }
+    .profile-pic { width: 128px; height: 128px; border-radius: 50%; object-fit: cover; }
+    .channel-title { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+    .channel-meta { color: #aaaaaa; font-size: 14px; margin-bottom: 12px; }
+    .subscribe-btn { background-color: #fff; color: #0f0f0f; font-weight: 500; padding: 8px 16px; border-radius: 18px; border: none; font-size: 14px; text-transform: uppercase; }
+    .nav-tabs { border-bottom: 1px solid #3f3f3f; margin-top: 24px; display: flex; gap: 24px; }
+    .nav-tab { color: #aaaaaa; font-weight: 500; font-size: 14px; text-transform: uppercase; padding: 12px 0; cursor: pointer; border-bottom: 3px solid transparent; }
+    .nav-tab.active { color: #fff; border-bottom-color: #fff; }
+    .video-card { background: transparent; cursor: pointer; }
+    .thumbnail { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 12px; margin-bottom: 12px; }
+    .video-title { font-size: 16px; font-weight: 500; line-height: 1.4; margin-bottom: 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .video-meta { color: #aaaaaa; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="yt-navbar">
+    <div class="d-flex align-items-center">
+      <i class="bi bi-list fs-3 me-3 text-white"></i>
+      <a href="#" class="yt-logo">
+        <i class="fa-brands fa-youtube text-danger fs-3"></i> YouTube
+      </a>
+    </div>
+    <div class="search-bar d-none d-md-flex">
+      <input type="text" class="search-input" placeholder="Search">
+      <button class="search-btn"><i class="bi bi-search"></i></button>
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <a href="index.html" class="btn btn-sm btn-outline-light rounded-pill"><i class="bi bi-arrow-left"></i> Back</a>
+      <i class="bi bi-bell fs-5"></i>
+      <i class="bi bi-person-circle fs-4"></i>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="max-width: 1280px; padding: 0 24px;">
+    <!-- Banner -->
+    <div class="banner"></div>
+
+    <!-- Header info -->
+    <div class="d-flex flex-column flex-md-row align-items-start mt-4 mb-2 gap-4">
+      <div class="profile-pic d-flex justify-content-center align-items-center" style="background-color: #1a1a1a;">
+        <i class="bi bi-leaf-fill text-warning" style="font-size: 60px;"></i>
+      </div>
+      <div class="flex-grow-1">
+        <div class="channel-title">Trach Chor ត្រាច់ចរ <i class="bi bi-check-circle-fill text-secondary fs-5 align-middle"></i></div>
+        <div class="channel-meta">@trachchor_travel ‧ 125K subscribers ‧ 342 videos</div>
+        <div class="channel-meta" style="max-width: 600px;">
+          Welcome to the official YouTube channel of Trach Chor, Cambodia's premier travel agency. Discover the beauty of Cambodia with us! ✨<br>
+          <a href="#" style="color: #3ea6ff; text-decoration: none;">trachchor.com</a>
+        </div>
+        <button class="subscribe-btn mt-2">Subscribe</button>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="nav-tabs">
+      <div class="nav-tab active">Home</div>
+      <div class="nav-tab">Videos</div>
+      <div class="nav-tab">Shorts</div>
+      <div class="nav-tab">Playlists</div>
+      <div class="nav-tab">Community</div>
+    </div>
+
+    <!-- Videos Grid -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-3 mb-5">
+      
+      <!-- Video 1 -->
+      <div class="col">
+        <div class="video-card">
+          <div class="position-relative">
+            <img src="assets/images/naret/Angkorareab.jpg" class="thumbnail">
+            <span class="position-absolute bg-dark text-white rounded px-1" style="bottom: 18px; right: 8px; font-size: 12px; font-weight: 500;">12:45</span>
+          </div>
+          <div class="video-title">Top 10 Places to Visit in Siem Reap | Angkor Wat Guide</div>
+          <div class="video-meta">15K views ‧ 2 weeks ago</div>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="col">
+        <div class="video-card">
+          <div class="position-relative">
+            <img src="assets/images/SEAVTHEAN/golden-beach-resort-koh-rong-main.jpg" class="thumbnail">
+            <span class="position-absolute bg-dark text-white rounded px-1" style="bottom: 18px; right: 8px; font-size: 12px; font-weight: 500;">08:20</span>
+          </div>
+          <div class="video-title">Koh Rong Island - The Paradise of Cambodia 🏝️</div>
+          <div class="video-meta">32K views ‧ 1 month ago</div>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="col">
+        <div class="video-card">
+          <div class="position-relative">
+            <img src="assets/images/naret/fn-2017-07-09-19-44-15-0.jpg" class="thumbnail">
+            <span class="position-absolute bg-dark text-white rounded px-1" style="bottom: 18px; right: 8px; font-size: 12px; font-weight: 500;">15:10</span>
+          </div>
+          <div class="video-title">Exploring Bokor Mountain & Thansur Sokha Hotel</div>
+          <div class="video-meta">8.5K views ‧ 3 months ago</div>
+        </div>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="col">
+        <div class="video-card">
+          <div class="position-relative">
+            <img src="assets/images/SEAVTHEAN/Cover_phnom-penh-travel-guide (1).jpg" class="thumbnail">
+            <span class="position-absolute bg-dark text-white rounded px-1" style="bottom: 18px; right: 8px; font-size: 12px; font-weight: 500;">10:05</span>
+          </div>
+          <div class="video-title">Phnom Penh City Tour - Night Market & Royal Palace</div>
+          <div class="video-meta">22K views ‧ 4 months ago</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

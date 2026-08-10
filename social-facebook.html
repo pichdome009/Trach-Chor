@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trach Chor on Facebook</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { background-color: #f0f2f5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .fb-navbar { background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,.08); padding: 0 16px; height: 56px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .fb-logo { color: #1877f2; font-size: 40px; line-height: 1; }
+    .cover-photo { height: 350px; background: url('https://images.unsplash.com/photo-1542224566-6e85f2e6772f?w=1200') center/cover no-repeat; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; }
+    .profile-header { background: #fff; padding-bottom: 20px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+    .profile-pic { width: 168px; height: 168px; border-radius: 50%; border: 4px solid #fff; position: absolute; bottom: -110px; left: 30px; background: #fff; }
+    .profile-info { margin-left: 220px; padding-top: 15px; min-height: 85px; margin-bottom: 30px; }
+    .page-name { font-size: 32px; font-weight: 700; color: #1c1e21; margin-bottom: 4px; }
+    .page-category { color: #65676b; font-size: 15px; font-weight: 500; }
+    .fb-btn-primary { background-color: #1b74e4; color: #fff; font-weight: 600; padding: 6px 12px; border-radius: 6px; border: none; }
+    .fb-btn-secondary { background-color: #e4e6eb; color: #050505; font-weight: 600; padding: 6px 12px; border-radius: 6px; border: none; }
+    .post-card { background: #fff; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="fb-navbar">
+    <div class="d-flex align-items-center">
+      <i class="fa-brands fa-facebook fb-logo me-2"></i>
+      <div class="bg-light rounded-pill px-3 py-2 d-flex align-items-center text-muted" style="width: 250px;">
+        <i class="bi bi-search me-2"></i> Search Facebook
+      </div>
+    </div>
+    <a href="index.html" class="btn btn-sm btn-outline-primary rounded-pill fw-bold"><i class="bi bi-arrow-left me-1"></i> Back to Trach Chor</a>
+  </div>
+
+  <div class="container-fluid p-0" style="max-width: 1095px; margin: 0 auto;">
+    <!-- Profile Header -->
+    <div class="profile-header">
+      <div class="position-relative">
+        <div class="cover-photo"></div>
+        <div class="profile-pic shadow-sm d-flex justify-content-center align-items-center" style="background-color: #1a1a1a;">
+          <i class="bi bi-leaf-fill text-warning" style="font-size: 80px;"></i>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between align-items-end profile-info pe-4">
+        <div>
+          <h1 class="page-name">ត្រាច់ចរ - Trach Chor <i class="bi bi-patch-check-fill text-primary fs-4"></i></h1>
+          <div class="page-category">25K likes • 28K followers • Travel Agency</div>
+        </div>
+        <div class="d-flex gap-2">
+          <button class="fb-btn-primary"><i class="fa-solid fa-thumbs-up me-1"></i> Like</button>
+          <button class="fb-btn-secondary"><i class="fa-brands fa-facebook-messenger me-1"></i> Message</button>
+          <button class="fb-btn-secondary"><i class="fa-solid fa-share me-1"></i> Share</button>
+        </div>
+      </div>
+      <hr class="mx-4 mt-4 mb-2">
+      <div class="d-flex px-4 fw-semibold text-muted" style="font-size: 15px;">
+        <div class="px-3 py-3" style="color: #1877f2; border-bottom: 3px solid #1877f2;">Posts</div>
+        <div class="px-3 py-3">About</div>
+        <div class="px-3 py-3">Mentions</div>
+        <div class="px-3 py-3">Reviews</div>
+        <div class="px-3 py-3">Followers</div>
+        <div class="px-3 py-3">Photos</div>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="row mt-3 mx-0">
+      <!-- Left Column: Intro -->
+      <div class="col-md-5 ps-0 pe-2">
+        <div class="post-card p-3">
+          <h5 class="fw-bold mb-3">Intro</h5>
+          <div class="d-flex align-items-start mb-3 text-muted">
+            <i class="bi bi-info-circle-fill fs-5 me-3 text-secondary"></i>
+            <span>សេវាកម្មកក់កញ្ចប់ទេសចរណ៍ សណ្ឋាគារ និងជួលយានជំនិះលំដាប់ផ្កាយ ៥។</span>
+          </div>
+          <div class="d-flex align-items-center mb-3 text-muted">
+            <i class="bi bi-geo-alt-fill fs-5 me-3 text-secondary"></i>
+            <span>Phnom Penh, Cambodia</span>
+          </div>
+          <div class="d-flex align-items-center mb-3 text-muted">
+            <i class="bi bi-envelope-fill fs-5 me-3 text-secondary"></i>
+            <span>trachchor.travel@gmail.com</span>
+          </div>
+          <div class="d-flex align-items-center mb-3 text-muted">
+            <i class="bi bi-telephone-fill fs-5 me-3 text-secondary"></i>
+            <span>+855 23 999 888</span>
+          </div>
+          <div class="d-flex align-items-center mb-3 text-muted">
+            <i class="bi bi-link-45deg fs-4 me-3 text-secondary"></i>
+            <a href="#" class="text-decoration-none">trachchor.com</a>
+          </div>
+        </div>
+        
+        <div class="post-card p-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold mb-0">Photos</h5>
+            <a href="#" class="text-decoration-none">See All Photos</a>
+          </div>
+          <div class="row g-1">
+            <div class="col-4"><img src="assets/images/naret/Angkorareab.jpg" class="w-100 object-fit-cover" style="height:100px; border-radius: 4px;"></div>
+            <div class="col-4"><img src="assets/images/naret/1.jpg" class="w-100 object-fit-cover" style="height:100px; border-radius: 4px;"></div>
+            <div class="col-4"><img src="assets/images/SEAVTHEAN/golden-beach-resort-koh-rong-main.jpg" class="w-100 object-fit-cover" style="height:100px; border-radius: 4px;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Posts -->
+      <div class="col-md-7 pe-0 ps-2">
+        <div class="post-card p-3">
+          <!-- Post Header -->
+          <div class="d-flex align-items-center mb-3">
+            <div class="rounded-circle me-2 d-flex justify-content-center align-items-center" style="width: 40px; height: 40px; background-color: #1a1a1a;">
+              <i class="bi bi-leaf-fill text-warning fs-5"></i>
+            </div>
+            <div>
+              <div class="fw-bold">ត្រាច់ចរ - Trach Chor</div>
+              <div class="text-muted" style="font-size: 13px;">4 hrs • <i class="bi bi-globe-americas"></i></div>
+            </div>
+            <i class="bi bi-three-dots ms-auto fs-5 text-muted"></i>
+          </div>
+          <!-- Post Body -->
+          <p>ប្រូម៉ូសិនពិសេសសម្រាប់ខែនេះ! 🥳🎉<br>កក់កញ្ចប់ដំណើរកម្សាន្តទៅកាន់ខេត្តសៀមរាប ទទួលបានការបញ្ចុះតម្លៃរហូតដល់ ២០% ភ្លាមៗសម្រាប់សមាជិក VIP! រួសរាន់ឡើង ចំនួនមានកំណត់! ✈️✨</p>
+          <img src="assets/images/naret/Angkorareab.jpg" class="w-100 rounded-3 mb-3 object-fit-cover" style="height: 350px;">
+          <!-- Post Stats -->
+          <div class="d-flex justify-content-between text-muted border-bottom pb-2 mb-2" style="font-size: 15px;">
+            <div><i class="fa-solid fa-thumbs-up text-primary bg-light p-1 rounded-circle me-1"></i> <i class="fa-solid fa-heart text-danger bg-light p-1 rounded-circle"></i> 1.2K</div>
+            <div>240 Comments • 150 Shares</div>
+          </div>
+          <!-- Post Actions -->
+          <div class="d-flex justify-content-between px-3 pt-1 fw-semibold text-muted">
+            <div class="py-1 cursor-pointer"><i class="bi bi-hand-thumbs-up me-2 fs-5 align-middle"></i>Like</div>
+            <div class="py-1 cursor-pointer"><i class="bi bi-chat me-2 fs-5 align-middle"></i>Comment</div>
+            <div class="py-1 cursor-pointer"><i class="bi bi-share me-2 fs-5 align-middle"></i>Share</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

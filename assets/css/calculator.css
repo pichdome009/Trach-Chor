@@ -123,12 +123,6 @@ body {
     padding: 10px 20px;
 }
 
-.calc-header-bg-icon {
-    background-color: #48566a65;
-    border-radius: 20px;
-    padding: 5px 15px;
-}
-
 /* Responsive */
 
 @media (max-width:992px) {
