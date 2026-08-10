@@ -1,0 +1,124 @@
+/* Profile Banner & Header */
+.profile-banner {
+  height: 250px;
+  background: linear-gradient(135deg, #0B8457 0%, #16A34A 100%), 
+  url('../images/Pich-Udom/cover_profile_page.jpg') center/cover no-repeat;
+  background-blend-mode: overlay;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%);
+}
+
+.profile-avatar-container {
+  width: 140px;
+  height: 140px;
+  margin-bottom: -40px;
+  z-index: 2;
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar-container:hover .profile-avatar {
+  transform: scale(1.05);
+}
+
+.edit-avatar-btn {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #0B8457 !important;
+  border: 2px solid white !important;
+}
+
+.edit-avatar-btn:hover {
+  transform: scale(1.1);
+  background-color: #16A34A !important;
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Sidebar Navigation */
+.profile-sidebar {
+  border: 1px solid rgba(0,0,0,0.05);
+  position: sticky;
+  top: 2rem;
+}
+
+.profile-nav .nav-link {
+  color: #495057;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.profile-nav .nav-link:hover {
+  background-color: #f8f9fa;
+  color: #0B8457;
+  transform: translateX(5px);
+}
+
+.profile-nav .nav-link.active {
+  background-color: #0B8457;
+  color: white;
+  box-shadow: 0 4px 10px rgba(11, 132, 87, 0.3);
+}
+
+.reward-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.8);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Form Styles */
+.profile-input {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+  color: #495057;
+}
+
+.profile-input:focus {
+  background-color: #fff;
+  border-color: #0B8457;
+  box-shadow: 0 0 0 0.25rem rgba(11, 132, 87, 0.15);
+}
+
+.profile-input[readonly], .profile-input[disabled] {
+  background-color: #f1f3f5;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Empty State */
+.empty-state-icon i {
+  font-size: 5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .profile-banner {
+    height: 300px;
+  }
+  .profile-header-content {
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+  }
+  .profile-avatar-container {
+    margin-bottom: 10px;
+  }
+}
