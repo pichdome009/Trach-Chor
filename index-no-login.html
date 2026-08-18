@@ -116,6 +116,80 @@
   </header>
   <!-- end hero section -->
 
+  <!-- start floating search box -->
+  <section class="container position-relative" style="z-index: 20; margin-top: -80px;" data-aos="fade-up">
+    <div class="glass-search-box">
+      <div class="d-flex justify-content-center gap-2 mb-4 border-bottom pb-3 overflow-auto">
+        <button class="search-tab-btn active"><i class="bi bi-building me-2"></i>កន្លែងស្នាក់នៅ & គោលដៅ</button>
+        <button class="search-tab-btn"><i class="bi bi-signpost-split me-2"></i>កញ្ចប់ទេសចរណ៍</button>
+        <button class="search-tab-btn"><i class="bi bi-car-front me-2"></i>រថយន្ត & ការធ្វើដំណើរ</button>
+      </div>
+
+      <form class="row g-2 align-items-center" action="destinations.html">
+        <div class="col-lg-3 col-md-6">
+          <div class="d-flex align-items-center border-end px-3 py-2">
+            <i class="bi bi-geo-alt-fill text-success fs-4 me-3"></i>
+            <div class="w-100">
+              <label class="small fw-bold text-uppercase d-block mb-1">ទីតាំងគោលដៅ</label>
+              <div class="dropdown w-100">
+                <button class="btn btn-link text-decoration-none text-dark fw-bold p-0 text-start w-100 shadow-none d-flex justify-content-between align-items-center custom-select-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="selected-text" style="font-size: 0.95rem;">ជ្រើសរើសទីតាំងទាំងអស់</span>
+                  <i class="bi bi-chevron-down small text-muted"></i>
+                </button>
+                <ul class="dropdown-menu custom-dropdown-menu shadow-lg border-0 rounded-4 w-100 mt-2">
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item active" href="#" data-value="all">ជ្រើសរើសទីតាំងទាំងអស់</a></li>
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item" href="#" data-value="siem-reap">ខេត្តសៀមរាប (អង្គរវត្ត)</a></li>
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item" href="#" data-value="koh-rong">កោះរ៉ុង & ឆ្នេរសមុទ្រ</a></li>
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item" href="#" data-value="mondulkiri">មណ្ឌលគិរី & ភ្នំ</a></li>
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item" href="#" data-value="phnom-penh">រាជធានីភ្នំពេញ</a></li>
+                </ul>
+                <input type="hidden" name="location" value="all">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="d-flex align-items-center border-end px-3 py-2">
+            <i class="bi bi-calendar-event-fill text-primary fs-4 me-3"></i>
+            <div class="w-100">
+              <label class="small fw-bold text-uppercase d-block mb-1">កាលបរិច្ឆេទ</label>
+              <input type="date" class="form-control border-0 p-0 bg-transparent fw-bold text-dark shadow-none" value="2026-07-15">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="d-flex align-items-center px-3 py-2">
+            <i class="bi bi-people-fill text-warning fs-4 me-3"></i>
+            <div class="w-100">
+              <label class="small fw-bold text-uppercase d-block mb-1">ចំនួនភ្ញៀវ</label>
+              <div class="dropdown w-100">
+                <button class="btn btn-link text-decoration-none text-dark fw-bold p-0 text-start w-100 shadow-none d-flex justify-content-between align-items-center custom-select-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="selected-text" style="font-size: 0.95rem;">ភ្ញៀវ ២ នាក់, ១ បន្ទប់</span>
+                  <i class="bi bi-chevron-down small text-muted"></i>
+                </button>
+                <ul class="dropdown-menu custom-dropdown-menu shadow-lg border-0 rounded-4 w-100 mt-2">
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item active" href="#" data-value="2">ភ្ញៀវ ២ នាក់, ១ បន្ទប់</a></li>
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item" href="#" data-value="4">គ្រួសារ (៤ នាក់), ២ បន្ទប់</a></li>
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item" href="#" data-value="group">ក្រុមធំ (៥+ នាក់)</a></li>
+                </ul>
+                <input type="hidden" name="guests" value="2">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 text-md-end text-center mt-3 mt-lg-0">
+          <button type="submit" class="btn btn-primary-luxury w-100 py-3 d-flex justify-content-center align-items-center fs-5">
+            <i class="bi bi-search me-2"></i> ស្វែងរកឥឡូវនេះ
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- end floating search box -->
+
   <!-- start section category -->
   <section class="section-padding py-5 category-section">
     <div class="container">
@@ -260,7 +334,7 @@
       
       <div class="row g-4">
         <!-- Tour Card 1 -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card tour-card-custom border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp" style="animation-delay: 0.3s; border-radius: 20px; overflow: hidden;">
             <div class="position-relative overflow-hidden">
               <img src="assets/images/Pich-Udom/Angkor_Wat.jpeg" class="card-img-top object-fit-cover" alt="Angkor Wat Tour" style="height: 240px; transition: transform 0.6s ease;">
@@ -285,7 +359,7 @@
         </div>
         
         <!-- Tour Card 2 -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card tour-card-custom border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp" style="animation-delay: 0.4s; border-radius: 20px; overflow: hidden;">
             <div class="position-relative overflow-hidden">
               <img src="assets/images/SEAVTHEAN/golden-beach-resort-koh-rong-main.jpg" class="card-img-top object-fit-cover" alt="Koh Rong Tour" style="height: 240px; transition: transform 0.6s ease;">
@@ -310,7 +384,7 @@
         </div>
 
         <!-- Tour Card 3 -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card tour-card-custom border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp" style="animation-delay: 0.5s; border-radius: 20px; overflow: hidden;">
             <div class="position-relative overflow-hidden">
               <img src="assets/images/naret/fn-2017-07-09-19-44-15-0.jpg" class="card-img-top object-fit-cover" alt="Bokor Tour" style="height: 240px; transition: transform 0.6s ease;">
@@ -653,7 +727,7 @@
       
       <div class="row g-4">
         <!-- Vehicle Card 1 -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card tour-card-custom border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp" style="animation-delay: 0.3s; border-radius: 20px; overflow: hidden;">
             <div class="position-relative overflow-hidden">
               <img src="assets/images/vehicles/suv.png" class="card-img-top object-fit-cover" alt="រថយន្តលក្ខណៈគ្រួសារ SUV" style="height: 240px; transition: transform 0.6s ease;">
@@ -677,7 +751,7 @@
         </div>
         
         <!-- Vehicle Card 2 -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card tour-card-custom border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp" style="animation-delay: 0.4s; border-radius: 20px; overflow: hidden;">
             <div class="position-relative overflow-hidden">
               <img src="assets/images/vehicles/minivan.png" class="card-img-top object-fit-cover" alt="រថយន្តក្រុងខ្នាតតូច Minivan" style="height: 240px; transition: transform 0.6s ease;">
@@ -701,7 +775,7 @@
         </div>
 
         <!-- Vehicle Card 3 -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card tour-card-custom border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp" style="animation-delay: 0.5s; border-radius: 20px; overflow: hidden;">
             <div class="position-relative overflow-hidden">
               <img src="assets/images/vehicles/scooter.png" class="card-img-top object-fit-cover" alt="ម៉ូតូ" style="height: 240px; transition: transform 0.6s ease;">
@@ -960,7 +1034,7 @@
             <ul class="footer-links">
               <li><a href="index.html">ទំព័រដើម</a></li>
               <li><a href="about.html">អំពីយើង</a></li>
-              <li><a href="services.html">សេវាកម្ម</a></li>
+              <li><a href="#">សេវាកម្ម</a></li>
               <li><a href="contact.html">ទំនាក់ទំនង</a></li>
             </ul>
           </div>
@@ -1249,6 +1323,40 @@
   </script>
   <!-- SweetAlert2 link if not exist -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Handle Tabs
+      const searchTabs = document.querySelectorAll('.search-tab-btn');
+      searchTabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          e.preventDefault();
+          searchTabs.forEach(t => t.classList.remove('active'));
+          e.currentTarget.classList.add('active');
+        });
+      });
+
+      // Handle Custom Dropdowns
+      document.querySelectorAll('.custom-dropdown-menu').forEach(menu => {
+        menu.addEventListener('click', (e) => {
+          const item = e.target.closest('.dropdown-item');
+          if(item) {
+            e.preventDefault();
+            // Update active class
+            menu.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+            
+            // Update button text
+            const container = menu.closest('.dropdown');
+            const btnText = container.querySelector('.selected-text');
+            const hiddenInput = container.querySelector('input[type="hidden"]');
+            
+            if(btnText) btnText.textContent = item.textContent;
+            if(hiddenInput) hiddenInput.value = item.getAttribute('data-value');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
