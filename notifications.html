@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="assets/css/nofications.css">
     <link rel="stylesheet" href="assets/css/nav-footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -20,7 +21,7 @@
 
 <body>
     <!-- start navbar -->
-    <section class="sec-navbar">
+    <section class="sec-navbar fixed-top w-100" style="z-index: 1030;">
     <nav class="navbar navbar-expand-lg py-3" data-bs-theme="dark">
       <div class="container">
         <a class="navbar-brand text-white fs-2 fw-bold" href="index.html"><i class="bi bi-leaf-fill text-warning"></i>
@@ -32,14 +33,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent2">
           <ul class="navbar-nav m-auto mb-2 mb-lg-0 fs-5 fw-medium gap-4">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">ទំព័រដើម</a>
+              <a class="nav-link" href="index.html">ទំព័រដើម</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">អំពីយើង</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="service nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <a class="service nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                aria-current="page" aria-expanded="false">
                 សេវាកម្ម
               </a>
               <ul class="dropdown-menu shadow border-0 rounded-4 p-3 fs-5 ">
@@ -113,7 +114,7 @@
                   </div>
                 </li>
                 <li>
-                  <a href="cart.html" class="btn w-100 rounded-pill fw-bold text-white btn-gradient-green transition-fast">ពិនិត្យមើល និងបង់ប្រាក់</a>
+                  <a href="cart.html" class="btn w-100 rounded-pill fw-bold text-white btn-gradient-green transition-fast d-flex align-items-center justify-content-center">ពិនិត្យមើល និងបង់ប្រាក់</a>
                 </li>
               </ul>
             </div>
@@ -125,7 +126,7 @@
                 <span class="position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold notification-badge-pulse" style="top: -2px; right: -2px; width: 18px; height: 18px; font-size: 0.65rem;">2</span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-glass rounded-4 p-3 mt-2" style="width: 340px;">
-                <li class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-3">
+                <li class="d-f1lex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-3">
                   <h6 class="mb-0 text-white fw-bold d-flex align-items-center"><i class="bi bi-bell-fill text-warning me-2 fs-5"></i>ការជូនដំណឹង (Notifications)</h6>
                   <span class="badge bg-light text-success fw-bold rounded-pill px-2 py-1 shadow-sm" style="font-size: 0.75rem;">ថ្មី 2</span>
                 </li>
@@ -153,7 +154,7 @@
                   <hr class="dropdown-divider border-secondary opacity-50 mb-3">
                 </li>
                 <li>
-                  <a href="notifications.html" class="btn w-100 rounded-pill fw-bold text-white" style="border: 1px solid rgba(255,255,255,0.2); background-color: rgba(255,255,255,0.05); transition: 0.3s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.3)';" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.2)';">មើលការជូនដំណឹងទាំងអស់</a>
+                  <a href="notifications.html" class="btn w-100 rounded-pill fw-bold text-white d-flex align-items-center justify-content-center" style="border: 1px solid rgba(255,255,255,0.2); background-color: rgba(255,255,255,0.05); transition: 0.3s;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.3)';" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.05)'; this.style.borderColor='rgba(255,255,255,0.2)';">មើលការជូនដំណឹងទាំងអស់</a>
                 </li>
               </ul>
             </div>
@@ -253,7 +254,7 @@
 
     <!-- Nofication Center Header-->
     <section class="notification-hero container-fluid px-lg-5" aria-labelledby="notification-title">
-        <div class="notification-hero__panel">
+        <div class="notification-hero__panel animate__animated animate__fadeInDown">
             <div class="notification-hero__content">
                 <h1 id="notification-title"><i class="bi bi-bell-fill"></i> មជ្ឈមណ្ឌលជូនដំណឹង </h1>
                 <p>តាមដានស្ថានភាពការកក់ រំលឹកកាលវិភាគធ្វើដំណើរ វិក្កយបត្រទូទាត់ និងការផ្តល់ជូនពិសេសពី Trach Chor។</p>
@@ -272,8 +273,8 @@
 
         <!-- Offcanvas button -->
         <div class="d-lg-none mb-3">
-            <button class="btn btn-success w-100" type="button"
-                data-bs-toggle="offcanvas" data-bs-target="#notifSidebarOffcanvas">
+            <button class="btn btn-success w-100" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#notifSidebarOffcanvas">
                 <i class="bi bi-funnel-fill me-2"></i>ស្វែងរកសារ &amp; ការកំណត់
             </button>
         </div>
@@ -297,8 +298,8 @@
                             data-bs-dismiss="offcanvas"><i class="bi bi-bell"></i>ការរំលឹក</a>
                         <a href="#payment" class="notification-category" data-category="payment" aria-pressed="false"
                             data-bs-dismiss="offcanvas"><i class="bi bi-qr-code-scan"></i>ការទូទាត់ប្រាក់</a>
-                        <a href="#promotion" class="notification-category" data-category="promotion" aria-pressed="false"
-                            data-bs-dismiss="offcanvas"><i class="bi bi-tags"></i>ប្រូម៉ូសិន</a>
+                        <a href="#promotion" class="notification-category" data-category="promotion"
+                            aria-pressed="false" data-bs-dismiss="offcanvas"><i class="bi bi-tags"></i>ប្រូម៉ូសិន</a>
                     </div>
                 </div>
                 <div class="notification-offcanvas-divider"></div>
@@ -306,18 +307,22 @@
                     <p class="notification-offcanvas-label">ការកំណត់ប្រភេទសារ</p>
                     <div class="setting-row d-flex justify-content-between align-items-center">
                         <span>សារ SMS</span>
-                        <div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" checked></div>
+                        <div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" checked>
+                        </div>
                     </div>
                     <div class="setting-row d-flex justify-content-between align-items-center">
                         <span>អ៊ីមែល</span>
-                        <div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" checked></div>
+                        <div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" checked>
+                        </div>
                     </div>
                     <div class="setting-row d-flex justify-content-between align-items-center">
                         <span>ប្រូម៉ូសិន</span>
-                        <div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" checked></div>
+                        <div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" checked>
+                        </div>
                     </div>
                 </div>
-                <button type="button" class="btn notification-offcanvas-close w-100" data-bs-dismiss="offcanvas">បិទការកំណត់</button>
+                <button type="button" class="btn notification-offcanvas-close w-100"
+                    data-bs-dismiss="offcanvas">បិទការកំណត់</button>
             </div>
         </div>
 
@@ -875,7 +880,8 @@
         </div>
     </section>
 
-    <section class="sec-footer bg-success mt-5">
+    <!-- start footer -->
+    <section class="sec-footer bg-success">
         <footer class="footer-luxury">
             <div class="container">
                 <div class="row g-4 mb-5">
@@ -885,10 +891,13 @@
                         <p class="mb-4">វេទិកាទេសចរណ៍ និងការធ្វើដំណើរលំដាប់ខ្ពស់ឈានមុខគេក្នុងប្រទេសកម្ពុជា។
                             យើងភ្ជាប់លោកអ្នកទៅកាន់គោលដៅធម្មជាតិ វប្បធម៌ និងការស្នាក់នៅដ៏ប្រណីតបំផុត។</p>
                         <div class="d-flex text-align-center">
-                            <a href="#" class="social-icon-btn"><i class="bi bi-facebook fs-5"></i></a>
-                            <a href="#" class="social-icon-btn"><i class="bi bi-instagram fs-5"></i></a>
-                            <a href="#" class="social-icon-btn"><i class="bi bi-telegram fs-5"></i></a>
-                            <a href="#" class="social-icon-btn"><i class="bi bi-youtube fs-5"></i></a>
+                            <a href="social-facebook.html" class="social-icon-btn"><i
+                                    class="bi bi-facebook fs-5"></i></a>
+                            <a href="social-instagram.html" class="social-icon-btn"><i
+                                    class="bi bi-instagram fs-5"></i></a>
+                            <a href="social-telegram.html" class="social-icon-btn"><i
+                                    class="bi bi-telegram fs-5"></i></a>
+                            <a href="social-youtube.html" class="social-icon-btn"><i class="bi bi-youtube fs-5"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-6">
@@ -940,6 +949,7 @@
             </div>
         </footer>
     </section>
+    <!-- end footer -->
 
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>

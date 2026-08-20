@@ -13,7 +13,7 @@ body {
 }
 
 .adventure-layout {
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 /* food.html hero */
@@ -118,8 +118,8 @@ body {
 }
 
 .restaurant-filter-sidebar {
-  background: linear-gradient(180deg, #fffdf7 0%, #f5edd6 100%);
-  border: 2px solid rgba(201, 168, 76, .3);
+  background: #fff;
+  border: 2px solid rgba(8, 99, 65, .28);
   border-radius: 22px;
   box-shadow: 0 12px 35px rgba(13, 46, 28, .12);
   padding: 1.5rem;
@@ -164,7 +164,7 @@ body {
 
 .restaurant-search-input .form-control:focus,
 .restaurant-filter-sidebar .form-select:focus {
-  box-shadow: 0 0 0 .2rem rgba(201, 168, 76, .2);
+  box-shadow: 0 0 0 .2rem rgba(8, 99, 65, .2);
 }
 
 /* Location-picker trigger button */
@@ -233,8 +233,8 @@ body {
 
 /* Reset button */
 .restaurant-reset-btn {
-  background: #0d2e1c;
-  border: 1px solid #0d2e1c;
+  background: #086341;
+  border: 1px solid #086341;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(13, 46, 28, .16);
   color: #fff;
@@ -243,14 +243,14 @@ body {
 }
 
 .restaurant-reset-btn:hover {
-  background: #16845c;
-  border-color: #16845c;
+  background: #0b8457;
+  border-color: #0b8457;
   color: #fff;
 }
 
 .restaurant-reset-btn:focus-visible,
 .restaurant-location-modal-btn:focus-visible {
-  box-shadow: 0 0 0 .25rem rgba(201, 168, 76, .28);
+  box-shadow: 0 0 0 .25rem rgba(8, 99, 65, .28);
   outline: 0;
 }
 
@@ -312,7 +312,7 @@ body {
 }
 
 .restaurant-location-option i {
-  color: #c9a84c;
+  color: #16845c;
   width: 1.1rem;
 }
 
@@ -807,7 +807,8 @@ body {
 /* ---- Hero banner ---- */
 @media (max-width: 767.98px) {
   .adventure-layout {
-    padding-top: 1.5rem;
+    /* The navbar remains fixed on mobile, so retain space for it. */
+    padding-top: 100px;
   }
 
   .adventure-hero-banner-food,
@@ -875,8 +876,8 @@ body {
    ============================================================ */
 
 .notification-sidebar-offcanvas {
-  background: linear-gradient(180deg, #fffdf7 0%, var(--cream) 100%);
-  border-bottom: 2px solid rgba(201, 168, 76, .42);
+  background: #fff;
+  border-bottom: 2px solid rgba(8, 99, 65, .35);
   box-shadow: 0 14px 36px rgba(13, 46, 28, .2);
   color: var(--jungle);
   height: auto;
@@ -901,7 +902,7 @@ body {
   align-items: center;
   background: var(--jade);
   border-radius: 10px;
-  color: var(--gold);
+  color: #fff;
   display: inline-flex;
   height: 34px;
   justify-content: center;
