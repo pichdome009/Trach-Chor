@@ -1,5 +1,4 @@
 :root {
-    --primary-font: 'Kantumruy Pro', 'Plus Jakarta Sans', sans-serif;
     --emerald: #059669;
     --emerald-hover: #047857;
     --emerald-light: #ecfdf5;
@@ -35,7 +34,6 @@ body {
 }
 
 .shape-2 {
-    background: #e0f2fe;
     bottom: 50px;
     right: 10%;
 }
