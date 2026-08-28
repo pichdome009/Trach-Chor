@@ -14,9 +14,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const costActivitiesEl = document.getElementById('costActivities');
     
     let breakdownChart = null;
+    let currentTotalCost = 0;
 
     function formatMoney(amount) {
         return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount);
+    }
+
+    function extractPrice(str) {
+        if (!str) return 0;
+        const match = str.match(/\$(\d+)/);
+        if (match) return parseInt(match[1]);
+        const num = parseInt(str);
+        return isNaN(num) ? 0 : num;
     }
 
     function calculateBudget() {
@@ -27,23 +36,26 @@ document.addEventListener('DOMContentLoaded', function () {
         const nights = days > 1 ? days - 1 : 1;
 
         // Base Costs from Dropdowns
-        const provinceBase = parseFloat(provinceSelect.value) || 0;
-        const transportVal = transportSelect.value;
-        const hotelCostPerNight = parseFloat(hotelSelect.value) || 0;
-        const foodCostPerDayPerPerson = parseFloat(foodSelect.value) || 0;
+        const provinceBase = extractPrice(provinceSelect.value) || 0;
+        const transportPrice = extractPrice(transportSelect.value) || 0;
+        const hotelCostPerNight = extractPrice(hotelSelect.value) || 0;
+        const foodCostPerDayPerPerson = extractPrice(foodSelect.value) || 0;
 
         // Calculations
         let transportCost = 0;
-        if (transportVal === 'bus') transportCost = 15 * people; // Round trip roughly
-        else if (transportVal === 'flight') transportCost = 100 * people;
-        else if (transportVal === 'taxi') transportCost = 80 * days;
+        if (transportSelect.value.includes('តាក់ស៊ី')) {
+            transportCost = transportPrice * days;
+        } else {
+            transportCost = transportPrice * people; // default for flight, bus, etc.
+        }
 
         const roomsNeeded = Math.ceil(people / 2);
         const hotelCost = roomsNeeded * nights * hotelCostPerNight;
         const foodCost = foodCostPerDayPerPerson * people * days;
         const activityCost = provinceBase * people * days;
 
-        const totalCost = transportCost + hotelCost + foodCost + activityCost;
+        currentTotalCost = transportCost + hotelCost + foodCost + activityCost;
+        const totalCost = currentTotalCost;
 
         // Update DOM
         totalBudgetEl.textContent = formatMoney(totalCost);
@@ -92,6 +104,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         }
+    }
+
+    
+    // Auto calculate on change
+    [provinceSelect, transportSelect, hotelSelect, foodSelect].forEach(el => {
+        if(el) el.addEventListener('change', calculateBudget);
+    });
+    [daysInput, peopleInput].forEach(el => {
+        if(el) el.addEventListener('input', calculateBudget);
+    });
+    
+    
+    const btnBookNow = document.getElementById('btnBookNow');
+    if (btnBookNow) {
+        btnBookNow.addEventListener('click', () => {
+            localStorage.setItem('grandTotal', currentTotalCost.toFixed(2));
+            // Add a nice visual effect or sweet alert if you want, but simple redirect works for static
+            window.location.href = 'booking-payment.html';
+        });
     }
 
     if(btnCalculate) {
