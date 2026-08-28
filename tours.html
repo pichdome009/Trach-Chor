@@ -55,7 +55,7 @@
               <li class="nav-item dropdown">
                 <a
                   class="service nav-link dropdown-toggle"
-                  href="#"
+                  href="javascript:void(0)"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -121,7 +121,7 @@
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item rounded-3 py-2 text-white" href="#"
+                    <a class="dropdown-item rounded-3 py-2 text-white" href="javascript:void(0)"
                       ><i class="bi bi-calculator"></i> គណនាចំណាយ</a
                     >
                   </li>
@@ -136,7 +136,7 @@
               <!-- Cart Dropdown -->
               <div class="dropdown">
                 <a
-                  href="#"
+                  href="cart.html"
                   class="position-relative d-flex align-items-center justify-content-center rounded-circle text-decoration-none"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -190,7 +190,7 @@
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="tours.html"
                       class="d-block p-3 mb-2 rounded-3 text-decoration-none dropdown-item-custom"
                     >
                       <div class="d-flex align-items-center">
@@ -218,7 +218,7 @@
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="rentals.html"
                       class="d-block p-3 mb-3 rounded-3 text-decoration-none dropdown-item-custom"
                     >
                       <div class="d-flex align-items-center">
@@ -265,7 +265,7 @@
               <!-- Bell Dropdown -->
               <div class="dropdown">
                 <a
-                  href="#"
+                  href="javascript:void(0)"
                   class="position-relative d-flex align-items-center justify-content-center rounded-circle text-decoration-none"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -319,7 +319,7 @@
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="javascript:void(0)"
                       class="d-block p-3 mb-2 rounded-3 text-decoration-none dropdown-item-custom"
                     >
                       <div class="d-flex align-items-center mb-2">
@@ -350,7 +350,7 @@
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="javascript:void(0)"
                       class="d-block p-3 mb-3 rounded-3 text-decoration-none dropdown-item-custom"
                     >
                       <div class="d-flex align-items-center mb-2">
@@ -474,7 +474,7 @@
                     </a>
                   </li>
                   <!-- <li>
-                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1" href="#">
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1" href="javascript:void(0)">
                   <div
                     class="icon-box-sm bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center"
                     style="width: 34px; height: 34px; flex-shrink: 0;">
@@ -556,7 +556,18 @@
     </section>
     <section class="py-5">
       <div class="container">
+        
+        <!-- Live Search Bar -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 col-lg-6">
+                <div class="input-group input-group-lg shadow-sm" style="border-radius: 50px; overflow: hidden;">
+                    <span class="input-group-text bg-white border-end-0 text-muted" style="border-radius: 50px 0 0 50px;"><i class="bi bi-search"></i></span>
+                    <input type="text" id="liveSearchInput" class="form-control border-start-0 shadow-none" placeholder="ស្វែងរកកញ្ចប់ទេសចរណ៍..." style="border-radius: 0 50px 50px 0;">
+                </div>
+            </div>
+        </div>
         <div class="row gap-5">
+
           <div class="col-12">
             <div class="row g-0 rounded-4 overflow-hidden shadow tc-card">
               <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 p-0">
@@ -1533,7 +1544,7 @@
               <ul class="footer-links">
                 <li><a href="index.html">ទំព័រដើម</a></li>
                 <li><a href="about.html">អំពីយើង</a></li>
-                <li><a href="#">សេវាកម្ម</a></li>
+                <li><a href="javascript:void(0)">សេវាកម្ម</a></li>
                 <li><a href="contact.html">ទំនាក់ទំនង</a></li>
               </ul>
             </div>
@@ -1616,5 +1627,40 @@
         });
       });
     </script>
-  </body>
+  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/global_cart.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.getElementById('liveSearchInput');
+            const tourCards = document.querySelectorAll('.tc-card');
+            
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const term = this.value.toLowerCase().trim();
+                    tourCards.forEach(card => {
+                        const text = card.textContent.toLowerCase();
+                        if (text.includes(term)) {
+                            // The actual card wrapper might be a col or just the card itself
+                            // Here the structure is div.col-12 > div.tc-card
+                            if (card.parentElement.classList.contains('col-12')) {
+                                card.parentElement.style.display = 'block';
+                            } else {
+                                card.style.display = 'flex';
+                            }
+                        } else {
+                            if (card.parentElement.classList.contains('col-12')) {
+                                card.parentElement.style.display = 'none';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+
 </html>
