@@ -20,7 +20,7 @@
 <body>
 
   <!-- start navbar -->
-    <section class="sec-navbar">
+    <section class="sec-navbar fixed-top w-100" style="z-index: 1030;">
     <nav class="navbar navbar-expand-lg py-3" data-bs-theme="dark">
       <div class="container">
         <a class="navbar-brand text-white fs-2 fw-bold" href="index.html"><i class="bi bi-leaf-fill text-warning"></i>
@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent2">
           <ul class="navbar-nav m-auto mb-2 mb-lg-0 fs-5 fw-medium gap-4">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">ទំព័រដើម</a>
+              <a class="nav-link active" aria-current="page" href="index.html">ទំព័រដើម</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">អំពីយើង</a>
@@ -75,9 +75,9 @@
           <div class="d-flex align-items-center gap-3">
             <!-- Cart Dropdown -->
             <div class="dropdown">
-              <a href="#" class="position-relative d-flex align-items-center justify-content-center rounded-circle text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false" style="width: 44px; height: 44px; background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.25)'; this.style.transform='scale(1.08)';" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.15)'; this.style.transform='scale(1)';">
+              <a href="cart.html" class="position-relative d-flex align-items-center justify-content-center rounded-circle text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false" style="width: 44px; height: 44px; background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.25)'; this.style.transform='scale(1.08)';" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.15)'; this.style.transform='scale(1)';">
                 <i class="bi bi-cart-fill text-white fs-5"></i>
-                <span class="position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold notification-badge-pulse" style="top: -2px; right: -2px; width: 18px; height: 18px; font-size: 0.65rem;">3</span>
+                <span class="position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold notification-badge-pulse" style="top: -2px; right: -2px; width: 18px; height: 18px; font-size: 0.65rem;"><span id="cartBadge">3</span></span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-glass rounded-4 p-3 mt-2" style="width: 340px;">
                 <li class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-3">
@@ -85,7 +85,7 @@
                   <span class="badge bg-light text-success fw-bold rounded-pill px-2 py-1 shadow-sm" style="font-size: 0.75rem;">3 ទំនិញ</span>
                 </li>
                 <li>
-                  <a href="#" class="d-block p-3 mb-2 rounded-3 text-decoration-none dropdown-item-custom">
+                  <a href="tours.html" class="d-block p-3 mb-2 rounded-3 text-decoration-none dropdown-item-custom">
                     <div class="d-flex align-items-center">
                       <div class="bg-success rounded-circle d-flex justify-content-center align-items-center me-3 shadow-sm" style="width: 40px; height: 40px; flex-shrink: 0;"><i class="bi bi-box2-heart-fill text-white fs-5"></i></div>
                       <div>
@@ -96,7 +96,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="d-block p-3 mb-3 rounded-3 text-decoration-none dropdown-item-custom">
+                  <a href="rentals.html" class="d-block p-3 mb-3 rounded-3 text-decoration-none dropdown-item-custom">
                     <div class="d-flex align-items-center">
                       <div class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-3 shadow-sm" style="width: 40px; height: 40px; flex-shrink: 0;"><i class="bi bi-car-front-fill text-white fs-5"></i></div>
                       <div>
@@ -122,15 +122,15 @@
             <div class="dropdown">
               <a href="#" class="position-relative d-flex align-items-center justify-content-center rounded-circle text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false" style="width: 44px; height: 44px; background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255, 255, 255, 0.25)'; this.style.transform='scale(1.08)';" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.15)'; this.style.transform='scale(1)';">
                 <i class="bi bi-bell-fill text-white fs-5"></i>
-                <span class="position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold notification-badge-pulse" style="top: -2px; right: -2px; width: 18px; height: 18px; font-size: 0.65rem;">2</span>
+                <span class="position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold notification-badge-pulse" style="top: -2px; right: -2px; width: 18px; height: 18px; font-size: 0.65rem;"><span id="cartBadge">2</span></span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-glass rounded-4 p-3 mt-2" style="width: 340px;">
-                <li class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-3">
+                <li class="d-f1lex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-3">
                   <h6 class="mb-0 text-white fw-bold d-flex align-items-center"><i class="bi bi-bell-fill text-warning me-2 fs-5"></i>ការជូនដំណឹង (Notifications)</h6>
                   <span class="badge bg-light text-success fw-bold rounded-pill px-2 py-1 shadow-sm" style="font-size: 0.75rem;">ថ្មី 2</span>
                 </li>
                 <li>
-                  <a href="#" class="d-block p-3 mb-2 rounded-3 text-decoration-none dropdown-item-custom">
+                  <a href="javascript:void(0)" class="d-block p-3 mb-2 rounded-3 text-decoration-none dropdown-item-custom">
                     <div class="d-flex align-items-center mb-2">
                       <div class="bg-success-subtle rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 28px; height: 28px; flex-shrink: 0;"><i class="bi bi-check text-success fs-5"></i></div>
                       <span class="fw-bold text-white">ការកក់ជោគជ័យ!</span>
@@ -140,7 +140,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="d-block p-3 mb-3 rounded-3 text-decoration-none dropdown-item-custom">
+                  <a href="javascript:void(0)" class="d-block p-3 mb-3 rounded-3 text-decoration-none dropdown-item-custom">
                     <div class="d-flex align-items-center mb-2">
                       <div class="bg-warning-subtle rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 28px; height: 28px; flex-shrink: 0;"><i class="bi bi-gift-fill text-warning fs-6"></i></div>
                       <span class="fw-bold text-white">កាដូពិសេស!</span>
@@ -196,7 +196,7 @@
                 </a>
               </li>
               <!-- <li>
-                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1" href="#">
+                <a class="dropdown-item rounded-3 py-2 px-3 d-flex align-items-center gap-3 mb-1" href="javascript:void(0)">
                   <div
                     class="icon-box-sm bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center"
                     style="width: 34px; height: 34px; flex-shrink: 0;">
@@ -274,10 +274,10 @@
         class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 animate__animated animate__fadeInUp"
         style="animation-delay: 0.8s;">
         <a href="#destinations" class="btn btn-secondary-luxury px-4 py-2">
-          <i class="bi bi-compass-fill fs-5"></i> ស្វែងរកឥឡូវនេះ (Explore Now)
+          <i class="bi bi-compass-fill fs-5"></i> ស្វែងរកឥឡូវនេះ
         </a>
-        <a href="#tours" class="btn btn-primary-luxury px-4 py-2">
-          <i class="bi bi-map fs-5"></i> កក់កញ្ចប់ទេសចរណ៍ (Book Tour)
+        <a href="tours.html" class="btn btn-primary-luxury px-4 py-2">
+          <i class="bi bi-map fs-5"></i> កក់កញ្ចប់ទេសចរណ៍
         </a>
       </div>
     </div>
@@ -285,8 +285,82 @@
   </header>
   <!-- end hero section -->
 
+  <!-- start floating search box -->
+  <section class="container position-relative" style="z-index: 20;" data-aos="fade-up">
+    <div class="glass-search-box">
+      <div class="d-flex justify-content-center gap-2 mb-4 border-bottom pb-3 overflow-auto">
+        <button class="search-tab-btn active"><i class="bi bi-building me-2"></i>កន្លែងស្នាក់នៅ & គោលដៅ</button>
+        <button class="search-tab-btn"><i class="bi bi-signpost-split me-2"></i>កញ្ចប់ទេសចរណ៍</button>
+        <button class="search-tab-btn"><i class="bi bi-car-front me-2"></i>រថយន្ត & ការធ្វើដំណើរ</button>
+      </div>
+
+      <form class="row g-2 align-items-center" action="destinations.html">
+        <div class="col-lg-3 col-md-6">
+          <div class="d-flex align-items-center border-end px-3 py-2">
+            <i class="bi bi-geo-alt-fill text-success fs-4 me-3"></i>
+            <div class="w-100">
+              <label class="small fw-bold text-uppercase d-block mb-1">ទីតាំងគោលដៅ</label>
+              <div class="dropdown w-100">
+                <button class="btn btn-link text-decoration-none text-dark fw-bold p-0 text-start w-100 shadow-none d-flex justify-content-between align-items-center custom-select-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="selected-text" style="font-size: 0.95rem;">ជ្រើសរើសទីតាំងទាំងអស់</span>
+                  <i class="bi bi-chevron-down small text-muted"></i>
+                </button>
+                <ul class="dropdown-menu custom-dropdown-menu shadow-lg border-0 rounded-4 w-100 mt-2">
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item active" href="javascript:void(0)" data-value="all">ជ្រើសរើសទីតាំងទាំងអស់</a></li>
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item" href="javascript:void(0)" data-value="siem-reap">ខេត្តសៀមរាប (អង្គរវត្ត)</a></li>
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item" href="javascript:void(0)" data-value="koh-rong">កោះរ៉ុង & ឆ្នេរសមុទ្រ</a></li>
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item" href="javascript:void(0)" data-value="mondulkiri">មណ្ឌលគិរី & ភ្នំ</a></li>
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item" href="javascript:void(0)" data-value="phnom-penh">រាជធានីភ្នំពេញ</a></li>
+                </ul>
+                <input type="hidden" name="location" value="all">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="d-flex align-items-center border-end px-3 py-2">
+            <i class="bi bi-calendar-event-fill text-primary fs-4 me-3"></i>
+            <div class="w-100">
+              <label class="small fw-bold text-uppercase d-block mb-1">កាលបរិច្ឆេទ</label>
+              <input type="date" class="form-control border-0 p-0 bg-transparent fw-bold text-dark shadow-none" value="2026-07-15">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="d-flex align-items-center px-3 py-2">
+            <i class="bi bi-people-fill text-warning fs-4 me-3"></i>
+            <div class="w-100">
+              <label class="small fw-bold text-uppercase d-block mb-1">ចំនួនភ្ញៀវ</label>
+              <div class="dropdown w-100">
+                <button class="btn btn-link text-decoration-none text-dark fw-bold p-0 text-start w-100 shadow-none d-flex justify-content-between align-items-center custom-select-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="selected-text" style="font-size: 0.95rem;">ភ្ញៀវ ២ នាក់, ១ បន្ទប់</span>
+                  <i class="bi bi-chevron-down small text-muted"></i>
+                </button>
+                <ul class="dropdown-menu custom-dropdown-menu shadow-lg border-0 rounded-4 w-100 mt-2">
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item active" href="javascript:void(0)" data-value="2">ភ្ញៀវ ២ នាក់, ១ បន្ទប់</a></li>
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item" href="javascript:void(0)" data-value="4">គ្រួសារ (៤ នាក់), ២ បន្ទប់</a></li>
+                  <li><a class="dropdown-item py-2 px-3 fw-bold custom-dropdown-item" href="javascript:void(0)" data-value="group">ក្រុមធំ (៥+ នាក់)</a></li>
+                </ul>
+                <input type="hidden" name="guests" value="2">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 text-md-end text-center mt-3 mt-lg-0">
+          <button type="submit" class="btn btn-primary-luxury w-100 py-3 d-flex justify-content-center align-items-center fs-5">
+            <i class="bi bi-search me-2"></i> ស្វែងរកឥឡូវនេះ
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- end floating search box -->
+
   <!-- start section category -->
-  <section class="section-padding py-5 category-section">
+  <section class="section-padding pb-5 category-section" style="padding-top: 180px;">
     <div class="container">
       <div class="text-center mb-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
         <h2 class="section-title fw-bold text-uppercase fs-1">ប្រភេទសេវាកម្ម</h2>
@@ -403,11 +477,11 @@
           <!-- Small Card 3 -->
           <a href="destinations.html" class="luxury-card d-flex flex-row overflow-hidden flex-grow-1 animate__animated animate__fadeInRight text-decoration-none" style="animation-delay: 0.6s; min-height: 155px;">
              <div class="position-relative" style="width: 45%;">
-                <img src="assets/images/naret/fn-2017-07-09-19-44-15-0.jpg" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 destination-img" alt="Bokor">
+                <img src="assets/images/SEAVTHEAN/images.jpg" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 destination-img" alt="Bokor">
              </div>
              <div class="card-body-luxury d-flex flex-column justify-content-center p-4" style="width: 55%;">
-                <h5 class="fw-bold mb-2 text-dark">ភ្នំបូកគោ</h5>
-                <p class="text-muted small mb-3"><i class="bi bi-geo-alt"></i> កំពត</p>
+                <h5 class="fw-bold mb-2 text-dark">ភ្នំ ១៥០០</h5>
+                <p class="text-muted small mb-3"><i class="bi bi-geo-alt"></i> ខេត្តពោធិ៍សាត់</p>
                 <div class="text-primary fw-bold mt-auto" style="font-size: 0.95rem;">ស្វែងយល់បន្ថែម <i class="bi bi-arrow-right destination-icon-arrow"></i></div>
              </div>
           </a>
@@ -429,7 +503,7 @@
       
       <div class="row g-4">
         <!-- Tour Card 1 -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card tour-card-custom border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp" style="animation-delay: 0.3s; border-radius: 20px; overflow: hidden;">
             <div class="position-relative overflow-hidden">
               <img src="assets/images/Pich-Udom/Angkor_Wat.jpeg" class="card-img-top object-fit-cover" alt="Angkor Wat Tour" style="height: 240px; transition: transform 0.6s ease;">
@@ -439,7 +513,7 @@
             </div>
             
             <div class="card-body p-4 d-flex flex-column">
-              <p class="mb-2 fw-bold text-success" style="font-size: 0.85rem;">វប្បធម៌ & ប្រវត្តិសាស្ត្រ VIP</p>
+              <p class="mb-2 fw-bold text-success" style="font-size: 0.85rem;">ប្រវត្តិសាស្ត្រ</p>
               <h5 class="card-title fw-bold text-dark mb-3" style="line-height: 1.4;">រុករកអង្គរវត្ត និងប្រាសាទអាថ៌កំបាំងក្នុងព្រៃ</h5>
               <p class="text-muted small mb-4" style="font-size: 0.85rem; line-height: 1.6;">
                 ធ្វើដំណើរតាមរទេះគោ និងរថយន្ត Jeep បុរាណ ទស្សនាប្រាសាទបន្ទាយស្រី បេងមាលា និងទទួលទានអាហារល្ងាចកណ្តាលប្រាសាទ។
@@ -454,18 +528,18 @@
         </div>
         
         <!-- Tour Card 2 -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card tour-card-custom border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp" style="animation-delay: 0.4s; border-radius: 20px; overflow: hidden;">
             <div class="position-relative overflow-hidden">
-              <img src="assets/images/SEAVTHEAN/golden-beach-resort-koh-rong-main.jpg" class="card-img-top object-fit-cover" alt="Koh Rong Tour" style="height: 240px; transition: transform 0.6s ease;">
+              <img src="assets/images/SEAVTHEAN/koh-rong-sanloem-hero.jpg" class="card-img-top object-fit-cover" alt="Koh Rong Tour" style="height: 240px; transition: transform 0.6s ease;">
               <div class="position-absolute top-0 start-0 m-3">
                 <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.85rem;"><i class="bi bi-clock me-1"></i> ៤ ថ្ងៃ ៣ យប់</span>
               </div>
             </div>
             
             <div class="card-body p-4 d-flex flex-column">
-              <p class="mb-2 fw-bold text-primary" style="font-size: 0.85rem;">ឆ្នេរសមុទ្រ & កោះឯកជន</p>
-              <h5 class="card-title fw-bold text-dark mb-3" style="line-height: 1.4;">ជិះទូកយ៉ាកឯកជន រុករកកោះឋានសួគ៌កោះរ៉ុង</h5>
+              <p class="mb-2 fw-bold text-primary" style="font-size: 0.85rem;">ឆ្នេរសមុទ្រ</p>
+              <h5 class="card-title fw-bold text-dark mb-3" style="line-height: 1.4;">ជិះទូកឯកជន​កម្សាន្ត​ និងស្ទូចត្រីនៅកោះរ៉ុងសន្លឹម</h5>
               <p class="text-muted small mb-4" style="font-size: 0.85rem; line-height: 1.6;">
                 ជិះទូកយ៉ាកទំនើបជុំវិញកោះរ៉ុង និងកោះរ៉ុងសន្លឹម ស្ទូចត្រីមើលផ្កាថ្ម និងស្នាក់នៅក្នង Villa ឯកជនមាត់សមុទ្រ។
               </p>
@@ -479,18 +553,18 @@
         </div>
 
         <!-- Tour Card 3 -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card tour-card-custom border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp" style="animation-delay: 0.5s; border-radius: 20px; overflow: hidden;">
             <div class="position-relative overflow-hidden">
-              <img src="assets/images/naret/fn-2017-07-09-19-44-15-0.jpg" class="card-img-top object-fit-cover" alt="Bokor Tour" style="height: 240px; transition: transform 0.6s ease;">
+              <img src="assets/images/SEAVTHEAN/images (5).jpg" class="card-img-top object-fit-cover" alt="Bokor Tour" style="height: 240px; transition: transform 0.6s ease;">
               <div class="position-absolute top-0 start-0 m-3">
                 <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.85rem;"><i class="bi bi-clock me-1"></i> ៣ ថ្ងៃ ២ យប់</span>
               </div>
             </div>
             
             <div class="card-body p-4 d-flex flex-column">
-              <p class="mb-2 fw-bold text-warning" style="font-size: 0.85rem;">ធម្មជាតិ & អេកូទេសចរណ៍</p>
-              <h5 class="card-title fw-bold text-dark mb-3" style="line-height: 1.4;">Glamping ជួរភ្នំក្រវាញ និងជិះកាយ៉ាក</h5>
+              <p class="mb-2 fw-bold text-warning" style="font-size: 0.85rem;">អេកូទេសចរណ៍</p>
+              <h5 class="card-title fw-bold text-dark mb-3" style="line-height: 1.4;">ផ្សងព្រេងព្រៃកោងកាង និងលម្ហែកាយនៅទឹកធ្លាក់តាតៃ</h5>
               <p class="text-muted small mb-4" style="font-size: 0.85rem; line-height: 1.6;">
                 ស្នាក់នៅតង់ប្រណីតបំពាក់ម៉ាស៊ីនត្រជាក់កណ្តាលព្រៃ ជិះទូកកាយ៉ាកតាមដងស្ទឹង និងទស្សនាសត្វព្រៃកម្រក្នុងឧទ្យានជាតិ។
               </p>
@@ -505,7 +579,7 @@
       </div>
 
       <div class="text-center mt-5 animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
-        <a href="tours.html" class="btn btn-outline-luxury px-4 py-2 rounded-pill fs-5 fw-bold">មើលកញ្ចប់ Tour ទាំងអស់ <i class="bi bi-arrow-right ms-2"></i></a>
+        <a href="tours.html" class="btn btn-outline-luxury px-4 py-2 rounded-pill fs-5 fw-bold">មើលកញ្ចប់ទេសចរណ៍ទាំងអស់<i class="bi bi-arrow-right ms-2"></i></a>
       </div>
     </div>
   </section>
@@ -516,7 +590,7 @@
     <div class="container">
       <div class="text-center mb-5 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
         <p class="fw-bold mb-2 text-uppercase" style="color: var(--primary-color); font-size: 0.9rem; letter-spacing: 1px;">ស្នាក់នៅប្រណិត</p>
-        <h2 class="section-title fw-bold text-dark fs-1 mb-3">សណ្ឋាគារ & រីសតលំដាប់ផ្កាយ ៥</h2>
+        <h2 class="section-title fw-bold text-dark fs-1 mb-3">សណ្ឋាគារ</h2>
         <p class="text-muted mt-3 mx-auto" style="max-width: 600px; font-size: 0.95rem;">ជ្រើសរើសកន្លែងស្នាក់នៅដែលផ្តល់នូវភាពស្ងប់ស្ងាត់ ផាសុកភាព និងសេវាកម្មកម្រិតខ្ពស់បំផុត</p>
       </div>
       
@@ -526,16 +600,16 @@
           <div class="card tour-card-custom border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp" style="animation-delay: 0.3s; border-radius: 20px; overflow: hidden;">
             <div class="row g-0 h-100">
               <div class="col-md-5 overflow-hidden">
-                <img src="assets/images/hotels/song_saa.png" class="w-100 h-100 object-fit-cover" alt="Song Saa Private Island" style="min-height: 250px;">
+                <img src="assets/images/horng-img/mondulkiri1.jpg" class="w-100 h-100 object-fit-cover" alt="Sihaknuk Island" style="min-height: 250px;">
               </div>
               <div class="col-md-7 d-flex flex-column">
                 <div class="card-body p-4 d-flex flex-column h-100">
                   <div class="mb-3">
                     <!-- <span class="badge bg-warning text-dark px-2 py-1 rounded" style="font-size: 0.75rem;">⭐ 5-Star Private Island Resort</span> -->
                   </div>
-                  <h5 class="card-title fw-bold text-dark mb-2" style="line-height: 1.4;">សង់សារ ព្រៃវេតអាយឡេន (Song Saa Private Island)</h5>
+                  <h5 class="card-title fw-bold text-dark mb-2" style="line-height: 1.4;">ទឺកជ្រោះប៊ូស្រា</h5>
                   <p class="text-muted small mb-4" style="font-size: 0.85rem; line-height: 1.6;">
-                    កោះឯកជនដ៏ប្រណីតបំផុតនៅកម្ពុជា ជាមួយ Villa លើទឹក បម្រើអាហារសមុទ្រ អមដោយការម៉ាស្សាសម្រាក។
+                    តង់ប្រណីតកណ្តាលព្រៃភ្នំក្រវាញ បង្កើតឡើងដោយស្ថាបត្យករល្បីលោក Bill Bensley ជាមួយ Zipline ក្នុងព្រៃ។
                   </p>
                   
                   <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
@@ -553,16 +627,16 @@
           <div class="card tour-card-custom border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp" style="animation-delay: 0.4s; border-radius: 20px; overflow: hidden;">
             <div class="row g-0 h-100">
               <div class="col-md-5 overflow-hidden">
-                <img src="assets/images/hotels/shinta_mani.png" class="w-100 h-100 object-fit-cover" alt="Shinta Mani Wild" style="min-height: 250px;">
+                <img src="assets/images/horng-img/sihaknuk.jpg" class="w-100 h-100 object-fit-cover" alt="Shinta Mani Wild" style="min-height: 250px;">
               </div>
               <div class="col-md-7 d-flex flex-column">
                 <div class="card-body p-4 d-flex flex-column h-100">
                   <div class="mb-3">
                     <!-- <span class="badge bg-success text-white px-2 py-1 rounded" style="font-size: 0.75rem;">🍃 Ultra-Luxury Eco Glamping</span> -->
                   </div>
-                  <h5 class="card-title fw-bold text-dark mb-2" style="line-height: 1.4;">ស៊ីនតាម៉ានី វ៉ាល (Shinta Mani Wild - Cardamom)</h5>
+                  <h5 class="card-title fw-bold text-dark mb-2" style="line-height: 1.4;">រីសតលើទឹក ផ្ទះបណ្តោលក្នុងកោះ</h5>
                   <p class="text-muted small mb-4" style="font-size: 0.85rem; line-height: 1.6;">
-                    តង់ប្រណីតកណ្តាលព្រៃភ្នំក្រវាញ បង្កើតឡើងដោយស្ថាបត្យករល្បីលោក Bill Bensley ជាមួយ Zipline ក្នុងព្រៃ។
+                    កោះឯកជនដ៏ប្រណីតបំផុតនៅកម្ពុជា ជាមួយ Villa លើទឹក បម្រើអាហារសមុទ្រ អមដោយការម៉ាស្សាសម្រាក។
                   </p>
                   
                   <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
@@ -577,7 +651,7 @@
       </div>
 
       <div class="text-center mt-5 animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
-        <a href="hotel.html" class="btn btn-outline-luxury px-4 py-2 rounded-pill fs-5 fw-bold">មើលសណ្ឋាគារ & រីសតលំដាប់ផ្កាយ ៥ ទាំងអស់ <i class="bi bi-arrow-right ms-2"></i></a>
+        <a href="hotel.html" class="btn btn-outline-luxury px-4 py-2 rounded-pill fs-5 fw-bold">មើលសណ្ឋាគារ<i class="bi bi-arrow-right ms-2"></i></a>
       </div>
     </div>
   </section>
@@ -599,7 +673,7 @@
             <div class="position-relative overflow-hidden">
               <img src="assets/images/foods/amok.png" class="card-img-top object-fit-cover" alt="អាម៉ុកត្រី" style="height: 200px; transition: transform 0.6s ease;">
               <div class="position-absolute top-0 start-0 m-3">
-                <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-star-fill me-1"></i> ម្ហូបពេញនិយម</span>
+                <!-- <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-star-fill me-1"></i> ម្ហូបពេញនិយម</span> -->
               </div>
             </div>
             
@@ -611,7 +685,7 @@
               
               <div class="mt-auto d-flex justify-content-between align-items-center">
                  <div class="text-success fw-bold fs-6">$18 <span class="text-muted small fw-normal" style="font-size: 0.75rem;">/ មុខ</span></div>
-                 <a href="food.html" class="btn btn-outline-success rounded-pill px-3 py-1 fw-bold shadow-sm fs-6" style="border-width: 2px;">កក់កន្លែងរសជាតិ</a>
+                 <a href="food.html" class="btn btn-outline-success add-to-cart-btn rounded-pill px-3 py-1 fw-bold shadow-sm fs-6" style="border-width: 2px;">កក់កន្លែងរសជាតិ</a>
               </div>
             </div>
           </div>
@@ -623,7 +697,7 @@
             <div class="position-relative overflow-hidden">
               <img src="assets/images/foods/crab.png" class="card-img-top object-fit-cover" alt="ក្តាមឆាម្រេច" style="height: 200px; transition: transform 0.6s ease;">
               <div class="position-absolute top-0 start-0 m-3">
-                <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-droplet-fill me-1"></i> គ្រឿងសមុទ្រ</span>
+                <!-- <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-droplet-fill me-1"></i> គ្រឿងសមុទ្រ</span> -->
               </div>
             </div>
             
@@ -635,7 +709,7 @@
               
               <div class="mt-auto d-flex justify-content-between align-items-center">
                  <div class="text-success fw-bold fs-6">$25 <span class="text-muted small fw-normal" style="font-size: 0.75rem;">/ មុខ</span></div>
-                 <a href="food.html" class="btn btn-outline-success rounded-pill px-3 py-1 fw-bold shadow-sm fs-6" style="border-width: 2px;">កក់កន្លែងរសជាតិ</a>
+                 <a href="food.html" class="btn btn-outline-success add-to-cart-btn rounded-pill px-3 py-1 fw-bold shadow-sm fs-6" style="border-width: 2px;">កក់កន្លែងរសជាតិ</a>
               </div>
             </div>
           </div>
@@ -647,7 +721,7 @@
             <div class="position-relative overflow-hidden">
               <img src="assets/images/foods/korko.png" class="card-img-top object-fit-cover" alt="សម្លកកូរ" style="height: 200px; transition: transform 0.6s ease;">
               <div class="position-absolute top-0 start-0 m-3">
-                <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-egg-fried me-1"></i> ម្ហូបប្រពៃណី</span>
+                <!-- <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-egg-fried me-1"></i> ម្ហូបប្រពៃណី</span> -->
               </div>
             </div>
             
@@ -659,7 +733,7 @@
               
               <div class="mt-auto d-flex justify-content-between align-items-center">
                  <div class="text-success fw-bold fs-6">$12 <span class="text-muted small fw-normal" style="font-size: 0.75rem;">/ មុខ</span></div>
-                 <a href="food.html" class="btn btn-outline-success rounded-pill px-3 py-1 fw-bold shadow-sm fs-6" style="border-width: 2px;">កក់កន្លែងរសជាតិ</a>
+                 <a href="food.html" class="btn btn-outline-success add-to-cart-btn rounded-pill px-3 py-1 fw-bold shadow-sm fs-6" style="border-width: 2px;">កក់កន្លែងរសជាតិ</a>
               </div>
             </div>
           </div>
@@ -671,7 +745,7 @@
             <div class="position-relative overflow-hidden">
               <img src="assets/images/foods/loklak.png" class="card-img-top object-fit-cover" alt="ឡុកឡាក់" style="height: 200px; transition: transform 0.6s ease;">
               <div class="position-absolute top-0 start-0 m-3">
-                <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-fire me-1"></i> អាំង BBQ</span>
+                <!-- <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-fire me-1"></i> អាំង BBQ</span> -->
               </div>
             </div>
             
@@ -683,7 +757,7 @@
               
               <div class="mt-auto d-flex justify-content-between align-items-center">
                  <div class="text-success fw-bold fs-6">$20 <span class="text-muted small fw-normal" style="font-size: 0.75rem;">/ មុខ</span></div>
-                 <a href="food.html" class="btn btn-outline-success rounded-pill px-3 py-1 fw-bold shadow-sm fs-6" style="border-width: 2px;">កក់កន្លែងរសជាតិ</a>
+                 <a href="food.html" class="btn btn-outline-success add-to-cart-btn rounded-pill px-3 py-1 fw-bold shadow-sm fs-6" style="border-width: 2px;">កក់កន្លែងរសជាតិ</a>
               </div>
             </div>
           </div>
@@ -713,7 +787,7 @@
             <div class="position-relative overflow-hidden">
               <img src="assets/images/products/silk.png" class="card-img-top object-fit-cover" alt="ហូលផាមួង" style="height: 200px; transition: transform 0.6s ease;">
               <div class="position-absolute top-0 start-0 m-3">
-                <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-gift-fill me-1"></i> សិប្បកម្មខ្មែរ</span>
+                <!-- <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-gift-fill me-1"></i> សិប្បកម្មខ្មែរ</span> -->
               </div>
             </div>
             
@@ -737,7 +811,7 @@
             <div class="position-relative overflow-hidden">
               <img src="assets/images/products/pepper.png" class="card-img-top object-fit-cover" alt="ម្រេចកំពត" style="height: 200px; transition: transform 0.6s ease;">
               <div class="position-absolute top-0 start-0 m-3">
-                <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-award-fill me-1"></i> GI ពិភពលោក</span>
+                <!-- <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-award-fill me-1"></i> GI ពិភពលោក</span> -->
               </div>
             </div>
             
@@ -761,7 +835,7 @@
             <div class="position-relative overflow-hidden">
               <img src="assets/images/products/palm_sugar.png" class="card-img-top object-fit-cover" alt="ស្ករត្នោតសរីរាង្គ" style="height: 200px; transition: transform 0.6s ease;">
               <div class="position-absolute top-0 start-0 m-3">
-                <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-tree-fill me-1"></i> ធម្មជាតិ ១០០%</span>
+                <!-- <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-tree-fill me-1"></i> ធម្មជាតិ ១០០%</span> -->
               </div>
             </div>
             
@@ -785,7 +859,7 @@
             <div class="position-relative overflow-hidden">
               <img src="assets/images/products/silver_sculpture.png" class="card-img-top object-fit-cover" alt="ចម្លាក់ប្រាក់" style="height: 200px; transition: transform 0.6s ease;">
               <div class="position-absolute top-0 start-0 m-3">
-                <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-gem me-1"></i> ចម្លាក់ដៃ</span>
+                <!-- <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-gem me-1"></i> ចម្លាក់ដៃ</span> -->
               </div>
             </div>
             
@@ -816,23 +890,23 @@
     <div class="container">
       <div class="text-center mb-5 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
         <p class="fw-bold mb-2 text-uppercase" style="color: var(--primary-color); font-size: 0.9rem; letter-spacing: 1px;">សេវាកម្មធ្វើដំណើរ</p>
-        <h2 class="section-title fw-bold text-dark fs-1 mb-3">ជួលយានយន្ត</h2>
+        <h2 class="section-title fw-bold text-dark fs-1 mb-3">ជួលយានជំនិះ</h2>
         <p class="text-muted mt-3 mx-auto" style="max-width: 700px; font-size: 0.95rem;">ផ្តល់ជូនសេវាកម្មជួលយានយន្តប្រកបដោយសុវត្ថិភាព ផាសុកភាព និងតម្លៃសមរម្យសម្រាប់ការធ្វើដំណើររបស់អ្នក</p>
       </div>
       
       <div class="row g-4">
         <!-- Vehicle Card 1 -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card tour-card-custom border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp" style="animation-delay: 0.3s; border-radius: 20px; overflow: hidden;">
             <div class="position-relative overflow-hidden">
-              <img src="assets/images/vehicles/suv.png" class="card-img-top object-fit-cover" alt="រថយន្តលក្ខណៈគ្រួសារ SUV" style="height: 240px; transition: transform 0.6s ease;">
+              <img src="assets/images/horng-img/toyota1.jpg" class="card-img-top object-fit-cover" alt="រថយន្តលក្ខណៈគ្រួសារ SUV" style="height: 240px; transition: transform 0.6s ease;">
               <div class="position-absolute top-0 start-0 m-3">
-                <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-car-front-fill me-1"></i> រថយន្ត SUV (5-7 កៅអី)</span>
+                <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-car-front-fill me-1"></i> រថយន្ត</span>
               </div>
             </div>
             
             <div class="card-body p-4 d-flex flex-column">
-              <h5 class="card-title fw-bold text-dark mb-2" style="line-height: 1.4; font-size: 1.15rem;">រថយន្តលក្ខណៈគ្រួសារ និងធុរកិច្ច</h5>
+              <h5 class="card-title fw-bold text-dark mb-2" style="line-height: 1.4; font-size: 1.15rem;">Toyota Hiace (Van)</h5>
               <p class="text-muted small mb-4" style="font-size: 0.9rem; line-height: 1.6;">
                 ស័ក្តិសមសម្រាប់ការធ្វើដំណើរជាលក្ខណៈគ្រួសារ ឬក្រុមតូច ធានាសុវត្ថិភាព និងផាសុកភាពខ្ពស់ក្នុងការធ្វើដំណើរ។
               </p>
@@ -846,19 +920,19 @@
         </div>
         
         <!-- Vehicle Card 2 -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card tour-card-custom border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp" style="animation-delay: 0.4s; border-radius: 20px; overflow: hidden;">
             <div class="position-relative overflow-hidden">
-              <img src="assets/images/vehicles/minivan.png" class="card-img-top object-fit-cover" alt="រថយន្តក្រុងខ្នាតតូច Minivan" style="height: 240px; transition: transform 0.6s ease;">
+              <img src="assets/images/horng-img/toyota.jpg" class="card-img-top object-fit-cover" alt="រថយន្តក្រុងខ្នាតតូច Minivan" style="height: 240px; transition: transform 0.6s ease;">
               <div class="position-absolute top-0 start-0 m-3">
-                <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-bus-front-fill me-1"></i> Minivan (12-15 កៅអី)</span>
+                <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-bus-front-fill me-1"></i> រថយន្ត</span>
               </div>
             </div>
             
             <div class="card-body p-4 d-flex flex-column">
               <h5 class="card-title fw-bold text-dark mb-2" style="line-height: 1.4; font-size: 1.15rem;">រថយន្តក្រុងខ្នាតតូច សម្រាប់ក្រុម</h5>
               <p class="text-muted small mb-4" style="font-size: 0.9rem; line-height: 1.6;">
-                ស័ក្តិសមសម្រាប់ការធ្វើដំណើរជាក្រុមធំ ទស្សនាចរណ៍ ឬកម្មវិធីផ្សេងៗ ដែលត្រូវការទំហំធំទូលាយ។
+                សម្រាប់គ្រួសារ ឬដំណើរអាជីវកម្ម មានអ្នកបើកជូនតាមតម្រូវការ។
               </p>
               
               <div class="mt-auto d-flex justify-content-between align-items-center">
@@ -870,17 +944,17 @@
         </div>
 
         <!-- Vehicle Card 3 -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card tour-card-custom border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp" style="animation-delay: 0.5s; border-radius: 20px; overflow: hidden;">
             <div class="position-relative overflow-hidden">
-              <img src="assets/images/vehicles/scooter.png" class="card-img-top object-fit-cover" alt="ម៉ូតូ" style="height: 240px; transition: transform 0.6s ease;">
+              <img src="assets/images/horng-img/click.jpg" class="card-img-top object-fit-cover" alt="ម៉ូតូ" style="height: 240px; transition: transform 0.6s ease;">
               <div class="position-absolute top-0 start-0 m-3">
-                <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-bicycle me-1"></i> ម៉ូតូ Scooter</span>
+                <span class="badge bg-success px-3 py-2 rounded-pill shadow-sm" style="font-size: 0.8rem;"><i class="bi bi-bicycle me-1"></i> ម៉ូតូ</span>
               </div>
             </div>
             
             <div class="card-body p-4 d-flex flex-column">
-              <h5 class="card-title fw-bold text-dark mb-2" style="line-height: 1.4; font-size: 1.15rem;">ជួលម៉ូតូជិះកម្សាន្តក្នុងក្រុង</h5>
+              <h5 class="card-title fw-bold text-dark mb-2" style="line-height: 1.4; font-size: 1.15rem;">Honda Click 125i</h5>
               <p class="text-muted small mb-4" style="font-size: 0.9rem; line-height: 1.6;">
                 ជម្រើសដ៏ល្អបំផុតសម្រាប់ការធ្វើដំណើរក្នុងតំបន់ទេសចរណ៍ ជៀសវាងការកកស្ទះ និងងាយស្រួលគ្រប់ទីកន្លែង។
               </p>
@@ -895,7 +969,7 @@
       </div>
 
       <div class="text-center mt-5 animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
-        <a href="rentals.html" class="btn btn-outline-luxury px-4 py-2 rounded-pill fs-5 fw-bold">មើលយានយន្តទាំងអស់ <i class="bi bi-arrow-right ms-2"></i></a>
+        <a href="rentals.html" class="btn btn-outline-luxury px-4 py-2 rounded-pill fs-5 fw-bold">មើលជួលយានជំនិះទាំងអស់<i class="bi bi-arrow-right ms-2"></i></a>
       </div>
     </div>
   </section>
@@ -915,88 +989,76 @@
           <form class="p-4 bg-light rounded-4 shadow-sm border-0">
             <div class="mb-4">
               <label class="form-label fw-bold" style="color: #0f9d58;">១. ជ្រើសរើសគោលដៅទេសចរណ៍</label>
-              <select class="form-select form-select-lg shadow-none" id="dest-select" style="border-radius: 12px; font-size: 1rem; border-color: #dee2e6;">
-                <option value="150" selected>អង្គរវត្ត & ប្រាសាទបុរាណ ($150/ថ្ងៃ ក្នុង១នាក់)</option>
-                <option value="200">កោះឋានសួគ៌កោះរ៉ុង ($200/ថ្ងៃ ក្នុង១នាក់)</option>
-                <option value="180">Glamping ជួរភ្នំក្រវាញ ($180/ថ្ងៃ ក្នុង១នាក់)</option>
-                <option value="120">ភ្នំបូកគោទេសចរណ៍ធម្មជាតិ ($120/ថ្ងៃ ក្នុង១នាក់)</option>
-              </select>
+              <div class="input-group input-group-lg shadow-none">
+  <span class="input-group-text bg-white border-end-0" style="border-radius: 12px 0 0 12px;"><i class="bi bi-geo-alt text-muted"></i></span>
+  <input type="text" class="form-control border-start-0 shadow-none" id="dest-select" list="dest-list" style="border-radius: 0 12px 12px 0; font-size: 1rem; border-color: #dee2e6;" placeholder="ឧ. អង្គរវត្ត & ប្រាសាទបាយ័ន...">
+</div>
+<datalist id="dest-list">
+  <option value="អង្គរវត្ត & ប្រាសាទបុរាណ ($150/ថ្ងៃ ក្នុង១នាក់)"></option>
+  <option value="កោះឋានសួគ៌កោះរ៉ុង ($200/ថ្ងៃ ក្នុង១នាក់)"></option>
+  <option value="Glamping ជួរភ្នំក្រវាញ ($180/ថ្ងៃ ក្នុង១នាក់)"></option>
+  <option value="ភ្នំបូកគោទេសចរណ៍ធម្មជាតិ ($120/ថ្ងៃ ក្នុង១នាក់)"></option>
+</datalist>
             </div>
             <div class="row">
               <div class="col-md-6 mb-4">
                 <label class="form-label fw-bold" style="color: #0f9d58;">២. ចំនួនភ្ញៀវ</label>
                 <div class="input-group input-group-lg shadow-none">
-                  <span class="input-group-text bg-white border-end-0" style="border-radius: 12px 0 0 12px;"><i class="fa-solid fa-users text-muted"></i></span>
-                  <input type="number" class="form-control border-start-0 shadow-none" id="guest-input" value="2" min="1" max="50" style="border-radius: 0 12px 12px 0; font-size: 1rem; border-color: #dee2e6;">
+                  <span class="input-group-text bg-white border-end-0" style="border-radius: 12px 0 0 12px;"><i class="bi bi-people-fill text-muted"></i></span>
+                  <input type="number" class="form-control border-start-0 shadow-none" id="guest-input" min="1" max="50" style="border-radius: 0 12px 12px 0; font-size: 1rem; border-color: #dee2e6;" placeholder="ឧ. 2">
                 </div>
               </div>
               
               <div class="col-md-6 mb-4">
                 <label class="form-label fw-bold" style="color: #0f9d58;">៣. រយៈពេលស្នាក់នៅ (ថ្ងៃ)</label>
                 <div class="input-group input-group-lg shadow-none">
-                  <span class="input-group-text bg-white border-end-0" style="border-radius: 12px 0 0 12px;"><i class="fa-regular fa-calendar-days text-muted"></i></span>
-                  <input type="number" class="form-control border-start-0 shadow-none" id="day-input" value="3" min="1" max="30" style="border-radius: 0 12px 12px 0; font-size: 1rem; border-color: #dee2e6;">
+                  <span class="input-group-text bg-white border-end-0" style="border-radius: 12px 0 0 12px;"><i class="bi bi-calendar-event text-muted"></i></span>
+                  <input type="number" class="form-control border-start-0 shadow-none" id="day-input" min="1" max="30" style="border-radius: 0 12px 12px 0; font-size: 1rem; border-color: #dee2e6;" placeholder="ឧ. 3">
                 </div>
               </div>
             </div>
 
             <div class="mb-4">
               <label class="form-label fw-bold" style="color: #0f9d58;">៤. កម្រិតសណ្ឋាគារ/ការស្នាក់នៅ</label>
-              <select class="form-select form-select-lg shadow-none" id="hotel-select" style="border-radius: 12px; font-size: 1rem; border-color: #dee2e6;">
-                <option value="0">រៀបចំដោយខ្លួនឯង ($0)</option>
-                <option value="100" selected>សណ្ឋាគារផ្កាយ ៥ ស្តង់ដារ ($100/យប់)</option>
-                <option value="250">សណ្ឋាគារផ្កាយ ៥ ព្រីមៀម ($250/យប់)</option>
-                <option value="500">វីឡាឯកជន Private Villa ($500/យប់)</option>
-              </select>
+              <div class="input-group input-group-lg shadow-none">
+  <span class="input-group-text bg-white border-end-0" style="border-radius: 12px 0 0 12px;"><i class="bi bi-building text-muted"></i></span>
+  <input type="text" class="form-control border-start-0 shadow-none" id="hotel-select" list="hotel-list" style="border-radius: 0 12px 12px 0; font-size: 1rem; border-color: #dee2e6;" placeholder="ឧ. សណ្ឋាគារផ្កាយ ៤ ស្តង់ដារ...">
+</div>
+<datalist id="hotel-list">
+  <option value="រៀបចំដោយខ្លួនឯង ($0)"></option>
+  <option value="សណ្ឋាគារផ្កាយ ៥ ស្តង់ដារ ($100/យប់)"></option>
+  <option value="សណ្ឋាគារផ្កាយ ៥ ព្រីមៀម ($250/យប់)"></option>
+  <option value="វីឡាឯកជន Private Villa ($500/យប់)"></option>
+</datalist>
             </div>
 
             <div class="row">
               <div class="col-md-6 mb-4">
                 <label class="form-label fw-bold" style="color: #0f9d58;">៥. សេវាកម្មយានយន្ត</label>
-                <select class="form-select form-select-lg shadow-none" id="vehicle-select" style="border-radius: 12px; font-size: 1rem; border-color: #dee2e6;">
-                  <option value="0" selected>មិនត្រូវការ ($0)</option>
-                  <option value="65">រថយន្ត SUV គ្រួសារ ($65/ថ្ងៃ)</option>
-                  <option value="110">រថយន្តក្រុងតូច Minivan ($110/ថ្ងៃ)</option>
-                </select>
+                <div class="input-group input-group-lg shadow-none">
+  <span class="input-group-text bg-white border-end-0" style="border-radius: 12px 0 0 12px;"><i class="bi bi-car-front text-muted"></i></span>
+  <input type="text" class="form-control border-start-0 shadow-none" id="vehicle-select" list="vehicle-list" style="border-radius: 0 12px 12px 0; font-size: 1rem; border-color: #dee2e6;" placeholder="ឧ. ឡាន SUV ឯកជន...">
+</div>
+<datalist id="vehicle-list">
+  <option value="មិនត្រូវការ ($0)"></option>
+  <option value="រថយន្ត SUV គ្រួសារ ($65/ថ្ងៃ)"></option>
+  <option value="រថយន្តក្រុងតូច Minivan ($110/ថ្ងៃ)"></option>
+</datalist>
               </div>
 
               <div class="col-md-6 mb-4">
                 <label class="form-label fw-bold" style="color: #0f9d58;">៦. កម្រិតអាហារ</label>
-                <select class="form-select form-select-lg shadow-none" id="meal-select" style="border-radius: 12px; font-size: 1rem; border-color: #dee2e6;">
-                  <option value="0">មិនត្រូវការ ($0)</option>
-                  <option value="20">អាហារពេលព្រឹក ($20/ថ្ងៃ)</option>
-                  <option value="70" selected>អាហារ ៣ ពេល ($70/ថ្ងៃ)</option>
-                  <option value="150">Fine Dining ($150/ថ្ងៃ)</option>
-                </select>
+                <div class="input-group input-group-lg shadow-none">
+  <span class="input-group-text bg-white border-end-0" style="border-radius: 12px 0 0 12px;"><i class="bi bi-cup-hot text-muted"></i></span>
+  <input type="text" class="form-control border-start-0 shadow-none" id="meal-select" list="meal-list" style="border-radius: 0 12px 12px 0; font-size: 1rem; border-color: #dee2e6;" placeholder="ឧ. អាហារ ៣ ពេល...">
+</div>
+<datalist id="meal-list">
+  <option value="មិនត្រូវការ ($0)"></option>
+  <option value="អាហារពេលព្រឹក ($20/ថ្ងៃ)"></option>
+  <option value="អាហារ ៣ ពេល ($70/ថ្ងៃ)"></option>
+  <option value="Fine Dining ($150/ថ្ងៃ)"></option>
+</datalist>
               </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6 mb-4">
-                <label class="form-label fw-bold" style="color: #0f9d58;">៧. មគ្គុទ្ទេសក៍ទេសចរណ៍</label>
-                <select class="form-select form-select-lg shadow-none" id="guide-select" style="border-radius: 12px; font-size: 1rem; border-color: #dee2e6;">
-                  <option value="0" selected>ដើរលេងដោយខ្លួនឯង ($0)</option>
-                  <option value="50">មគ្គុទ្ទេសក៍ទូទៅ ($50/ថ្ងៃ)</option>
-                  <option value="100">មគ្គុទ្ទេសក៍ VIP ($100/ថ្ងៃ)</option>
-                </select>
-              </div>
-
-              <div class="col-md-6 mb-4">
-                <label class="form-label fw-bold" style="color: #0f9d58;">៨. កម្សាន្ត & ស្ប៉ា</label>
-                <select class="form-select form-select-lg shadow-none" id="activity-select" style="border-radius: 12px; font-size: 1rem; border-color: #dee2e6;">
-                  <option value="0" selected>មិនត្រូវការ ($0)</option>
-                  <option value="30">កម្សាន្តធម្មតា ($30/ថ្ងៃ)</option>
-                  <option value="100">Premium & Spa ($100/ថ្ងៃ)</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="mb-2">
-              <label class="form-label fw-bold" style="color: #0f9d58;">៩. ធានារ៉ាប់រងការធ្វើដំណើរ</label>
-              <select class="form-select form-select-lg shadow-none" id="insurance-select" style="border-radius: 12px; font-size: 1rem; border-color: #dee2e6;">
-                <option value="0" selected>ទេ ខ្ញុំមានរួចហើយ ($0)</option>
-                <option value="15">បាទ/ចាស ($15/ថ្ងៃ ក្នុង១នាក់)</option>
-              </select>
             </div>
           </form>
         </div>
@@ -1029,13 +1091,10 @@
                   <span class="text-muted">ថ្លៃអាហារ/ថ្ងៃ:</span>
                   <span class="fw-bold" id="sum-meal">$70</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center px-0 bg-transparent" style="border-bottom: 1px dashed #dee2e6;">
-                  <span class="text-muted">សេវាកម្មបន្ថែម/ថ្ងៃ:</span>
-                  <span class="fw-bold" id="sum-extras">$0</span>
-                </li>
+                
                 <li class="list-group-item d-flex justify-content-between align-items-center px-0 bg-transparent mt-2 pb-0" style="border-bottom: none;">
-                  <span class="text-muted"><i class="fa-solid fa-users me-1 text-primary"></i> ភ្ញៀវសរុប: <span class="fw-bold text-dark" id="sum-guest">2</span> នាក់</span>
-                  <span class="text-muted"><i class="fa-regular fa-calendar-days me-1 text-primary"></i> រយៈពេល: <span class="fw-bold text-dark" id="sum-day">3</span> ថ្ងៃ</span>
+                  <span class="text-muted"><i class="bi bi-people-fill me-1 text-primary"></i> ភ្ញៀវសរុប: <span class="fw-bold text-dark" id="sum-guest">2</span> នាក់</span>
+                  <span class="text-muted"><i class="bi bi-calendar-event me-1 text-primary"></i> រយៈពេល: <span class="fw-bold text-dark" id="sum-day">3</span> ថ្ងៃ</span>
                 </li>
               </ul>
               
@@ -1046,7 +1105,7 @@
               
               <div class="text-center mt-auto">
                 <button class="btn w-100 rounded-pill py-3 text-white fw-bold shadow-sm mb-3" style="font-size: 1.1rem; background-color: #0f9d58; border-color: #0f9d58; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">កក់ឥឡូវនេះ (Book Now)</button>
-                <button class="btn btn-outline-success w-100 rounded-pill py-3 fw-bold shadow-sm" style="font-size: 1.1rem; transition: all 0.3s ease; border-color: #0f9d58; color: #0f9d58;" onmouseover="this.style.transform='scale(1.03)'; this.style.backgroundColor='#0f9d58'; this.style.color='white';" onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='transparent'; this.style.color='#0f9d58';" onclick="document.getElementById('aiChatBtn').click();"><i class="bi bi-robot me-2"></i>សុំយោបល់ពី AI (Ask AI)</button>
+                <button class="btn btn-outline-success add-to-cart-btn w-100 rounded-pill py-3 fw-bold shadow-sm" style="font-size: 1.1rem; transition: all 0.3s ease; border-color: #0f9d58; color: #0f9d58;" onmouseover="this.style.transform='scale(1.03)'; this.style.backgroundColor='#0f9d58'; this.style.color='white';" onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='transparent'; this.style.color='#0f9d58';" onclick="document.getElementById('aiChatBtn').click();"><i class="bi bi-robot me-2"></i>សុំយោបល់ពី AI (Ask AI)</button>
               </div>
             </div>
           </div>
@@ -1129,7 +1188,7 @@
             <ul class="footer-links">
               <li><a href="index.html">ទំព័រដើម</a></li>
               <li><a href="about.html">អំពីយើង</a></li>
-              <li><a href="services.html">សេវាកម្ម</a></li>
+              <li><a href="javascript:void(0)">សេវាកម្ម</a></li>
               <li><a href="contact.html">ទំនាក់ទំនង</a></li>
             </ul>
           </div>
@@ -1181,40 +1240,43 @@
       const hotelSelect = document.getElementById('hotel-select');
       const vehicleSelect = document.getElementById('vehicle-select');
       const mealSelect = document.getElementById('meal-select');
-      const guideSelect = document.getElementById('guide-select');
-      const activitySelect = document.getElementById('activity-select');
-      const insuranceSelect = document.getElementById('insurance-select');
+      
+      
+      
       
       const sumDest = document.getElementById('sum-dest');
       const sumHotel = document.getElementById('sum-hotel');
       const sumVehicle = document.getElementById('sum-vehicle');
       const sumMeal = document.getElementById('sum-meal');
-      const sumExtras = document.getElementById('sum-extras');
+      
       const sumGuest = document.getElementById('sum-guest');
       const sumDay = document.getElementById('sum-day');
       const sumTotal = document.getElementById('sum-total');
 
+      
+        function extractPrice(str) {
+          if (!str) return 0;
+          const match = str.match(/\$(\d+)/);
+          if (match) return parseInt(match[1]);
+          const num = parseInt(str);
+          return isNaN(num) ? 0 : num;
+        }
+
       function calculateBudget() {
         if(!destSelect || !guestInput || !dayInput) return;
 
-        const priceDest = parseInt(destSelect.value) || 0;
-        const priceHotel = parseInt(hotelSelect.value) || 0;
-        const priceVehicle = parseInt(vehicleSelect.value) || 0;
-        const priceMeal = parseInt(mealSelect.value) || 0;
-        const priceGuide = parseInt(guideSelect.value) || 0;
-        const priceActivity = parseInt(activitySelect.value) || 0;
-        const priceInsurance = parseInt(insuranceSelect.value) || 0;
-        
+        const priceDest = extractPrice(destSelect.value);
+        const priceHotel = extractPrice(hotelSelect.value);
+        const priceVehicle = extractPrice(vehicleSelect.value);
+        const priceMeal = extractPrice(mealSelect.value);
         const guests = parseInt(guestInput.value) || 1;
         const days = parseInt(dayInput.value) || 1;
-        
-        const totalExtras = (priceGuide * days) + (priceActivity * guests * days) + (priceInsurance * guests * days);
         
         sumDest.textContent = '$' + priceDest;
         sumHotel.textContent = '$' + priceHotel;
         sumVehicle.textContent = '$' + priceVehicle;
         sumMeal.textContent = '$' + priceMeal;
-        sumExtras.textContent = '$' + (totalExtras / days); // display per day for simplicity or just total extras. Let's just show the combined rate
+        // display per day for simplicity or just total extras. Let's just show the combined rate
         sumGuest.textContent = guests;
         sumDay.textContent = days;
         
@@ -1224,7 +1286,7 @@
         const totalVehicle = priceVehicle * days;
         const totalMeal = priceMeal * guests * days;
         
-        const total = totalDest + totalHotel + totalVehicle + totalMeal + totalExtras;
+        const total = totalDest + totalHotel + totalVehicle + totalMeal;
         sumTotal.textContent = '$' + total.toLocaleString();
       }
 
@@ -1233,9 +1295,9 @@
         hotelSelect.addEventListener('change', calculateBudget);
         vehicleSelect.addEventListener('change', calculateBudget);
         mealSelect.addEventListener('change', calculateBudget);
-        guideSelect.addEventListener('change', calculateBudget);
-        activitySelect.addEventListener('change', calculateBudget);
-        insuranceSelect.addEventListener('change', calculateBudget);
+        
+        
+        
         guestInput.addEventListener('input', calculateBudget);
         dayInput.addEventListener('input', calculateBudget);
         calculateBudget();
@@ -1381,6 +1443,43 @@
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Handle Tabs
+      const searchTabs = document.querySelectorAll('.search-tab-btn');
+      searchTabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          e.preventDefault();
+          searchTabs.forEach(t => t.classList.remove('active'));
+          e.currentTarget.classList.add('active');
+        });
+      });
+
+      // Handle Custom Dropdowns
+      document.querySelectorAll('.custom-dropdown-menu').forEach(menu => {
+        menu.addEventListener('click', (e) => {
+          const item = e.target.closest('.dropdown-item');
+          if(item) {
+            e.preventDefault();
+            // Update active class
+            menu.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+            
+            // Update button text
+            const container = menu.closest('.dropdown');
+            const btnText = container.querySelector('.selected-text');
+            const hiddenInput = container.querySelector('input[type="hidden"]');
+            
+            if(btnText) btnText.textContent = item.textContent;
+            if(hiddenInput) hiddenInput.value = item.getAttribute('data-value');
+          }
+        });
+      });
+    });
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/global_cart.js"></script>
 </body>
 
 </html>

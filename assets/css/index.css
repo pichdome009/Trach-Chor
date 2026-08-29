@@ -755,6 +755,75 @@ body{
     transform: translateY(-2px);
 }
 
+/* --- Floating Search Box --- */
+.glass-search-box {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-xl);
+  padding: 1.8rem;
+  position: absolute;
+  top: -80px;
+  left: 15px;
+  right: 15px;
+  z-index: 10;
+}
+
+.glass-search-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: var(--shadow-xl);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.search-tab-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #64748b;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  white-space: nowrap !important;
+}
+
+.search-tab-btn.active, .search-tab-btn:hover {
+  border-color: #cbd5e1;
+  background: white;
+  color: #1e293b;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+/* --- Custom Dropdown Styling for Search Box --- */
+.custom-dropdown-menu {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.5rem;
+}
+.custom-dropdown-item {
+  color: var(--text-dark);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.custom-dropdown-item:hover, .custom-dropdown-item:focus {
+  background-color: #e8f5e9;
+  color: #0b8457;
+}
+.custom-dropdown-item.active {
+  background-color: #0b8457;
+  color: white;
+}
+.custom-select-btn i {
+  transition: transform 0.3s ease;
+}
+.custom-select-btn[aria-expanded="true"] i {
+  transform: rotate(180deg);
+}
 /* .navbar .dropdown:hover .dropdown-menu{
     display: block;
     margin-top: 0;
